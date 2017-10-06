@@ -1,0 +1,3 @@
+[submodule "SharpFace.External"]
+	path = SharpFace.External
+	url = https://github.com/Kawaian/SharpFace.External.git
