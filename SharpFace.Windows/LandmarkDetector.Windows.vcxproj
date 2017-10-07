@@ -53,44 +53,28 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="external\boost\boost.props" />
-    <Import Project="external\dlib\dlib.props" />
-    <Import Project="external\tbb\tbb.props" />
-    <Import Project="external\OpenCV3.1\openCV3.1.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="external\boost\boost.props" />
-    <Import Project="external\dlib\dlib.props" />
-    <Import Project="external\tbb\tbb.props" />
-    <Import Project="external\OpenCV3.1\openCV3.1.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="external\dlib\dlib.props" />
-    <Import Project="external\OpenCV3.1\openCV3.1.props" />
-    <Import Project="external\boost\boost_d.props" />
-    <Import Project="external\tbb\tbb_d.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="external\dlib\dlib.props" />
-    <Import Project="external\OpenCV3.1\openCV3.1.props" />
-    <Import Project="external\boost\boost_d.props" />
-    <Import Project="external\tbb\tbb_d.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>./include;$(SolutionDir)SharpFace.Windows\external\tbb\include;$(SolutionDir)SharpFace.Windows\external\boost;$(SolutionDir)SharpFace.Windows\external\boost\boost;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include\opencv;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include;$(SolutionDir)SharpFace.Windows\external\dlib\include\dlib\..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;EIGEN_MPL2_ONLY;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -102,25 +86,27 @@
       <OpenMPSupport>false</OpenMPSupport>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4251;4091</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\model" "$(OutDir)model"
-xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifiers" "$(OutDir)classifiers"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.Windows\external\tbb\bin\$(PlatformShortName)\$(PlatformToolset)\tbb_debug.dll" "$(OutDir)"</Command>
+      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb_debug.dll" "$(OutDir)"</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.Windows\external\tbb\lib\$(PlatformShortName)\$(PlatformToolset);$(SolutionDir)SharpFace.Windows\external\boost\$(PlatformTarget)\$(PlatformToolset)\lib;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\$(PlatformTarget)\$(PlatformToolset)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_filesystem-vc141-mt-gd-1_60.lib;libboost_system-vc141-mt-gd-1_60.lib;opencv_world310.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>./include;$(SolutionDir)SharpFace.Windows\external\tbb\include;$(SolutionDir)SharpFace.Windows\external\boost;$(SolutionDir)SharpFace.Windows\external\boost\boost;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include\opencv;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include;$(SolutionDir)SharpFace.Windows\external\dlib\include\dlib\..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_DEBUG;_LIB;EIGEN_MPL2_ONLY;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -131,26 +117,28 @@ xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifier
       <OpenMPSupport>false</OpenMPSupport>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4251;4091</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\model" "$(OutDir)model"
-xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifiers" "$(OutDir)classifiers"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.Windows\external\tbb\bin\$(PlatformShortName)\$(PlatformToolset)\tbb_debug.dll" "$(OutDir)"</Command>
+      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb_debug.dll" "$(OutDir)"</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.Windows\external\tbb\lib\$(PlatformShortName)\$(PlatformToolset);$(SolutionDir)SharpFace.Windows\external\boost\$(PlatformTarget)\$(PlatformToolset)\lib;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\$(PlatformTarget)\$(PlatformToolset)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_filesystem-vc141-mt-gd-1_60.lib;libboost_system-vc141-mt-gd-1_60.lib;opencv_world310.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>Full</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>./include;$(SolutionDir)SharpFace.Windows\external\tbb\include;$(SolutionDir)SharpFace.Windows\external\boost;$(SolutionDir)SharpFace.Windows\external\boost\boost;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include\opencv;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include;$(SolutionDir)SharpFace.Windows\external\dlib\include\dlib\..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -162,26 +150,28 @@ xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifier
       <OpenMPSupport>false</OpenMPSupport>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4251;4091</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\model" "$(OutDir)model"
-xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifiers" "$(OutDir)classifiers"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.Windows\external\tbb\bin\$(PlatformShortName)\$(PlatformToolset)\tbb.dll" "$(OutDir)"</Command>
+      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb.dll" "$(OutDir)"</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\$(PlatformTarget)\$(PlatformToolset)\lib;$(SolutionDir)SharpFace.Windows\external\tbb\lib\$(PlatformShortName)\$(PlatformToolset);$(SolutionDir)SharpFace.Windows\external\boost\$(PlatformTarget)\$(PlatformToolset)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_filesystem-vc141-mt-1_60.lib;libboost_system-vc141-mt-1_60.lib;opencv_world310.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <Optimization>Full</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>./include;$(SolutionDir)SharpFace.Windows\external\tbb\include;$(SolutionDir)SharpFace.Windows\external\boost;$(SolutionDir)SharpFace.Windows\external\boost\boost;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include\opencv;$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\include;$(SolutionDir)SharpFace.Windows\external\dlib\include\dlib\..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -193,19 +183,21 @@ xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifier
       <OpenMPSupport>false</OpenMPSupport>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4251;4091</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\model" "$(OutDir)model"
-xcopy /I /E /Y /D "$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\classifiers" "$(OutDir)classifiers"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.Windows\external\tbb\bin\$(PlatformShortName)\$(PlatformToolset)\tbb.dll" "$(OutDir)"</Command>
+      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb.dll" "$(OutDir)"</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.Windows\external\OpenCV3.1\$(PlatformTarget)\$(PlatformToolset)\lib;$(SolutionDir)SharpFace.Windows\external\tbb\lib\$(PlatformShortName)\$(PlatformToolset);$(SolutionDir)SharpFace.Windows\external\boost\$(PlatformTarget)\$(PlatformToolset)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_filesystem-vc141-mt-1_60.lib;libboost_system-vc141-mt-1_60.lib;opencv_world310.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
