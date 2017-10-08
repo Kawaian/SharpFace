@@ -47,7 +47,6 @@
     <Compile Include="auto\PAW.cs" />
     <Compile Include="auto\PDM.cs" />
     <Compile Include="HandleRef.cs" />
-    <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="auto\SVR_patch_expert.cs" />
     <Compile Include="auto\SWIGTYPE_p_bool.cs" />
@@ -112,6 +111,7 @@
     <Compile Include="auto\SWIGTYPE_p_vectorT_vectorT_vectorT_Multi_SVR_patch_expert_t_t_t.cs" />
     <Compile Include="auto\SWIGTYPE_p_vectorT_vectorT_vectorT_vectorT_cv__Mat_T_float_t_t_t_t_t.cs" />
     <Compile Include="auto\SWIGTYPE_p_vectorT_vectorT_vectorT_vectorT_pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs" />
+    <Compile Include="Tests\LandmarkTestImg.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
