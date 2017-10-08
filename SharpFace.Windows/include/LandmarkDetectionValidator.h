@@ -68,6 +68,10 @@
 // Local includes
 #include "PAW.h"
 
+#ifdef SWIG
+#define OPENFACE_API
+#endif
+
 using namespace std;
 
 namespace LandmarkDetector

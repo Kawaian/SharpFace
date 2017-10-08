@@ -44,6 +44,11 @@
 
 #include "DLLExport.h"
 
+
+#ifdef SWIG
+#define OPENFACE_API
+#endif
+
 namespace LandmarkDetector
 {
   //===========================================================================

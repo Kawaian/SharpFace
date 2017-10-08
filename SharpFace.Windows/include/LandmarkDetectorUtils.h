@@ -41,6 +41,11 @@
 
 #include "LandmarkDetectorModel.h"
 
+
+#ifdef SWIG
+#define OPENFACE_API
+#endif
+
 using namespace std;
 
 namespace LandmarkDetector

@@ -43,6 +43,11 @@
 #include "CCNF_patch_expert.h"
 #include "PDM.h"
 
+
+#ifdef SWIG
+#define OPENFACE_API
+#endif
+
 namespace LandmarkDetector
 {
 //===========================================================================
