@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SharpFace.Windows\SharpFace.Windows.csproj">
+      <Project>{7a473bf1-ae5d-47ff-878e-e49112561ca3}</Project>
+      <Name>SharpFace.Windows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharpFace\SharpFace.csproj">
       <Project>{b3a225b9-1a79-4330-9b4e-a3c4e07bbeab}</Project>
       <Name>SharpFace</Name>

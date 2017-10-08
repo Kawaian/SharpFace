@@ -10,6 +10,8 @@ namespace SharpFace.Tests
     {
         static void Main(string[] args)
         {
+            Windows.Native.Init();
+
             var t = new Test();
             t.Invoke();
             Console.Write("fin");
