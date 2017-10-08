@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SharpFace.Tests
 {
-    class LandmarkTestImg
+    public class LandmarkTestImg
     {
+        public void Run()
+        {
+            CLNF model = new CLNF()
+        }
     }
 }

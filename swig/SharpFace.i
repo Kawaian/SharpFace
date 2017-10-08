@@ -1,4 +1,5 @@
 %module LandmarkDetector
+%include "std_string.i"
 
 %include "interfaces/CCNF_patch_expert.i"
 %include "interfaces/CCNF_patch_expert.i"
