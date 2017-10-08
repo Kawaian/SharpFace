@@ -10,7 +10,9 @@ namespace SharpFace.Tests
     {
         public void Run()
         {
-            CLNF model = new CLNF()
+            FaceModelParameters modelParameters = new FaceModelParameters(new string[] { "./" });
+            
+            CLNF model = new CLNF();
         }
     }
 }
