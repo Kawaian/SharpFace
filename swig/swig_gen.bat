@@ -1,3 +1,3 @@
 @echo off
 
-swig -c++ -csharp SharpFace.i
+swig -c++ -csharp -outdir csfiles SharpFace.i
