@@ -1,17 +1,18 @@
 # C# port of OpenFace
-	By 이희준, 김진관, マティアス コンスタンス
+By 이희준, 김진관, マティアス コンスタンス
 
-	Modified version of OpenFace with C# port.
-	The modified version can be found in Native/
-	**All credit goes to the creators of OpenFace.**
+Modified version of OpenFace with C# port.
+The modified version can be found in Native.
+
+**Credit goes to the creators of OpenFace.**
 
 ## Modifications
-	- Added support for dll builds
-	- Cleaned project
+- Added DLL and SWIG support
+- Reorganized source files
 
 ## Platforms:
-	- Windows x86/x64
-	- Android x86/x64
+- Windows **x86**, **x64**
+- Android **x86**, **x64**, **arm**, **arm64**
 
 # Original README:
 ## OpenFace: an open source facial behavior analysis toolkit
