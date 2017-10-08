@@ -8,7 +8,6 @@
  * interface file instead.
  * ----------------------------------------------------------------------------- */
 
-
 #ifndef SWIGCSHARP
 #define SWIGCSHARP
 #endif
@@ -299,36 +298,36 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LandmarkDetector(SWIG_CSh
 #define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, msg, ""); return nullreturn; } else
 
 
-	#include "../../SharpFace.Windows/include/CCNF_patch_expert.h"
+	#include "CCNF_patch_expert.h"
 
 
-	#include "../../SharpFace.Windows/include/LandmarkDetectionValidator.h"
+	#include "LandmarkDetectionValidator.h"
 
 
-	#include "../../SharpFace.Windows/include/LandmarkDetectorFunc.h"
+	#include "LandmarkDetectorFunc.h"
 
 
-	#include "../../SharpFace.Windows/include/LandmarkDetectorModel.h"
+	#include "LandmarkDetectorModel.h"
 
 
-	#include "../../SharpFace.Windows/include/LandmarkDetectorParameters.h"
+	#include "LandmarkDetectorParameters.h"
 
 
-	#include "../../SharpFace.Windows/include/LandmarkDetectorUtils.h"
+	#include "LandmarkDetectorUtils.h"
 
 
-	#include "../../SharpFace.Windows/include/Patch_experts.h"
+	#include "Patch_experts.h"
 
 
-	#include "../../SharpFace.Windows/include/PAW.h"
+	#include "PAW.h"
 
 
-	#include "../../SharpFace.Windows/include/PDM.h"
+	#include "PDM.h"
 
 
-	#include "../../SharpFace.Windows/include/SVR_patch_expert.h"
+	#include "SVR_patch_expert.h"
 
-
+using namespace LandmarkDetector;
 #ifdef __cplusplus
 extern "C" {
 #endif
