@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{a1546654-b040-432d-9d52-dc85b4a8cae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{cb62f9da-3d3d-48ce-84da-69f9bf83e3f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\LandmarkDetectorModel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LandmarkDetectorParameters.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LandmarkDetectorUtils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Patch_experts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PAW.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PDM.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stdafx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SVR_patch_expert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CCNF_patch_expert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DLLExport.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LandmarkCoreIncludes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LandmarkDetectionValidator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LandmarkDetectorFunc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\LandmarkDetectorFunc.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LandmarkDetectorModel.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LandmarkDetectorParameters.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LandmarkDetectorUtils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Patch_experts.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PAW.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PDM.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SVR_patch_expert.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CCNF_patch_expert.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LandmarkDetectionValidator.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
