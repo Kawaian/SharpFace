@@ -15,25 +15,25 @@
 
 
 #ifdef __cplusplus
-/* SwigValueWrapper is described in swig.swg */
+ /* SwigValueWrapper is described in swig.swg */
 template<typename T> class SwigValueWrapper {
-  struct SwigMovePointer {
-    T *ptr;
-    SwigMovePointer(T *p) : ptr(p) { }
-    ~SwigMovePointer() { delete ptr; }
-    SwigMovePointer& operator=(SwigMovePointer& rhs) { T* oldptr = ptr; ptr = 0; delete oldptr; ptr = rhs.ptr; rhs.ptr = 0; return *this; }
-  } pointer;
-  SwigValueWrapper& operator=(const SwigValueWrapper<T>& rhs);
-  SwigValueWrapper(const SwigValueWrapper<T>& rhs);
+    struct SwigMovePointer {
+        T *ptr;
+        SwigMovePointer(T *p) : ptr(p) { }
+        ~SwigMovePointer() { delete ptr; }
+        SwigMovePointer& operator=(SwigMovePointer& rhs) { T* oldptr = ptr; ptr = 0; delete oldptr; ptr = rhs.ptr; rhs.ptr = 0; return *this; }
+    } pointer;
+    SwigValueWrapper& operator=(const SwigValueWrapper<T>& rhs);
+    SwigValueWrapper(const SwigValueWrapper<T>& rhs);
 public:
-  SwigValueWrapper() : pointer(0) { }
-  SwigValueWrapper& operator=(const T& t) { SwigMovePointer tmp(new T(t)); pointer = tmp; return *this; }
-  operator T&() const { return *pointer.ptr; }
-  T *operator&() { return pointer.ptr; }
+    SwigValueWrapper() : pointer(0) { }
+    SwigValueWrapper& operator=(const T& t) { SwigMovePointer tmp(new T(t)); pointer = tmp; return *this; }
+    operator T&() const { return *pointer.ptr; }
+    T *operator&() { return pointer.ptr; }
 };
 
 template <typename T> T SwigValueInit() {
-  return T();
+    return T();
 }
 #endif
 
@@ -42,7 +42,7 @@ template <typename T> T SwigValueInit() {
  *  declarations/attributes, and other compiler dependent labels.
  * ----------------------------------------------------------------------------- */
 
-/* template workaround for compilers that cannot correctly implement the C++ standard */
+ /* template workaround for compilers that cannot correctly implement the C++ standard */
 #ifndef SWIGTEMPLATEDISAMBIGUATOR
 # if defined(__SUNPRO_CC) && (__SUNPRO_CC <= 0x560)
 #  define SWIGTEMPLATEDISAMBIGUATOR template
@@ -167,39 +167,39 @@ template <typename T> T SwigValueInit() {
 #include <stdio.h>
 
 
-/* Support for throwing C# exceptions from C/C++. There are two types: 
- * Exceptions that take a message and ArgumentExceptions that take a message and a parameter name. */
+ /* Support for throwing C# exceptions from C/C++. There are two types:
+  * Exceptions that take a message and ArgumentExceptions that take a message and a parameter name. */
 typedef enum {
-  SWIG_CSharpApplicationException,
-  SWIG_CSharpArithmeticException,
-  SWIG_CSharpDivideByZeroException,
-  SWIG_CSharpIndexOutOfRangeException,
-  SWIG_CSharpInvalidCastException,
-  SWIG_CSharpInvalidOperationException,
-  SWIG_CSharpIOException,
-  SWIG_CSharpNullReferenceException,
-  SWIG_CSharpOutOfMemoryException,
-  SWIG_CSharpOverflowException,
-  SWIG_CSharpSystemException
+    SWIG_CSharpApplicationException,
+    SWIG_CSharpArithmeticException,
+    SWIG_CSharpDivideByZeroException,
+    SWIG_CSharpIndexOutOfRangeException,
+    SWIG_CSharpInvalidCastException,
+    SWIG_CSharpInvalidOperationException,
+    SWIG_CSharpIOException,
+    SWIG_CSharpNullReferenceException,
+    SWIG_CSharpOutOfMemoryException,
+    SWIG_CSharpOverflowException,
+    SWIG_CSharpSystemException
 } SWIG_CSharpExceptionCodes;
 
 typedef enum {
-  SWIG_CSharpArgumentException,
-  SWIG_CSharpArgumentNullException,
-  SWIG_CSharpArgumentOutOfRangeException
+    SWIG_CSharpArgumentException,
+    SWIG_CSharpArgumentNullException,
+    SWIG_CSharpArgumentOutOfRangeException
 } SWIG_CSharpExceptionArgumentCodes;
 
 typedef void (SWIGSTDCALL* SWIG_CSharpExceptionCallback_t)(const char *);
 typedef void (SWIGSTDCALL* SWIG_CSharpExceptionArgumentCallback_t)(const char *, const char *);
 
 typedef struct {
-  SWIG_CSharpExceptionCodes code;
-  SWIG_CSharpExceptionCallback_t callback;
+    SWIG_CSharpExceptionCodes code;
+    SWIG_CSharpExceptionCallback_t callback;
 } SWIG_CSharpException_t;
 
 typedef struct {
-  SWIG_CSharpExceptionArgumentCodes code;
-  SWIG_CSharpExceptionArgumentCallback_t callback;
+    SWIG_CSharpExceptionArgumentCodes code;
+    SWIG_CSharpExceptionArgumentCallback_t callback;
 } SWIG_CSharpExceptionArgument_t;
 
 static SWIG_CSharpException_t SWIG_csharp_exceptions[] = {
@@ -223,60 +223,60 @@ static SWIG_CSharpExceptionArgument_t SWIG_csharp_exceptions_argument[] = {
 };
 
 static void SWIGUNUSED SWIG_CSharpSetPendingException(SWIG_CSharpExceptionCodes code, const char *msg) {
-  SWIG_CSharpExceptionCallback_t callback = SWIG_csharp_exceptions[SWIG_CSharpApplicationException].callback;
-  if ((size_t)code < sizeof(SWIG_csharp_exceptions)/sizeof(SWIG_CSharpException_t)) {
-    callback = SWIG_csharp_exceptions[code].callback;
-  }
-  callback(msg);
+    SWIG_CSharpExceptionCallback_t callback = SWIG_csharp_exceptions[SWIG_CSharpApplicationException].callback;
+    if ((size_t)code < sizeof(SWIG_csharp_exceptions) / sizeof(SWIG_CSharpException_t)) {
+        callback = SWIG_csharp_exceptions[code].callback;
+    }
+    callback(msg);
 }
 
 static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExceptionArgumentCodes code, const char *msg, const char *param_name) {
-  SWIG_CSharpExceptionArgumentCallback_t callback = SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentException].callback;
-  if ((size_t)code < sizeof(SWIG_csharp_exceptions_argument)/sizeof(SWIG_CSharpExceptionArgument_t)) {
-    callback = SWIG_csharp_exceptions_argument[code].callback;
-  }
-  callback(msg, param_name);
+    SWIG_CSharpExceptionArgumentCallback_t callback = SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentException].callback;
+    if ((size_t)code < sizeof(SWIG_csharp_exceptions_argument) / sizeof(SWIG_CSharpExceptionArgument_t)) {
+        callback = SWIG_csharp_exceptions_argument[code].callback;
+    }
+    callback(msg, param_name);
 }
 
 
 #ifdef __cplusplus
-extern "C" 
+extern "C"
 #endif
 SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_LandmarkDetector(
-                                                SWIG_CSharpExceptionCallback_t applicationCallback,
-                                                SWIG_CSharpExceptionCallback_t arithmeticCallback,
-                                                SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
-                                                SWIG_CSharpExceptionCallback_t indexOutOfRangeCallback, 
-                                                SWIG_CSharpExceptionCallback_t invalidCastCallback,
-                                                SWIG_CSharpExceptionCallback_t invalidOperationCallback,
-                                                SWIG_CSharpExceptionCallback_t ioCallback,
-                                                SWIG_CSharpExceptionCallback_t nullReferenceCallback,
-                                                SWIG_CSharpExceptionCallback_t outOfMemoryCallback, 
-                                                SWIG_CSharpExceptionCallback_t overflowCallback, 
-                                                SWIG_CSharpExceptionCallback_t systemCallback) {
-  SWIG_csharp_exceptions[SWIG_CSharpApplicationException].callback = applicationCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpArithmeticException].callback = arithmeticCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpDivideByZeroException].callback = divideByZeroCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpIndexOutOfRangeException].callback = indexOutOfRangeCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpInvalidCastException].callback = invalidCastCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpInvalidOperationException].callback = invalidOperationCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpIOException].callback = ioCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpNullReferenceException].callback = nullReferenceCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpOutOfMemoryException].callback = outOfMemoryCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpOverflowException].callback = overflowCallback;
-  SWIG_csharp_exceptions[SWIG_CSharpSystemException].callback = systemCallback;
+    SWIG_CSharpExceptionCallback_t applicationCallback,
+    SWIG_CSharpExceptionCallback_t arithmeticCallback,
+    SWIG_CSharpExceptionCallback_t divideByZeroCallback,
+    SWIG_CSharpExceptionCallback_t indexOutOfRangeCallback,
+    SWIG_CSharpExceptionCallback_t invalidCastCallback,
+    SWIG_CSharpExceptionCallback_t invalidOperationCallback,
+    SWIG_CSharpExceptionCallback_t ioCallback,
+    SWIG_CSharpExceptionCallback_t nullReferenceCallback,
+    SWIG_CSharpExceptionCallback_t outOfMemoryCallback,
+    SWIG_CSharpExceptionCallback_t overflowCallback,
+    SWIG_CSharpExceptionCallback_t systemCallback) {
+    SWIG_csharp_exceptions[SWIG_CSharpApplicationException].callback = applicationCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpArithmeticException].callback = arithmeticCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpDivideByZeroException].callback = divideByZeroCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpIndexOutOfRangeException].callback = indexOutOfRangeCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpInvalidCastException].callback = invalidCastCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpInvalidOperationException].callback = invalidOperationCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpIOException].callback = ioCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpNullReferenceException].callback = nullReferenceCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpOutOfMemoryException].callback = outOfMemoryCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpOverflowException].callback = overflowCallback;
+    SWIG_csharp_exceptions[SWIG_CSharpSystemException].callback = systemCallback;
 }
 
 #ifdef __cplusplus
-extern "C" 
+extern "C"
 #endif
 SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_LandmarkDetector(
-                                                SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
-                                                SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
-                                                SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
-  SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentException].callback = argumentCallback;
-  SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentNullException].callback = argumentNullCallback;
-  SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentOutOfRangeException].callback = argumentOutOfRangeCallback;
+    SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
+    SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
+    SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
+    SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentException].callback = argumentCallback;
+    SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentNullException].callback = argumentNullCallback;
+    SWIG_csharp_exceptions_argument[SWIG_CSharpArgumentOutOfRangeException].callback = argumentOutOfRangeCallback;
 }
 
 
@@ -286,10 +286,10 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 
 
 #ifdef __cplusplus
-extern "C" 
+extern "C"
 #endif
 SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LandmarkDetector(SWIG_CSharpStringHelperCallback callback) {
-  SWIG_csharp_string_callback = callback;
+    SWIG_csharp_string_callback = callback;
 }
 
 
@@ -298,5248 +298,5230 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LandmarkDetector(SWIG_CSh
 #define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, msg, ""); return nullreturn; } else
 
 
-	#include "CCNF_patch_expert.h"
-
-
-	#include "LandmarkDetectionValidator.h"
-
-
-	#include "LandmarkDetectorFunc.h"
-
-
-	#include "LandmarkDetectorModel.h"
-
-
-	#include "LandmarkDetectorParameters.h"
-
-
-	#include "LandmarkDetectorUtils.h"
-
-
-	#include "Patch_experts.h"
-
-
-	#include "PAW.h"
-
-
-	#include "PDM.h"
-
-
-	#include "SVR_patch_expert.h"
+#include "CCNF_patch_expert.h"
+#include "LandmarkDetectionValidator.h"
+#include "LandmarkDetectorFunc.h"
+#include "LandmarkDetectorModel.h"
+#include "LandmarkDetectorParameters.h"
+#include "LandmarkDetectorUtils.h"
+#include "Patch_experts.h"
+#include "PAW.h"
+#include "PDM.h"
+#include "SVR_patch_expert.h"
 
 using namespace LandmarkDetector;
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_set(void * jarg1, int jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->neuron_type = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result = (int) ((arg1)->neuron_type);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->norm_weights = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result = (double) ((arg1)->norm_weights);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_bias_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->bias = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_bias_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result = (double) ((arg1)->bias);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  cv::Mat_< float > arg2 ;
-  cv::Mat_< float > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  argp2 = (cv::Mat_< float > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->weights = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  cv::Mat_< float > result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result =  ((arg1)->weights);
-  jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  std::map< int,cv::Mat_< double > > arg2 ;
-  std::map< int,cv::Mat_< double > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  argp2 = (std::map< int,cv::Mat_< double > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< int,cv::Mat_< double > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->weights_dfts = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  std::map< int,cv::Mat_< double > > result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result =  ((arg1)->weights_dfts);
-  jresult = new std::map< int,cv::Mat_< double > >((const std::map< int,cv::Mat_< double > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_alpha_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->alpha = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_alpha_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  result = (double) ((arg1)->alpha);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::CCNF_neuron *result = 0 ;
-  
-  result = (LandmarkDetector::CCNF_neuron *)new LandmarkDetector::CCNF_neuron();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_neuron *arg1 = 0 ;
-  LandmarkDetector::CCNF_neuron *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CCNF_neuron const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::CCNF_neuron *)new LandmarkDetector::CCNF_neuron((LandmarkDetector::CCNF_neuron const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  std::ifstream *arg2 = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (std::ifstream *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  (arg1)->Read(*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< double > *arg3 = 0 ;
-  cv::Mat *arg4 = 0 ;
-  cv::Mat *arg5 = 0 ;
-  cv::Mat_< float > *arg6 = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  arg5 = (cv::Mat *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  arg6 = (cv::Mat_< float > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->Response(*arg2,*arg3,*arg4,*arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_neuron(void * jarg1) {
-  LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_neuron *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_width_set(void * jarg1, int jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->width = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_width_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result = (int) ((arg1)->width);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_height_set(void * jarg1, int jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->height = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_height_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result = (int) ((arg1)->height);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< LandmarkDetector::CCNF_neuron > *arg2 = (std::vector< LandmarkDetector::CCNF_neuron > *) 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (std::vector< LandmarkDetector::CCNF_neuron > *)jarg2; 
-  if (arg1) (arg1)->neurons = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< LandmarkDetector::CCNF_neuron > *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result = (std::vector< LandmarkDetector::CCNF_neuron > *)& ((arg1)->neurons);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< int > arg2 ;
-  std::vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  argp2 = (std::vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->window_sizes = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< int > result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result =  ((arg1)->window_sizes);
-  jresult = new std::vector< int >((const std::vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< cv::Mat_< float > > arg2 ;
-  std::vector< cv::Mat_< float > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  argp2 = (std::vector< cv::Mat_< float > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< cv::Mat_< float > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->Sigmas = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< cv::Mat_< float > > result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result =  ((arg1)->Sigmas);
-  jresult = new std::vector< cv::Mat_< float > >((const std::vector< cv::Mat_< float > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_betas_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< double > arg2 ;
-  std::vector< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  argp2 = (std::vector< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->betas = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_betas_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< double > result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result =  ((arg1)->betas);
-  jresult = new std::vector< double >((const std::vector< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->patch_confidence = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  result = (double) ((arg1)->patch_confidence);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *result = 0 ;
-  
-  result = (LandmarkDetector::CCNF_patch_expert *)new LandmarkDetector::CCNF_patch_expert();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CCNF_patch_expert *arg1 = 0 ;
-  LandmarkDetector::CCNF_patch_expert *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CCNF_patch_expert const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::CCNF_patch_expert *)new LandmarkDetector::CCNF_patch_expert((LandmarkDetector::CCNF_patch_expert const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Read(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::ifstream *arg2 = 0 ;
-  std::vector< int > arg3 ;
-  std::vector< std::vector< cv::Mat_< float > > > arg4 ;
-  std::vector< int > *argp3 ;
-  std::vector< std::vector< cv::Mat_< float > > > *argp4 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (std::ifstream *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  argp3 = (std::vector< int > *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< int >", 0);
-    return ;
-  }
-  arg3 = *argp3; 
-  argp4 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg4; 
-  if (!argp4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< std::vector< cv::Mat_< float > > >", 0);
-    return ;
-  }
-  arg4 = *argp4; 
-  (arg1)->Read(*arg2,arg3,arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->Response(*arg2,*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_ComputeSigmas(void * jarg1, void * jarg2, int jarg3) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  std::vector< cv::Mat_< float > > arg2 ;
-  int arg3 ;
-  std::vector< cv::Mat_< float > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  argp2 = (std::vector< cv::Mat_< float > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< cv::Mat_< float > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  arg3 = (int)jarg3; 
-  (arg1)->ComputeSigmas(arg2,arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_patch_expert(void * jarg1) {
-  LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  
-  arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_validator_type_set(void * jarg1, int jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->validator_type = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_validator_type_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result = (int) ((arg1)->validator_type);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_orientations_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Vec3d > arg2 ;
-  vector< cv::Vec3d > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< cv::Vec3d > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Vec3d >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->orientations = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_orientations_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Vec3d > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->orientations);
-  jresult = new vector< cv::Vec3d >((const vector< cv::Vec3d > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_paws_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< PAW > arg2 ;
-  vector< PAW > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< PAW > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< PAW >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->paws = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_paws_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< PAW > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->paws);
-  jresult = new vector< PAW >((const vector< PAW > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_bs_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< double > arg2 ;
-  vector< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->bs = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_bs_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< double > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->bs);
-  jresult = new vector< double >((const vector< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > arg2 ;
-  vector< cv::Mat_< double > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< cv::Mat_< double > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->ws = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->ws);
-  jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_nn_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< double > > > arg2 ;
-  vector< vector< cv::Mat_< double > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< cv::Mat_< double > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< double > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->ws_nn = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_nn_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< double > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->ws_nn);
-  jresult = new vector< vector< cv::Mat_< double > > >((const vector< vector< cv::Mat_< double > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_activation_fun_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< int > arg2 ;
-  vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->activation_fun = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_activation_fun_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< int > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->activation_fun);
-  jresult = new vector< int >((const vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_output_fun_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< int > arg2 ;
-  vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->output_fun = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_output_fun_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< int > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->output_fun);
-  jresult = new vector< int >((const vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< vector< cv::Mat_< float > > > > > arg2 ;
-  vector< vector< vector< vector< cv::Mat_< float > > > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< vector< vector< cv::Mat_< float > > > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< vector< cv::Mat_< float > > > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_convolutional_layers = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< vector< cv::Mat_< float > > > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_convolutional_layers);
-  jresult = new vector< vector< vector< vector< cv::Mat_< float > > > > >((const vector< vector< vector< vector< cv::Mat_< float > > > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > > arg2 ;
-  vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_convolutional_layers_dft = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_convolutional_layers_dft);
-  jresult = new vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > >((const vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< float > > > arg2 ;
-  vector< vector< vector< float > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< vector< float > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< float > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_convolutional_layers_bias = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< vector< float > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_convolutional_layers_bias);
-  jresult = new vector< vector< vector< float > > >((const vector< vector< vector< float > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< int > > arg2 ;
-  vector< vector< int > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< int > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< int > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_subsampling_layers = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< int > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_subsampling_layers);
-  jresult = new vector< vector< int > >((const vector< vector< int > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< float > > > arg2 ;
-  vector< vector< cv::Mat_< float > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_fully_connected_layers_weights = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< float > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_fully_connected_layers_weights);
-  jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< float > > arg2 ;
-  vector< vector< float > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< float > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< float > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_fully_connected_layers_bias = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< float > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_fully_connected_layers_bias);
-  jresult = new vector< vector< float > >((const vector< vector< float > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< int > > arg2 ;
-  vector< vector< int > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< int > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< int > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_layer_types = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< int > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_layer_types);
-  jresult = new vector< vector< int > >((const vector< vector< int > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< float > > > arg2 ;
-  vector< vector< cv::Mat_< float > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->cnn_fully_connected_layers_biases = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< vector< cv::Mat_< float > > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->cnn_fully_connected_layers_biases);
-  jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_mean_images_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > arg2 ;
-  vector< cv::Mat_< double > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< cv::Mat_< double > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->mean_images = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_mean_images_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->mean_images);
-  jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > arg2 ;
-  vector< cv::Mat_< double > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (vector< cv::Mat_< double > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->standard_deviations = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  vector< cv::Mat_< double > > result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  result =  ((arg1)->standard_deviations);
-  jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *result = 0 ;
-  
-  result = (LandmarkDetector::DetectionValidator *)new LandmarkDetector::DetectionValidator();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = 0 ;
-  LandmarkDetector::DetectionValidator *result = 0 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::DetectionValidator const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::DetectionValidator *)new LandmarkDetector::DetectionValidator((LandmarkDetector::DetectionValidator const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_DetectionValidator_Check(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  double jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  cv::Vec3d *arg2 = 0 ;
-  cv::Mat_< uchar > *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  arg2 = (cv::Vec3d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (cv::Mat_< uchar > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return 0;
-  } 
-  result = (double)(arg1)->Check((cv::Vec3d const &)*arg2,(cv::Mat_< uchar > const &)*arg3,*arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->Read(arg2);
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_GetViewId(void * jarg1, void * jarg2) {
-  int jresult ;
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  cv::Vec3d *arg2 = 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  arg2 = (cv::Vec3d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  result = (int)((LandmarkDetector::DetectionValidator const *)arg1)->GetViewId((cv::Vec3d const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DetectionValidator(void * jarg1) {
-  LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
-  
-  arg1 = (LandmarkDetector::DetectionValidator *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  cv::Mat_< uchar > *arg1 = 0 ;
-  CLNF *arg2 = 0 ;
-  FaceModelParameters *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (cv::Mat_< uchar > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (CLNF *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
-    return 0;
-  } 
-  arg3 = (FaceModelParameters *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectLandmarksInVideo((cv::Mat_< uchar > const &)*arg1,*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  unsigned int jresult ;
-  cv::Mat_< uchar > *arg1 = 0 ;
-  cv::Rect_< double > arg2 ;
-  CLNF *arg3 = 0 ;
-  FaceModelParameters *arg4 = 0 ;
-  cv::Rect_< double > const *argp2 ;
-  bool result;
-  
-  arg1 = (cv::Mat_< uchar > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  argp2 = (cv::Rect_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Rect_< double > const", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  arg3 = (CLNF *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
-    return 0;
-  } 
-  arg4 = (FaceModelParameters *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectLandmarksInVideo((cv::Mat_< uchar > const &)*arg1,arg2,*arg3,*arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  cv::Mat_< uchar > *arg1 = 0 ;
-  CLNF *arg2 = 0 ;
-  FaceModelParameters *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (cv::Mat_< uchar > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (CLNF *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
-    return 0;
-  } 
-  arg3 = (FaceModelParameters *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectLandmarksInImage((cv::Mat_< uchar > const &)*arg1,*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  unsigned int jresult ;
-  cv::Mat_< uchar > *arg1 = 0 ;
-  cv::Rect_< double > arg2 ;
-  CLNF *arg3 = 0 ;
-  FaceModelParameters *arg4 = 0 ;
-  cv::Rect_< double > const *argp2 ;
-  bool result;
-  
-  arg1 = (cv::Mat_< uchar > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  argp2 = (cv::Rect_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Rect_< double > const", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  arg3 = (CLNF *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
-    return 0;
-  } 
-  arg4 = (FaceModelParameters *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectLandmarksInImage((cv::Mat_< uchar > const &)*arg1,arg2,*arg3,*arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
-  void * jresult ;
-  CLNF *arg1 = 0 ;
-  double arg2 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  cv::Vec6d result;
-  
-  arg1 = (CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  result = LandmarkDetector::GetPoseCamera((CLNF const &)*arg1,arg2,arg3,arg4,arg5);
-  jresult = new cv::Vec6d((const cv::Vec6d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
-  void * jresult ;
-  CLNF *arg1 = 0 ;
-  double arg2 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  cv::Vec6d result;
-  
-  arg1 = (CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  result = LandmarkDetector::GetPoseWorld((CLNF const &)*arg1,arg2,arg3,arg4,arg5);
-  jresult = new cv::Vec6d((const cv::Vec6d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
-  void * jresult ;
-  CLNF *arg1 = 0 ;
-  double arg2 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  cv::Vec6d result;
-  
-  arg1 = (CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  result = LandmarkDetector::GetCorrectedPoseCamera((CLNF const &)*arg1,arg2,arg3,arg4,arg5);
-  jresult = new cv::Vec6d((const cv::Vec6d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
-  void * jresult ;
-  CLNF *arg1 = 0 ;
-  double arg2 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  cv::Vec6d result;
-  
-  arg1 = (CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  result = LandmarkDetector::GetCorrectedPoseWorld((CLNF const &)*arg1,arg2,arg3,arg4,arg5);
-  jresult = new cv::Vec6d((const cv::Vec6d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_pdm_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  PDM arg2 ;
-  PDM *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (PDM *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null PDM", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->pdm = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_pdm_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  PDM result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->pdm);
-  jresult = new PDM((const PDM &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_patch_experts_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  Patch_experts arg2 ;
-  Patch_experts *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (Patch_experts *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Patch_experts", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->patch_experts = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_patch_experts_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  Patch_experts result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->patch_experts);
-  jresult = new Patch_experts((const Patch_experts &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_local_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->params_local = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_local_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->params_local);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_global_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Vec6d arg2 ;
-  cv::Vec6d *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Vec6d *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->params_global = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_global_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Vec6d result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->params_global);
-  jresult = new cv::Vec6d((const cv::Vec6d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_models_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< LandmarkDetector::CLNF > *arg2 = (vector< LandmarkDetector::CLNF > *) 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (vector< LandmarkDetector::CLNF > *)jarg2; 
-  if (arg1) (arg1)->hierarchical_models = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_models_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< LandmarkDetector::CLNF > *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (vector< LandmarkDetector::CLNF > *)& ((arg1)->hierarchical_models);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< string > arg2 ;
-  vector< string > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (vector< string > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->hierarchical_model_names = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< string > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->hierarchical_model_names);
-  jresult = new vector< string >((const vector< string > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< vector< pair< int,int > > > arg2 ;
-  vector< vector< pair< int,int > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (vector< vector< pair< int,int > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< pair< int,int > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->hierarchical_mapping = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< vector< pair< int,int > > > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->hierarchical_mapping);
-  jresult = new vector< vector< pair< int,int > > >((const vector< vector< pair< int,int > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_params_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< FaceModelParameters > arg2 ;
-  vector< FaceModelParameters > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (vector< FaceModelParameters > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< FaceModelParameters >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->hierarchical_params = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_params_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< FaceModelParameters > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->hierarchical_params);
-  jresult = new vector< FaceModelParameters >((const vector< FaceModelParameters > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::CascadeClassifier arg2 ;
-  cv::CascadeClassifier *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::CascadeClassifier *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::CascadeClassifier", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->face_detector_HAAR = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::CascadeClassifier result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->face_detector_HAAR);
-  jresult = new cv::CascadeClassifier((const cv::CascadeClassifier &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->face_detector_location = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_location_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  string result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->face_detector_location);
-  jresult = new string((const string &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HOG_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  dlib::frontal_face_detector arg2 ;
-  dlib::frontal_face_detector *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (dlib::frontal_face_detector *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null dlib::frontal_face_detector", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->face_detector_HOG = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HOG_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  dlib::frontal_face_detector result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->face_detector_HOG);
-  jresult = new dlib::frontal_face_detector((const dlib::frontal_face_detector &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_validator_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  LandmarkDetector::DetectionValidator *arg2 = (LandmarkDetector::DetectionValidator *) 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (LandmarkDetector::DetectionValidator *)jarg2; 
-  if (arg1) (arg1)->landmark_validator = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_validator_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  LandmarkDetector::DetectionValidator *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (LandmarkDetector::DetectionValidator *)& ((arg1)->landmark_validator);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_success_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->detection_success = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_detection_success_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (bool) ((arg1)->detection_success);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_tracking_initialised_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->tracking_initialised = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_tracking_initialised_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (bool) ((arg1)->tracking_initialised);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_certainty_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->detection_certainty = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_detection_certainty_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (double) ((arg1)->detection_certainty);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_eye_model_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->eye_model = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_eye_model_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (bool) ((arg1)->eye_model);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_triangulations_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< cv::Mat_< int > > arg2 ;
-  vector< cv::Mat_< int > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (vector< cv::Mat_< int > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< int > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->triangulations = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_triangulations_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  vector< cv::Mat_< int > > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->triangulations);
-  jresult = new vector< cv::Mat_< int > >((const vector< cv::Mat_< int > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detected_landmarks_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->detected_landmarks = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_detected_landmarks_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->detected_landmarks);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_model_likelihood_set(void * jarg1, double jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->model_likelihood = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_model_likelihood_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (double) ((arg1)->model_likelihood);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->landmark_likelihoods = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->landmark_likelihoods);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_failures_in_a_row_set(void * jarg1, int jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->failures_in_a_row = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CLNF_failures_in_a_row_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = (int) ((arg1)->failures_in_a_row);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_template_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< uchar > arg2 ;
-  cv::Mat_< uchar > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Mat_< uchar > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< uchar >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->face_template = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_template_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< uchar > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->face_template);
-  jresult = new cv::Mat_< uchar >((const cv::Mat_< uchar > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_preference_det_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Point_< double > arg2 ;
-  cv::Point_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (cv::Point_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->preference_det = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_preference_det_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Point_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result =  ((arg1)->preference_det);
-  jresult = new cv::Point_< double >((const cv::Point_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::CLNF *result = 0 ;
-  
-  result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_1(void * jarg1) {
-  void * jresult ;
-  string arg1 ;
-  string *argp1 ;
-  LandmarkDetector::CLNF *result = 0 ;
-  
-  argp1 = (string *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
-  result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF(arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_2(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = 0 ;
-  LandmarkDetector::CLNF *result = 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF((LandmarkDetector::CLNF const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CLNF(void * jarg1) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_DetectLandmarks(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  FaceModelParameters *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (FaceModelParameters *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
-    return 0;
-  } 
-  result = (bool)(arg1)->DetectLandmarks((cv::Mat_< uchar > const &)*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetShape(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double arg2 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  result = ((LandmarkDetector::CLNF const *)arg1)->GetShape(arg2,arg3,arg4,arg5);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetBoundingBox(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  cv::Rect_< double > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  result = ((LandmarkDetector::CLNF const *)arg1)->GetBoundingBox();
-  jresult = new cv::Rect_< double >((const cv::Rect_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_0(void * jarg1) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  (arg1)->Reset();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_1(void * jarg1, double jarg2, double jarg3) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  double arg2 ;
-  double arg3 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  (arg1)->Reset(arg2,arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->Read(arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read_CLNF(void * jarg1, void * jarg2) {
-  LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->Read_CLNF(arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_set(void * jarg1, int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->num_optimisation_iteration = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (int) ((arg1)->num_optimisation_iteration);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->limit_pose = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->limit_pose);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->validate_detections = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->validate_detections);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_set(void * jarg1, double jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->validation_boundary = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (double) ((arg1)->validation_boundary);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > arg2 ;
-  vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  argp2 = (vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->window_sizes_small = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result =  ((arg1)->window_sizes_small);
-  jresult = new vector< int >((const vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > arg2 ;
-  vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  argp2 = (vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->window_sizes_init = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result =  ((arg1)->window_sizes_init);
-  jresult = new vector< int >((const vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > arg2 ;
-  vector< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  argp2 = (vector< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->window_sizes_current = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  vector< int > result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result =  ((arg1)->window_sizes_current);
-  jresult = new vector< int >((const vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_set(void * jarg1, double jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->face_template_scale = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (double) ((arg1)->face_template_scale);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->use_face_template = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->use_face_template);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->model_location = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_model_location_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  string result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result =  ((arg1)->model_location);
-  jresult = new string((const string &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_sigma_set(void * jarg1, double jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->sigma = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_sigma_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (double) ((arg1)->sigma);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_set(void * jarg1, double jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->reg_factor = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (double) ((arg1)->reg_factor);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_set(void * jarg1, double jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->weight_factor = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (double) ((arg1)->weight_factor);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_multi_view_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->multi_view = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_multi_view_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->multi_view);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_set(void * jarg1, int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->reinit_video_every = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (int) ((arg1)->reinit_video_every);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->face_detector_location = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  string result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result =  ((arg1)->face_detector_location);
-  jresult = new string((const string &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_set(void * jarg1, int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  LandmarkDetector::FaceModelParameters::FaceDetector arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = (LandmarkDetector::FaceModelParameters::FaceDetector)jarg2; 
-  if (arg1) (arg1)->curr_face_detector = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  LandmarkDetector::FaceModelParameters::FaceDetector result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (LandmarkDetector::FaceModelParameters::FaceDetector) ((arg1)->curr_face_detector);
-  jresult = (int)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->quiet_mode = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->quiet_mode);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->refine_hierarchical = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->refine_hierarchical);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->refine_parameters = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->refine_parameters);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_set(void * jarg1, unsigned int jarg2) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->track_gaze = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_get(void * jarg1) {
-  unsigned int jresult ;
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  bool result;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  result = (bool) ((arg1)->track_gaze);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::FaceModelParameters *result = 0 ;
-  
-  result = (LandmarkDetector::FaceModelParameters *)new LandmarkDetector::FaceModelParameters();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_1(void * jarg1) {
-  void * jresult ;
-  vector< string > *arg1 = 0 ;
-  LandmarkDetector::FaceModelParameters *result = 0 ;
-  
-  arg1 = (vector< string > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::FaceModelParameters *)new LandmarkDetector::FaceModelParameters(*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1) {
-  LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
-  
-  arg1 = (LandmarkDetector::FaceModelParameters *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  vector< string > *arg1 = 0 ;
-  vector< string > *arg2 = 0 ;
-  vector< string > *arg3 = 0 ;
-  bool *arg4 = 0 ;
-  string *arg5 = 0 ;
-  vector< string > *arg6 = 0 ;
-  
-  arg1 = (vector< string > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg2 = (vector< string > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg3 = (vector< string > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg4 = (bool *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "bool & type is null", 0);
-    return ;
-  } 
-  arg5 = (string *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "string & type is null", 0);
-    return ;
-  } 
-  arg6 = (vector< string > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::get_video_input_output_params(*arg1,*arg2,*arg3,*arg4,*arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_get_camera_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  int *arg1 = 0 ;
-  float *arg2 = 0 ;
-  float *arg3 = 0 ;
-  float *arg4 = 0 ;
-  float *arg5 = 0 ;
-  vector< string > *arg6 = 0 ;
-  
-  arg1 = (int *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "int & type is null", 0);
-    return ;
-  } 
-  arg2 = (float *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
-    return ;
-  } 
-  arg3 = (float *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
-    return ;
-  } 
-  arg4 = (float *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
-    return ;
-  } 
-  arg5 = (float *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
-    return ;
-  } 
-  arg6 = (vector< string > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::get_camera_params(*arg1,*arg2,*arg3,*arg4,*arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_get_image_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  vector< string > *arg1 = 0 ;
-  vector< string > *arg2 = 0 ;
-  vector< string > *arg3 = 0 ;
-  vector< string > *arg4 = 0 ;
-  vector< cv::Rect_< double > > *arg5 = 0 ;
-  vector< string > *arg6 = 0 ;
-  
-  arg1 = (vector< string > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg2 = (vector< string > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg3 = (vector< string > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg4 = (vector< string > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  arg5 = (vector< cv::Rect_< double > > *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
-    return ;
-  } 
-  arg6 = (vector< string > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::get_image_input_output_params(*arg1,*arg2,*arg3,*arg4,*arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_matchTemplate_m(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, int jarg8) {
-  cv::Mat_< float > *arg1 = 0 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Mat *arg3 = 0 ;
-  cv::Mat *arg4 = 0 ;
-  cv::Mat_< float > *arg5 = 0 ;
-  map< int,cv::Mat_< double > > *arg6 = 0 ;
-  cv::Mat_< float > *arg7 = 0 ;
-  int arg8 ;
-  
-  arg1 = (cv::Mat_< float > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  arg5 = (cv::Mat_< float > *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg6 = (map< int,cv::Mat_< double > > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "map< int,cv::Mat_< double > > & type is null", 0);
-    return ;
-  } 
-  arg7 = (cv::Mat_< float > *)jarg7;
-  if (!arg7) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg8 = (int)jarg8; 
-  LandmarkDetector::matchTemplate_m((cv::Mat_< float > const &)*arg1,*arg2,*arg3,*arg4,(cv::Mat_< float > const &)*arg5,*arg6,*arg7,arg8);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesKabsch2D(void * jarg1, void * jarg2) {
-  void * jresult ;
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Matx22d result;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::AlignShapesKabsch2D((cv::Mat_< double > const &)*arg1,(cv::Mat_< double > const &)*arg2);
-  jresult = new cv::Matx22d((const cv::Matx22d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesWithScale(void * jarg1, void * jarg2) {
-  void * jresult ;
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  cv::Matx22d result;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return 0;
-  } 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = LandmarkDetector::AlignShapesWithScale(*arg1,arg2);
-  jresult = new cv::Matx22d((const cv::Matx22d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Project(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6) {
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  double arg6 ;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return ;
-  } 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  arg6 = (double)jarg6; 
-  LandmarkDetector::Project(*arg1,(cv::Mat_< double > const &)*arg2,arg3,arg4,arg5,arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_0(void * jarg1, void * jarg2, void * jarg3, int jarg4, float jarg5, float jarg6, float jarg7, float jarg8) {
-  cv::Mat arg1 ;
-  cv::Vec6d arg2 ;
-  cv::Scalar arg3 ;
-  int arg4 ;
-  float arg5 ;
-  float arg6 ;
-  float arg7 ;
-  float arg8 ;
-  cv::Mat *argp1 ;
-  cv::Vec6d *argp2 ;
-  cv::Scalar *argp3 ;
-  
-  argp1 = (cv::Mat *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = (cv::Vec6d *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  argp3 = (cv::Scalar *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Scalar", 0);
-    return ;
-  }
-  arg3 = *argp3; 
-  arg4 = (int)jarg4; 
-  arg5 = (float)jarg5; 
-  arg6 = (float)jarg6; 
-  arg7 = (float)jarg7; 
-  arg8 = (float)jarg8; 
-  LandmarkDetector::DrawBox(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateBox(void * jarg1, float jarg2, float jarg3, float jarg4, float jarg5) {
-  void * jresult ;
-  cv::Vec6d arg1 ;
-  float arg2 ;
-  float arg3 ;
-  float arg4 ;
-  float arg5 ;
-  cv::Vec6d *argp1 ;
-  vector< std::pair< cv::Point2d,cv::Point2d > > result;
-  
-  argp1 = (cv::Vec6d *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
-  arg2 = (float)jarg2; 
-  arg3 = (float)jarg3; 
-  arg4 = (float)jarg4; 
-  arg5 = (float)jarg5; 
-  result = LandmarkDetector::CalculateBox(arg1,arg2,arg3,arg4,arg5);
-  jresult = new vector< std::pair< cv::Point2d,cv::Point2d > >((const vector< std::pair< cv::Point2d,cv::Point2d > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_1(void * jarg1, void * jarg2, void * jarg3, int jarg4) {
-  vector< pair< cv::Point,cv::Point > > arg1 ;
-  cv::Mat arg2 ;
-  cv::Scalar arg3 ;
-  int arg4 ;
-  vector< pair< cv::Point,cv::Point > > *argp1 ;
-  cv::Mat *argp2 ;
-  cv::Scalar *argp3 ;
-  
-  argp1 = (vector< pair< cv::Point,cv::Point > > *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< pair< cv::Point,cv::Point > >", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = (cv::Mat *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  argp3 = (cv::Scalar *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Scalar", 0);
-    return ;
-  }
-  arg3 = *argp3; 
-  arg4 = (int)jarg4; 
-  LandmarkDetector::DrawBox(arg1,arg2,arg3,arg4);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_0(void * jarg1, void * jarg2) {
-  void * jresult ;
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< int > *arg2 = 0 ;
-  vector< cv::Point2d > result;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< int > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::CalculateLandmarks((cv::Mat_< double > const &)*arg1,*arg2);
-  jresult = new vector< cv::Point2d >((const vector< cv::Point2d > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::CLNF *arg1 = 0 ;
-  vector< cv::Point2d > result;
-  
-  arg1 = (LandmarkDetector::CLNF *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::CalculateLandmarks(*arg1);
-  jresult = new vector< cv::Point2d >((const vector< cv::Point2d > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawLandmarks(void * jarg1, void * jarg2) {
-  cv::Mat arg1 ;
-  vector< cv::Point > arg2 ;
-  cv::Mat *argp1 ;
-  vector< cv::Point > *argp2 ;
-  
-  argp1 = (cv::Mat *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = (vector< cv::Point > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Point >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  LandmarkDetector::DrawLandmarks(arg1,arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
-  cv::Mat arg1 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Mat_< int > *arg3 = 0 ;
-  cv::Mat *argp1 ;
-  
-  argp1 = (cv::Mat *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< int > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::Draw(arg1,(cv::Mat_< double > const &)*arg2,(cv::Mat_< int > const &)*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_1(void * jarg1, void * jarg2) {
-  cv::Mat arg1 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Mat *argp1 ;
-  
-  argp1 = (cv::Mat *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::Draw(arg1,(cv::Mat_< double > const &)*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_2(void * jarg1, void * jarg2) {
-  cv::Mat arg1 ;
-  LandmarkDetector::CLNF *arg2 = 0 ;
-  cv::Mat *argp1 ;
-  
-  argp1 = (cv::Mat *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
-    return ;
-  }
-  arg1 = *argp1; 
-  arg2 = (LandmarkDetector::CLNF *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF const & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::Draw(arg1,(LandmarkDetector::CLNF const &)*arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2RotationMatrix(void * jarg1) {
-  void * jresult ;
-  cv::Vec3d *arg1 = 0 ;
-  cv::Matx33d result;
-  
-  arg1 = (cv::Vec3d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::Euler2RotationMatrix((cv::Vec3d const &)*arg1);
-  jresult = new cv::Matx33d((const cv::Matx33d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2Euler(void * jarg1) {
-  void * jresult ;
-  cv::Matx33d *arg1 = 0 ;
-  cv::Vec3d result;
-  
-  arg1 = (cv::Matx33d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx33d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::RotationMatrix2Euler((cv::Matx33d const &)*arg1);
-  jresult = new cv::Vec3d((const cv::Vec3d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2AxisAngle(void * jarg1) {
-  void * jresult ;
-  cv::Vec3d *arg1 = 0 ;
-  cv::Vec3d result;
-  
-  arg1 = (cv::Vec3d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::Euler2AxisAngle((cv::Vec3d const &)*arg1);
-  jresult = new cv::Vec3d((const cv::Vec3d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2Euler(void * jarg1) {
-  void * jresult ;
-  cv::Vec3d *arg1 = 0 ;
-  cv::Vec3d result;
-  
-  arg1 = (cv::Vec3d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::AxisAngle2Euler((cv::Vec3d const &)*arg1);
-  jresult = new cv::Vec3d((const cv::Vec3d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2RotationMatrix(void * jarg1) {
-  void * jresult ;
-  cv::Vec3d *arg1 = 0 ;
-  cv::Matx33d result;
-  
-  arg1 = (cv::Vec3d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::AxisAngle2RotationMatrix((cv::Vec3d const &)*arg1);
-  jresult = new cv::Matx33d((const cv::Matx33d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2AxisAngle(void * jarg1) {
-  void * jresult ;
-  cv::Matx33d *arg1 = 0 ;
-  cv::Vec3d result;
-  
-  arg1 = (cv::Matx33d *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx33d const & type is null", 0);
-    return 0;
-  } 
-  result = LandmarkDetector::RotationMatrix2AxisAngle((cv::Matx33d const &)*arg1);
-  jresult = new cv::Vec3d((const cv::Vec3d &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_0(void * jarg1, void * jarg2) {
-  unsigned int jresult ;
-  vector< cv::Rect_< double > > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  bool result;
-  
-  arg1 = (vector< cv::Rect_< double > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectFaces(*arg1,(cv::Mat_< uchar > const &)*arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_1(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  vector< cv::Rect_< double > > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  cv::CascadeClassifier *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (vector< cv::Rect_< double > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (cv::CascadeClassifier *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectFaces(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  unsigned int jresult ;
-  cv::Rect_< double > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  cv::CascadeClassifier *arg3 = 0 ;
-  cv::Point arg4 ;
-  cv::Point const *argp4 ;
-  bool result;
-  
-  arg1 = (cv::Rect_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (cv::CascadeClassifier *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
-    return 0;
-  } 
-  argp4 = (cv::Point *)jarg4; 
-  if (!argp4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point const", 0);
-    return 0;
-  }
-  arg4 = *argp4; 
-  result = (bool)LandmarkDetector::DetectSingleFace(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3,arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_1(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  cv::Rect_< double > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  cv::CascadeClassifier *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (cv::Rect_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (cv::CascadeClassifier *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectSingleFace(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
-  unsigned int jresult ;
-  vector< cv::Rect_< double > > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  std::vector< double > *arg3 = 0 ;
-  bool result;
-  
-  arg1 = (vector< cv::Rect_< double > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (std::vector< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectFacesHOG(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  unsigned int jresult ;
-  vector< cv::Rect_< double > > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  dlib::frontal_face_detector *arg3 = 0 ;
-  std::vector< double > *arg4 = 0 ;
-  bool result;
-  
-  arg1 = (vector< cv::Rect_< double > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (dlib::frontal_face_detector *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
-    return 0;
-  } 
-  arg4 = (std::vector< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectFacesHOG(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3,*arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
-  unsigned int jresult ;
-  cv::Rect_< double > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  dlib::frontal_face_detector *arg3 = 0 ;
-  double *arg4 = 0 ;
-  cv::Point arg5 ;
-  cv::Point const *argp5 ;
-  bool result;
-  
-  arg1 = (cv::Rect_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (dlib::frontal_face_detector *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
-    return 0;
-  } 
-  arg4 = (double *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "double & type is null", 0);
-    return 0;
-  } 
-  argp5 = (cv::Point *)jarg5; 
-  if (!argp5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point const", 0);
-    return 0;
-  }
-  arg5 = *argp5; 
-  result = (bool)LandmarkDetector::DetectSingleFaceHOG(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3,*arg4,arg5);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  unsigned int jresult ;
-  cv::Rect_< double > *arg1 = 0 ;
-  cv::Mat_< uchar > *arg2 = 0 ;
-  dlib::frontal_face_detector *arg3 = 0 ;
-  double *arg4 = 0 ;
-  bool result;
-  
-  arg1 = (cv::Rect_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< uchar > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (dlib::frontal_face_detector *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
-    return 0;
-  } 
-  arg4 = (double *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "double & type is null", 0);
-    return 0;
-  } 
-  result = (bool)LandmarkDetector::DetectSingleFaceHOG(*arg1,(cv::Mat_< uchar > const &)*arg2,*arg3,*arg4);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadMatBin(void * jarg1, void * jarg2) {
-  std::ifstream *arg1 = 0 ;
-  cv::Mat *arg2 = 0 ;
-  
-  arg1 = (std::ifstream *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  arg2 = (cv::Mat *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::ReadMatBin(*arg1,*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadMat(void * jarg1, void * jarg2) {
-  std::ifstream *arg1 = 0 ;
-  cv::Mat *arg2 = 0 ;
-  
-  arg1 = (std::ifstream *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  arg2 = (cv::Mat *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::ReadMat(*arg1,*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SkipComments(void * jarg1) {
-  std::ifstream *arg1 = 0 ;
-  
-  arg1 = (std::ifstream *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  LandmarkDetector::SkipComments(*arg1);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< vector< Multi_SVR_patch_expert > > > arg2 ;
-  vector< vector< vector< Multi_SVR_patch_expert > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< vector< vector< Multi_SVR_patch_expert > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< Multi_SVR_patch_expert > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->svr_expert_intensity = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< vector< Multi_SVR_patch_expert > > > result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result =  ((arg1)->svr_expert_intensity);
-  jresult = new vector< vector< vector< Multi_SVR_patch_expert > > >((const vector< vector< vector< Multi_SVR_patch_expert > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *arg2 = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *) 0 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  arg2 = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *)jarg2; 
-  if (arg1) (arg1)->ccnf_expert_intensity = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *result = 0 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *)& ((arg1)->ccnf_expert_intensity);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_sigma_components_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Mat_< float > > > arg2 ;
-  vector< vector< cv::Mat_< float > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->sigma_components = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_sigma_components_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Mat_< float > > > result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result =  ((arg1)->sigma_components);
-  jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_patch_scaling_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< double > arg2 ;
-  vector< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->patch_scaling = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_patch_scaling_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< double > result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result =  ((arg1)->patch_scaling);
-  jresult = new vector< double >((const vector< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_centers_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Vec3d > > arg2 ;
-  vector< vector< cv::Vec3d > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< vector< cv::Vec3d > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Vec3d > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->centers = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_centers_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Vec3d > > result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result =  ((arg1)->centers);
-  jresult = new vector< vector< cv::Vec3d > >((const vector< vector< cv::Vec3d > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_visibilities_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Mat_< int > > > arg2 ;
-  vector< vector< cv::Mat_< int > > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< vector< cv::Mat_< int > > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< int > > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->visibilities = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_visibilities_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< vector< cv::Mat_< int > > > result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result =  ((arg1)->visibilities);
-  jresult = new vector< vector< cv::Mat_< int > > >((const vector< vector< cv::Mat_< int > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *result = 0 ;
-  
-  result = (LandmarkDetector::Patch_experts *)new LandmarkDetector::Patch_experts();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Patch_experts *arg1 = 0 ;
-  LandmarkDetector::Patch_experts *result = 0 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::Patch_experts const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::Patch_experts *)new LandmarkDetector::Patch_experts((LandmarkDetector::Patch_experts const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, int jarg9, int jarg10) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< cv::Mat_< float > > *arg2 = 0 ;
-  cv::Matx22f *arg3 = 0 ;
-  cv::Matx22d *arg4 = 0 ;
-  cv::Mat_< uchar > *arg5 = 0 ;
-  PDM *arg6 = 0 ;
-  cv::Vec6d *arg7 = 0 ;
-  cv::Mat_< double > *arg8 = 0 ;
-  int arg9 ;
-  int arg10 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  arg2 = (vector< cv::Mat_< float > > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Mat_< float > > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Matx22f *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx22f & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Matx22d *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx22d & type is null", 0);
-    return ;
-  } 
-  arg5 = (cv::Mat_< uchar > *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
-    return ;
-  } 
-  arg6 = (PDM *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "PDM const & type is null", 0);
-    return ;
-  } 
-  arg7 = (cv::Vec6d *)jarg7;
-  if (!arg7) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return ;
-  } 
-  arg8 = (cv::Mat_< double > *)jarg8;
-  if (!arg8) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg9 = (int)jarg9; 
-  arg10 = (int)jarg10; 
-  (arg1)->Response(*arg2,*arg3,*arg4,(cv::Mat_< uchar > const &)*arg5,(PDM const &)*arg6,(cv::Vec6d const &)*arg7,(cv::Mat_< double > const &)*arg8,arg9,arg10);
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_GetViewIdx(void * jarg1, void * jarg2, int jarg3) {
-  int jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  cv::Vec6d *arg2 = 0 ;
-  int arg3 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  arg2 = (cv::Vec6d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (int)jarg3; 
-  result = (int)((LandmarkDetector::Patch_experts const *)arg1)->GetViewIdx((cv::Vec6d const &)*arg2,arg3);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_0(void * jarg1, unsigned long jarg2) {
-  int jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  size_t arg2 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  arg2 = (size_t)jarg2; 
-  result = (int)((LandmarkDetector::Patch_experts const *)arg1)->nViews(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_1(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  result = (int)((LandmarkDetector::Patch_experts const *)arg1)->nViews();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Read(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  vector< string > arg2 ;
-  vector< string > arg3 ;
-  vector< string > *argp2 ;
-  vector< string > *argp3 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  argp2 = (vector< string > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  argp3 = (vector< string > *)jarg3; 
-  if (!argp3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
-    return ;
-  }
-  arg3 = *argp3; 
-  (arg1)->Read(arg2,arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Patch_experts(void * jarg1) {
-  LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
-  
-  arg1 = (LandmarkDetector::Patch_experts *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_number_of_pixels_set(void * jarg1, int jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->number_of_pixels = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PAW_number_of_pixels_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (int) ((arg1)->number_of_pixels);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_min_x_set(void * jarg1, double jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->min_x = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_PAW_min_x_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (double) ((arg1)->min_x);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_min_y_set(void * jarg1, double jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->min_y = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_PAW_min_y_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (double) ((arg1)->min_y);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_destination_landmarks_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->destination_landmarks = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_destination_landmarks_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->destination_landmarks);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_source_landmarks_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->source_landmarks = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_source_landmarks_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->source_landmarks);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_triangulation_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< int > arg2 ;
-  cv::Mat_< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->triangulation = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_triangulation_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< int > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->triangulation);
-  jresult = new cv::Mat_< int >((const cv::Mat_< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_triangle_id_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< int > arg2 ;
-  cv::Mat_< int > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< int > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< int >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->triangle_id = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_triangle_id_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< int > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->triangle_id);
-  jresult = new cv::Mat_< int >((const cv::Mat_< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_pixel_mask_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< uchar > arg2 ;
-  cv::Mat_< uchar > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< uchar > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< uchar >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->pixel_mask = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_pixel_mask_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< uchar > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->pixel_mask);
-  jresult = new cv::Mat_< uchar >((const cv::Mat_< uchar > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_coefficients_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->coefficients = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_coefficients_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->coefficients);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_alpha_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->alpha = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_alpha_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->alpha);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_beta_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->beta = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_beta_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->beta);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_map_x_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< float > arg2 ;
-  cv::Mat_< float > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< float > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->map_x = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_map_x_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< float > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->map_x);
-  jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_map_y_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< float > arg2 ;
-  cv::Mat_< float > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  argp2 = (cv::Mat_< float > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->map_y = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_map_y_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< float > result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result =  ((arg1)->map_y);
-  jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::PAW *result = 0 ;
-  
-  result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_1(void * jarg1, void * jarg2) {
-  void * jresult ;
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< int > *arg2 = 0 ;
-  LandmarkDetector::PAW *result = 0 ;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< int > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((cv::Mat_< double > const &)*arg1,(cv::Mat_< int > const &)*arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_2(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6) {
-  void * jresult ;
-  cv::Mat_< double > *arg1 = 0 ;
-  cv::Mat_< int > *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  double arg5 ;
-  double arg6 ;
-  LandmarkDetector::PAW *result = 0 ;
-  
-  arg1 = (cv::Mat_< double > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (cv::Mat_< int > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
-    return 0;
-  } 
-  arg3 = (double)jarg3; 
-  arg4 = (double)jarg4; 
-  arg5 = (double)jarg5; 
-  arg6 = (double)jarg6; 
-  result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((cv::Mat_< double > const &)*arg1,(cv::Mat_< int > const &)*arg2,arg3,arg4,arg5,arg6);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_3(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PAW *arg1 = 0 ;
-  LandmarkDetector::PAW *result = 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::PAW const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((LandmarkDetector::PAW const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  std::ifstream *arg2 = 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (std::ifstream *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  (arg1)->Read(*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_Warp(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat *arg2 = 0 ;
-  cv::Mat *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (cv::Mat *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->Warp((cv::Mat const &)*arg2,*arg3,(cv::Mat_< double > const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_CalcCoeff(void * jarg1) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  (arg1)->CalcCoeff();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PAW_WarpRegion(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->WarpRegion(*arg2,*arg3);
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PAW_NumberOfLandmarks(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (int)((LandmarkDetector::PAW const *)arg1)->NumberOfLandmarks();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PAW_NumberOfTriangles(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (int)((LandmarkDetector::PAW const *)arg1)->NumberOfTriangles();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PAW_constWidth(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (int)((LandmarkDetector::PAW const *)arg1)->constWidth();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PAW_Height(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  result = (int)((LandmarkDetector::PAW const *)arg1)->Height();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PAW(void * jarg1) {
-  LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0 ;
-  
-  arg1 = (LandmarkDetector::PAW *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_mean_shape_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->mean_shape = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_mean_shape_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  result =  ((arg1)->mean_shape);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_princ_comp_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->princ_comp = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_princ_comp_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  result =  ((arg1)->princ_comp);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_eigen_values_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > arg2 ;
-  cv::Mat_< double > *argp2 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  argp2 = (cv::Mat_< double > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->eigen_values = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_eigen_values_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > result;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  result =  ((arg1)->eigen_values);
-  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::PDM *result = 0 ;
-  
-  result = (LandmarkDetector::PDM *)new LandmarkDetector::PDM();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::PDM *arg1 = 0 ;
-  LandmarkDetector::PDM *result = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::PDM const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::PDM *)new LandmarkDetector::PDM((LandmarkDetector::PDM const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  string arg2 ;
-  string *argp2 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  argp2 = (string *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->Read(arg2);
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfPoints(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  result = (int)((LandmarkDetector::PDM const *)arg1)->NumberOfPoints();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfModes(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  result = (int)((LandmarkDetector::PDM const *)arg1)->NumberOfModes();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Clamp(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Vec6d *arg3 = 0 ;
-  LandmarkDetector::FaceModelParameters *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Vec6d *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  arg4 = (LandmarkDetector::FaceModelParameters *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::FaceModelParameters const & type is null", 0);
-    return ;
-  } 
-  (arg1)->Clamp(*arg2,*arg3,(LandmarkDetector::FaceModelParameters const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape3D(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Mat_< double > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  ((LandmarkDetector::PDM const *)arg1)->CalcShape3D(*arg2,(cv::Mat_< double > const &)*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape2D(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< double > *arg2 = 0 ;
-  cv::Mat_< double > *arg3 = 0 ;
-  cv::Vec6d *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< double > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Vec6d *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return ;
-  } 
-  ((LandmarkDetector::PDM const *)arg1)->CalcShape2D(*arg2,(cv::Mat_< double > const &)*arg3,(cv::Vec6d const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Vec6d *arg2 = 0 ;
-  cv::Rect_< double > *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  cv::Vec3d arg5 ;
-  cv::Vec3d const *argp5 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Vec6d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Rect_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  argp5 = (cv::Vec3d *)jarg5; 
-  if (!argp5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec3d const", 0);
-    return ;
-  }
-  arg5 = *argp5; 
-  (arg1)->CalcParams(*arg2,(cv::Rect_< double > const &)*arg3,(cv::Mat_< double > const &)*arg4,arg5);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Vec6d *arg2 = 0 ;
-  cv::Rect_< double > *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Vec6d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Rect_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->CalcParams(*arg2,(cv::Rect_< double > const &)*arg3,(cv::Mat_< double > const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Vec6d *arg2 = 0 ;
-  cv::Mat_< double > *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  cv::Vec3d arg5 ;
-  cv::Vec3d const *argp5 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Vec6d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  argp5 = (cv::Vec3d *)jarg5; 
-  if (!argp5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec3d const", 0);
-    return ;
-  }
-  arg5 = *argp5; 
-  (arg1)->CalcParams(*arg2,(cv::Mat_< double > const &)*arg3,(cv::Mat_< double > const &)*arg4,arg5);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Vec6d *arg2 = 0 ;
-  cv::Mat_< double > *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Vec6d *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< double > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->CalcParams(*arg2,(cv::Mat_< double > const &)*arg3,(cv::Mat_< double > const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcBoundingBox(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Rect *arg2 = 0 ;
-  cv::Vec6d *arg3 = 0 ;
-  cv::Mat_< double > *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Rect *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Vec6d *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< double > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->CalcBoundingBox(*arg2,(cv::Vec6d const &)*arg3,(cv::Mat_< double > const &)*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeRigidJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Vec6d *arg3 = 0 ;
-  cv::Mat_< float > *arg4 = 0 ;
-  cv::Mat_< float > arg5 ;
-  cv::Mat_< float > *arg6 = 0 ;
-  cv::Mat_< float > const *argp5 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Vec6d *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< float > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  argp5 = (cv::Mat_< float > *)jarg5; 
-  if (!argp5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float > const", 0);
-    return ;
-  }
-  arg5 = *argp5; 
-  arg6 = (cv::Mat_< float > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->ComputeRigidJacobian((cv::Mat_< float > const &)*arg2,(cv::Vec6d const &)*arg3,*arg4,arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Vec6d *arg3 = 0 ;
-  cv::Mat_< float > *arg4 = 0 ;
-  cv::Mat_< float > arg5 ;
-  cv::Mat_< float > *arg6 = 0 ;
-  cv::Mat_< float > const *argp5 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Vec6d *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Mat_< float > *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  argp5 = (cv::Mat_< float > *)jarg5; 
-  if (!argp5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float > const", 0);
-    return ;
-  }
-  arg5 = *argp5; 
-  arg6 = (cv::Mat_< float > *)jarg6;
-  if (!arg6) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->ComputeJacobian((cv::Mat_< float > const &)*arg2,(cv::Vec6d const &)*arg3,*arg4,arg5,*arg6);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_UpdateModelParameters(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  cv::Vec6d *arg4 = 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  arg4 = (cv::Vec6d *)jarg4;
-  if (!arg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
-    return ;
-  } 
-  (arg1)->UpdateModelParameters((cv::Mat_< float > const &)*arg2,*arg3,*arg4);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PDM(void * jarg1) {
-  LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
-  
-  arg1 = (LandmarkDetector::PDM *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_type_set(void * jarg1, int jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->type = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_SVR_patch_expert_type_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result = (int) ((arg1)->type);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_scaling_set(void * jarg1, double jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->scaling = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_scaling_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result = (double) ((arg1)->scaling);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_bias_set(void * jarg1, double jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->bias = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_bias_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result = (double) ((arg1)->bias);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  cv::Mat_< float > arg2 ;
-  cv::Mat_< float > *argp2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  argp2 = (cv::Mat_< float > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->weights = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  cv::Mat_< float > result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result =  ((arg1)->weights);
-  jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  std::map< int,cv::Mat_< double > > arg2 ;
-  std::map< int,cv::Mat_< double > > *argp2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  argp2 = (std::map< int,cv::Mat_< double > > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< int,cv::Mat_< double > >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->weights_dfts = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  std::map< int,cv::Mat_< double > > result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result =  ((arg1)->weights_dfts);
-  jresult = new std::map< int,cv::Mat_< double > >((const std::map< int,cv::Mat_< double > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_confidence_set(void * jarg1, double jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double arg2 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->confidence = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_confidence_get(void * jarg1) {
-  double jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  double result;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  result = (double) ((arg1)->confidence);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::SVR_patch_expert *result = 0 ;
-  
-  result = (LandmarkDetector::SVR_patch_expert *)new LandmarkDetector::SVR_patch_expert();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::SVR_patch_expert *arg1 = 0 ;
-  LandmarkDetector::SVR_patch_expert *result = 0 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::SVR_patch_expert const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::SVR_patch_expert *)new LandmarkDetector::SVR_patch_expert((LandmarkDetector::SVR_patch_expert const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  std::ifstream *arg2 = 0 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (std::ifstream *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  (arg1)->Read(*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->Response((cv::Mat_< float > const &)*arg2,*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->ResponseDepth((cv::Mat_< float > const &)*arg2,*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SVR_patch_expert(void * jarg1) {
-  LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
-  
-  arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_set(void * jarg1, int jarg2) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->width = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  result = (int) ((arg1)->width);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_set(void * jarg1, int jarg2) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  int arg2 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->height = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_get(void * jarg1) {
-  int jresult ;
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  int result;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  result = (int) ((arg1)->height);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_set(void * jarg1, void * jarg2) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  std::vector< LandmarkDetector::SVR_patch_expert > *arg2 = (std::vector< LandmarkDetector::SVR_patch_expert > *) 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (std::vector< LandmarkDetector::SVR_patch_expert > *)jarg2; 
-  if (arg1) (arg1)->svr_patch_experts = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_get(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  std::vector< LandmarkDetector::SVR_patch_expert > *result = 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  result = (std::vector< LandmarkDetector::SVR_patch_expert > *)& ((arg1)->svr_patch_experts);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_0() {
-  void * jresult ;
-  LandmarkDetector::Multi_SVR_patch_expert *result = 0 ;
-  
-  result = (LandmarkDetector::Multi_SVR_patch_expert *)new LandmarkDetector::Multi_SVR_patch_expert();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_1(void * jarg1) {
-  void * jresult ;
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = 0 ;
-  LandmarkDetector::Multi_SVR_patch_expert *result = 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::Multi_SVR_patch_expert const & type is null", 0);
-    return 0;
-  } 
-  result = (LandmarkDetector::Multi_SVR_patch_expert *)new LandmarkDetector::Multi_SVR_patch_expert((LandmarkDetector::Multi_SVR_patch_expert const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Read(void * jarg1, void * jarg2) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  std::ifstream *arg2 = 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (std::ifstream *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
-    return ;
-  } 
-  (arg1)->Read(*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->Response((cv::Mat_< float > const &)*arg2,*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  cv::Mat_< float > *arg2 = 0 ;
-  cv::Mat_< float > *arg3 = 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  arg2 = (cv::Mat_< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
-    return ;
-  } 
-  arg3 = (cv::Mat_< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
-    return ;
-  } 
-  (arg1)->ResponseDepth((cv::Mat_< float > const &)*arg2,*arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Multi_SVR_patch_expert(void * jarg1) {
-  LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
-  
-  arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1; 
-  delete arg1;
-}
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_set(void * jarg1, int jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->neuron_type = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = (int)((arg1)->neuron_type);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->norm_weights = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = (double)((arg1)->norm_weights);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_bias_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->bias = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_bias_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = (double)((arg1)->bias);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        cv::Mat_< float > arg2;
+        cv::Mat_< float > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        argp2 = (cv::Mat_< float > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->weights = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        cv::Mat_< float > result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = ((arg1)->weights);
+        jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        std::map< int, cv::Mat_< double > > arg2;
+        std::map< int, cv::Mat_< double > > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        argp2 = (std::map< int, cv::Mat_< double > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< int,cv::Mat_< double > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->weights_dfts = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        std::map< int, cv::Mat_< double > > result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = ((arg1)->weights_dfts);
+        jresult = new std::map< int, cv::Mat_< double > >((const std::map< int, cv::Mat_< double > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_alpha_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->alpha = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_alpha_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        result = (double)((arg1)->alpha);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::CCNF_neuron *result = 0;
+
+        result = (LandmarkDetector::CCNF_neuron *)new LandmarkDetector::CCNF_neuron();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_neuron *arg1 = 0;
+        LandmarkDetector::CCNF_neuron *result = 0;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CCNF_neuron const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::CCNF_neuron *)new LandmarkDetector::CCNF_neuron((LandmarkDetector::CCNF_neuron const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        std::ifstream *arg2 = 0;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (std::ifstream *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        (arg1)->Read(*arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< double > *arg3 = 0;
+        cv::Mat *arg4 = 0;
+        cv::Mat *arg5 = 0;
+        cv::Mat_< float > *arg6 = 0;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        arg5 = (cv::Mat *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        arg6 = (cv::Mat_< float > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->Response(*arg2, *arg3, *arg4, *arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_neuron(void * jarg1) {
+        LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0;
+
+        arg1 = (LandmarkDetector::CCNF_neuron *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_width_set(void * jarg1, int jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->width = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_width_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = (int)((arg1)->width);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_height_set(void * jarg1, int jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->height = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_height_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = (int)((arg1)->height);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< LandmarkDetector::CCNF_neuron > *arg2 = (std::vector< LandmarkDetector::CCNF_neuron > *) 0;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (std::vector< LandmarkDetector::CCNF_neuron > *)jarg2;
+        if (arg1) (arg1)->neurons = *arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< LandmarkDetector::CCNF_neuron > *result = 0;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = (std::vector< LandmarkDetector::CCNF_neuron > *)& ((arg1)->neurons);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< int > arg2;
+        std::vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        argp2 = (std::vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->window_sizes = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< int > result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = ((arg1)->window_sizes);
+        jresult = new std::vector< int >((const std::vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< cv::Mat_< float > > arg2;
+        std::vector< cv::Mat_< float > > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        argp2 = (std::vector< cv::Mat_< float > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< cv::Mat_< float > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->Sigmas = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< cv::Mat_< float > > result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = ((arg1)->Sigmas);
+        jresult = new std::vector< cv::Mat_< float > >((const std::vector< cv::Mat_< float > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_betas_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< double > arg2;
+        std::vector< double > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        argp2 = (std::vector< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->betas = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_betas_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< double > result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = ((arg1)->betas);
+        jresult = new std::vector< double >((const std::vector< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->patch_confidence = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        result = (double)((arg1)->patch_confidence);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *result = 0;
+
+        result = (LandmarkDetector::CCNF_patch_expert *)new LandmarkDetector::CCNF_patch_expert();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CCNF_patch_expert *arg1 = 0;
+        LandmarkDetector::CCNF_patch_expert *result = 0;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CCNF_patch_expert const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::CCNF_patch_expert *)new LandmarkDetector::CCNF_patch_expert((LandmarkDetector::CCNF_patch_expert const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Read(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::ifstream *arg2 = 0;
+        std::vector< int > arg3;
+        std::vector< std::vector< cv::Mat_< float > > > arg4;
+        std::vector< int > *argp3;
+        std::vector< std::vector< cv::Mat_< float > > > *argp4;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (std::ifstream *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        argp3 = (std::vector< int > *)jarg3;
+        if (!argp3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< int >", 0);
+            return;
+        }
+        arg3 = *argp3;
+        argp4 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg4;
+        if (!argp4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< std::vector< cv::Mat_< float > > >", 0);
+            return;
+        }
+        arg4 = *argp4;
+        (arg1)->Read(*arg2, arg3, arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->Response(*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_ComputeSigmas(void * jarg1, void * jarg2, int jarg3) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+        std::vector< cv::Mat_< float > > arg2;
+        int arg3;
+        std::vector< cv::Mat_< float > > *argp2;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        argp2 = (std::vector< cv::Mat_< float > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< cv::Mat_< float > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        arg3 = (int)jarg3;
+        (arg1)->ComputeSigmas(arg2, arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_patch_expert(void * jarg1) {
+        LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0;
+
+        arg1 = (LandmarkDetector::CCNF_patch_expert *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_validator_type_set(void * jarg1, int jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->validator_type = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_validator_type_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = (int)((arg1)->validator_type);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_orientations_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Vec3d > arg2;
+        vector< cv::Vec3d > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< cv::Vec3d > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Vec3d >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->orientations = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_orientations_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Vec3d > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->orientations);
+        jresult = new vector< cv::Vec3d >((const vector< cv::Vec3d > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_paws_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< PAW > arg2;
+        vector< PAW > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< PAW > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< PAW >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->paws = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_paws_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< PAW > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->paws);
+        jresult = new vector< PAW >((const vector< PAW > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_bs_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< double > arg2;
+        vector< double > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->bs = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_bs_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< double > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->bs);
+        jresult = new vector< double >((const vector< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > arg2;
+        vector< cv::Mat_< double > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< cv::Mat_< double > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->ws = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->ws);
+        jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_nn_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< double > > > arg2;
+        vector< vector< cv::Mat_< double > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< cv::Mat_< double > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< double > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->ws_nn = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_nn_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< double > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->ws_nn);
+        jresult = new vector< vector< cv::Mat_< double > > >((const vector< vector< cv::Mat_< double > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_activation_fun_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< int > arg2;
+        vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->activation_fun = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_activation_fun_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< int > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->activation_fun);
+        jresult = new vector< int >((const vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_output_fun_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< int > arg2;
+        vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->output_fun = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_output_fun_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< int > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->output_fun);
+        jresult = new vector< int >((const vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< vector< cv::Mat_< float > > > > > arg2;
+        vector< vector< vector< vector< cv::Mat_< float > > > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< vector< vector< cv::Mat_< float > > > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< vector< cv::Mat_< float > > > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_convolutional_layers = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< vector< cv::Mat_< float > > > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_convolutional_layers);
+        jresult = new vector< vector< vector< vector< cv::Mat_< float > > > > >((const vector< vector< vector< vector< cv::Mat_< float > > > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > > arg2;
+        vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< vector< pair< int,cv::Mat_< double > > > > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_convolutional_layers_dft = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_convolutional_layers_dft);
+        jresult = new vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > >((const vector< vector< vector< vector< pair< int, cv::Mat_< double > > > > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< float > > > arg2;
+        vector< vector< vector< float > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< vector< float > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< float > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_convolutional_layers_bias = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< vector< float > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_convolutional_layers_bias);
+        jresult = new vector< vector< vector< float > > >((const vector< vector< vector< float > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< int > > arg2;
+        vector< vector< int > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< int > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< int > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_subsampling_layers = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< int > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_subsampling_layers);
+        jresult = new vector< vector< int > >((const vector< vector< int > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< float > > > arg2;
+        vector< vector< cv::Mat_< float > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_fully_connected_layers_weights = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< float > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_fully_connected_layers_weights);
+        jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< float > > arg2;
+        vector< vector< float > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< float > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< float > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_fully_connected_layers_bias = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< float > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_fully_connected_layers_bias);
+        jresult = new vector< vector< float > >((const vector< vector< float > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< int > > arg2;
+        vector< vector< int > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< int > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< int > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_layer_types = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< int > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_layer_types);
+        jresult = new vector< vector< int > >((const vector< vector< int > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< float > > > arg2;
+        vector< vector< cv::Mat_< float > > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->cnn_fully_connected_layers_biases = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< vector< cv::Mat_< float > > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->cnn_fully_connected_layers_biases);
+        jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_mean_images_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > arg2;
+        vector< cv::Mat_< double > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< cv::Mat_< double > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->mean_images = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_mean_images_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->mean_images);
+        jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > arg2;
+        vector< cv::Mat_< double > > *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (vector< cv::Mat_< double > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< double > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->standard_deviations = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        vector< cv::Mat_< double > > result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        result = ((arg1)->standard_deviations);
+        jresult = new vector< cv::Mat_< double > >((const vector< cv::Mat_< double > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *result = 0;
+
+        result = (LandmarkDetector::DetectionValidator *)new LandmarkDetector::DetectionValidator();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::DetectionValidator *arg1 = 0;
+        LandmarkDetector::DetectionValidator *result = 0;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::DetectionValidator const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::DetectionValidator *)new LandmarkDetector::DetectionValidator((LandmarkDetector::DetectionValidator const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_DetectionValidator_Check(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        double jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        cv::Vec3d *arg2 = 0;
+        cv::Mat_< uchar > *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+        double result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        arg2 = (cv::Vec3d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        arg3 = (cv::Mat_< uchar > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return 0;
+        }
+        result = (double)(arg1)->Check((cv::Vec3d const &)*arg2, (cv::Mat_< uchar > const &)*arg3, *arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        (arg1)->Read(arg2);
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_GetViewId(void * jarg1, void * jarg2) {
+        int jresult;
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+        cv::Vec3d *arg2 = 0;
+        int result;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        arg2 = (cv::Vec3d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        result = (int)((LandmarkDetector::DetectionValidator const *)arg1)->GetViewId((cv::Vec3d const &)*arg2);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_DetectionValidator(void * jarg1) {
+        LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0;
+
+        arg1 = (LandmarkDetector::DetectionValidator *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        cv::Mat_< uchar > *arg1 = 0;
+        CLNF *arg2 = 0;
+        FaceModelParameters *arg3 = 0;
+        bool result;
+
+        arg1 = (cv::Mat_< uchar > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (CLNF *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
+            return 0;
+        }
+        arg3 = (FaceModelParameters *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectLandmarksInVideo((cv::Mat_< uchar > const &)*arg1, *arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        unsigned int jresult;
+        cv::Mat_< uchar > *arg1 = 0;
+        cv::Rect_< double > arg2;
+        CLNF *arg3 = 0;
+        FaceModelParameters *arg4 = 0;
+        cv::Rect_< double > const *argp2;
+        bool result;
+
+        arg1 = (cv::Mat_< uchar > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        argp2 = (cv::Rect_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Rect_< double > const", 0);
+            return 0;
+        }
+        arg2 = *argp2;
+        arg3 = (CLNF *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
+            return 0;
+        }
+        arg4 = (FaceModelParameters *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectLandmarksInVideo((cv::Mat_< uchar > const &)*arg1, arg2, *arg3, *arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        cv::Mat_< uchar > *arg1 = 0;
+        CLNF *arg2 = 0;
+        FaceModelParameters *arg3 = 0;
+        bool result;
+
+        arg1 = (cv::Mat_< uchar > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (CLNF *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
+            return 0;
+        }
+        arg3 = (FaceModelParameters *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectLandmarksInImage((cv::Mat_< uchar > const &)*arg1, *arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        unsigned int jresult;
+        cv::Mat_< uchar > *arg1 = 0;
+        cv::Rect_< double > arg2;
+        CLNF *arg3 = 0;
+        FaceModelParameters *arg4 = 0;
+        cv::Rect_< double > const *argp2;
+        bool result;
+
+        arg1 = (cv::Mat_< uchar > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        argp2 = (cv::Rect_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Rect_< double > const", 0);
+            return 0;
+        }
+        arg2 = *argp2;
+        arg3 = (CLNF *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF & type is null", 0);
+            return 0;
+        }
+        arg4 = (FaceModelParameters *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectLandmarksInImage((cv::Mat_< uchar > const &)*arg1, arg2, *arg3, *arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
+        void * jresult;
+        CLNF *arg1 = 0;
+        double arg2;
+        double arg3;
+        double arg4;
+        double arg5;
+        cv::Vec6d result;
+
+        arg1 = (CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
+            return 0;
+        }
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        result = LandmarkDetector::GetPoseCamera((CLNF const &)*arg1, arg2, arg3, arg4, arg5);
+        jresult = new cv::Vec6d((const cv::Vec6d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
+        void * jresult;
+        CLNF *arg1 = 0;
+        double arg2;
+        double arg3;
+        double arg4;
+        double arg5;
+        cv::Vec6d result;
+
+        arg1 = (CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
+            return 0;
+        }
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        result = LandmarkDetector::GetPoseWorld((CLNF const &)*arg1, arg2, arg3, arg4, arg5);
+        jresult = new cv::Vec6d((const cv::Vec6d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
+        void * jresult;
+        CLNF *arg1 = 0;
+        double arg2;
+        double arg3;
+        double arg4;
+        double arg5;
+        cv::Vec6d result;
+
+        arg1 = (CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
+            return 0;
+        }
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        result = LandmarkDetector::GetCorrectedPoseCamera((CLNF const &)*arg1, arg2, arg3, arg4, arg5);
+        jresult = new cv::Vec6d((const cv::Vec6d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
+        void * jresult;
+        CLNF *arg1 = 0;
+        double arg2;
+        double arg3;
+        double arg4;
+        double arg5;
+        cv::Vec6d result;
+
+        arg1 = (CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "CLNF const & type is null", 0);
+            return 0;
+        }
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        result = LandmarkDetector::GetCorrectedPoseWorld((CLNF const &)*arg1, arg2, arg3, arg4, arg5);
+        jresult = new cv::Vec6d((const cv::Vec6d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_pdm_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        PDM arg2;
+        PDM *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (PDM *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null PDM", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->pdm = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_pdm_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        PDM result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->pdm);
+        jresult = new PDM((const PDM &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_patch_experts_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        Patch_experts arg2;
+        Patch_experts *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (Patch_experts *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Patch_experts", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->patch_experts = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_patch_experts_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        Patch_experts result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->patch_experts);
+        jresult = new Patch_experts((const Patch_experts &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_local_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->params_local = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_local_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->params_local);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_global_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Vec6d arg2;
+        cv::Vec6d *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Vec6d *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->params_global = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_global_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Vec6d result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->params_global);
+        jresult = new cv::Vec6d((const cv::Vec6d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_models_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< LandmarkDetector::CLNF > *arg2 = (vector< LandmarkDetector::CLNF > *) 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (vector< LandmarkDetector::CLNF > *)jarg2;
+        if (arg1) (arg1)->hierarchical_models = *arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_models_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< LandmarkDetector::CLNF > *result = 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (vector< LandmarkDetector::CLNF > *)& ((arg1)->hierarchical_models);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< string > arg2;
+        vector< string > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (vector< string > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->hierarchical_model_names = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< string > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->hierarchical_model_names);
+        jresult = new vector< string >((const vector< string > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< vector< pair< int, int > > > arg2;
+        vector< vector< pair< int, int > > > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (vector< vector< pair< int, int > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< pair< int,int > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->hierarchical_mapping = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< vector< pair< int, int > > > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->hierarchical_mapping);
+        jresult = new vector< vector< pair< int, int > > >((const vector< vector< pair< int, int > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_params_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< FaceModelParameters > arg2;
+        vector< FaceModelParameters > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (vector< FaceModelParameters > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< FaceModelParameters >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->hierarchical_params = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_params_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< FaceModelParameters > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->hierarchical_params);
+        jresult = new vector< FaceModelParameters >((const vector< FaceModelParameters > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::CascadeClassifier arg2;
+        cv::CascadeClassifier *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::CascadeClassifier *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::CascadeClassifier", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->face_detector_HAAR = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::CascadeClassifier result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->face_detector_HAAR);
+        jresult = new cv::CascadeClassifier((const cv::CascadeClassifier &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->face_detector_location = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_location_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        string result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->face_detector_location);
+        jresult = new string((const string &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HOG_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        dlib::frontal_face_detector arg2;
+        dlib::frontal_face_detector *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (dlib::frontal_face_detector *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null dlib::frontal_face_detector", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->face_detector_HOG = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HOG_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        dlib::frontal_face_detector result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->face_detector_HOG);
+        jresult = new dlib::frontal_face_detector((const dlib::frontal_face_detector &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_validator_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        LandmarkDetector::DetectionValidator *arg2 = (LandmarkDetector::DetectionValidator *) 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (LandmarkDetector::DetectionValidator *)jarg2;
+        if (arg1) (arg1)->landmark_validator = *arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_validator_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        LandmarkDetector::DetectionValidator *result = 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (LandmarkDetector::DetectionValidator *)& ((arg1)->landmark_validator);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_success_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->detection_success = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_detection_success_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (bool)((arg1)->detection_success);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_tracking_initialised_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->tracking_initialised = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_tracking_initialised_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (bool)((arg1)->tracking_initialised);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_certainty_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->detection_certainty = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_detection_certainty_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (double)((arg1)->detection_certainty);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_eye_model_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->eye_model = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_eye_model_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (bool)((arg1)->eye_model);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_triangulations_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< cv::Mat_< int > > arg2;
+        vector< cv::Mat_< int > > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (vector< cv::Mat_< int > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Mat_< int > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->triangulations = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_triangulations_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        vector< cv::Mat_< int > > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->triangulations);
+        jresult = new vector< cv::Mat_< int > >((const vector< cv::Mat_< int > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detected_landmarks_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->detected_landmarks = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_detected_landmarks_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->detected_landmarks);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_model_likelihood_set(void * jarg1, double jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->model_likelihood = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_model_likelihood_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (double)((arg1)->model_likelihood);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->landmark_likelihoods = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->landmark_likelihoods);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_failures_in_a_row_set(void * jarg1, int jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->failures_in_a_row = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_CLNF_failures_in_a_row_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = (int)((arg1)->failures_in_a_row);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_template_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< uchar > arg2;
+        cv::Mat_< uchar > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Mat_< uchar > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< uchar >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->face_template = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_template_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< uchar > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->face_template);
+        jresult = new cv::Mat_< uchar >((const cv::Mat_< uchar > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_preference_det_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Point_< double > arg2;
+        cv::Point_< double > *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (cv::Point_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->preference_det = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_preference_det_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Point_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((arg1)->preference_det);
+        jresult = new cv::Point_< double >((const cv::Point_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::CLNF *result = 0;
+
+        result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_1(void * jarg1) {
+        void * jresult;
+        string arg1;
+        string *argp1;
+        LandmarkDetector::CLNF *result = 0;
+
+        argp1 = (string *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return 0;
+        }
+        arg1 = *argp1;
+        result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF(arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_2(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = 0;
+        LandmarkDetector::CLNF *result = 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::CLNF *)new LandmarkDetector::CLNF((LandmarkDetector::CLNF const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_CLNF(void * jarg1) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_DetectLandmarks(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        FaceModelParameters *arg3 = 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (FaceModelParameters *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "FaceModelParameters & type is null", 0);
+            return 0;
+        }
+        result = (bool)(arg1)->DetectLandmarks((cv::Mat_< uchar > const &)*arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetShape(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double arg2;
+        double arg3;
+        double arg4;
+        double arg5;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        result = ((LandmarkDetector::CLNF const *)arg1)->GetShape(arg2, arg3, arg4, arg5);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetBoundingBox(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        cv::Rect_< double > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        result = ((LandmarkDetector::CLNF const *)arg1)->GetBoundingBox();
+        jresult = new cv::Rect_< double >((const cv::Rect_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_0(void * jarg1) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        (arg1)->Reset();
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_1(void * jarg1, double jarg2, double jarg3) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        double arg2;
+        double arg3;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        arg2 = (double)jarg2;
+        arg3 = (double)jarg3;
+        (arg1)->Reset(arg2, arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        (arg1)->Read(arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read_CLNF(void * jarg1, void * jarg2) {
+        LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        (arg1)->Read_CLNF(arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_set(void * jarg1, int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->num_optimisation_iteration = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (int)((arg1)->num_optimisation_iteration);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->limit_pose = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->limit_pose);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->validate_detections = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->validate_detections);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_set(void * jarg1, double jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->validation_boundary = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (double)((arg1)->validation_boundary);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > arg2;
+        vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        argp2 = (vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->window_sizes_small = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = ((arg1)->window_sizes_small);
+        jresult = new vector< int >((const vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > arg2;
+        vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        argp2 = (vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->window_sizes_init = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = ((arg1)->window_sizes_init);
+        jresult = new vector< int >((const vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > arg2;
+        vector< int > *argp2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        argp2 = (vector< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->window_sizes_current = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        vector< int > result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = ((arg1)->window_sizes_current);
+        jresult = new vector< int >((const vector< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_set(void * jarg1, double jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->face_template_scale = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (double)((arg1)->face_template_scale);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->use_face_template = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->use_face_template);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->model_location = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_model_location_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        string result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = ((arg1)->model_location);
+        jresult = new string((const string &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_sigma_set(void * jarg1, double jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->sigma = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_sigma_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (double)((arg1)->sigma);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_set(void * jarg1, double jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->reg_factor = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (double)((arg1)->reg_factor);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_set(void * jarg1, double jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->weight_factor = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (double)((arg1)->weight_factor);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_multi_view_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->multi_view = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_multi_view_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->multi_view);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_set(void * jarg1, int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->reinit_video_every = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (int)((arg1)->reinit_video_every);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->face_detector_location = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        string result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = ((arg1)->face_detector_location);
+        jresult = new string((const string &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_set(void * jarg1, int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        LandmarkDetector::FaceModelParameters::FaceDetector arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = (LandmarkDetector::FaceModelParameters::FaceDetector)jarg2;
+        if (arg1) (arg1)->curr_face_detector = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        LandmarkDetector::FaceModelParameters::FaceDetector result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (LandmarkDetector::FaceModelParameters::FaceDetector) ((arg1)->curr_face_detector);
+        jresult = (int)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->quiet_mode = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->quiet_mode);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->refine_hierarchical = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->refine_hierarchical);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->refine_parameters = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->refine_parameters);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_set(void * jarg1, unsigned int jarg2) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool arg2;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        arg2 = jarg2 ? true : false;
+        if (arg1) (arg1)->track_gaze = arg2;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_get(void * jarg1) {
+        unsigned int jresult;
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+        bool result;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        result = (bool)((arg1)->track_gaze);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::FaceModelParameters *result = 0;
+
+        result = (LandmarkDetector::FaceModelParameters *)new LandmarkDetector::FaceModelParameters();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_1(void * jarg1) {
+        void * jresult;
+        vector< string > *arg1 = 0;
+        LandmarkDetector::FaceModelParameters *result = 0;
+
+        arg1 = (vector< string > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::FaceModelParameters *)new LandmarkDetector::FaceModelParameters(*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1) {
+        LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0;
+
+        arg1 = (LandmarkDetector::FaceModelParameters *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        vector< string > *arg1 = 0;
+        vector< string > *arg2 = 0;
+        vector< string > *arg3 = 0;
+        bool *arg4 = 0;
+        string *arg5 = 0;
+        vector< string > *arg6 = 0;
+
+        arg1 = (vector< string > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg2 = (vector< string > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg3 = (vector< string > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg4 = (bool *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "bool & type is null", 0);
+            return;
+        }
+        arg5 = (string *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "string & type is null", 0);
+            return;
+        }
+        arg6 = (vector< string > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        LandmarkDetector::get_video_input_output_params(*arg1, *arg2, *arg3, *arg4, *arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_get_camera_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        int *arg1 = 0;
+        float *arg2 = 0;
+        float *arg3 = 0;
+        float *arg4 = 0;
+        float *arg5 = 0;
+        vector< string > *arg6 = 0;
+
+        arg1 = (int *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "int & type is null", 0);
+            return;
+        }
+        arg2 = (float *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
+            return;
+        }
+        arg3 = (float *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
+            return;
+        }
+        arg4 = (float *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
+            return;
+        }
+        arg5 = (float *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "float & type is null", 0);
+            return;
+        }
+        arg6 = (vector< string > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        LandmarkDetector::get_camera_params(*arg1, *arg2, *arg3, *arg4, *arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_get_image_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        vector< string > *arg1 = 0;
+        vector< string > *arg2 = 0;
+        vector< string > *arg3 = 0;
+        vector< string > *arg4 = 0;
+        vector< cv::Rect_< double > > *arg5 = 0;
+        vector< string > *arg6 = 0;
+
+        arg1 = (vector< string > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg2 = (vector< string > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg3 = (vector< string > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg4 = (vector< string > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        arg5 = (vector< cv::Rect_< double > > *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
+            return;
+        }
+        arg6 = (vector< string > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< string > & type is null", 0);
+            return;
+        }
+        LandmarkDetector::get_image_input_output_params(*arg1, *arg2, *arg3, *arg4, *arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_matchTemplate_m(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, int jarg8) {
+        cv::Mat_< float > *arg1 = 0;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Mat *arg3 = 0;
+        cv::Mat *arg4 = 0;
+        cv::Mat_< float > *arg5 = 0;
+        map< int, cv::Mat_< double > > *arg6 = 0;
+        cv::Mat_< float > *arg7 = 0;
+        int arg8;
+
+        arg1 = (cv::Mat_< float > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        arg5 = (cv::Mat_< float > *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg6 = (map< int, cv::Mat_< double > > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "map< int,cv::Mat_< double > > & type is null", 0);
+            return;
+        }
+        arg7 = (cv::Mat_< float > *)jarg7;
+        if (!arg7) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg8 = (int)jarg8;
+        LandmarkDetector::matchTemplate_m((cv::Mat_< float > const &)*arg1, *arg2, *arg3, *arg4, (cv::Mat_< float > const &)*arg5, *arg6, *arg7, arg8);
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesKabsch2D(void * jarg1, void * jarg2) {
+        void * jresult;
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Matx22d result;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::AlignShapesKabsch2D((cv::Mat_< double > const &)*arg1, (cv::Mat_< double > const &)*arg2);
+        jresult = new cv::Matx22d((const cv::Matx22d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesWithScale(void * jarg1, void * jarg2) {
+        void * jresult;
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+        cv::Matx22d result;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return 0;
+        }
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return 0;
+        }
+        arg2 = *argp2;
+        result = LandmarkDetector::AlignShapesWithScale(*arg1, arg2);
+        jresult = new cv::Matx22d((const cv::Matx22d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Project(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6) {
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< double > *arg2 = 0;
+        double arg3;
+        double arg4;
+        double arg5;
+        double arg6;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return;
+        }
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        arg6 = (double)jarg6;
+        LandmarkDetector::Project(*arg1, (cv::Mat_< double > const &)*arg2, arg3, arg4, arg5, arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_0(void * jarg1, void * jarg2, void * jarg3, int jarg4, float jarg5, float jarg6, float jarg7, float jarg8) {
+        cv::Mat arg1;
+        cv::Vec6d arg2;
+        cv::Scalar arg3;
+        int arg4;
+        float arg5;
+        float arg6;
+        float arg7;
+        float arg8;
+        cv::Mat *argp1;
+        cv::Vec6d *argp2;
+        cv::Scalar *argp3;
+
+        argp1 = (cv::Mat *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg1 = *argp1;
+        argp2 = (cv::Vec6d *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
+            return;
+        }
+        arg2 = *argp2;
+        argp3 = (cv::Scalar *)jarg3;
+        if (!argp3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Scalar", 0);
+            return;
+        }
+        arg3 = *argp3;
+        arg4 = (int)jarg4;
+        arg5 = (float)jarg5;
+        arg6 = (float)jarg6;
+        arg7 = (float)jarg7;
+        arg8 = (float)jarg8;
+        LandmarkDetector::DrawBox(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateBox(void * jarg1, float jarg2, float jarg3, float jarg4, float jarg5) {
+        void * jresult;
+        cv::Vec6d arg1;
+        float arg2;
+        float arg3;
+        float arg4;
+        float arg5;
+        cv::Vec6d *argp1;
+        vector< std::pair< cv::Point2d, cv::Point2d > > result;
+
+        argp1 = (cv::Vec6d *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec6d", 0);
+            return 0;
+        }
+        arg1 = *argp1;
+        arg2 = (float)jarg2;
+        arg3 = (float)jarg3;
+        arg4 = (float)jarg4;
+        arg5 = (float)jarg5;
+        result = LandmarkDetector::CalculateBox(arg1, arg2, arg3, arg4, arg5);
+        jresult = new vector< std::pair< cv::Point2d, cv::Point2d > >((const vector< std::pair< cv::Point2d, cv::Point2d > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_1(void * jarg1, void * jarg2, void * jarg3, int jarg4) {
+        vector< pair< cv::Point, cv::Point > > arg1;
+        cv::Mat arg2;
+        cv::Scalar arg3;
+        int arg4;
+        vector< pair< cv::Point, cv::Point > > *argp1;
+        cv::Mat *argp2;
+        cv::Scalar *argp3;
+
+        argp1 = (vector< pair< cv::Point, cv::Point > > *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< pair< cv::Point,cv::Point > >", 0);
+            return;
+        }
+        arg1 = *argp1;
+        argp2 = (cv::Mat *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg2 = *argp2;
+        argp3 = (cv::Scalar *)jarg3;
+        if (!argp3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Scalar", 0);
+            return;
+        }
+        arg3 = *argp3;
+        arg4 = (int)jarg4;
+        LandmarkDetector::DrawBox(arg1, arg2, arg3, arg4);
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_0(void * jarg1, void * jarg2) {
+        void * jresult;
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< int > *arg2 = 0;
+        vector< cv::Point2d > result;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< int > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::CalculateLandmarks((cv::Mat_< double > const &)*arg1, *arg2);
+        jresult = new vector< cv::Point2d >((const vector< cv::Point2d > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::CLNF *arg1 = 0;
+        vector< cv::Point2d > result;
+
+        arg1 = (LandmarkDetector::CLNF *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::CalculateLandmarks(*arg1);
+        jresult = new vector< cv::Point2d >((const vector< cv::Point2d > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_DrawLandmarks(void * jarg1, void * jarg2) {
+        cv::Mat arg1;
+        vector< cv::Point > arg2;
+        cv::Mat *argp1;
+        vector< cv::Point > *argp2;
+
+        argp1 = (cv::Mat *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg1 = *argp1;
+        argp2 = (vector< cv::Point > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< cv::Point >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        LandmarkDetector::DrawLandmarks(arg1, arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+        cv::Mat arg1;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Mat_< int > *arg3 = 0;
+        cv::Mat *argp1;
+
+        argp1 = (cv::Mat *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg1 = *argp1;
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< int > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
+            return;
+        }
+        LandmarkDetector::Draw(arg1, (cv::Mat_< double > const &)*arg2, (cv::Mat_< int > const &)*arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_1(void * jarg1, void * jarg2) {
+        cv::Mat arg1;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Mat *argp1;
+
+        argp1 = (cv::Mat *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg1 = *argp1;
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        LandmarkDetector::Draw(arg1, (cv::Mat_< double > const &)*arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_2(void * jarg1, void * jarg2) {
+        cv::Mat arg1;
+        LandmarkDetector::CLNF *arg2 = 0;
+        cv::Mat *argp1;
+
+        argp1 = (cv::Mat *)jarg1;
+        if (!argp1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat", 0);
+            return;
+        }
+        arg1 = *argp1;
+        arg2 = (LandmarkDetector::CLNF *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::CLNF const & type is null", 0);
+            return;
+        }
+        LandmarkDetector::Draw(arg1, (LandmarkDetector::CLNF const &)*arg2);
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2RotationMatrix(void * jarg1) {
+        void * jresult;
+        cv::Vec3d *arg1 = 0;
+        cv::Matx33d result;
+
+        arg1 = (cv::Vec3d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::Euler2RotationMatrix((cv::Vec3d const &)*arg1);
+        jresult = new cv::Matx33d((const cv::Matx33d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2Euler(void * jarg1) {
+        void * jresult;
+        cv::Matx33d *arg1 = 0;
+        cv::Vec3d result;
+
+        arg1 = (cv::Matx33d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx33d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::RotationMatrix2Euler((cv::Matx33d const &)*arg1);
+        jresult = new cv::Vec3d((const cv::Vec3d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2AxisAngle(void * jarg1) {
+        void * jresult;
+        cv::Vec3d *arg1 = 0;
+        cv::Vec3d result;
+
+        arg1 = (cv::Vec3d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::Euler2AxisAngle((cv::Vec3d const &)*arg1);
+        jresult = new cv::Vec3d((const cv::Vec3d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2Euler(void * jarg1) {
+        void * jresult;
+        cv::Vec3d *arg1 = 0;
+        cv::Vec3d result;
+
+        arg1 = (cv::Vec3d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::AxisAngle2Euler((cv::Vec3d const &)*arg1);
+        jresult = new cv::Vec3d((const cv::Vec3d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2RotationMatrix(void * jarg1) {
+        void * jresult;
+        cv::Vec3d *arg1 = 0;
+        cv::Matx33d result;
+
+        arg1 = (cv::Vec3d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec3d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::AxisAngle2RotationMatrix((cv::Vec3d const &)*arg1);
+        jresult = new cv::Matx33d((const cv::Matx33d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2AxisAngle(void * jarg1) {
+        void * jresult;
+        cv::Matx33d *arg1 = 0;
+        cv::Vec3d result;
+
+        arg1 = (cv::Matx33d *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx33d const & type is null", 0);
+            return 0;
+        }
+        result = LandmarkDetector::RotationMatrix2AxisAngle((cv::Matx33d const &)*arg1);
+        jresult = new cv::Vec3d((const cv::Vec3d &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_0(void * jarg1, void * jarg2) {
+        unsigned int jresult;
+        vector< cv::Rect_< double > > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        bool result;
+
+        arg1 = (vector< cv::Rect_< double > > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectFaces(*arg1, (cv::Mat_< uchar > const &)*arg2);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_1(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        vector< cv::Rect_< double > > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        cv::CascadeClassifier *arg3 = 0;
+        bool result;
+
+        arg1 = (vector< cv::Rect_< double > > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (cv::CascadeClassifier *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectFaces(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        unsigned int jresult;
+        cv::Rect_< double > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        cv::CascadeClassifier *arg3 = 0;
+        cv::Point arg4;
+        cv::Point const *argp4;
+        bool result;
+
+        arg1 = (cv::Rect_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (cv::CascadeClassifier *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
+            return 0;
+        }
+        argp4 = (cv::Point *)jarg4;
+        if (!argp4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point const", 0);
+            return 0;
+        }
+        arg4 = *argp4;
+        result = (bool)LandmarkDetector::DetectSingleFace(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3, arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_1(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        cv::Rect_< double > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        cv::CascadeClassifier *arg3 = 0;
+        bool result;
+
+        arg1 = (cv::Rect_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (cv::CascadeClassifier *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::CascadeClassifier & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectSingleFace(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+        unsigned int jresult;
+        vector< cv::Rect_< double > > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        std::vector< double > *arg3 = 0;
+        bool result;
+
+        arg1 = (vector< cv::Rect_< double > > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (std::vector< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectFacesHOG(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        unsigned int jresult;
+        vector< cv::Rect_< double > > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        dlib::frontal_face_detector *arg3 = 0;
+        std::vector< double > *arg4 = 0;
+        bool result;
+
+        arg1 = (vector< cv::Rect_< double > > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Rect_< double > > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (dlib::frontal_face_detector *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
+            return 0;
+        }
+        arg4 = (std::vector< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectFacesHOG(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3, *arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+        unsigned int jresult;
+        cv::Rect_< double > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        dlib::frontal_face_detector *arg3 = 0;
+        double *arg4 = 0;
+        cv::Point arg5;
+        cv::Point const *argp5;
+        bool result;
+
+        arg1 = (cv::Rect_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (dlib::frontal_face_detector *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
+            return 0;
+        }
+        arg4 = (double *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "double & type is null", 0);
+            return 0;
+        }
+        argp5 = (cv::Point *)jarg5;
+        if (!argp5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Point const", 0);
+            return 0;
+        }
+        arg5 = *argp5;
+        result = (bool)LandmarkDetector::DetectSingleFaceHOG(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3, *arg4, arg5);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        unsigned int jresult;
+        cv::Rect_< double > *arg1 = 0;
+        cv::Mat_< uchar > *arg2 = 0;
+        dlib::frontal_face_detector *arg3 = 0;
+        double *arg4 = 0;
+        bool result;
+
+        arg1 = (cv::Rect_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< uchar > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (dlib::frontal_face_detector *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "dlib::frontal_face_detector & type is null", 0);
+            return 0;
+        }
+        arg4 = (double *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "double & type is null", 0);
+            return 0;
+        }
+        result = (bool)LandmarkDetector::DetectSingleFaceHOG(*arg1, (cv::Mat_< uchar > const &)*arg2, *arg3, *arg4);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_ReadMatBin(void * jarg1, void * jarg2) {
+        std::ifstream *arg1 = 0;
+        cv::Mat *arg2 = 0;
+
+        arg1 = (std::ifstream *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        arg2 = (cv::Mat *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        LandmarkDetector::ReadMatBin(*arg1, *arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_ReadMat(void * jarg1, void * jarg2) {
+        std::ifstream *arg1 = 0;
+        cv::Mat *arg2 = 0;
+
+        arg1 = (std::ifstream *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        arg2 = (cv::Mat *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        LandmarkDetector::ReadMat(*arg1, *arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SkipComments(void * jarg1) {
+        std::ifstream *arg1 = 0;
+
+        arg1 = (std::ifstream *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        LandmarkDetector::SkipComments(*arg1);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< vector< Multi_SVR_patch_expert > > > arg2;
+        vector< vector< vector< Multi_SVR_patch_expert > > > *argp2;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< vector< vector< Multi_SVR_patch_expert > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< vector< Multi_SVR_patch_expert > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->svr_expert_intensity = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< vector< Multi_SVR_patch_expert > > > result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = ((arg1)->svr_expert_intensity);
+        jresult = new vector< vector< vector< Multi_SVR_patch_expert > > >((const vector< vector< vector< Multi_SVR_patch_expert > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *arg2 = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *) 0;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        arg2 = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *)jarg2;
+        if (arg1) (arg1)->ccnf_expert_intensity = *arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *result = 0;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = (vector< vector< vector< LandmarkDetector::CCNF_patch_expert > > > *)& ((arg1)->ccnf_expert_intensity);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_sigma_components_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Mat_< float > > > arg2;
+        vector< vector< cv::Mat_< float > > > *argp2;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< vector< cv::Mat_< float > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< float > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->sigma_components = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_sigma_components_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Mat_< float > > > result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = ((arg1)->sigma_components);
+        jresult = new vector< vector< cv::Mat_< float > > >((const vector< vector< cv::Mat_< float > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_patch_scaling_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< double > arg2;
+        vector< double > *argp2;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->patch_scaling = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_patch_scaling_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< double > result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = ((arg1)->patch_scaling);
+        jresult = new vector< double >((const vector< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_centers_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Vec3d > > arg2;
+        vector< vector< cv::Vec3d > > *argp2;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< vector< cv::Vec3d > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Vec3d > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->centers = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_centers_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Vec3d > > result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = ((arg1)->centers);
+        jresult = new vector< vector< cv::Vec3d > >((const vector< vector< cv::Vec3d > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_visibilities_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Mat_< int > > > arg2;
+        vector< vector< cv::Mat_< int > > > *argp2;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< vector< cv::Mat_< int > > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< vector< cv::Mat_< int > > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->visibilities = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_visibilities_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< vector< cv::Mat_< int > > > result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = ((arg1)->visibilities);
+        jresult = new vector< vector< cv::Mat_< int > > >((const vector< vector< cv::Mat_< int > > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::Patch_experts *result = 0;
+
+        result = (LandmarkDetector::Patch_experts *)new LandmarkDetector::Patch_experts();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Patch_experts *arg1 = 0;
+        LandmarkDetector::Patch_experts *result = 0;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::Patch_experts const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::Patch_experts *)new LandmarkDetector::Patch_experts((LandmarkDetector::Patch_experts const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, int jarg9, int jarg10) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< cv::Mat_< float > > *arg2 = 0;
+        cv::Matx22f *arg3 = 0;
+        cv::Matx22d *arg4 = 0;
+        cv::Mat_< uchar > *arg5 = 0;
+        PDM *arg6 = 0;
+        cv::Vec6d *arg7 = 0;
+        cv::Mat_< double > *arg8 = 0;
+        int arg9;
+        int arg10;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        arg2 = (vector< cv::Mat_< float > > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "vector< cv::Mat_< float > > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Matx22f *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx22f & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Matx22d *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Matx22d & type is null", 0);
+            return;
+        }
+        arg5 = (cv::Mat_< uchar > *)jarg5;
+        if (!arg5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< uchar > const & type is null", 0);
+            return;
+        }
+        arg6 = (PDM *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "PDM const & type is null", 0);
+            return;
+        }
+        arg7 = (cv::Vec6d *)jarg7;
+        if (!arg7) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return;
+        }
+        arg8 = (cv::Mat_< double > *)jarg8;
+        if (!arg8) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg9 = (int)jarg9;
+        arg10 = (int)jarg10;
+        (arg1)->Response(*arg2, *arg3, *arg4, (cv::Mat_< uchar > const &)*arg5, (PDM const &)*arg6, (cv::Vec6d const &)*arg7, (cv::Mat_< double > const &)*arg8, arg9, arg10);
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_GetViewIdx(void * jarg1, void * jarg2, int jarg3) {
+        int jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        cv::Vec6d *arg2 = 0;
+        int arg3;
+        int result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        arg2 = (cv::Vec6d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return 0;
+        }
+        arg3 = (int)jarg3;
+        result = (int)((LandmarkDetector::Patch_experts const *)arg1)->GetViewIdx((cv::Vec6d const &)*arg2, arg3);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_0(void * jarg1, unsigned long jarg2) {
+        int jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        size_t arg2;
+        int result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        arg2 = (size_t)jarg2;
+        result = (int)((LandmarkDetector::Patch_experts const *)arg1)->nViews(arg2);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_1(void * jarg1) {
+        int jresult;
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        result = (int)((LandmarkDetector::Patch_experts const *)arg1)->nViews();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Read(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+        vector< string > arg2;
+        vector< string > arg3;
+        vector< string > *argp2;
+        vector< string > *argp3;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        argp2 = (vector< string > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        argp3 = (vector< string > *)jarg3;
+        if (!argp3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null vector< string >", 0);
+            return;
+        }
+        arg3 = *argp3;
+        (arg1)->Read(arg2, arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_Patch_experts(void * jarg1) {
+        LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0;
+
+        arg1 = (LandmarkDetector::Patch_experts *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_number_of_pixels_set(void * jarg1, int jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->number_of_pixels = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PAW_number_of_pixels_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (int)((arg1)->number_of_pixels);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_min_x_set(void * jarg1, double jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->min_x = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_PAW_min_x_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (double)((arg1)->min_x);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_min_y_set(void * jarg1, double jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->min_y = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_PAW_min_y_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (double)((arg1)->min_y);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_destination_landmarks_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->destination_landmarks = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_destination_landmarks_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->destination_landmarks);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_source_landmarks_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->source_landmarks = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_source_landmarks_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->source_landmarks);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_triangulation_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< int > arg2;
+        cv::Mat_< int > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->triangulation = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_triangulation_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< int > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->triangulation);
+        jresult = new cv::Mat_< int >((const cv::Mat_< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_triangle_id_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< int > arg2;
+        cv::Mat_< int > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< int > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< int >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->triangle_id = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_triangle_id_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< int > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->triangle_id);
+        jresult = new cv::Mat_< int >((const cv::Mat_< int > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_pixel_mask_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< uchar > arg2;
+        cv::Mat_< uchar > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< uchar > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< uchar >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->pixel_mask = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_pixel_mask_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< uchar > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->pixel_mask);
+        jresult = new cv::Mat_< uchar >((const cv::Mat_< uchar > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_coefficients_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->coefficients = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_coefficients_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->coefficients);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_alpha_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->alpha = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_alpha_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->alpha);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_beta_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->beta = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_beta_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->beta);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_map_x_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< float > arg2;
+        cv::Mat_< float > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< float > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->map_x = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_map_x_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< float > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->map_x);
+        jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_map_y_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< float > arg2;
+        cv::Mat_< float > *argp2;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        argp2 = (cv::Mat_< float > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->map_y = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PAW_map_y_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< float > result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = ((arg1)->map_y);
+        jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::PAW *result = 0;
+
+        result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_1(void * jarg1, void * jarg2) {
+        void * jresult;
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< int > *arg2 = 0;
+        LandmarkDetector::PAW *result = 0;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< int > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((cv::Mat_< double > const &)*arg1, (cv::Mat_< int > const &)*arg2);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_2(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6) {
+        void * jresult;
+        cv::Mat_< double > *arg1 = 0;
+        cv::Mat_< int > *arg2 = 0;
+        double arg3;
+        double arg4;
+        double arg5;
+        double arg6;
+        LandmarkDetector::PAW *result = 0;
+
+        arg1 = (cv::Mat_< double > *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return 0;
+        }
+        arg2 = (cv::Mat_< int > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
+            return 0;
+        }
+        arg3 = (double)jarg3;
+        arg4 = (double)jarg4;
+        arg5 = (double)jarg5;
+        arg6 = (double)jarg6;
+        result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((cv::Mat_< double > const &)*arg1, (cv::Mat_< int > const &)*arg2, arg3, arg4, arg5, arg6);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PAW__SWIG_3(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PAW *arg1 = 0;
+        LandmarkDetector::PAW *result = 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::PAW const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::PAW *)new LandmarkDetector::PAW((LandmarkDetector::PAW const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        std::ifstream *arg2 = 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (std::ifstream *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        (arg1)->Read(*arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_Warp(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat *arg2 = 0;
+        cv::Mat *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (cv::Mat *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        (arg1)->Warp((cv::Mat const &)*arg2, *arg3, (cv::Mat_< double > const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_CalcCoeff(void * jarg1) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        (arg1)->CalcCoeff();
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PAW_WarpRegion(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->WarpRegion(*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PAW_NumberOfLandmarks(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (int)((LandmarkDetector::PAW const *)arg1)->NumberOfLandmarks();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PAW_NumberOfTriangles(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (int)((LandmarkDetector::PAW const *)arg1)->NumberOfTriangles();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PAW_constWidth(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (int)((LandmarkDetector::PAW const *)arg1)->constWidth();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PAW_Height(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        result = (int)((LandmarkDetector::PAW const *)arg1)->Height();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_PAW(void * jarg1) {
+        LandmarkDetector::PAW *arg1 = (LandmarkDetector::PAW *) 0;
+
+        arg1 = (LandmarkDetector::PAW *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_mean_shape_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->mean_shape = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_mean_shape_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        result = ((arg1)->mean_shape);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_princ_comp_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->princ_comp = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_princ_comp_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        result = ((arg1)->princ_comp);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_eigen_values_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > arg2;
+        cv::Mat_< double > *argp2;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        argp2 = (cv::Mat_< double > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< double >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->eigen_values = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_eigen_values_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > result;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        result = ((arg1)->eigen_values);
+        jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::PDM *result = 0;
+
+        result = (LandmarkDetector::PDM *)new LandmarkDetector::PDM();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::PDM *arg1 = 0;
+        LandmarkDetector::PDM *result = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::PDM const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::PDM *)new LandmarkDetector::PDM((LandmarkDetector::PDM const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        string arg2;
+        string *argp2;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        argp2 = (string *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null string", 0);
+            return;
+        }
+        arg2 = *argp2;
+        (arg1)->Read(arg2);
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfPoints(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        result = (int)((LandmarkDetector::PDM const *)arg1)->NumberOfPoints();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfModes(void * jarg1) {
+        int jresult;
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        result = (int)((LandmarkDetector::PDM const *)arg1)->NumberOfModes();
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Clamp(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Vec6d *arg3 = 0;
+        LandmarkDetector::FaceModelParameters *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Vec6d *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        arg4 = (LandmarkDetector::FaceModelParameters *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::FaceModelParameters const & type is null", 0);
+            return;
+        }
+        (arg1)->Clamp(*arg2, *arg3, (LandmarkDetector::FaceModelParameters const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape3D(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Mat_< double > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        ((LandmarkDetector::PDM const *)arg1)->CalcShape3D(*arg2, (cv::Mat_< double > const &)*arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape2D(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< double > *arg2 = 0;
+        cv::Mat_< double > *arg3 = 0;
+        cv::Vec6d *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< double > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Vec6d *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return;
+        }
+        ((LandmarkDetector::PDM const *)arg1)->CalcShape2D(*arg2, (cv::Mat_< double > const &)*arg3, (cv::Vec6d const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Vec6d *arg2 = 0;
+        cv::Rect_< double > *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+        cv::Vec3d arg5;
+        cv::Vec3d const *argp5;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Vec6d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Rect_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        argp5 = (cv::Vec3d *)jarg5;
+        if (!argp5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec3d const", 0);
+            return;
+        }
+        arg5 = *argp5;
+        (arg1)->CalcParams(*arg2, (cv::Rect_< double > const &)*arg3, (cv::Mat_< double > const &)*arg4, arg5);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Vec6d *arg2 = 0;
+        cv::Rect_< double > *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Vec6d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Rect_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect_< double > const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        (arg1)->CalcParams(*arg2, (cv::Rect_< double > const &)*arg3, (cv::Mat_< double > const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Vec6d *arg2 = 0;
+        cv::Mat_< double > *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+        cv::Vec3d arg5;
+        cv::Vec3d const *argp5;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Vec6d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        argp5 = (cv::Vec3d *)jarg5;
+        if (!argp5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Vec3d const", 0);
+            return;
+        }
+        arg5 = *argp5;
+        (arg1)->CalcParams(*arg2, (cv::Mat_< double > const &)*arg3, (cv::Mat_< double > const &)*arg4, arg5);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Vec6d *arg2 = 0;
+        cv::Mat_< double > *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Vec6d *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< double > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        (arg1)->CalcParams(*arg2, (cv::Mat_< double > const &)*arg3, (cv::Mat_< double > const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcBoundingBox(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Rect *arg2 = 0;
+        cv::Vec6d *arg3 = 0;
+        cv::Mat_< double > *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Rect *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Rect & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Vec6d *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< double > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
+            return;
+        }
+        (arg1)->CalcBoundingBox(*arg2, (cv::Vec6d const &)*arg3, (cv::Mat_< double > const &)*arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeRigidJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Vec6d *arg3 = 0;
+        cv::Mat_< float > *arg4 = 0;
+        cv::Mat_< float > arg5;
+        cv::Mat_< float > *arg6 = 0;
+        cv::Mat_< float > const *argp5;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Vec6d *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< float > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        argp5 = (cv::Mat_< float > *)jarg5;
+        if (!argp5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float > const", 0);
+            return;
+        }
+        arg5 = *argp5;
+        arg6 = (cv::Mat_< float > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->ComputeRigidJacobian((cv::Mat_< float > const &)*arg2, (cv::Vec6d const &)*arg3, *arg4, arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Vec6d *arg3 = 0;
+        cv::Mat_< float > *arg4 = 0;
+        cv::Mat_< float > arg5;
+        cv::Mat_< float > *arg6 = 0;
+        cv::Mat_< float > const *argp5;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Vec6d *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d const & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Mat_< float > *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        argp5 = (cv::Mat_< float > *)jarg5;
+        if (!argp5) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float > const", 0);
+            return;
+        }
+        arg5 = *argp5;
+        arg6 = (cv::Mat_< float > *)jarg6;
+        if (!arg6) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->ComputeJacobian((cv::Mat_< float > const &)*arg2, (cv::Vec6d const &)*arg3, *arg4, arg5, *arg6);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_PDM_UpdateModelParameters(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+        cv::Vec6d *arg4 = 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        arg4 = (cv::Vec6d *)jarg4;
+        if (!arg4) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Vec6d & type is null", 0);
+            return;
+        }
+        (arg1)->UpdateModelParameters((cv::Mat_< float > const &)*arg2, *arg3, *arg4);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_PDM(void * jarg1) {
+        LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0;
+
+        arg1 = (LandmarkDetector::PDM *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_type_set(void * jarg1, int jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->type = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_SVR_patch_expert_type_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = (int)((arg1)->type);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_scaling_set(void * jarg1, double jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->scaling = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_scaling_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = (double)((arg1)->scaling);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_bias_set(void * jarg1, double jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->bias = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_bias_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = (double)((arg1)->bias);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        cv::Mat_< float > arg2;
+        cv::Mat_< float > *argp2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        argp2 = (cv::Mat_< float > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null cv::Mat_< float >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->weights = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        cv::Mat_< float > result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = ((arg1)->weights);
+        jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        std::map< int, cv::Mat_< double > > arg2;
+        std::map< int, cv::Mat_< double > > *argp2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        argp2 = (std::map< int, cv::Mat_< double > > *)jarg2;
+        if (!argp2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< int,cv::Mat_< double > >", 0);
+            return;
+        }
+        arg2 = *argp2;
+        if (arg1) (arg1)->weights_dfts = arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        std::map< int, cv::Mat_< double > > result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = ((arg1)->weights_dfts);
+        jresult = new std::map< int, cv::Mat_< double > >((const std::map< int, cv::Mat_< double > > &)result);
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_confidence_set(void * jarg1, double jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double arg2;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (double)jarg2;
+        if (arg1) (arg1)->confidence = arg2;
+    }
+
+
+    SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_confidence_get(void * jarg1) {
+        double jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        double result;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        result = (double)((arg1)->confidence);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::SVR_patch_expert *result = 0;
+
+        result = (LandmarkDetector::SVR_patch_expert *)new LandmarkDetector::SVR_patch_expert();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::SVR_patch_expert *arg1 = 0;
+        LandmarkDetector::SVR_patch_expert *result = 0;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::SVR_patch_expert const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::SVR_patch_expert *)new LandmarkDetector::SVR_patch_expert((LandmarkDetector::SVR_patch_expert const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        std::ifstream *arg2 = 0;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (std::ifstream *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        (arg1)->Read(*arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->Response((cv::Mat_< float > const &)*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->ResponseDepth((cv::Mat_< float > const &)*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_SVR_patch_expert(void * jarg1) {
+        LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0;
+
+        arg1 = (LandmarkDetector::SVR_patch_expert *)jarg1;
+        delete arg1;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_set(void * jarg1, int jarg2) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->width = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        result = (int)((arg1)->width);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_set(void * jarg1, int jarg2) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        int arg2;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (int)jarg2;
+        if (arg1) (arg1)->height = arg2;
+    }
+
+
+    SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_get(void * jarg1) {
+        int jresult;
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        int result;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        result = (int)((arg1)->height);
+        jresult = result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_set(void * jarg1, void * jarg2) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        std::vector< LandmarkDetector::SVR_patch_expert > *arg2 = (std::vector< LandmarkDetector::SVR_patch_expert > *) 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (std::vector< LandmarkDetector::SVR_patch_expert > *)jarg2;
+        if (arg1) (arg1)->svr_patch_experts = *arg2;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_get(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        std::vector< LandmarkDetector::SVR_patch_expert > *result = 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        result = (std::vector< LandmarkDetector::SVR_patch_expert > *)& ((arg1)->svr_patch_experts);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_0() {
+        void * jresult;
+        LandmarkDetector::Multi_SVR_patch_expert *result = 0;
+
+        result = (LandmarkDetector::Multi_SVR_patch_expert *)new LandmarkDetector::Multi_SVR_patch_expert();
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_1(void * jarg1) {
+        void * jresult;
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = 0;
+        LandmarkDetector::Multi_SVR_patch_expert *result = 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        if (!arg1) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "LandmarkDetector::Multi_SVR_patch_expert const & type is null", 0);
+            return 0;
+        }
+        result = (LandmarkDetector::Multi_SVR_patch_expert *)new LandmarkDetector::Multi_SVR_patch_expert((LandmarkDetector::Multi_SVR_patch_expert const &)*arg1);
+        jresult = (void *)result;
+        return jresult;
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Read(void * jarg1, void * jarg2) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        std::ifstream *arg2 = 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (std::ifstream *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ifstream & type is null", 0);
+            return;
+        }
+        (arg1)->Read(*arg2);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->Response((cv::Mat_< float > const &)*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+        cv::Mat_< float > *arg2 = 0;
+        cv::Mat_< float > *arg3 = 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        arg2 = (cv::Mat_< float > *)jarg2;
+        if (!arg2) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
+            return;
+        }
+        arg3 = (cv::Mat_< float > *)jarg3;
+        if (!arg3) {
+            SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > & type is null", 0);
+            return;
+        }
+        (arg1)->ResponseDepth((cv::Mat_< float > const &)*arg2, *arg3);
+    }
+
+
+    SWIGEXPORT void SWIGSTDCALL CSharp_delete_Multi_SVR_patch_expert(void * jarg1) {
+        LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0;
+
+        arg1 = (LandmarkDetector::Multi_SVR_patch_expert *)jarg1;
+        delete arg1;
+    }
 
 
 #ifdef __cplusplus
