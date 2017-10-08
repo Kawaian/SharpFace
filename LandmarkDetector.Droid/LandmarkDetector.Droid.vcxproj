@@ -62,6 +62,11 @@
     <ClCompile Include="src\stdafx.cpp" />
     <ClCompile Include="src\SVR_patch_expert.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="external\dlib\dlib.Droid.vcxproj">
+      <Project>{0b3816ac-cb04-44d7-83cf-5f0e438de302}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{470bd53a-6967-40af-b88e-9ac2a56828b4}</ProjectGuid>
     <Keyword>Android</Keyword>

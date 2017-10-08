@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{DE3759A2-7441-4C30-8B56-020ABA09EF1C}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LandmarkDetector.Droid", "LandmarkDetector.Droid\LandmarkDetector.Droid.vcxproj", "{470BD53A-6967-40AF-B88E-9AC2A56828B4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlib.Windows", "LandmarkDetector.Windows\external\dlib\dlib.Windows.vcxproj", "{B47A5F12-2567-44E9-AE49-35763EC82149}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlib.Droid", "LandmarkDetector.Droid\external\dlib\dlib.Droid.vcxproj", "{0B3816AC-CB04-44D7-83CF-5F0E438DE302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,24 @@ Global
 		{B47A5F12-2567-44E9-AE49-35763EC82149}.Release|x64.Build.0 = Release|x64
 		{B47A5F12-2567-44E9-AE49-35763EC82149}.Release|x86.ActiveCfg = Release|Win32
 		{B47A5F12-2567-44E9-AE49-35763EC82149}.Release|x86.Build.0 = Release|Win32
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|ARM.Build.0 = Debug|ARM
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|ARM64.Build.0 = Debug|ARM64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|x64.ActiveCfg = Debug|x64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|x64.Build.0 = Debug|x64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|x86.ActiveCfg = Debug|x86
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Debug|x86.Build.0 = Debug|x86
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|Any CPU.ActiveCfg = Release|x86
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|ARM.ActiveCfg = Release|ARM
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|ARM.Build.0 = Release|ARM
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|ARM64.ActiveCfg = Release|ARM64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|ARM64.Build.0 = Release|ARM64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|x64.ActiveCfg = Release|x64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|x64.Build.0 = Release|x64
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|x86.ActiveCfg = Release|x86
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +180,7 @@ Global
 		{7A473BF1-AE5D-47FF-878E-E49112561CA3} = {981A6663-3ACC-4F76-A230-AFF4D98EC79D}
 		{470BD53A-6967-40AF-B88E-9AC2A56828B4} = {5EFD9769-F126-4EAE-A361-BA992D2C69EF}
 		{B47A5F12-2567-44E9-AE49-35763EC82149} = {C91E7A4E-965F-4031-9D6C-5A2BFEB0887A}
+		{0B3816AC-CB04-44D7-83CF-5F0E438DE302} = {5EFD9769-F126-4EAE-A361-BA992D2C69EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68E571A3-7DD3-4CF8-99AE-D7BA19E9F407}
