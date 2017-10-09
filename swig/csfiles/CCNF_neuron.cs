@@ -81,14 +81,13 @@ public class CCNF_neuron : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_t weights_dfts {
+  public SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t weights_dfts {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t.getCPtr(value));
     } 
     get {
-      SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_t ret = new SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_t(LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr);
+      SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t(cPtr, false);
       return ret;
     } 
   }

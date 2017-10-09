@@ -1696,71 +1696,71 @@ class LaandmrkDetectorPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_CVPoint2D_Pair_List")]
   public static extern void delete_CVPoint2D_Pair_List(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Clear")]
-  public static extern void CVRectDouble_List_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Clear")]
+  public static extern void CVDoubleRect_List_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Add")]
-  public static extern void CVRectDouble_List_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Add")]
+  public static extern void CVDoubleRect_List_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_size")]
-  public static extern uint CVRectDouble_List_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_size")]
+  public static extern uint CVDoubleRect_List_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_capacity")]
-  public static extern uint CVRectDouble_List_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_capacity")]
+  public static extern uint CVDoubleRect_List_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_reserve")]
-  public static extern void CVRectDouble_List_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_reserve")]
+  public static extern void CVDoubleRect_List_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVRectDouble_List__SWIG_0")]
-  public static extern global::System.IntPtr new_CVRectDouble_List__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVDoubleRect_List__SWIG_0")]
+  public static extern global::System.IntPtr new_CVDoubleRect_List__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVRectDouble_List__SWIG_1")]
-  public static extern global::System.IntPtr new_CVRectDouble_List__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVDoubleRect_List__SWIG_1")]
+  public static extern global::System.IntPtr new_CVDoubleRect_List__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVRectDouble_List__SWIG_2")]
-  public static extern global::System.IntPtr new_CVRectDouble_List__SWIG_2(int jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_CVDoubleRect_List__SWIG_2")]
+  public static extern global::System.IntPtr new_CVDoubleRect_List__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_getitemcopy")]
-  public static extern global::System.IntPtr CVRectDouble_List_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_getitemcopy")]
+  public static extern global::System.IntPtr CVDoubleRect_List_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_getitem")]
-  public static extern global::System.IntPtr CVRectDouble_List_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_getitem")]
+  public static extern global::System.IntPtr CVDoubleRect_List_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_setitem")]
-  public static extern void CVRectDouble_List_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_setitem")]
+  public static extern void CVDoubleRect_List_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_AddRange")]
-  public static extern void CVRectDouble_List_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_AddRange")]
+  public static extern void CVDoubleRect_List_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_GetRange")]
-  public static extern global::System.IntPtr CVRectDouble_List_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_GetRange")]
+  public static extern global::System.IntPtr CVDoubleRect_List_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Insert")]
-  public static extern void CVRectDouble_List_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Insert")]
+  public static extern void CVDoubleRect_List_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_InsertRange")]
-  public static extern void CVRectDouble_List_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_InsertRange")]
+  public static extern void CVDoubleRect_List_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_RemoveAt")]
-  public static extern void CVRectDouble_List_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_RemoveAt")]
+  public static extern void CVDoubleRect_List_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_RemoveRange")]
-  public static extern void CVRectDouble_List_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_RemoveRange")]
+  public static extern void CVDoubleRect_List_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Repeat")]
-  public static extern global::System.IntPtr CVRectDouble_List_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Repeat")]
+  public static extern global::System.IntPtr CVDoubleRect_List_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Reverse__SWIG_0")]
-  public static extern void CVRectDouble_List_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Reverse__SWIG_0")]
+  public static extern void CVDoubleRect_List_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_Reverse__SWIG_1")]
-  public static extern void CVRectDouble_List_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_Reverse__SWIG_1")]
+  public static extern void CVDoubleRect_List_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVRectDouble_List_SetRange")]
-  public static extern void CVRectDouble_List_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_CVDoubleRect_List_SetRange")]
+  public static extern void CVDoubleRect_List_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_CVRectDouble_List")]
-  public static extern void delete_CVRectDouble_List(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_CVDoubleRect_List")]
+  public static extern void delete_CVDoubleRect_List(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_List2N_Clear")]
   public static extern void Int_List2N_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1893,4 +1893,526 @@ class LaandmrkDetectorPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_Float_List2N")]
   public static extern void delete_Float_List2N(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Clear")]
+  public static extern void FloatMat_List_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Add")]
+  public static extern void FloatMat_List_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_size")]
+  public static extern uint FloatMat_List_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_capacity")]
+  public static extern uint FloatMat_List_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_reserve")]
+  public static extern void FloatMat_List_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List__SWIG_0")]
+  public static extern global::System.IntPtr new_FloatMat_List__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List__SWIG_1")]
+  public static extern global::System.IntPtr new_FloatMat_List__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List__SWIG_2")]
+  public static extern global::System.IntPtr new_FloatMat_List__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_getitemcopy")]
+  public static extern global::System.IntPtr FloatMat_List_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_getitem")]
+  public static extern global::System.IntPtr FloatMat_List_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_setitem")]
+  public static extern void FloatMat_List_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_AddRange")]
+  public static extern void FloatMat_List_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_GetRange")]
+  public static extern global::System.IntPtr FloatMat_List_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Insert")]
+  public static extern void FloatMat_List_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_InsertRange")]
+  public static extern void FloatMat_List_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_RemoveAt")]
+  public static extern void FloatMat_List_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_RemoveRange")]
+  public static extern void FloatMat_List_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Repeat")]
+  public static extern global::System.IntPtr FloatMat_List_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Reverse__SWIG_0")]
+  public static extern void FloatMat_List_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_Reverse__SWIG_1")]
+  public static extern void FloatMat_List_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List_SetRange")]
+  public static extern void FloatMat_List_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_FloatMat_List")]
+  public static extern void delete_FloatMat_List(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Clear")]
+  public static extern void DoubleMat_List_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Add")]
+  public static extern void DoubleMat_List_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_size")]
+  public static extern uint DoubleMat_List_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_capacity")]
+  public static extern uint DoubleMat_List_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_reserve")]
+  public static extern void DoubleMat_List_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List__SWIG_0")]
+  public static extern global::System.IntPtr new_DoubleMat_List__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List__SWIG_1")]
+  public static extern global::System.IntPtr new_DoubleMat_List__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List__SWIG_2")]
+  public static extern global::System.IntPtr new_DoubleMat_List__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_getitemcopy")]
+  public static extern global::System.IntPtr DoubleMat_List_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_getitem")]
+  public static extern global::System.IntPtr DoubleMat_List_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_setitem")]
+  public static extern void DoubleMat_List_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_AddRange")]
+  public static extern void DoubleMat_List_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_GetRange")]
+  public static extern global::System.IntPtr DoubleMat_List_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Insert")]
+  public static extern void DoubleMat_List_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_InsertRange")]
+  public static extern void DoubleMat_List_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_RemoveAt")]
+  public static extern void DoubleMat_List_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_RemoveRange")]
+  public static extern void DoubleMat_List_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Repeat")]
+  public static extern global::System.IntPtr DoubleMat_List_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Reverse__SWIG_0")]
+  public static extern void DoubleMat_List_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_Reverse__SWIG_1")]
+  public static extern void DoubleMat_List_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List_SetRange")]
+  public static extern void DoubleMat_List_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_DoubleMat_List")]
+  public static extern void delete_DoubleMat_List(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Clear")]
+  public static extern void IntMat_List_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Add")]
+  public static extern void IntMat_List_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_size")]
+  public static extern uint IntMat_List_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_capacity")]
+  public static extern uint IntMat_List_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_reserve")]
+  public static extern void IntMat_List_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List__SWIG_0")]
+  public static extern global::System.IntPtr new_IntMat_List__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List__SWIG_1")]
+  public static extern global::System.IntPtr new_IntMat_List__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List__SWIG_2")]
+  public static extern global::System.IntPtr new_IntMat_List__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_getitemcopy")]
+  public static extern global::System.IntPtr IntMat_List_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_getitem")]
+  public static extern global::System.IntPtr IntMat_List_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_setitem")]
+  public static extern void IntMat_List_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_AddRange")]
+  public static extern void IntMat_List_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_GetRange")]
+  public static extern global::System.IntPtr IntMat_List_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Insert")]
+  public static extern void IntMat_List_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_InsertRange")]
+  public static extern void IntMat_List_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_RemoveAt")]
+  public static extern void IntMat_List_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_RemoveRange")]
+  public static extern void IntMat_List_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Repeat")]
+  public static extern global::System.IntPtr IntMat_List_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Reverse__SWIG_0")]
+  public static extern void IntMat_List_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_Reverse__SWIG_1")]
+  public static extern void IntMat_List_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List_SetRange")]
+  public static extern void IntMat_List_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_IntMat_List")]
+  public static extern void delete_IntMat_List(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Int_DoubleMat_Map__SWIG_0")]
+  public static extern global::System.IntPtr new_Int_DoubleMat_Map__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Int_DoubleMat_Map__SWIG_1")]
+  public static extern global::System.IntPtr new_Int_DoubleMat_Map__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_size")]
+  public static extern uint Int_DoubleMat_Map_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_empty")]
+  public static extern bool Int_DoubleMat_Map_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_Clear")]
+  public static extern void Int_DoubleMat_Map_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_getitem")]
+  public static extern global::System.IntPtr Int_DoubleMat_Map_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_setitem")]
+  public static extern void Int_DoubleMat_Map_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_ContainsKey")]
+  public static extern bool Int_DoubleMat_Map_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_Add")]
+  public static extern void Int_DoubleMat_Map_Add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_Remove")]
+  public static extern bool Int_DoubleMat_Map_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_create_iterator_begin")]
+  public static extern global::System.IntPtr Int_DoubleMat_Map_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_get_next_key")]
+  public static extern int Int_DoubleMat_Map_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Int_DoubleMat_Map_destroy_iterator")]
+  public static extern void Int_DoubleMat_Map_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_Int_DoubleMat_Map")]
+  public static extern void delete_Int_DoubleMat_Map(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Float_DoubleMat_Map__SWIG_0")]
+  public static extern global::System.IntPtr new_Float_DoubleMat_Map__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Float_DoubleMat_Map__SWIG_1")]
+  public static extern global::System.IntPtr new_Float_DoubleMat_Map__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_size")]
+  public static extern uint Float_DoubleMat_Map_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_empty")]
+  public static extern bool Float_DoubleMat_Map_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_Clear")]
+  public static extern void Float_DoubleMat_Map_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_getitem")]
+  public static extern global::System.IntPtr Float_DoubleMat_Map_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_setitem")]
+  public static extern void Float_DoubleMat_Map_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_ContainsKey")]
+  public static extern bool Float_DoubleMat_Map_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_Add")]
+  public static extern void Float_DoubleMat_Map_Add(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_Remove")]
+  public static extern bool Float_DoubleMat_Map_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_create_iterator_begin")]
+  public static extern global::System.IntPtr Float_DoubleMat_Map_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_get_next_key")]
+  public static extern float Float_DoubleMat_Map_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Float_DoubleMat_Map_destroy_iterator")]
+  public static extern void Float_DoubleMat_Map_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_Float_DoubleMat_Map")]
+  public static extern void delete_Float_DoubleMat_Map(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Double_DoubleMat_Map__SWIG_0")]
+  public static extern global::System.IntPtr new_Double_DoubleMat_Map__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_Double_DoubleMat_Map__SWIG_1")]
+  public static extern global::System.IntPtr new_Double_DoubleMat_Map__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_size")]
+  public static extern uint Double_DoubleMat_Map_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_empty")]
+  public static extern bool Double_DoubleMat_Map_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_Clear")]
+  public static extern void Double_DoubleMat_Map_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_getitem")]
+  public static extern global::System.IntPtr Double_DoubleMat_Map_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_setitem")]
+  public static extern void Double_DoubleMat_Map_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_ContainsKey")]
+  public static extern bool Double_DoubleMat_Map_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_Add")]
+  public static extern void Double_DoubleMat_Map_Add(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_Remove")]
+  public static extern bool Double_DoubleMat_Map_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_create_iterator_begin")]
+  public static extern global::System.IntPtr Double_DoubleMat_Map_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_get_next_key")]
+  public static extern double Double_DoubleMat_Map_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_Double_DoubleMat_Map_destroy_iterator")]
+  public static extern void Double_DoubleMat_Map_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_Double_DoubleMat_Map")]
+  public static extern void delete_Double_DoubleMat_Map(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Clear")]
+  public static extern void IntMat_List2N_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Add")]
+  public static extern void IntMat_List2N_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_size")]
+  public static extern uint IntMat_List2N_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_capacity")]
+  public static extern uint IntMat_List2N_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_reserve")]
+  public static extern void IntMat_List2N_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List2N__SWIG_0")]
+  public static extern global::System.IntPtr new_IntMat_List2N__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List2N__SWIG_1")]
+  public static extern global::System.IntPtr new_IntMat_List2N__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_IntMat_List2N__SWIG_2")]
+  public static extern global::System.IntPtr new_IntMat_List2N__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_getitemcopy")]
+  public static extern global::System.IntPtr IntMat_List2N_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_getitem")]
+  public static extern global::System.IntPtr IntMat_List2N_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_setitem")]
+  public static extern void IntMat_List2N_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_AddRange")]
+  public static extern void IntMat_List2N_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_GetRange")]
+  public static extern global::System.IntPtr IntMat_List2N_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Insert")]
+  public static extern void IntMat_List2N_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_InsertRange")]
+  public static extern void IntMat_List2N_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_RemoveAt")]
+  public static extern void IntMat_List2N_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_RemoveRange")]
+  public static extern void IntMat_List2N_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Repeat")]
+  public static extern global::System.IntPtr IntMat_List2N_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Reverse__SWIG_0")]
+  public static extern void IntMat_List2N_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_Reverse__SWIG_1")]
+  public static extern void IntMat_List2N_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_IntMat_List2N_SetRange")]
+  public static extern void IntMat_List2N_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_IntMat_List2N")]
+  public static extern void delete_IntMat_List2N(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Clear")]
+  public static extern void DoubleMat_List2N_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Add")]
+  public static extern void DoubleMat_List2N_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_size")]
+  public static extern uint DoubleMat_List2N_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_capacity")]
+  public static extern uint DoubleMat_List2N_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_reserve")]
+  public static extern void DoubleMat_List2N_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List2N__SWIG_0")]
+  public static extern global::System.IntPtr new_DoubleMat_List2N__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List2N__SWIG_1")]
+  public static extern global::System.IntPtr new_DoubleMat_List2N__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_DoubleMat_List2N__SWIG_2")]
+  public static extern global::System.IntPtr new_DoubleMat_List2N__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_getitemcopy")]
+  public static extern global::System.IntPtr DoubleMat_List2N_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_getitem")]
+  public static extern global::System.IntPtr DoubleMat_List2N_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_setitem")]
+  public static extern void DoubleMat_List2N_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_AddRange")]
+  public static extern void DoubleMat_List2N_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_GetRange")]
+  public static extern global::System.IntPtr DoubleMat_List2N_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Insert")]
+  public static extern void DoubleMat_List2N_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_InsertRange")]
+  public static extern void DoubleMat_List2N_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_RemoveAt")]
+  public static extern void DoubleMat_List2N_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_RemoveRange")]
+  public static extern void DoubleMat_List2N_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Repeat")]
+  public static extern global::System.IntPtr DoubleMat_List2N_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Reverse__SWIG_0")]
+  public static extern void DoubleMat_List2N_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_Reverse__SWIG_1")]
+  public static extern void DoubleMat_List2N_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_DoubleMat_List2N_SetRange")]
+  public static extern void DoubleMat_List2N_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_DoubleMat_List2N")]
+  public static extern void delete_DoubleMat_List2N(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Clear")]
+  public static extern void FloatMat_List2N_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Add")]
+  public static extern void FloatMat_List2N_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_size")]
+  public static extern uint FloatMat_List2N_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_capacity")]
+  public static extern uint FloatMat_List2N_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_reserve")]
+  public static extern void FloatMat_List2N_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List2N__SWIG_0")]
+  public static extern global::System.IntPtr new_FloatMat_List2N__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List2N__SWIG_1")]
+  public static extern global::System.IntPtr new_FloatMat_List2N__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_new_FloatMat_List2N__SWIG_2")]
+  public static extern global::System.IntPtr new_FloatMat_List2N__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_getitemcopy")]
+  public static extern global::System.IntPtr FloatMat_List2N_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_getitem")]
+  public static extern global::System.IntPtr FloatMat_List2N_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_setitem")]
+  public static extern void FloatMat_List2N_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_AddRange")]
+  public static extern void FloatMat_List2N_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_GetRange")]
+  public static extern global::System.IntPtr FloatMat_List2N_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Insert")]
+  public static extern void FloatMat_List2N_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_InsertRange")]
+  public static extern void FloatMat_List2N_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_RemoveAt")]
+  public static extern void FloatMat_List2N_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_RemoveRange")]
+  public static extern void FloatMat_List2N_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Repeat")]
+  public static extern global::System.IntPtr FloatMat_List2N_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Reverse__SWIG_0")]
+  public static extern void FloatMat_List2N_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_Reverse__SWIG_1")]
+  public static extern void FloatMat_List2N_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_FloatMat_List2N_SetRange")]
+  public static extern void FloatMat_List2N_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("LaandmrkDetector", EntryPoint="CSharp_delete_FloatMat_List2N")]
+  public static extern void delete_FloatMat_List2N(global::System.Runtime.InteropServices.HandleRef jarg1);
 }

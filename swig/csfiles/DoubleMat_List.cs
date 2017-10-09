@@ -9,22 +9,22 @@
 //------------------------------------------------------------------------------
 
 
-public class CVRectDouble_List : global::System.IDisposable, global::System.Collections.IEnumerable
-    , global::System.Collections.Generic.IEnumerable<SWIGTYPE_p_cv__Rect_T_double_t>
+public class DoubleMat_List : global::System.IDisposable, global::System.Collections.IEnumerable
+    , global::System.Collections.Generic.IEnumerable<SWIGTYPE_p_cv__MatT_double_t>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal CVRectDouble_List(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal DoubleMat_List(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CVRectDouble_List obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(DoubleMat_List obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~CVRectDouble_List() {
+  ~DoubleMat_List() {
     Dispose();
   }
 
@@ -33,7 +33,7 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LaandmrkDetectorPINVOKE.delete_CVRectDouble_List(swigCPtr);
+          LaandmrkDetectorPINVOKE.delete_DoubleMat_List(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,10 +41,10 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
     }
   }
 
-  public CVRectDouble_List(global::System.Collections.ICollection c) : this() {
+  public DoubleMat_List(global::System.Collections.ICollection c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (SWIGTYPE_p_cv__Rect_T_double_t element in c) {
+    foreach (SWIGTYPE_p_cv__MatT_double_t element in c) {
       this.Add(element);
     }
   }
@@ -61,7 +61,7 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
     }
   }
 
-  public SWIGTYPE_p_cv__Rect_T_double_t this[int index]  {
+  public SWIGTYPE_p_cv__MatT_double_t this[int index]  {
     get {
       return getitem(index);
     }
@@ -93,17 +93,17 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
     }
   }
 
-  public void CopyTo(SWIGTYPE_p_cv__Rect_T_double_t[] array)
+  public void CopyTo(SWIGTYPE_p_cv__MatT_double_t[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(SWIGTYPE_p_cv__Rect_T_double_t[] array, int arrayIndex)
+  public void CopyTo(SWIGTYPE_p_cv__MatT_double_t[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, SWIGTYPE_p_cv__Rect_T_double_t[] array, int arrayIndex, int count)
+  public void CopyTo(int index, SWIGTYPE_p_cv__MatT_double_t[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -121,16 +121,16 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  global::System.Collections.Generic.IEnumerator<SWIGTYPE_p_cv__Rect_T_double_t> global::System.Collections.Generic.IEnumerable<SWIGTYPE_p_cv__Rect_T_double_t>.GetEnumerator() {
-    return new CVRectDouble_ListEnumerator(this);
+  global::System.Collections.Generic.IEnumerator<SWIGTYPE_p_cv__MatT_double_t> global::System.Collections.Generic.IEnumerable<SWIGTYPE_p_cv__MatT_double_t>.GetEnumerator() {
+    return new DoubleMat_ListEnumerator(this);
   }
 
   global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new CVRectDouble_ListEnumerator(this);
+    return new DoubleMat_ListEnumerator(this);
   }
 
-  public CVRectDouble_ListEnumerator GetEnumerator() {
-    return new CVRectDouble_ListEnumerator(this);
+  public DoubleMat_ListEnumerator GetEnumerator() {
+    return new DoubleMat_ListEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -138,15 +138,15 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class CVRectDouble_ListEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<SWIGTYPE_p_cv__Rect_T_double_t>
+  public sealed class DoubleMat_ListEnumerator : global::System.Collections.IEnumerator
+    , global::System.Collections.Generic.IEnumerator<SWIGTYPE_p_cv__MatT_double_t>
   {
-    private CVRectDouble_List collectionRef;
+    private DoubleMat_List collectionRef;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public CVRectDouble_ListEnumerator(CVRectDouble_List collection) {
+    public DoubleMat_ListEnumerator(DoubleMat_List collection) {
       collectionRef = collection;
       currentIndex = -1;
       currentObject = null;
@@ -154,7 +154,7 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
     }
 
     // Type-safe iterator Current
-    public SWIGTYPE_p_cv__Rect_T_double_t Current {
+    public SWIGTYPE_p_cv__MatT_double_t Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -162,7 +162,7 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (SWIGTYPE_p_cv__Rect_T_double_t)currentObject;
+        return (SWIGTYPE_p_cv__MatT_double_t)currentObject;
       }
     }
 
@@ -200,106 +200,106 @@ public class CVRectDouble_List : global::System.IDisposable, global::System.Coll
   }
 
   public void Clear() {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_Clear(swigCPtr);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_Clear(swigCPtr);
   }
 
-  public void Add(SWIGTYPE_p_cv__Rect_T_double_t x) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_Add(swigCPtr, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(x));
+  public void Add(SWIGTYPE_p_cv__MatT_double_t x) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_Add(swigCPtr, SWIGTYPE_p_cv__MatT_double_t.getCPtr(x));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = LaandmrkDetectorPINVOKE.CVRectDouble_List_size(swigCPtr);
+    uint ret = LaandmrkDetectorPINVOKE.DoubleMat_List_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = LaandmrkDetectorPINVOKE.CVRectDouble_List_capacity(swigCPtr);
+    uint ret = LaandmrkDetectorPINVOKE.DoubleMat_List_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_reserve(swigCPtr, n);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_reserve(swigCPtr, n);
   }
 
-  public CVRectDouble_List() : this(LaandmrkDetectorPINVOKE.new_CVRectDouble_List__SWIG_0(), true) {
+  public DoubleMat_List() : this(LaandmrkDetectorPINVOKE.new_DoubleMat_List__SWIG_0(), true) {
   }
 
-  public CVRectDouble_List(CVRectDouble_List other) : this(LaandmrkDetectorPINVOKE.new_CVRectDouble_List__SWIG_1(CVRectDouble_List.getCPtr(other)), true) {
+  public DoubleMat_List(DoubleMat_List other) : this(LaandmrkDetectorPINVOKE.new_DoubleMat_List__SWIG_1(DoubleMat_List.getCPtr(other)), true) {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CVRectDouble_List(int capacity) : this(LaandmrkDetectorPINVOKE.new_CVRectDouble_List__SWIG_2(capacity), true) {
+  public DoubleMat_List(int capacity) : this(LaandmrkDetectorPINVOKE.new_DoubleMat_List__SWIG_2(capacity), true) {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private SWIGTYPE_p_cv__Rect_T_double_t getitemcopy(int index) {
-    SWIGTYPE_p_cv__Rect_T_double_t ret = new SWIGTYPE_p_cv__Rect_T_double_t(LaandmrkDetectorPINVOKE.CVRectDouble_List_getitemcopy(swigCPtr, index), true);
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  private SWIGTYPE_p_cv__Rect_T_double_t getitem(int index) {
-    SWIGTYPE_p_cv__Rect_T_double_t ret = new SWIGTYPE_p_cv__Rect_T_double_t(LaandmrkDetectorPINVOKE.CVRectDouble_List_getitem(swigCPtr, index), false);
+  private SWIGTYPE_p_cv__MatT_double_t getitemcopy(int index) {
+    SWIGTYPE_p_cv__MatT_double_t ret = new SWIGTYPE_p_cv__MatT_double_t(LaandmrkDetectorPINVOKE.DoubleMat_List_getitemcopy(swigCPtr, index), true);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, SWIGTYPE_p_cv__Rect_T_double_t val) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_setitem(swigCPtr, index, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(val));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void AddRange(CVRectDouble_List values) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_AddRange(swigCPtr, CVRectDouble_List.getCPtr(values));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public CVRectDouble_List GetRange(int index, int count) {
-    global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CVRectDouble_List_GetRange(swigCPtr, index, count);
-    CVRectDouble_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVRectDouble_List(cPtr, true);
+  private SWIGTYPE_p_cv__MatT_double_t getitem(int index) {
+    SWIGTYPE_p_cv__MatT_double_t ret = new SWIGTYPE_p_cv__MatT_double_t(LaandmrkDetectorPINVOKE.DoubleMat_List_getitem(swigCPtr, index), false);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void Insert(int index, SWIGTYPE_p_cv__Rect_T_double_t x) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_Insert(swigCPtr, index, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(x));
+  private void setitem(int index, SWIGTYPE_p_cv__MatT_double_t val) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_setitem(swigCPtr, index, SWIGTYPE_p_cv__MatT_double_t.getCPtr(val));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void InsertRange(int index, CVRectDouble_List values) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_InsertRange(swigCPtr, index, CVRectDouble_List.getCPtr(values));
+  public void AddRange(DoubleMat_List values) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_AddRange(swigCPtr, DoubleMat_List.getCPtr(values));
+    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public DoubleMat_List GetRange(int index, int count) {
+    global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DoubleMat_List_GetRange(swigCPtr, index, count);
+    DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, true);
+    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void Insert(int index, SWIGTYPE_p_cv__MatT_double_t x) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_Insert(swigCPtr, index, SWIGTYPE_p_cv__MatT_double_t.getCPtr(x));
+    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InsertRange(int index, DoubleMat_List values) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_InsertRange(swigCPtr, index, DoubleMat_List.getCPtr(values));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_RemoveAt(swigCPtr, index);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_RemoveAt(swigCPtr, index);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_RemoveRange(swigCPtr, index, count);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_RemoveRange(swigCPtr, index, count);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static CVRectDouble_List Repeat(SWIGTYPE_p_cv__Rect_T_double_t value, int count) {
-    global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CVRectDouble_List_Repeat(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(value), count);
-    CVRectDouble_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVRectDouble_List(cPtr, true);
+  public static DoubleMat_List Repeat(SWIGTYPE_p_cv__MatT_double_t value, int count) {
+    global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DoubleMat_List_Repeat(SWIGTYPE_p_cv__MatT_double_t.getCPtr(value), count);
+    DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, true);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_Reverse__SWIG_0(swigCPtr);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_Reverse__SWIG_1(swigCPtr, index, count);
+    LaandmrkDetectorPINVOKE.DoubleMat_List_Reverse__SWIG_1(swigCPtr, index, count);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetRange(int index, CVRectDouble_List values) {
-    LaandmrkDetectorPINVOKE.CVRectDouble_List_SetRange(swigCPtr, index, CVRectDouble_List.getCPtr(values));
+  public void SetRange(int index, DoubleMat_List values) {
+    LaandmrkDetectorPINVOKE.DoubleMat_List_SetRange(swigCPtr, index, DoubleMat_List.getCPtr(values));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 

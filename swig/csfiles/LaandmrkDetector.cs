@@ -68,13 +68,13 @@ public class LaandmrkDetector {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static void get_image_input_output_params(String_List input_image_files, String_List output_feature_files, String_List output_pose_files, String_List output_image_files, CVRectDouble_List input_bounding_boxes, String_List arguments) {
-    LaandmrkDetectorPINVOKE.get_image_input_output_params(String_List.getCPtr(input_image_files), String_List.getCPtr(output_feature_files), String_List.getCPtr(output_pose_files), String_List.getCPtr(output_image_files), CVRectDouble_List.getCPtr(input_bounding_boxes), String_List.getCPtr(arguments));
+  public static void get_image_input_output_params(String_List input_image_files, String_List output_feature_files, String_List output_pose_files, String_List output_image_files, CVDoubleRect_List input_bounding_boxes, String_List arguments) {
+    LaandmrkDetectorPINVOKE.get_image_input_output_params(String_List.getCPtr(input_image_files), String_List.getCPtr(output_feature_files), String_List.getCPtr(output_pose_files), String_List.getCPtr(output_image_files), CVDoubleRect_List.getCPtr(input_bounding_boxes), String_List.getCPtr(arguments));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static void matchTemplate_m(SWIGTYPE_p_cv__Mat_T_float_t input_img, SWIGTYPE_p_cv__Mat_T_double_t img_dft, SWIGTYPE_p_cv__Mat _integral_img, SWIGTYPE_p_cv__Mat _integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t templ, SWIGTYPE_p_mapT_int_cv__Mat_T_double_t_t templ_dfts, SWIGTYPE_p_cv__Mat_T_float_t result, int method) {
-    LaandmrkDetectorPINVOKE.matchTemplate_m(SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(input_img), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(img_dft), SWIGTYPE_p_cv__Mat.getCPtr(_integral_img), SWIGTYPE_p_cv__Mat.getCPtr(_integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(templ), SWIGTYPE_p_mapT_int_cv__Mat_T_double_t_t.getCPtr(templ_dfts), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(result), method);
+  public static void matchTemplate_m(SWIGTYPE_p_cv__Mat_T_float_t input_img, SWIGTYPE_p_cv__Mat_T_double_t img_dft, SWIGTYPE_p_cv__Mat _integral_img, SWIGTYPE_p_cv__Mat _integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t templ, SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t templ_dfts, SWIGTYPE_p_cv__Mat_T_float_t result, int method) {
+    LaandmrkDetectorPINVOKE.matchTemplate_m(SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(input_img), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(img_dft), SWIGTYPE_p_cv__Mat.getCPtr(_integral_img), SWIGTYPE_p_cv__Mat.getCPtr(_integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(templ), SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t.getCPtr(templ_dfts), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(result), method);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -179,14 +179,14 @@ public class LaandmrkDetector {
     return ret;
   }
 
-  public static bool DetectFaces(CVRectDouble_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity) {
-    bool ret = LaandmrkDetectorPINVOKE.DetectFaces__SWIG_0(CVRectDouble_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity));
+  public static bool DetectFaces(CVDoubleRect_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity) {
+    bool ret = LaandmrkDetectorPINVOKE.DetectFaces__SWIG_0(CVDoubleRect_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static bool DetectFaces(CVRectDouble_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_cv__CascadeClassifier classifier) {
-    bool ret = LaandmrkDetectorPINVOKE.DetectFaces__SWIG_1(CVRectDouble_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_cv__CascadeClassifier.getCPtr(classifier));
+  public static bool DetectFaces(CVDoubleRect_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_cv__CascadeClassifier classifier) {
+    bool ret = LaandmrkDetectorPINVOKE.DetectFaces__SWIG_1(CVDoubleRect_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_cv__CascadeClassifier.getCPtr(classifier));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -203,14 +203,14 @@ public class LaandmrkDetector {
     return ret;
   }
 
-  public static bool DetectFacesHOG(CVRectDouble_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, Double_List confidences) {
-    bool ret = LaandmrkDetectorPINVOKE.DetectFacesHOG__SWIG_0(CVRectDouble_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), Double_List.getCPtr(confidences));
+  public static bool DetectFacesHOG(CVDoubleRect_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, Double_List confidences) {
+    bool ret = LaandmrkDetectorPINVOKE.DetectFacesHOG__SWIG_0(CVDoubleRect_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), Double_List.getCPtr(confidences));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static bool DetectFacesHOG(CVRectDouble_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, Double_List confidences) {
-    bool ret = LaandmrkDetectorPINVOKE.DetectFacesHOG__SWIG_1(CVRectDouble_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), Double_List.getCPtr(confidences));
+  public static bool DetectFacesHOG(CVDoubleRect_List o_regions, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, Double_List confidences) {
+    bool ret = LaandmrkDetectorPINVOKE.DetectFacesHOG__SWIG_1(CVDoubleRect_List.getCPtr(o_regions), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), Double_List.getCPtr(confidences));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
