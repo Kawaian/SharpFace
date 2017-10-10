@@ -218,13 +218,13 @@ public class CLNF : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_cv__Mat_T_int_t_t triangulations {
+  public IntMat_List triangulations {
     set {
-      LaandmrkDetectorPINVOKE.CLNF_triangulations_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_int_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.CLNF_triangulations_set(swigCPtr, IntMat_List.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CLNF_triangulations_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_cv__Mat_T_int_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Mat_T_int_t_t(cPtr, false);
+      IntMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntMat_List(cPtr, false);
       return ret;
     } 
   }

@@ -81,13 +81,13 @@ public class SVR_patch_expert : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t weights_dfts {
+  public Int_DoubleMat_Map weights_dfts {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_dfts_set(swigCPtr, SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_dfts_set(swigCPtr, Int_DoubleMat_Map.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_dfts_get(swigCPtr);
-      SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__mapT_int_cv__Mat_T_double_t_std__lessT_int_t_t(cPtr, false);
+      Int_DoubleMat_Map ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMat_Map(cPtr, false);
       return ret;
     } 
   }

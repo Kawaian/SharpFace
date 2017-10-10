@@ -81,13 +81,13 @@ public class CCNF_patch_expert : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t Sigmas {
+  public FloatMat_List Sigmas {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, FloatMat_List.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CCNF_patch_expert_Sigmas_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t(cPtr, false);
+      FloatMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List(cPtr, false);
       return ret;
     } 
   }
@@ -120,8 +120,8 @@ public class CCNF_patch_expert : global::System.IDisposable {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Read(SWIGTYPE_p_std__ifstream stream, Int_List window_sizes, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t sigma_components) {
-    LaandmrkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream), Int_List.getCPtr(window_sizes), SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t.getCPtr(sigma_components));
+  public void Read(SWIGTYPE_p_std__ifstream stream, Int_List window_sizes, FloatMat_List2N sigma_components) {
+    LaandmrkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream), Int_List.getCPtr(window_sizes), FloatMat_List2N.getCPtr(sigma_components));
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -130,8 +130,8 @@ public class CCNF_patch_expert : global::System.IDisposable {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void ComputeSigmas(SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t sigma_components, int window_size) {
-    LaandmrkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t.getCPtr(sigma_components), window_size);
+  public void ComputeSigmas(FloatMat_List sigma_components, int window_size) {
+    LaandmrkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, FloatMat_List.getCPtr(sigma_components), window_size);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 

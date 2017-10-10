@@ -316,18 +316,20 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LaandmrkDetector(SWIG_CSh
 
 
 
-    // C++ API
+// ------------- C++ API ------------- //
 
-    #include "CCNF_patch_expert.h"
-    #include "LandmarkDetectionValidator.h"
-    #include "LandmarkDetectorFunc.h"
-    #include "LandmarkDetectorModel.h"
-    #include "LandmarkDetectorParameters.h"
-    #include "LandmarkDetectorUtils.h"
-    #include "Patch_experts.h"
-    #include "PAW.h"
-    #include "PDM.h"
-    #include "SVR_patch_expert.h"
+#include "CCNF_patch_expert.h"
+#include "LandmarkDetectionValidator.h"
+#include "LandmarkDetectorFunc.h"
+#include "LandmarkDetectorModel.h"
+#include "LandmarkDetectorParameters.h"
+#include "LandmarkDetectorUtils.h"
+#include "Patch_experts.h"
+#include "PAW.h"
+#include "PDM.h"
+#include "SVR_patch_expert.h"
+
+using namespace LandmarkDetector;
 
 
 #include <stdexcept>
@@ -851,6 +853,279 @@ SWIGINTERN bool std_vector_Sl_std_string_Sg__Remove(std::vector< std::string > *
         }
         return false;
       }
+SWIGINTERN std::vector< std::vector< int > > *new_std_vector_Sl_std_vector_Sl_int_Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< int > >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< std::vector< int > >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN std::vector< int > std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitemcopy(std::vector< std::vector< int > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< int > const &std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitem(std::vector< std::vector< int > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__setitem(std::vector< std::vector< int > > *self,int index,std::vector< int > const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__AddRange(std::vector< std::vector< int > > *self,std::vector< std::vector< int > > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< std::vector< int > > *std_vector_Sl_std_vector_Sl_int_Sg__Sg__GetRange(std::vector< std::vector< int > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< std::vector< int > >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Insert(std::vector< std::vector< int > > *self,int index,std::vector< int > const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__InsertRange(std::vector< std::vector< int > > *self,int index,std::vector< std::vector< int > > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveAt(std::vector< std::vector< int > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveRange(std::vector< std::vector< int > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< std::vector< int > > *std_vector_Sl_std_vector_Sl_int_Sg__Sg__Repeat(std::vector< int > const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< std::vector< int > >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< int > > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< int > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__SetRange(std::vector< std::vector< int > > *self,int index,std::vector< std::vector< int > > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN std::vector< std::vector< float > > *new_std_vector_Sl_std_vector_Sl_float_Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< float > >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< std::vector< float > >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN std::vector< float > std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitemcopy(std::vector< std::vector< float > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< float > const &std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitem(std::vector< std::vector< float > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__setitem(std::vector< std::vector< float > > *self,int index,std::vector< float > const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__AddRange(std::vector< std::vector< float > > *self,std::vector< std::vector< float > > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< std::vector< float > > *std_vector_Sl_std_vector_Sl_float_Sg__Sg__GetRange(std::vector< std::vector< float > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< std::vector< float > >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Insert(std::vector< std::vector< float > > *self,int index,std::vector< float > const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__InsertRange(std::vector< std::vector< float > > *self,int index,std::vector< std::vector< float > > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveAt(std::vector< std::vector< float > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveRange(std::vector< std::vector< float > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< std::vector< float > > *std_vector_Sl_std_vector_Sl_float_Sg__Sg__Repeat(std::vector< float > const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< std::vector< float > >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< float > > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< float > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__SetRange(std::vector< std::vector< float > > *self,int index,std::vector< std::vector< float > > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN std::vector< std::vector< std::vector< float > > > *new_std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< std::vector< float > > >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< std::vector< std::vector< float > > >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN std::vector< std::vector< float > > std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< std::vector< float > > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< std::vector< float > > const &std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__getitem(std::vector< std::vector< std::vector< float > > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__setitem(std::vector< std::vector< std::vector< float > > > *self,int index,std::vector< std::vector< float > > const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__AddRange(std::vector< std::vector< std::vector< float > > > *self,std::vector< std::vector< std::vector< float > > > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< std::vector< std::vector< float > > > *std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__GetRange(std::vector< std::vector< std::vector< float > > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< std::vector< std::vector< float > > >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Insert(std::vector< std::vector< std::vector< float > > > *self,int index,std::vector< std::vector< float > > const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__InsertRange(std::vector< std::vector< std::vector< float > > > *self,int index,std::vector< std::vector< std::vector< float > > > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< std::vector< float > > > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< std::vector< float > > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< std::vector< std::vector< float > > > *std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Repeat(std::vector< std::vector< float > > const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< std::vector< std::vector< float > > >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< std::vector< float > > > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< std::vector< float > > > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__SetRange(std::vector< std::vector< std::vector< float > > > *self,int index,std::vector< std::vector< std::vector< float > > > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
 SWIGINTERN std::vector< cv::Point > *new_std_vector_Sl_cv_Point_Sg___SWIG_2(int capacity){
         std::vector< cv::Point >* pv = 0;
         if (capacity >= 0) {
@@ -1306,65 +1581,65 @@ SWIGINTERN void std_vector_Sl_cv_Rect__Sl_double_Sg__Sg__SetRange(std::vector< c
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< std::vector< int > > *new_std_vector_Sl_std_vector_Sl_int_Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::vector< int > >* pv = 0;
+SWIGINTERN std::vector< cv::Mat_< float > > *new_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg___SWIG_2(int capacity){
+        std::vector< cv::Mat_< float > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::vector< int > >();
+          pv = new std::vector< cv::Mat_< float > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::vector< int > std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitemcopy(std::vector< std::vector< int > > *self,int index){
+SWIGINTERN cv::Mat_< float > std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__getitemcopy(std::vector< cv::Mat_< float > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::vector< int > const &std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitem(std::vector< std::vector< int > > *self,int index){
+SWIGINTERN cv::Mat_< float > const &std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__getitem(std::vector< cv::Mat_< float > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__setitem(std::vector< std::vector< int > > *self,int index,std::vector< int > const &val){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__setitem(std::vector< cv::Mat_< float > > *self,int index,cv::Mat_< float > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__AddRange(std::vector< std::vector< int > > *self,std::vector< std::vector< int > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__AddRange(std::vector< cv::Mat_< float > > *self,std::vector< cv::Mat_< float > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::vector< int > > *std_vector_Sl_std_vector_Sl_int_Sg__Sg__GetRange(std::vector< std::vector< int > > *self,int index,int count){
+SWIGINTERN std::vector< cv::Mat_< float > > *std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__GetRange(std::vector< cv::Mat_< float > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::vector< int > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< cv::Mat_< float > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Insert(std::vector< std::vector< int > > *self,int index,std::vector< int > const &x){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Insert(std::vector< cv::Mat_< float > > *self,int index,cv::Mat_< float > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__InsertRange(std::vector< std::vector< int > > *self,int index,std::vector< std::vector< int > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__InsertRange(std::vector< cv::Mat_< float > > *self,int index,std::vector< cv::Mat_< float > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveAt(std::vector< std::vector< int > > *self,int index){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__RemoveAt(std::vector< cv::Mat_< float > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveRange(std::vector< std::vector< int > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__RemoveRange(std::vector< cv::Mat_< float > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1373,15 +1648,15 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveRange(std::vector<
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::vector< int > > *std_vector_Sl_std_vector_Sl_int_Sg__Sg__Repeat(std::vector< int > const &value,int count){
+SWIGINTERN std::vector< cv::Mat_< float > > *std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Repeat(cv::Mat_< float > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::vector< int > >(count, value);
+        return new std::vector< cv::Mat_< float > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< int > > *self){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat_< float > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< int > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat_< float > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1390,72 +1665,72 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_1(std::vec
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_int_Sg__Sg__SetRange(std::vector< std::vector< int > > *self,int index,std::vector< std::vector< int > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__SetRange(std::vector< cv::Mat_< float > > *self,int index,std::vector< cv::Mat_< float > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< std::vector< float > > *new_std_vector_Sl_std_vector_Sl_float_Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::vector< float > >* pv = 0;
+SWIGINTERN std::vector< cv::Mat_< double > > *new_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg___SWIG_2(int capacity){
+        std::vector< cv::Mat_< double > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::vector< float > >();
+          pv = new std::vector< cv::Mat_< double > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::vector< float > std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitemcopy(std::vector< std::vector< float > > *self,int index){
+SWIGINTERN cv::Mat_< double > std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__getitemcopy(std::vector< cv::Mat_< double > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::vector< float > const &std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitem(std::vector< std::vector< float > > *self,int index){
+SWIGINTERN cv::Mat_< double > const &std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__getitem(std::vector< cv::Mat_< double > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__setitem(std::vector< std::vector< float > > *self,int index,std::vector< float > const &val){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__setitem(std::vector< cv::Mat_< double > > *self,int index,cv::Mat_< double > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__AddRange(std::vector< std::vector< float > > *self,std::vector< std::vector< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__AddRange(std::vector< cv::Mat_< double > > *self,std::vector< cv::Mat_< double > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::vector< float > > *std_vector_Sl_std_vector_Sl_float_Sg__Sg__GetRange(std::vector< std::vector< float > > *self,int index,int count){
+SWIGINTERN std::vector< cv::Mat_< double > > *std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__GetRange(std::vector< cv::Mat_< double > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::vector< float > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< cv::Mat_< double > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Insert(std::vector< std::vector< float > > *self,int index,std::vector< float > const &x){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Insert(std::vector< cv::Mat_< double > > *self,int index,cv::Mat_< double > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__InsertRange(std::vector< std::vector< float > > *self,int index,std::vector< std::vector< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__InsertRange(std::vector< cv::Mat_< double > > *self,int index,std::vector< cv::Mat_< double > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveAt(std::vector< std::vector< float > > *self,int index){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__RemoveAt(std::vector< cv::Mat_< double > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveRange(std::vector< std::vector< float > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__RemoveRange(std::vector< cv::Mat_< double > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1464,15 +1739,15 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveRange(std::vecto
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::vector< float > > *std_vector_Sl_std_vector_Sl_float_Sg__Sg__Repeat(std::vector< float > const &value,int count){
+SWIGINTERN std::vector< cv::Mat_< double > > *std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Repeat(cv::Mat_< double > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::vector< float > >(count, value);
+        return new std::vector< cv::Mat_< double > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< float > > *self){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat_< double > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< float > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat_< double > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1481,72 +1756,72 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_1(std::v
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_float_Sg__Sg__SetRange(std::vector< std::vector< float > > *self,int index,std::vector< std::vector< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__SetRange(std::vector< cv::Mat_< double > > *self,int index,std::vector< cv::Mat_< double > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< cv::Mat< float > > *new_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg___SWIG_2(int capacity){
-        std::vector< cv::Mat< float > >* pv = 0;
+SWIGINTERN std::vector< cv::Mat_< int > > *new_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg___SWIG_2(int capacity){
+        std::vector< cv::Mat_< int > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< cv::Mat< float > >();
+          pv = new std::vector< cv::Mat_< int > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN cv::Mat< float > std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__getitemcopy(std::vector< cv::Mat< float > > *self,int index){
+SWIGINTERN cv::Mat_< int > std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__getitemcopy(std::vector< cv::Mat_< int > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN cv::Mat< float > const &std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__getitem(std::vector< cv::Mat< float > > *self,int index){
+SWIGINTERN cv::Mat_< int > const &std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__getitem(std::vector< cv::Mat_< int > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__setitem(std::vector< cv::Mat< float > > *self,int index,cv::Mat< float > const &val){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__setitem(std::vector< cv::Mat_< int > > *self,int index,cv::Mat_< int > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__AddRange(std::vector< cv::Mat< float > > *self,std::vector< cv::Mat< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__AddRange(std::vector< cv::Mat_< int > > *self,std::vector< cv::Mat_< int > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< cv::Mat< float > > *std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__GetRange(std::vector< cv::Mat< float > > *self,int index,int count){
+SWIGINTERN std::vector< cv::Mat_< int > > *std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__GetRange(std::vector< cv::Mat_< int > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< cv::Mat< float > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< cv::Mat_< int > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Insert(std::vector< cv::Mat< float > > *self,int index,cv::Mat< float > const &x){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Insert(std::vector< cv::Mat_< int > > *self,int index,cv::Mat_< int > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__InsertRange(std::vector< cv::Mat< float > > *self,int index,std::vector< cv::Mat< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__InsertRange(std::vector< cv::Mat_< int > > *self,int index,std::vector< cv::Mat_< int > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__RemoveAt(std::vector< cv::Mat< float > > *self,int index){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__RemoveAt(std::vector< cv::Mat_< int > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__RemoveRange(std::vector< cv::Mat< float > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__RemoveRange(std::vector< cv::Mat_< int > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1555,15 +1830,15 @@ SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__RemoveRange(std::vector< c
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< cv::Mat< float > > *std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Repeat(cv::Mat< float > const &value,int count){
+SWIGINTERN std::vector< cv::Mat_< int > > *std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Repeat(cv::Mat_< int > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< cv::Mat< float > >(count, value);
+        return new std::vector< cv::Mat_< int > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat< float > > *self){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat_< int > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat< float > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat_< int > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1572,371 +1847,228 @@ SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Reverse__SWIG_1(std::vecto
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__SetRange(std::vector< cv::Mat< float > > *self,int index,std::vector< cv::Mat< float > > const &values){
+SWIGINTERN void std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__SetRange(std::vector< cv::Mat_< int > > *self,int index,std::vector< cv::Mat_< int > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< cv::Mat< double > > *new_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg___SWIG_2(int capacity){
-        std::vector< cv::Mat< double > >* pv = 0;
-        if (capacity >= 0) {
-          pv = new std::vector< cv::Mat< double > >();
-          pv->reserve(capacity);
-       } else {
-          throw std::out_of_range("capacity");
-       }
-       return pv;
-      }
-SWIGINTERN cv::Mat< double > std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__getitemcopy(std::vector< cv::Mat< double > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN cv::Mat< double > const &std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__getitem(std::vector< cv::Mat< double > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__setitem(std::vector< cv::Mat< double > > *self,int index,cv::Mat< double > const &val){
-        if (index>=0 && index<(int)self->size())
-          (*self)[index] = val;
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__AddRange(std::vector< cv::Mat< double > > *self,std::vector< cv::Mat< double > > const &values){
-        self->insert(self->end(), values.begin(), values.end());
-      }
-SWIGINTERN std::vector< cv::Mat< double > > *std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__GetRange(std::vector< cv::Mat< double > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        return new std::vector< cv::Mat< double > >(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Insert(std::vector< cv::Mat< double > > *self,int index,cv::Mat< double > const &x){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, x);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__InsertRange(std::vector< cv::Mat< double > > *self,int index,std::vector< cv::Mat< double > > const &values){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, values.begin(), values.end());
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__RemoveAt(std::vector< cv::Mat< double > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          self->erase(self->begin() + index);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__RemoveRange(std::vector< cv::Mat< double > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        self->erase(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN std::vector< cv::Mat< double > > *std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Repeat(cv::Mat< double > const &value,int count){
-        if (count < 0)
-          throw std::out_of_range("count");
-        return new std::vector< cv::Mat< double > >(count, value);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat< double > > *self){
-        std::reverse(self->begin(), self->end());
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat< double > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        std::reverse(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__SetRange(std::vector< cv::Mat< double > > *self,int index,std::vector< cv::Mat< double > > const &values){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (index+values.size() > self->size())
-          throw std::out_of_range("index");
-        std::copy(values.begin(), values.end(), self->begin()+index);
-      }
-SWIGINTERN std::vector< cv::Mat< int > > *new_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg___SWIG_2(int capacity){
-        std::vector< cv::Mat< int > >* pv = 0;
-        if (capacity >= 0) {
-          pv = new std::vector< cv::Mat< int > >();
-          pv->reserve(capacity);
-       } else {
-          throw std::out_of_range("capacity");
-       }
-       return pv;
-      }
-SWIGINTERN cv::Mat< int > std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__getitemcopy(std::vector< cv::Mat< int > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN cv::Mat< int > const &std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__getitem(std::vector< cv::Mat< int > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__setitem(std::vector< cv::Mat< int > > *self,int index,cv::Mat< int > const &val){
-        if (index>=0 && index<(int)self->size())
-          (*self)[index] = val;
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__AddRange(std::vector< cv::Mat< int > > *self,std::vector< cv::Mat< int > > const &values){
-        self->insert(self->end(), values.begin(), values.end());
-      }
-SWIGINTERN std::vector< cv::Mat< int > > *std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__GetRange(std::vector< cv::Mat< int > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        return new std::vector< cv::Mat< int > >(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Insert(std::vector< cv::Mat< int > > *self,int index,cv::Mat< int > const &x){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, x);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__InsertRange(std::vector< cv::Mat< int > > *self,int index,std::vector< cv::Mat< int > > const &values){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, values.begin(), values.end());
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__RemoveAt(std::vector< cv::Mat< int > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          self->erase(self->begin() + index);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__RemoveRange(std::vector< cv::Mat< int > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        self->erase(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN std::vector< cv::Mat< int > > *std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Repeat(cv::Mat< int > const &value,int count){
-        if (count < 0)
-          throw std::out_of_range("count");
-        return new std::vector< cv::Mat< int > >(count, value);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Reverse__SWIG_0(std::vector< cv::Mat< int > > *self){
-        std::reverse(self->begin(), self->end());
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Reverse__SWIG_1(std::vector< cv::Mat< int > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        std::reverse(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__SetRange(std::vector< cv::Mat< int > > *self,int index,std::vector< cv::Mat< int > > const &values){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (index+values.size() > self->size())
-          throw std::out_of_range("index");
-        std::copy(values.begin(), values.end(), self->begin()+index);
-      }
-SWIGINTERN std::map< int,cv::Mat< int > >::mapped_type const &std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__getitem(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int > >::key_type const &key){
-        std::map< int, cv::Mat< int >, std::less< int > >::iterator iter = self->find(key);
+SWIGINTERN std::map< int,cv::Mat_< int > >::mapped_type const &std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__getitem(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int > >::key_type const &key){
+        std::map< int, cv::Mat_< int >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end())
           return iter->second;
         else
           throw std::out_of_range("key not found");
       }
-SWIGINTERN void std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__setitem(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int > >::key_type const &key,std::map< int,cv::Mat< int > >::mapped_type const &x){
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__setitem(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int > >::key_type const &key,std::map< int,cv::Mat_< int > >::mapped_type const &x){
         (*self)[key] = x;
       }
-SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__ContainsKey(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int > >::key_type const &key){
-        std::map< int, cv::Mat< int >, std::less< int > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__ContainsKey(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int > >::key_type const &key){
+        std::map< int, cv::Mat_< int >, std::less< int > >::iterator iter = self->find(key);
         return iter != self->end();
       }
-SWIGINTERN void std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__Add(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int > >::key_type const &key,std::map< int,cv::Mat< int > >::mapped_type const &val){
-        std::map< int, cv::Mat< int >, std::less< int > >::iterator iter = self->find(key);
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__Add(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int > >::key_type const &key,std::map< int,cv::Mat_< int > >::mapped_type const &val){
+        std::map< int, cv::Mat_< int >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end())
           throw std::out_of_range("key already exists");
-        self->insert(std::pair< int, cv::Mat< int > >(key, val));
+        self->insert(std::pair< int, cv::Mat_< int > >(key, val));
       }
-SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__Remove(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int > >::key_type const &key){
-        std::map< int, cv::Mat< int >, std::less< int > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__Remove(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int > >::key_type const &key){
+        std::map< int, cv::Mat_< int >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end()) {
           self->erase(iter);
           return true;
         }                
         return false;
       }
-SWIGINTERN std::map< int,cv::Mat< int >,std::less< int > >::iterator *std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__create_iterator_begin(std::map< int,cv::Mat< int > > *self){
-        return new std::map< int, cv::Mat< int >, std::less< int > >::iterator(self->begin());
+SWIGINTERN std::map< int,cv::Mat_< int >,std::less< int > >::iterator *std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__create_iterator_begin(std::map< int,cv::Mat_< int > > *self){
+        return new std::map< int, cv::Mat_< int >, std::less< int > >::iterator(self->begin());
       }
-SWIGINTERN std::map< int,cv::Mat< int > >::key_type const &std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__get_next_key(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int >,std::less< int > >::iterator *swigiterator){
-        std::map< int, cv::Mat< int >, std::less< int > >::iterator iter = *swigiterator;
+SWIGINTERN std::map< int,cv::Mat_< int > >::key_type const &std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__get_next_key(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int >,std::less< int > >::iterator *swigiterator){
+        std::map< int, cv::Mat_< int >, std::less< int > >::iterator iter = *swigiterator;
         (*swigiterator)++;
         return (*iter).first;
       }
-SWIGINTERN void std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__destroy_iterator(std::map< int,cv::Mat< int > > *self,std::map< int,cv::Mat< int >,std::less< int > >::iterator *swigiterator){
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__destroy_iterator(std::map< int,cv::Mat_< int > > *self,std::map< int,cv::Mat_< int >,std::less< int > >::iterator *swigiterator){
         delete swigiterator;
       }
-SWIGINTERN std::map< float,cv::Mat< float > >::mapped_type const &std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__getitem(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float > >::key_type const &key){
-        std::map< float, cv::Mat< float >, std::less< float > >::iterator iter = self->find(key);
+SWIGINTERN std::map< int,cv::Mat_< double > >::mapped_type const &std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__getitem(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double > >::key_type const &key){
+        std::map< int, cv::Mat_< double >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end())
           return iter->second;
         else
           throw std::out_of_range("key not found");
       }
-SWIGINTERN void std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__setitem(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float > >::key_type const &key,std::map< float,cv::Mat< float > >::mapped_type const &x){
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__setitem(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double > >::key_type const &key,std::map< int,cv::Mat_< double > >::mapped_type const &x){
         (*self)[key] = x;
       }
-SWIGINTERN bool std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__ContainsKey(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float > >::key_type const &key){
-        std::map< float, cv::Mat< float >, std::less< float > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__ContainsKey(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double > >::key_type const &key){
+        std::map< int, cv::Mat_< double >, std::less< int > >::iterator iter = self->find(key);
         return iter != self->end();
       }
-SWIGINTERN void std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__Add(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float > >::key_type const &key,std::map< float,cv::Mat< float > >::mapped_type const &val){
-        std::map< float, cv::Mat< float >, std::less< float > >::iterator iter = self->find(key);
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__Add(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double > >::key_type const &key,std::map< int,cv::Mat_< double > >::mapped_type const &val){
+        std::map< int, cv::Mat_< double >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end())
           throw std::out_of_range("key already exists");
-        self->insert(std::pair< float, cv::Mat< float > >(key, val));
+        self->insert(std::pair< int, cv::Mat_< double > >(key, val));
       }
-SWIGINTERN bool std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__Remove(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float > >::key_type const &key){
-        std::map< float, cv::Mat< float >, std::less< float > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__Remove(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double > >::key_type const &key){
+        std::map< int, cv::Mat_< double >, std::less< int > >::iterator iter = self->find(key);
         if (iter != self->end()) {
           self->erase(iter);
           return true;
         }                
         return false;
       }
-SWIGINTERN std::map< float,cv::Mat< float >,std::less< float > >::iterator *std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__create_iterator_begin(std::map< float,cv::Mat< float > > *self){
-        return new std::map< float, cv::Mat< float >, std::less< float > >::iterator(self->begin());
+SWIGINTERN std::map< int,cv::Mat_< double >,std::less< int > >::iterator *std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__create_iterator_begin(std::map< int,cv::Mat_< double > > *self){
+        return new std::map< int, cv::Mat_< double >, std::less< int > >::iterator(self->begin());
       }
-SWIGINTERN std::map< float,cv::Mat< float > >::key_type const &std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__get_next_key(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float >,std::less< float > >::iterator *swigiterator){
-        std::map< float, cv::Mat< float >, std::less< float > >::iterator iter = *swigiterator;
+SWIGINTERN std::map< int,cv::Mat_< double > >::key_type const &std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__get_next_key(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double >,std::less< int > >::iterator *swigiterator){
+        std::map< int, cv::Mat_< double >, std::less< int > >::iterator iter = *swigiterator;
         (*swigiterator)++;
         return (*iter).first;
       }
-SWIGINTERN void std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__destroy_iterator(std::map< float,cv::Mat< float > > *self,std::map< float,cv::Mat< float >,std::less< float > >::iterator *swigiterator){
+SWIGINTERN void std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__destroy_iterator(std::map< int,cv::Mat_< double > > *self,std::map< int,cv::Mat_< double >,std::less< int > >::iterator *swigiterator){
         delete swigiterator;
       }
-SWIGINTERN std::map< double,cv::Mat< double > >::mapped_type const &std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__getitem(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double > >::key_type const &key){
-        std::map< double, cv::Mat< double >, std::less< double > >::iterator iter = self->find(key);
+SWIGINTERN std::map< float,cv::Mat_< float > >::mapped_type const &std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__getitem(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float > >::key_type const &key){
+        std::map< float, cv::Mat_< float >, std::less< float > >::iterator iter = self->find(key);
         if (iter != self->end())
           return iter->second;
         else
           throw std::out_of_range("key not found");
       }
-SWIGINTERN void std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__setitem(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double > >::key_type const &key,std::map< double,cv::Mat< double > >::mapped_type const &x){
+SWIGINTERN void std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__setitem(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float > >::key_type const &key,std::map< float,cv::Mat_< float > >::mapped_type const &x){
         (*self)[key] = x;
       }
-SWIGINTERN bool std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__ContainsKey(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double > >::key_type const &key){
-        std::map< double, cv::Mat< double >, std::less< double > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__ContainsKey(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float > >::key_type const &key){
+        std::map< float, cv::Mat_< float >, std::less< float > >::iterator iter = self->find(key);
         return iter != self->end();
       }
-SWIGINTERN void std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__Add(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double > >::key_type const &key,std::map< double,cv::Mat< double > >::mapped_type const &val){
-        std::map< double, cv::Mat< double >, std::less< double > >::iterator iter = self->find(key);
+SWIGINTERN void std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__Add(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float > >::key_type const &key,std::map< float,cv::Mat_< float > >::mapped_type const &val){
+        std::map< float, cv::Mat_< float >, std::less< float > >::iterator iter = self->find(key);
         if (iter != self->end())
           throw std::out_of_range("key already exists");
-        self->insert(std::pair< double, cv::Mat< double > >(key, val));
+        self->insert(std::pair< float, cv::Mat_< float > >(key, val));
       }
-SWIGINTERN bool std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__Remove(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double > >::key_type const &key){
-        std::map< double, cv::Mat< double >, std::less< double > >::iterator iter = self->find(key);
+SWIGINTERN bool std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__Remove(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float > >::key_type const &key){
+        std::map< float, cv::Mat_< float >, std::less< float > >::iterator iter = self->find(key);
         if (iter != self->end()) {
           self->erase(iter);
           return true;
         }                
         return false;
       }
-SWIGINTERN std::map< double,cv::Mat< double >,std::less< double > >::iterator *std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__create_iterator_begin(std::map< double,cv::Mat< double > > *self){
-        return new std::map< double, cv::Mat< double >, std::less< double > >::iterator(self->begin());
+SWIGINTERN std::map< float,cv::Mat_< float >,std::less< float > >::iterator *std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__create_iterator_begin(std::map< float,cv::Mat_< float > > *self){
+        return new std::map< float, cv::Mat_< float >, std::less< float > >::iterator(self->begin());
       }
-SWIGINTERN std::map< double,cv::Mat< double > >::key_type const &std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__get_next_key(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double >,std::less< double > >::iterator *swigiterator){
-        std::map< double, cv::Mat< double >, std::less< double > >::iterator iter = *swigiterator;
+SWIGINTERN std::map< float,cv::Mat_< float > >::key_type const &std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__get_next_key(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float >,std::less< float > >::iterator *swigiterator){
+        std::map< float, cv::Mat_< float >, std::less< float > >::iterator iter = *swigiterator;
         (*swigiterator)++;
         return (*iter).first;
       }
-SWIGINTERN void std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__destroy_iterator(std::map< double,cv::Mat< double > > *self,std::map< double,cv::Mat< double >,std::less< double > >::iterator *swigiterator){
+SWIGINTERN void std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__destroy_iterator(std::map< float,cv::Mat_< float > > *self,std::map< float,cv::Mat_< float >,std::less< float > >::iterator *swigiterator){
         delete swigiterator;
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< int > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::vector< cv::Mat< int > > >* pv = 0;
+SWIGINTERN std::map< double,cv::Mat_< double > >::mapped_type const &std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__getitem(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double > >::key_type const &key){
+        std::map< double, cv::Mat_< double >, std::less< double > >::iterator iter = self->find(key);
+        if (iter != self->end())
+          return iter->second;
+        else
+          throw std::out_of_range("key not found");
+      }
+SWIGINTERN void std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__setitem(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double > >::key_type const &key,std::map< double,cv::Mat_< double > >::mapped_type const &x){
+        (*self)[key] = x;
+      }
+SWIGINTERN bool std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__ContainsKey(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double > >::key_type const &key){
+        std::map< double, cv::Mat_< double >, std::less< double > >::iterator iter = self->find(key);
+        return iter != self->end();
+      }
+SWIGINTERN void std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__Add(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double > >::key_type const &key,std::map< double,cv::Mat_< double > >::mapped_type const &val){
+        std::map< double, cv::Mat_< double >, std::less< double > >::iterator iter = self->find(key);
+        if (iter != self->end())
+          throw std::out_of_range("key already exists");
+        self->insert(std::pair< double, cv::Mat_< double > >(key, val));
+      }
+SWIGINTERN bool std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__Remove(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double > >::key_type const &key){
+        std::map< double, cv::Mat_< double >, std::less< double > >::iterator iter = self->find(key);
+        if (iter != self->end()) {
+          self->erase(iter);
+          return true;
+        }                
+        return false;
+      }
+SWIGINTERN std::map< double,cv::Mat_< double >,std::less< double > >::iterator *std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__create_iterator_begin(std::map< double,cv::Mat_< double > > *self){
+        return new std::map< double, cv::Mat_< double >, std::less< double > >::iterator(self->begin());
+      }
+SWIGINTERN std::map< double,cv::Mat_< double > >::key_type const &std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__get_next_key(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double >,std::less< double > >::iterator *swigiterator){
+        std::map< double, cv::Mat_< double >, std::less< double > >::iterator iter = *swigiterator;
+        (*swigiterator)++;
+        return (*iter).first;
+      }
+SWIGINTERN void std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__destroy_iterator(std::map< double,cv::Mat_< double > > *self,std::map< double,cv::Mat_< double >,std::less< double > >::iterator *swigiterator){
+        delete swigiterator;
+      }
+SWIGINTERN std::vector< std::vector< cv::Mat_< int > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< cv::Mat_< int > > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::vector< cv::Mat< int > > >();
+          pv = new std::vector< std::vector< cv::Mat_< int > > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::vector< cv::Mat< int > > std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat< int > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< int > > std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat_< int > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::vector< cv::Mat< int > > const &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat< int > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< int > > const &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat_< int > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat< int > > > *self,int index,std::vector< cv::Mat< int > > const &val){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat_< int > > > *self,int index,std::vector< cv::Mat_< int > > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat< int > > > *self,std::vector< std::vector< cv::Mat< int > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat_< int > > > *self,std::vector< std::vector< cv::Mat_< int > > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< int > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat< int > > > *self,int index,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< int > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat_< int > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::vector< cv::Mat< int > > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< std::vector< cv::Mat_< int > > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat< int > > > *self,int index,std::vector< cv::Mat< int > > const &x){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat_< int > > > *self,int index,std::vector< cv::Mat_< int > > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat< int > > > *self,int index,std::vector< std::vector< cv::Mat< int > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat_< int > > > *self,int index,std::vector< std::vector< cv::Mat_< int > > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat< int > > > *self,int index){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat_< int > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat< int > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat_< int > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1945,15 +2077,15 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__RemoveRang
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< int > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Repeat(std::vector< cv::Mat< int > > const &value,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< int > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Repeat(std::vector< cv::Mat_< int > > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::vector< cv::Mat< int > > >(count, value);
+        return new std::vector< std::vector< cv::Mat_< int > > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat< int > > > *self){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat_< int > > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat< int > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat_< int > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -1962,72 +2094,72 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Reverse__S
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat< int > > > *self,int index,std::vector< std::vector< cv::Mat< int > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat_< int > > > *self,int index,std::vector< std::vector< cv::Mat_< int > > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< double > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::vector< cv::Mat< double > > >* pv = 0;
+SWIGINTERN std::vector< std::vector< cv::Mat_< double > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< cv::Mat_< double > > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::vector< cv::Mat< double > > >();
+          pv = new std::vector< std::vector< cv::Mat_< double > > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::vector< cv::Mat< double > > std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat< double > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< double > > std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat_< double > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::vector< cv::Mat< double > > const &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat< double > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< double > > const &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat_< double > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat< double > > > *self,int index,std::vector< cv::Mat< double > > const &val){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat_< double > > > *self,int index,std::vector< cv::Mat_< double > > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat< double > > > *self,std::vector< std::vector< cv::Mat< double > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat_< double > > > *self,std::vector< std::vector< cv::Mat_< double > > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< double > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat< double > > > *self,int index,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< double > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat_< double > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::vector< cv::Mat< double > > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< std::vector< cv::Mat_< double > > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat< double > > > *self,int index,std::vector< cv::Mat< double > > const &x){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat_< double > > > *self,int index,std::vector< cv::Mat_< double > > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat< double > > > *self,int index,std::vector< std::vector< cv::Mat< double > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat_< double > > > *self,int index,std::vector< std::vector< cv::Mat_< double > > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat< double > > > *self,int index){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat_< double > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat< double > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat_< double > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -2036,15 +2168,15 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__RemoveR
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< double > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Repeat(std::vector< cv::Mat< double > > const &value,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< double > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Repeat(std::vector< cv::Mat_< double > > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::vector< cv::Mat< double > > >(count, value);
+        return new std::vector< std::vector< cv::Mat_< double > > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat< double > > > *self){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat_< double > > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat< double > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat_< double > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -2053,72 +2185,72 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Reverse
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat< double > > > *self,int index,std::vector< std::vector< cv::Mat< double > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat_< double > > > *self,int index,std::vector< std::vector< cv::Mat_< double > > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< float > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::vector< cv::Mat< float > > >* pv = 0;
+SWIGINTERN std::vector< std::vector< cv::Mat_< float > > > *new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::vector< cv::Mat_< float > > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::vector< cv::Mat< float > > >();
+          pv = new std::vector< std::vector< cv::Mat_< float > > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::vector< cv::Mat< float > > std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat< float > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< float > > std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__getitemcopy(std::vector< std::vector< cv::Mat_< float > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::vector< cv::Mat< float > > const &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat< float > > > *self,int index){
+SWIGINTERN std::vector< cv::Mat_< float > > const &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__getitem(std::vector< std::vector< cv::Mat_< float > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat< float > > > *self,int index,std::vector< cv::Mat< float > > const &val){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__setitem(std::vector< std::vector< cv::Mat_< float > > > *self,int index,std::vector< cv::Mat_< float > > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat< float > > > *self,std::vector< std::vector< cv::Mat< float > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__AddRange(std::vector< std::vector< cv::Mat_< float > > > *self,std::vector< std::vector< cv::Mat_< float > > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< float > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat< float > > > *self,int index,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< float > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__GetRange(std::vector< std::vector< cv::Mat_< float > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::vector< cv::Mat< float > > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< std::vector< cv::Mat_< float > > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat< float > > > *self,int index,std::vector< cv::Mat< float > > const &x){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Insert(std::vector< std::vector< cv::Mat_< float > > > *self,int index,std::vector< cv::Mat_< float > > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat< float > > > *self,int index,std::vector< std::vector< cv::Mat< float > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__InsertRange(std::vector< std::vector< cv::Mat_< float > > > *self,int index,std::vector< std::vector< cv::Mat_< float > > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat< float > > > *self,int index){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__RemoveAt(std::vector< std::vector< cv::Mat_< float > > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat< float > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__RemoveRange(std::vector< std::vector< cv::Mat_< float > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -2127,15 +2259,15 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__RemoveRa
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::vector< cv::Mat< float > > > *std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Repeat(std::vector< cv::Mat< float > > const &value,int count){
+SWIGINTERN std::vector< std::vector< cv::Mat_< float > > > *std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Repeat(std::vector< cv::Mat_< float > > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::vector< cv::Mat< float > > >(count, value);
+        return new std::vector< std::vector< cv::Mat_< float > > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat< float > > > *self){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(std::vector< std::vector< cv::Mat_< float > > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat< float > > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(std::vector< std::vector< cv::Mat_< float > > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -2144,7 +2276,7 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Reverse_
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat< float > > > *self,int index,std::vector< std::vector< cv::Mat< float > > > const &values){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__SetRange(std::vector< std::vector< cv::Mat_< float > > > *self,int index,std::vector< std::vector< cv::Mat_< float > > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
@@ -2564,7 +2696,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Read(void * jarg1, void * j
   LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
   std::ifstream *arg2 = 0 ;
   std::vector< int > arg3 ;
-  SwigValueWrapper< std::vector< std::vector< cv::Mat_< float > > > > arg4 ;
+  std::vector< std::vector< cv::Mat_< float > > > arg4 ;
   std::vector< int > *argp3 ;
   std::vector< std::vector< cv::Mat_< float > > > *argp4 ;
   
@@ -2612,7 +2744,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Response(void * jarg1, void
 
 SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_ComputeSigmas(void * jarg1, void * jarg2, int jarg3) {
   LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
-  SwigValueWrapper< std::vector< cv::Mat_< float > > > arg2 ;
+  std::vector< cv::Mat_< float > > arg2 ;
   int arg3 ;
   std::vector< cv::Mat_< float > > *argp2 ;
   
@@ -8369,6 +8501,1146 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_String_List(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Clear(void * jarg1) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Add(void * jarg1, void * jarg2) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  std::vector< int > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (std::vector< int > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((std::vector< int > const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  std::vector< std::vector< int > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  result = ((std::vector< std::vector< int > > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  std::vector< std::vector< int > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  result = ((std::vector< std::vector< int > > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  std::vector< std::vector< int > >::size_type arg2 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (std::vector< std::vector< int > >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_0() {
+  void * jresult ;
+  std::vector< std::vector< int > > *result = 0 ;
+  
+  result = (std::vector< std::vector< int > > *)new std::vector< std::vector< int > >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< std::vector< int > > *arg1 = 0 ;
+  std::vector< std::vector< int > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< std::vector< int > > *)new std::vector< std::vector< int > >((std::vector< std::vector< int > > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< std::vector< int > > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< std::vector< int > > *)new_std_vector_Sl_std_vector_Sl_int_Sg__Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitemcopy(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< int > result;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new std::vector< int >((const std::vector< int > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< int > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< int > *) &std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< int > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< int > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__setitem(arg1,arg2,(std::vector< int > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_AddRange(void * jarg1, void * jarg2) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  std::vector< std::vector< int > > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (std::vector< std::vector< int > > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_std_vector_Sl_int_Sg__Sg__AddRange(arg1,(std::vector< std::vector< int > > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< std::vector< int > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< std::vector< int > > *)std_vector_Sl_std_vector_Sl_int_Sg__Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< int > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< int > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__Insert(arg1,arg2,(std::vector< int > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< int > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< int > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< int > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_Repeat(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< int > *arg1 = 0 ;
+  int arg2 ;
+  std::vector< std::vector< int > > *result = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return 0;
+  } 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::vector< int > > *)std_vector_Sl_std_vector_Sl_int_Sg__Sg__Repeat((std::vector< int > const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_0(void * jarg1) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< int > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< int > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_int_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< int > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List2N(void * jarg1) {
+  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< int > > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Clear(void * jarg1) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Add(void * jarg1, void * jarg2) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  std::vector< float > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (std::vector< float > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((std::vector< float > const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  std::vector< std::vector< float > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  result = ((std::vector< std::vector< float > > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  std::vector< std::vector< float > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  result = ((std::vector< std::vector< float > > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  std::vector< std::vector< float > >::size_type arg2 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (std::vector< std::vector< float > >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_0() {
+  void * jresult ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  result = (std::vector< std::vector< float > > *)new std::vector< std::vector< float > >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< std::vector< float > > *arg1 = 0 ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< std::vector< float > > *)new std::vector< std::vector< float > >((std::vector< std::vector< float > > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< std::vector< float > > *)new_std_vector_Sl_std_vector_Sl_float_Sg__Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitemcopy(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< float > result;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new std::vector< float >((const std::vector< float > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< float > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< float > *) &std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< float > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< float > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__setitem(arg1,arg2,(std::vector< float > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_AddRange(void * jarg1, void * jarg2) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  std::vector< std::vector< float > > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (std::vector< std::vector< float > > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_std_vector_Sl_float_Sg__Sg__AddRange(arg1,(std::vector< std::vector< float > > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< std::vector< float > > *)std_vector_Sl_std_vector_Sl_float_Sg__Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< float > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< float > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__Insert(arg1,arg2,(std::vector< float > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< float > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_Repeat(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< float > *arg1 = 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  arg1 = (std::vector< float > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    return 0;
+  } 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::vector< float > > *)std_vector_Sl_std_vector_Sl_float_Sg__Sg__Repeat((std::vector< float > const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_0(void * jarg1) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< float > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_float_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List2N(void * jarg1) {
+  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Clear(void * jarg1) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Add(void * jarg1, void * jarg2) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  std::vector< std::vector< float > > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< float > > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((std::vector< std::vector< float > > const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  std::vector< std::vector< std::vector< float > > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  result = ((std::vector< std::vector< std::vector< float > > > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  std::vector< std::vector< std::vector< float > > >::size_type result;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  result = ((std::vector< std::vector< std::vector< float > > > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  std::vector< std::vector< std::vector< float > > >::size_type arg2 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< std::vector< float > > >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_0() {
+  void * jresult ;
+  std::vector< std::vector< std::vector< float > > > *result = 0 ;
+  
+  result = (std::vector< std::vector< std::vector< float > > > *)new std::vector< std::vector< std::vector< float > > >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = 0 ;
+  std::vector< std::vector< std::vector< float > > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< std::vector< float > > > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< std::vector< std::vector< float > > > *)new std::vector< std::vector< std::vector< float > > >((std::vector< std::vector< std::vector< float > > > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< std::vector< std::vector< float > > > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< std::vector< std::vector< float > > > *)new_std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitemcopy(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > result;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new std::vector< std::vector< float > >((const std::vector< std::vector< float > > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::vector< float > > *) &std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_setitem(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< float > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_AddRange(void * jarg1, void * jarg2) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  std::vector< std::vector< std::vector< float > > > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< std::vector< float > > > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< std::vector< float > > > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< std::vector< float > > > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< std::vector< std::vector< float > > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< std::vector< std::vector< float > > > *)std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Insert(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< float > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< float > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< std::vector< float > > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< std::vector< float > > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< std::vector< float > > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< std::vector< float > > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_Repeat(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::vector< float > > *arg1 = 0 ;
+  int arg2 ;
+  std::vector< std::vector< std::vector< float > > > *result = 0 ;
+  
+  arg1 = (std::vector< std::vector< float > > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
+    return 0;
+  } 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::vector< std::vector< float > > > *)std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Repeat((std::vector< std::vector< float > > const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_0(void * jarg1) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  int arg2 ;
+  std::vector< std::vector< std::vector< float > > > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::vector< std::vector< float > > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< std::vector< float > > > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_vector_Sl_std_vector_Sl_float_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< std::vector< float > > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List3N(void * jarg1) {
+  std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
+  
+  arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_0() {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *result = 0 ;
@@ -10501,795 +11773,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRect_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Clear(void * jarg1) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Add(void * jarg1, void * jarg2) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  std::vector< int > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (std::vector< int > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->push_back((std::vector< int > const &)*arg2);
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_size(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  std::vector< std::vector< int > >::size_type result;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  result = ((std::vector< std::vector< int > > const *)arg1)->size();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_capacity(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  std::vector< std::vector< int > >::size_type result;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  result = ((std::vector< std::vector< int > > const *)arg1)->capacity();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  std::vector< std::vector< int > >::size_type arg2 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (std::vector< std::vector< int > >::size_type)jarg2; 
-  (arg1)->reserve(arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_0() {
-  void * jresult ;
-  std::vector< std::vector< int > > *result = 0 ;
-  
-  result = (std::vector< std::vector< int > > *)new std::vector< std::vector< int > >();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_1(void * jarg1) {
-  void * jresult ;
-  std::vector< std::vector< int > > *arg1 = 0 ;
-  std::vector< std::vector< int > > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
-    return 0;
-  } 
-  result = (std::vector< std::vector< int > > *)new std::vector< std::vector< int > >((std::vector< std::vector< int > > const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_2(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  std::vector< std::vector< int > > *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  try {
-    result = (std::vector< std::vector< int > > *)new_std_vector_Sl_std_vector_Sl_int_Sg__Sg___SWIG_2(arg1);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitemcopy(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< int > result;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitemcopy(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = new std::vector< int >((const std::vector< int > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitem(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< int > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::vector< int > *) &std_vector_Sl_std_vector_Sl_int_Sg__Sg__getitem(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< int > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< int > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__setitem(arg1,arg2,(std::vector< int > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_AddRange(void * jarg1, void * jarg2) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  std::vector< std::vector< int > > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (std::vector< std::vector< int > > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
-    return ;
-  } 
-  std_vector_Sl_std_vector_Sl_int_Sg__Sg__AddRange(arg1,(std::vector< std::vector< int > > const &)*arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
-  void * jresult ;
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  std::vector< std::vector< int > > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    result = (std::vector< std::vector< int > > *)std_vector_Sl_std_vector_Sl_int_Sg__Sg__GetRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< int > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< int > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__Insert(arg1,arg2,(std::vector< int > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< std::vector< int > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< int > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< int > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveAt(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__RemoveRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_Repeat(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< int > *arg1 = 0 ;
-  int arg2 ;
-  std::vector< std::vector< int > > *result = 0 ;
-  
-  arg1 = (std::vector< int > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::vector< std::vector< int > > *)std_vector_Sl_std_vector_Sl_int_Sg__Sg__Repeat((std::vector< int > const &)*arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_0(void * jarg1) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_0(arg1);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  int arg2 ;
-  std::vector< std::vector< int > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< int > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< int > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_int_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< int > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List2N(void * jarg1) {
-  std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< int > > *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Clear(void * jarg1) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Add(void * jarg1, void * jarg2) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  std::vector< float > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (std::vector< float > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->push_back((std::vector< float > const &)*arg2);
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_size(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  std::vector< std::vector< float > >::size_type result;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  result = ((std::vector< std::vector< float > > const *)arg1)->size();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_capacity(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  std::vector< std::vector< float > >::size_type result;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  result = ((std::vector< std::vector< float > > const *)arg1)->capacity();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  std::vector< std::vector< float > >::size_type arg2 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (std::vector< std::vector< float > >::size_type)jarg2; 
-  (arg1)->reserve(arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_0() {
-  void * jresult ;
-  std::vector< std::vector< float > > *result = 0 ;
-  
-  result = (std::vector< std::vector< float > > *)new std::vector< std::vector< float > >();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_1(void * jarg1) {
-  void * jresult ;
-  std::vector< std::vector< float > > *arg1 = 0 ;
-  std::vector< std::vector< float > > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
-    return 0;
-  } 
-  result = (std::vector< std::vector< float > > *)new std::vector< std::vector< float > >((std::vector< std::vector< float > > const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_2(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  std::vector< std::vector< float > > *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  try {
-    result = (std::vector< std::vector< float > > *)new_std_vector_Sl_std_vector_Sl_float_Sg__Sg___SWIG_2(arg1);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitemcopy(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< float > result;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitemcopy(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = new std::vector< float >((const std::vector< float > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitem(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< float > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::vector< float > *) &std_vector_Sl_std_vector_Sl_float_Sg__Sg__getitem(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< float > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__setitem(arg1,arg2,(std::vector< float > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_AddRange(void * jarg1, void * jarg2) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  std::vector< std::vector< float > > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (std::vector< std::vector< float > > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
-    return ;
-  } 
-  std_vector_Sl_std_vector_Sl_float_Sg__Sg__AddRange(arg1,(std::vector< std::vector< float > > const &)*arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
-  void * jresult ;
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  std::vector< std::vector< float > > *result = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    result = (std::vector< std::vector< float > > *)std_vector_Sl_std_vector_Sl_float_Sg__Sg__GetRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< float > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< float > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__Insert(arg1,arg2,(std::vector< float > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< std::vector< float > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< float > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveAt(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__RemoveRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_Repeat(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< float > *arg1 = 0 ;
-  int arg2 ;
-  std::vector< std::vector< float > > *result = 0 ;
-  
-  arg1 = (std::vector< float > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::vector< std::vector< float > > *)std_vector_Sl_std_vector_Sl_float_Sg__Sg__Repeat((std::vector< float > const &)*arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_0(void * jarg1) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_0(arg1);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  int arg2 ;
-  std::vector< std::vector< float > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< float > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< float > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_vector_Sl_float_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< float > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List2N(void * jarg1) {
-  std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
-  
-  arg1 = (std::vector< std::vector< float > > *)jarg1; 
-  delete arg1;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Clear(void * jarg1) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Add(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
-  cv::Mat< float > *arg2 = 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
+  cv::Mat_< float > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  arg2 = (cv::Mat< float > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  arg2 = (cv::Mat_< float > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((cv::Mat< float > const &)*arg2);
+  (arg1)->push_back((cv::Mat_< float > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
-  std::vector< cv::Mat< float > >::size_type result;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
+  std::vector< cv::Mat_< float > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  result = ((std::vector< cv::Mat< float > > const *)arg1)->size();
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< float > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -11297,31 +11809,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_size(void * jarg1) {
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
-  std::vector< cv::Mat< float > >::size_type result;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
+  std::vector< cv::Mat_< float > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  result = ((std::vector< cv::Mat< float > > const *)arg1)->capacity();
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< float > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
-  std::vector< cv::Mat< float > >::size_type arg2 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
+  std::vector< cv::Mat_< float > >::size_type arg2 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< float > >::size_type)jarg2; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< float > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_0() {
   void * jresult ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
-  result = (std::vector< cv::Mat< float > > *)new std::vector< cv::Mat< float > >();
+  result = (std::vector< cv::Mat_< float > > *)new std::vector< cv::Mat_< float > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -11329,15 +11841,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< cv::Mat< float > > *arg1 = 0 ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< cv::Mat< float > > *)new std::vector< cv::Mat< float > >((std::vector< cv::Mat< float > > const &)*arg1);
+  result = (std::vector< cv::Mat_< float > > *)new std::vector< cv::Mat_< float > >((std::vector< cv::Mat_< float > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -11346,11 +11858,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_1(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< cv::Mat< float > > *)new_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< cv::Mat_< float > > *)new_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11364,35 +11876,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  cv::Mat< float > result;
+  cv::Mat_< float > result;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new cv::Mat< float >((const cv::Mat< float > &)result); 
+  jresult = new cv::Mat_< float >((const cv::Mat_< float > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  cv::Mat< float > *result = 0 ;
+  cv::Mat_< float > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (cv::Mat< float > *) &std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__getitem(arg1,arg2);
+    result = (cv::Mat_< float > *) &std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11405,19 +11917,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitem(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  cv::Mat< float > *arg3 = 0 ;
+  cv::Mat_< float > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< float > *)jarg3;
+  arg3 = (cv::Mat_< float > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__setitem(arg1,arg2,(cv::Mat< float > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__setitem(arg1,arg2,(cv::Mat_< float > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11428,31 +11940,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_setitem(void * jarg1, int jarg2
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_AddRange(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
-  std::vector< cv::Mat< float > > *arg2 = 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< float > > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< float > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat< float > > const &)*arg2);
+  std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat_< float > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< cv::Mat< float > > *)std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< cv::Mat_< float > > *)std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11469,19 +11981,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_GetRange(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  cv::Mat< float > *arg3 = 0 ;
+  cv::Mat_< float > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< float > *)jarg3;
+  arg3 = (cv::Mat_< float > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Insert(arg1,arg2,(cv::Mat< float > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Insert(arg1,arg2,(cv::Mat_< float > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11492,19 +12004,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Insert(void * jarg1, int jarg2,
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *arg3 = 0 ;
+  std::vector< cv::Mat_< float > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< float > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< float > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat< float > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat_< float > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11515,13 +12027,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_InsertRange(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11532,15 +12044,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveAt(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11556,18 +12068,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveRange(void * jarg1, int j
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  cv::Mat< float > *arg1 = 0 ;
+  cv::Mat_< float > *arg1 = 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
-  arg1 = (cv::Mat< float > *)jarg1;
+  arg1 = (cv::Mat_< float > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< float > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< float > > *)std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Repeat((cv::Mat< float > const &)*arg1,arg2);
+    result = (std::vector< cv::Mat_< float > > *)std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Repeat((cv::Mat_< float > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11580,23 +12092,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_Repeat(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_0(void * jarg1) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
-  std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
+  std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11611,19 +12123,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_1(void * jarg1, i
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *arg3 = 0 ;
+  std::vector< cv::Mat_< float > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< float > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< float > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat< float > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat_< float > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11634,42 +12146,42 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_SetRange(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMat_List(void * jarg1) {
-  std::vector< cv::Mat< float > > *arg1 = (std::vector< cv::Mat< float > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Clear(void * jarg1) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Add(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
-  cv::Mat< double > *arg2 = 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
+  cv::Mat_< double > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  arg2 = (cv::Mat< double > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  arg2 = (cv::Mat_< double > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< double > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((cv::Mat< double > const &)*arg2);
+  (arg1)->push_back((cv::Mat_< double > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
-  std::vector< cv::Mat< double > >::size_type result;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
+  std::vector< cv::Mat_< double > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  result = ((std::vector< cv::Mat< double > > const *)arg1)->size();
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< double > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -11677,31 +12189,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_size(void * jarg1) {
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
-  std::vector< cv::Mat< double > >::size_type result;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
+  std::vector< cv::Mat_< double > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  result = ((std::vector< cv::Mat< double > > const *)arg1)->capacity();
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< double > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
-  std::vector< cv::Mat< double > >::size_type arg2 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
+  std::vector< cv::Mat_< double > >::size_type arg2 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< double > >::size_type)jarg2; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< double > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_0() {
   void * jresult ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
-  result = (std::vector< cv::Mat< double > > *)new std::vector< cv::Mat< double > >();
+  result = (std::vector< cv::Mat_< double > > *)new std::vector< cv::Mat_< double > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -11709,15 +12221,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< cv::Mat< double > > *arg1 = 0 ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< cv::Mat< double > > *)new std::vector< cv::Mat< double > >((std::vector< cv::Mat< double > > const &)*arg1);
+  result = (std::vector< cv::Mat_< double > > *)new std::vector< cv::Mat_< double > >((std::vector< cv::Mat_< double > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -11726,11 +12238,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_1(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< cv::Mat< double > > *)new_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< cv::Mat_< double > > *)new_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11744,35 +12256,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  cv::Mat< double > result;
+  cv::Mat_< double > result;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new cv::Mat< double >((const cv::Mat< double > &)result); 
+  jresult = new cv::Mat_< double >((const cv::Mat_< double > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  cv::Mat< double > *result = 0 ;
+  cv::Mat_< double > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (cv::Mat< double > *) &std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__getitem(arg1,arg2);
+    result = (cv::Mat_< double > *) &std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11785,19 +12297,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitem(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  cv::Mat< double > *arg3 = 0 ;
+  cv::Mat_< double > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< double > *)jarg3;
+  arg3 = (cv::Mat_< double > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< double > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__setitem(arg1,arg2,(cv::Mat< double > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__setitem(arg1,arg2,(cv::Mat_< double > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11808,31 +12320,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_setitem(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_AddRange(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
-  std::vector< cv::Mat< double > > *arg2 = 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< double > > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< double > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat< double > > const &)*arg2);
+  std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat_< double > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< cv::Mat< double > > *)std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< cv::Mat_< double > > *)std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11849,19 +12361,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_GetRange(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  cv::Mat< double > *arg3 = 0 ;
+  cv::Mat_< double > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< double > *)jarg3;
+  arg3 = (cv::Mat_< double > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< double > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Insert(arg1,arg2,(cv::Mat< double > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Insert(arg1,arg2,(cv::Mat_< double > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11872,19 +12384,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Insert(void * jarg1, int jarg2
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *arg3 = 0 ;
+  std::vector< cv::Mat_< double > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< double > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< double > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat< double > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat_< double > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11895,13 +12407,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_InsertRange(void * jarg1, int 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11912,15 +12424,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveAt(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11936,18 +12448,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveRange(void * jarg1, int 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  cv::Mat< double > *arg1 = 0 ;
+  cv::Mat_< double > *arg1 = 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (cv::Mat< double > *)jarg1;
+  arg1 = (cv::Mat_< double > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< double > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< double > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< double > > *)std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Repeat((cv::Mat< double > const &)*arg1,arg2);
+    result = (std::vector< cv::Mat_< double > > *)std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Repeat((cv::Mat_< double > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11960,23 +12472,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_Repeat(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_0(void * jarg1) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
-  std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
+  std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -11991,19 +12503,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_1(void * jarg1, 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *arg3 = 0 ;
+  std::vector< cv::Mat_< double > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< double > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< double > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat< double > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat_< double > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12014,42 +12526,42 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_SetRange(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List(void * jarg1) {
-  std::vector< cv::Mat< double > > *arg1 = (std::vector< cv::Mat< double > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Clear(void * jarg1) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Add(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
-  cv::Mat< int > *arg2 = 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
+  cv::Mat_< int > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  arg2 = (cv::Mat< int > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  arg2 = (cv::Mat_< int > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< int > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((cv::Mat< int > const &)*arg2);
+  (arg1)->push_back((cv::Mat_< int > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
-  std::vector< cv::Mat< int > >::size_type result;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
+  std::vector< cv::Mat_< int > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  result = ((std::vector< cv::Mat< int > > const *)arg1)->size();
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< int > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -12057,31 +12569,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_size(void * jarg1) {
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
-  std::vector< cv::Mat< int > >::size_type result;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
+  std::vector< cv::Mat_< int > >::size_type result;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  result = ((std::vector< cv::Mat< int > > const *)arg1)->capacity();
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  result = ((std::vector< cv::Mat_< int > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
-  std::vector< cv::Mat< int > >::size_type arg2 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
+  std::vector< cv::Mat_< int > >::size_type arg2 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< int > >::size_type)jarg2; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< int > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_0() {
   void * jresult ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
-  result = (std::vector< cv::Mat< int > > *)new std::vector< cv::Mat< int > >();
+  result = (std::vector< cv::Mat_< int > > *)new std::vector< cv::Mat_< int > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -12089,15 +12601,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< cv::Mat< int > > *arg1 = 0 ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< cv::Mat< int > > *)new std::vector< cv::Mat< int > >((std::vector< cv::Mat< int > > const &)*arg1);
+  result = (std::vector< cv::Mat_< int > > *)new std::vector< cv::Mat_< int > >((std::vector< cv::Mat_< int > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -12106,11 +12618,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_1(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< cv::Mat< int > > *)new_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< cv::Mat_< int > > *)new_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12124,35 +12636,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  cv::Mat< int > result;
+  cv::Mat_< int > result;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new cv::Mat< int >((const cv::Mat< int > &)result); 
+  jresult = new cv::Mat_< int >((const cv::Mat_< int > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  cv::Mat< int > *result = 0 ;
+  cv::Mat_< int > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (cv::Mat< int > *) &std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__getitem(arg1,arg2);
+    result = (cv::Mat_< int > *) &std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12165,19 +12677,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitem(void * jarg1, int jarg2
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  cv::Mat< int > *arg3 = 0 ;
+  cv::Mat_< int > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< int > *)jarg3;
+  arg3 = (cv::Mat_< int > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< int > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__setitem(arg1,arg2,(cv::Mat< int > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__setitem(arg1,arg2,(cv::Mat_< int > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12188,31 +12700,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_setitem(void * jarg1, int jarg2, 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_AddRange(void * jarg1, void * jarg2) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
-  std::vector< cv::Mat< int > > *arg2 = 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg2 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< int > > *)jarg2;
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< int > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat< int > > const &)*arg2);
+  std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__AddRange(arg1,(std::vector< cv::Mat_< int > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< cv::Mat< int > > *)std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< cv::Mat_< int > > *)std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12229,19 +12741,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_GetRange(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  cv::Mat< int > *arg3 = 0 ;
+  cv::Mat_< int > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (cv::Mat< int > *)jarg3;
+  arg3 = (cv::Mat_< int > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< int > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Insert(arg1,arg2,(cv::Mat< int > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Insert(arg1,arg2,(cv::Mat_< int > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12252,19 +12764,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Insert(void * jarg1, int jarg2, v
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *arg3 = 0 ;
+  std::vector< cv::Mat_< int > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< int > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< int > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat< int > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__InsertRange(arg1,arg2,(std::vector< cv::Mat_< int > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12275,13 +12787,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_InsertRange(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12292,15 +12804,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveAt(void * jarg1, int jarg2)
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12316,18 +12828,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveRange(void * jarg1, int jar
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  cv::Mat< int > *arg1 = 0 ;
+  cv::Mat_< int > *arg1 = 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
-  arg1 = (cv::Mat< int > *)jarg1;
+  arg1 = (cv::Mat_< int > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat< int > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "cv::Mat_< int > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< int > > *)std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Repeat((cv::Mat< int > const &)*arg1,arg2);
+    result = (std::vector< cv::Mat_< int > > *)std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Repeat((cv::Mat_< int > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12340,23 +12852,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_Repeat(void * jarg1, int jarg2)
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_0(void * jarg1) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
-  std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12371,19 +12883,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_1(void * jarg1, int
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *arg3 = 0 ;
+  std::vector< cv::Mat_< int > > *arg3 = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< int > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< int > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat< int > > const &)*arg3);
+    std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__SetRange(arg1,arg2,(std::vector< cv::Mat_< int > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12394,18 +12906,218 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_SetRange(void * jarg1, int jarg2,
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List(void * jarg1) {
-  std::vector< cv::Mat< int > > *arg1 = (std::vector< cv::Mat< int > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1; 
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_0() {
+  void * jresult ;
+  std::map< int,cv::Mat_< int > > *result = 0 ;
+  
+  result = (std::map< int,cv::Mat_< int > > *)new std::map< int,cv::Mat_< int > >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::map< int,cv::Mat_< int >,std::less< int > > *arg1 = 0 ;
+  std::map< int,cv::Mat_< int > > *result = 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int >,std::less< int > > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< int >,std::less< int > > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::map< int,cv::Mat_< int > > *)new std::map< int,cv::Mat_< int > >((std::map< int,cv::Mat_< int >,std::less< int > > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMat_Map_size(void * jarg1) {
+  unsigned long jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::size_type result;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  result = ((std::map< int,cv::Mat_< int > > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_empty(void * jarg1) {
+  unsigned int jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  bool result;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  result = (bool)((std::map< int,cv::Mat_< int > > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Clear(void * jarg1) {
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< int > >::key_type temp2 ;
+  std::map< int,cv::Mat_< int > >::mapped_type *result = 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< int > >::key_type)jarg2; 
+  arg2 = &temp2; 
+  try {
+    result = (std::map< int,cv::Mat_< int > >::mapped_type *) &std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__getitem(arg1,(int const &)*arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_setitem(void * jarg1, int jarg2, void * jarg3) {
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< int > >::mapped_type *arg3 = 0 ;
+  std::map< int,cv::Mat_< int > >::key_type temp2 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< int > >::key_type)jarg2; 
+  arg2 = &temp2; 
+  arg3 = (std::map< int,cv::Mat_< int > >::mapped_type *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< int > >::mapped_type const & type is null", 0);
+    return ;
+  } 
+  std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__setitem(arg1,(int const &)*arg2,(cv::Mat_< int > const &)*arg3);
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_ContainsKey(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< int > >::key_type temp2 ;
+  bool result;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< int > >::key_type)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__ContainsKey(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Add(void * jarg1, int jarg2, void * jarg3) {
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< int > >::mapped_type *arg3 = 0 ;
+  std::map< int,cv::Mat_< int > >::key_type temp2 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< int > >::key_type)jarg2; 
+  arg2 = &temp2; 
+  arg3 = (std::map< int,cv::Mat_< int > >::mapped_type *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< int > >::mapped_type const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__Add(arg1,(int const &)*arg2,(cv::Mat_< int > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_Remove(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< int > >::key_type temp2 ;
+  bool result;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< int > >::key_type)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__Remove(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_create_iterator_begin(void * jarg1) {
+  void * jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int >,std::less< int > >::iterator *result = 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  result = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *)std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__create_iterator_begin(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMat_Map_get_next_key(void * jarg1, void * jarg2) {
+  int jresult ;
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *) 0 ;
+  std::map< int,cv::Mat_< int > >::key_type *result = 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *)jarg2; 
+  result = (std::map< int,cv::Mat_< int > >::key_type *) &std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__get_next_key(arg1,arg2);
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  std::map< int,cv::Mat_< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *) 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
+  arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *)jarg2; 
+  std_map_Sl_int_Sc_cv_Mat__Sl_int_Sg__Sg__destroy_iterator(arg1,arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMat_Map(void * jarg1) {
+  std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
+  
+  arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_0() {
   void * jresult ;
-  std::map< int,cv::Mat< int > > *result = 0 ;
+  std::map< int,cv::Mat_< double > > *result = 0 ;
   
-  result = (std::map< int,cv::Mat< int > > *)new std::map< int,cv::Mat< int > >();
+  result = (std::map< int,cv::Mat_< double > > *)new std::map< int,cv::Mat_< double > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -12413,15 +13125,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::map< int,cv::Mat< int >,std::less< int > > *arg1 = 0 ;
-  std::map< int,cv::Mat< int > > *result = 0 ;
+  std::map< int,cv::Mat_< double >,std::less< int > > *arg1 = 0 ;
+  std::map< int,cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int >,std::less< int > > *)jarg1;
+  arg1 = (std::map< int,cv::Mat_< double >,std::less< int > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat< int >,std::less< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< double >,std::less< int > > const & type is null", 0);
     return 0;
   } 
-  result = (std::map< int,cv::Mat< int > > *)new std::map< int,cv::Mat< int > >((std::map< int,cv::Mat< int >,std::less< int > > const &)*arg1);
+  result = (std::map< int,cv::Mat_< double > > *)new std::map< int,cv::Mat_< double > >((std::map< int,cv::Mat_< double >,std::less< int > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -12429,11 +13141,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_1(void * jarg1)
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMat_Map_size(void * jarg1) {
   unsigned long jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::size_type result;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::size_type result;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  result = ((std::map< int,cv::Mat< int > > const *)arg1)->size();
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  result = ((std::map< int,cv::Mat_< double > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -12441,36 +13153,36 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMat_Map_size(void * jarg1)
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_empty(void * jarg1) {
   unsigned int jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   bool result;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  result = (bool)((std::map< int,cv::Mat< int > > const *)arg1)->empty();
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  result = (bool)((std::map< int,cv::Mat_< double > > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Clear(void * jarg1) {
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *arg2 = 0 ;
-  std::map< int,cv::Mat< int > >::key_type temp2 ;
-  std::map< int,cv::Mat< int > >::mapped_type *result = 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< double > >::key_type temp2 ;
+  std::map< int,cv::Mat_< double > >::mapped_type *result = 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  temp2 = (std::map< int,cv::Mat< int > >::key_type)jarg2; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
   try {
-    result = (std::map< int,cv::Mat< int > >::mapped_type *) &std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__getitem(arg1,(int const &)*arg2);
+    result = (std::map< int,cv::Mat_< double > >::mapped_type *) &std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__getitem(arg1,(int const &)*arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12483,55 +13195,55 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_getitem(void * jarg1, int
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *arg2 = 0 ;
-  std::map< int,cv::Mat< int > >::mapped_type *arg3 = 0 ;
-  std::map< int,cv::Mat< int > >::key_type temp2 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
+  std::map< int,cv::Mat_< double > >::key_type temp2 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  temp2 = (std::map< int,cv::Mat< int > >::key_type)jarg2; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< int,cv::Mat< int > >::mapped_type *)jarg3;
+  arg3 = (std::map< int,cv::Mat_< double > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat< int > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< double > >::mapped_type const & type is null", 0);
     return ;
   } 
-  std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__setitem(arg1,(int const &)*arg2,(cv::Mat< int > const &)*arg3);
+  std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__setitem(arg1,(int const &)*arg2,(cv::Mat_< double > const &)*arg3);
 }
 
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_ContainsKey(void * jarg1, int jarg2) {
   unsigned int jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *arg2 = 0 ;
-  std::map< int,cv::Mat< int > >::key_type temp2 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< double > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  temp2 = (std::map< int,cv::Mat< int > >::key_type)jarg2; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__ContainsKey(arg1,(int const &)*arg2);
+  result = (bool)std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__ContainsKey(arg1,(int const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Add(void * jarg1, int jarg2, void * jarg3) {
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *arg2 = 0 ;
-  std::map< int,cv::Mat< int > >::mapped_type *arg3 = 0 ;
-  std::map< int,cv::Mat< int > >::key_type temp2 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
+  std::map< int,cv::Mat_< double > >::key_type temp2 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  temp2 = (std::map< int,cv::Mat< int > >::key_type)jarg2; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< int,cv::Mat< int > >::mapped_type *)jarg3;
+  arg3 = (std::map< int,cv::Mat_< double > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat< int > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< int,cv::Mat_< double > >::mapped_type const & type is null", 0);
     return ;
   } 
   try {
-    std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__Add(arg1,(int const &)*arg2,(cv::Mat< int > const &)*arg3);
+    std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__Add(arg1,(int const &)*arg2,(cv::Mat_< double > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12543,15 +13255,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Add(void * jarg1, int jarg2
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_Remove(void * jarg1, int jarg2) {
   unsigned int jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *arg2 = 0 ;
-  std::map< int,cv::Mat< int > >::key_type temp2 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< int,cv::Mat_< double > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  temp2 = (std::map< int,cv::Mat< int > >::key_type)jarg2; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< int,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__Remove(arg1,(int const &)*arg2);
+  result = (bool)std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__Remove(arg1,(int const &)*arg2);
   jresult = result; 
   return jresult;
 }
@@ -12559,11 +13271,11 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_Remove(void * jarg1
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_create_iterator_begin(void * jarg1) {
   void * jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int >,std::less< int > >::iterator *result = 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double >,std::less< int > >::iterator *result = 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  result = (std::map< int,cv::Mat< int >,std::less< int > >::iterator *)std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__create_iterator_begin(arg1);
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  result = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *)std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -12571,106 +13283,106 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_create_iterator_begin(voi
 
 SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMat_Map_get_next_key(void * jarg1, void * jarg2) {
   int jresult ;
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat< int >,std::less< int > >::iterator *) 0 ;
-  std::map< int,cv::Mat< int > >::key_type *result = 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *) 0 ;
+  std::map< int,cv::Mat_< double > >::key_type *result = 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  arg2 = (std::map< int,cv::Mat< int >,std::less< int > >::iterator *)jarg2; 
-  result = (std::map< int,cv::Mat< int > >::key_type *) &std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__get_next_key(arg1,arg2);
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *)jarg2; 
+  result = (std::map< int,cv::Mat_< double > >::key_type *) &std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__get_next_key(arg1,arg2);
   jresult = *result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
-  std::map< int,cv::Mat< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat< int >,std::less< int > >::iterator *) 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
+  std::map< int,cv::Mat_< double >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *) 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
-  arg2 = (std::map< int,cv::Mat< int >,std::less< int > >::iterator *)jarg2; 
-  std_map_Sl_int_Sc_cv_Mat_Sl_int_Sg__Sg__destroy_iterator(arg1,arg2);
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *)jarg2; 
+  std_map_Sl_int_Sc_cv_Mat__Sl_double_Sg__Sg__destroy_iterator(arg1,arg2);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMat_Map(void * jarg1) {
-  std::map< int,cv::Mat< int > > *arg1 = (std::map< int,cv::Mat< int > > *) 0 ;
+  std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::map< int,cv::Mat< int > > *)jarg1; 
+  arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_DoubleMat_Map__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_0() {
   void * jresult ;
-  std::map< float,cv::Mat< float > > *result = 0 ;
+  std::map< float,cv::Mat_< float > > *result = 0 ;
   
-  result = (std::map< float,cv::Mat< float > > *)new std::map< float,cv::Mat< float > >();
+  result = (std::map< float,cv::Mat_< float > > *)new std::map< float,cv::Mat_< float > >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_DoubleMat_Map__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::map< float,cv::Mat< float >,std::less< float > > *arg1 = 0 ;
-  std::map< float,cv::Mat< float > > *result = 0 ;
+  std::map< float,cv::Mat_< float >,std::less< float > > *arg1 = 0 ;
+  std::map< float,cv::Mat_< float > > *result = 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float >,std::less< float > > *)jarg1;
+  arg1 = (std::map< float,cv::Mat_< float >,std::less< float > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat< float >,std::less< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat_< float >,std::less< float > > const & type is null", 0);
     return 0;
   } 
-  result = (std::map< float,cv::Mat< float > > *)new std::map< float,cv::Mat< float > >((std::map< float,cv::Mat< float >,std::less< float > > const &)*arg1);
+  result = (std::map< float,cv::Mat_< float > > *)new std::map< float,cv::Mat_< float > >((std::map< float,cv::Mat_< float >,std::less< float > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_DoubleMat_Map_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMat_Map_size(void * jarg1) {
   unsigned long jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::size_type result;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::size_type result;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  result = ((std::map< float,cv::Mat< float > > const *)arg1)->size();
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  result = ((std::map< float,cv::Mat_< float > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_DoubleMat_Map_empty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_empty(void * jarg1) {
   unsigned int jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   bool result;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  result = (bool)((std::map< float,cv::Mat< float > > const *)arg1)->empty();
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  result = (bool)((std::map< float,cv::Mat_< float > > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_DoubleMat_Map_Clear(void * jarg1) {
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Clear(void * jarg1) {
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_DoubleMat_Map_getitem(void * jarg1, float jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_getitem(void * jarg1, float jarg2) {
   void * jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *arg2 = 0 ;
-  std::map< float,cv::Mat< float > >::key_type temp2 ;
-  std::map< float,cv::Mat< float > >::mapped_type *result = 0 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
+  std::map< float,cv::Mat_< float > >::key_type temp2 ;
+  std::map< float,cv::Mat_< float > >::mapped_type *result = 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  temp2 = (std::map< float,cv::Mat< float > >::key_type)jarg2; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  temp2 = (std::map< float,cv::Mat_< float > >::key_type)jarg2; 
   arg2 = &temp2; 
   try {
-    result = (std::map< float,cv::Mat< float > >::mapped_type *) &std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__getitem(arg1,(float const &)*arg2);
+    result = (std::map< float,cv::Mat_< float > >::mapped_type *) &std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__getitem(arg1,(float const &)*arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12682,56 +13394,56 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_DoubleMat_Map_getitem(void * jarg1, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_DoubleMat_Map_setitem(void * jarg1, float jarg2, void * jarg3) {
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *arg2 = 0 ;
-  std::map< float,cv::Mat< float > >::mapped_type *arg3 = 0 ;
-  std::map< float,cv::Mat< float > >::key_type temp2 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_setitem(void * jarg1, float jarg2, void * jarg3) {
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
+  std::map< float,cv::Mat_< float > >::mapped_type *arg3 = 0 ;
+  std::map< float,cv::Mat_< float > >::key_type temp2 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  temp2 = (std::map< float,cv::Mat< float > >::key_type)jarg2; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  temp2 = (std::map< float,cv::Mat_< float > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< float,cv::Mat< float > >::mapped_type *)jarg3;
+  arg3 = (std::map< float,cv::Mat_< float > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat< float > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat_< float > >::mapped_type const & type is null", 0);
     return ;
   } 
-  std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__setitem(arg1,(float const &)*arg2,(cv::Mat< float > const &)*arg3);
+  std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__setitem(arg1,(float const &)*arg2,(cv::Mat_< float > const &)*arg3);
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_DoubleMat_Map_ContainsKey(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_ContainsKey(void * jarg1, float jarg2) {
   unsigned int jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *arg2 = 0 ;
-  std::map< float,cv::Mat< float > >::key_type temp2 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
+  std::map< float,cv::Mat_< float > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  temp2 = (std::map< float,cv::Mat< float > >::key_type)jarg2; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  temp2 = (std::map< float,cv::Mat_< float > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__ContainsKey(arg1,(float const &)*arg2);
+  result = (bool)std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__ContainsKey(arg1,(float const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_DoubleMat_Map_Add(void * jarg1, float jarg2, void * jarg3) {
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *arg2 = 0 ;
-  std::map< float,cv::Mat< float > >::mapped_type *arg3 = 0 ;
-  std::map< float,cv::Mat< float > >::key_type temp2 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Add(void * jarg1, float jarg2, void * jarg3) {
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
+  std::map< float,cv::Mat_< float > >::mapped_type *arg3 = 0 ;
+  std::map< float,cv::Mat_< float > >::key_type temp2 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  temp2 = (std::map< float,cv::Mat< float > >::key_type)jarg2; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  temp2 = (std::map< float,cv::Mat_< float > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< float,cv::Mat< float > >::mapped_type *)jarg3;
+  arg3 = (std::map< float,cv::Mat_< float > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat< float > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< float,cv::Mat_< float > >::mapped_type const & type is null", 0);
     return ;
   } 
   try {
-    std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__Add(arg1,(float const &)*arg2,(cv::Mat< float > const &)*arg3);
+    std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__Add(arg1,(float const &)*arg2,(cv::Mat_< float > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12741,71 +13453,71 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_DoubleMat_Map_Add(void * jarg1, float j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_DoubleMat_Map_Remove(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_Remove(void * jarg1, float jarg2) {
   unsigned int jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *arg2 = 0 ;
-  std::map< float,cv::Mat< float > >::key_type temp2 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
+  std::map< float,cv::Mat_< float > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  temp2 = (std::map< float,cv::Mat< float > >::key_type)jarg2; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  temp2 = (std::map< float,cv::Mat_< float > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__Remove(arg1,(float const &)*arg2);
+  result = (bool)std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__Remove(arg1,(float const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_DoubleMat_Map_create_iterator_begin(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_create_iterator_begin(void * jarg1) {
   void * jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float >,std::less< float > >::iterator *result = 0 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float >,std::less< float > >::iterator *result = 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  result = (std::map< float,cv::Mat< float >,std::less< float > >::iterator *)std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__create_iterator_begin(arg1);
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  result = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *)std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_Float_DoubleMat_Map_get_next_key(void * jarg1, void * jarg2) {
+SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMat_Map_get_next_key(void * jarg1, void * jarg2) {
   float jresult ;
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat< float >,std::less< float > >::iterator *) 0 ;
-  std::map< float,cv::Mat< float > >::key_type *result = 0 ;
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *) 0 ;
+  std::map< float,cv::Mat_< float > >::key_type *result = 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  arg2 = (std::map< float,cv::Mat< float >,std::less< float > >::iterator *)jarg2; 
-  result = (std::map< float,cv::Mat< float > >::key_type *) &std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__get_next_key(arg1,arg2);
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *)jarg2; 
+  result = (std::map< float,cv::Mat_< float > >::key_type *) &std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__get_next_key(arg1,arg2);
   jresult = *result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_DoubleMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
-  std::map< float,cv::Mat< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat< float >,std::less< float > >::iterator *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
+  std::map< float,cv::Mat_< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *) 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
-  arg2 = (std::map< float,cv::Mat< float >,std::less< float > >::iterator *)jarg2; 
-  std_map_Sl_float_Sc_cv_Mat_Sl_float_Sg__Sg__destroy_iterator(arg1,arg2);
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
+  arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *)jarg2; 
+  std_map_Sl_float_Sc_cv_Mat__Sl_float_Sg__Sg__destroy_iterator(arg1,arg2);
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_DoubleMat_Map(void * jarg1) {
-  std::map< float,cv::Mat< float > > *arg1 = (std::map< float,cv::Mat< float > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMat_Map(void * jarg1) {
+  std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   
-  arg1 = (std::map< float,cv::Mat< float > > *)jarg1; 
+  arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_0() {
   void * jresult ;
-  std::map< double,cv::Mat< double > > *result = 0 ;
+  std::map< double,cv::Mat_< double > > *result = 0 ;
   
-  result = (std::map< double,cv::Mat< double > > *)new std::map< double,cv::Mat< double > >();
+  result = (std::map< double,cv::Mat_< double > > *)new std::map< double,cv::Mat_< double > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -12813,15 +13525,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::map< double,cv::Mat< double >,std::less< double > > *arg1 = 0 ;
-  std::map< double,cv::Mat< double > > *result = 0 ;
+  std::map< double,cv::Mat_< double >,std::less< double > > *arg1 = 0 ;
+  std::map< double,cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double >,std::less< double > > *)jarg1;
+  arg1 = (std::map< double,cv::Mat_< double >,std::less< double > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat< double >,std::less< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat_< double >,std::less< double > > const & type is null", 0);
     return 0;
   } 
-  result = (std::map< double,cv::Mat< double > > *)new std::map< double,cv::Mat< double > >((std::map< double,cv::Mat< double >,std::less< double > > const &)*arg1);
+  result = (std::map< double,cv::Mat_< double > > *)new std::map< double,cv::Mat_< double > >((std::map< double,cv::Mat_< double >,std::less< double > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -12829,11 +13541,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_1(void * jar
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMat_Map_size(void * jarg1) {
   unsigned long jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::size_type result;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::size_type result;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  result = ((std::map< double,cv::Mat< double > > const *)arg1)->size();
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  result = ((std::map< double,cv::Mat_< double > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -12841,36 +13553,36 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMat_Map_size(void * jar
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_empty(void * jarg1) {
   unsigned int jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   bool result;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  result = (bool)((std::map< double,cv::Mat< double > > const *)arg1)->empty();
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  result = (bool)((std::map< double,cv::Mat_< double > > const *)arg1)->empty();
   jresult = result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Clear(void * jarg1) {
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_getitem(void * jarg1, double jarg2) {
   void * jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *arg2 = 0 ;
-  std::map< double,cv::Mat< double > >::key_type temp2 ;
-  std::map< double,cv::Mat< double > >::mapped_type *result = 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< double,cv::Mat_< double > >::key_type temp2 ;
+  std::map< double,cv::Mat_< double > >::mapped_type *result = 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  temp2 = (std::map< double,cv::Mat< double > >::key_type)jarg2; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< double,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
   try {
-    result = (std::map< double,cv::Mat< double > >::mapped_type *) &std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__getitem(arg1,(double const &)*arg2);
+    result = (std::map< double,cv::Mat_< double > >::mapped_type *) &std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__getitem(arg1,(double const &)*arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12883,55 +13595,55 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_getitem(void * jarg1, 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_setitem(void * jarg1, double jarg2, void * jarg3) {
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *arg2 = 0 ;
-  std::map< double,cv::Mat< double > >::mapped_type *arg3 = 0 ;
-  std::map< double,cv::Mat< double > >::key_type temp2 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< double,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
+  std::map< double,cv::Mat_< double > >::key_type temp2 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  temp2 = (std::map< double,cv::Mat< double > >::key_type)jarg2; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< double,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< double,cv::Mat< double > >::mapped_type *)jarg3;
+  arg3 = (std::map< double,cv::Mat_< double > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat< double > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat_< double > >::mapped_type const & type is null", 0);
     return ;
   } 
-  std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__setitem(arg1,(double const &)*arg2,(cv::Mat< double > const &)*arg3);
+  std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__setitem(arg1,(double const &)*arg2,(cv::Mat_< double > const &)*arg3);
 }
 
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_ContainsKey(void * jarg1, double jarg2) {
   unsigned int jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *arg2 = 0 ;
-  std::map< double,cv::Mat< double > >::key_type temp2 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< double,cv::Mat_< double > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  temp2 = (std::map< double,cv::Mat< double > >::key_type)jarg2; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< double,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__ContainsKey(arg1,(double const &)*arg2);
+  result = (bool)std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__ContainsKey(arg1,(double const &)*arg2);
   jresult = result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Add(void * jarg1, double jarg2, void * jarg3) {
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *arg2 = 0 ;
-  std::map< double,cv::Mat< double > >::mapped_type *arg3 = 0 ;
-  std::map< double,cv::Mat< double > >::key_type temp2 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< double,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
+  std::map< double,cv::Mat_< double > >::key_type temp2 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  temp2 = (std::map< double,cv::Mat< double > >::key_type)jarg2; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< double,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  arg3 = (std::map< double,cv::Mat< double > >::mapped_type *)jarg3;
+  arg3 = (std::map< double,cv::Mat_< double > >::mapped_type *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat< double > >::mapped_type const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::map< double,cv::Mat_< double > >::mapped_type const & type is null", 0);
     return ;
   } 
   try {
-    std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__Add(arg1,(double const &)*arg2,(cv::Mat< double > const &)*arg3);
+    std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__Add(arg1,(double const &)*arg2,(cv::Mat_< double > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -12943,15 +13655,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Add(void * jarg1, double
 
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_Remove(void * jarg1, double jarg2) {
   unsigned int jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *arg2 = 0 ;
-  std::map< double,cv::Mat< double > >::key_type temp2 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
+  std::map< double,cv::Mat_< double > >::key_type temp2 ;
   bool result;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  temp2 = (std::map< double,cv::Mat< double > >::key_type)jarg2; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  temp2 = (std::map< double,cv::Mat_< double > >::key_type)jarg2; 
   arg2 = &temp2; 
-  result = (bool)std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__Remove(arg1,(double const &)*arg2);
+  result = (bool)std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__Remove(arg1,(double const &)*arg2);
   jresult = result; 
   return jresult;
 }
@@ -12959,11 +13671,11 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_Remove(void * ja
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_create_iterator_begin(void * jarg1) {
   void * jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double >,std::less< double > >::iterator *result = 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double >,std::less< double > >::iterator *result = 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  result = (std::map< double,cv::Mat< double >,std::less< double > >::iterator *)std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__create_iterator_begin(arg1);
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  result = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *)std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__create_iterator_begin(arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -12971,65 +13683,65 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_create_iterator_begin(
 
 SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMat_Map_get_next_key(void * jarg1, void * jarg2) {
   double jresult ;
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat< double >,std::less< double > >::iterator *) 0 ;
-  std::map< double,cv::Mat< double > >::key_type *result = 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *) 0 ;
+  std::map< double,cv::Mat_< double > >::key_type *result = 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  arg2 = (std::map< double,cv::Mat< double >,std::less< double > >::iterator *)jarg2; 
-  result = (std::map< double,cv::Mat< double > >::key_type *) &std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__get_next_key(arg1,arg2);
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *)jarg2; 
+  result = (std::map< double,cv::Mat_< double > >::key_type *) &std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__get_next_key(arg1,arg2);
   jresult = *result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
-  std::map< double,cv::Mat< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat< double >,std::less< double > >::iterator *) 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
+  std::map< double,cv::Mat_< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *) 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
-  arg2 = (std::map< double,cv::Mat< double >,std::less< double > >::iterator *)jarg2; 
-  std_map_Sl_double_Sc_cv_Mat_Sl_double_Sg__Sg__destroy_iterator(arg1,arg2);
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
+  arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *)jarg2; 
+  std_map_Sl_double_Sc_cv_Mat__Sl_double_Sg__Sg__destroy_iterator(arg1,arg2);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMat_Map(void * jarg1) {
-  std::map< double,cv::Mat< double > > *arg1 = (std::map< double,cv::Mat< double > > *) 0 ;
+  std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   
-  arg1 = (std::map< double,cv::Mat< double > > *)jarg1; 
+  arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Clear(void * jarg1) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Add(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
-  std::vector< cv::Mat< int > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
+  std::vector< cv::Mat_< int > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< int > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< int > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((std::vector< cv::Mat< int > > const &)*arg2);
+  (arg1)->push_back((std::vector< cv::Mat_< int > > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< int > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< int > > > const *)arg1)->size();
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< int > > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -13037,31 +13749,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_size(void * jarg1) {
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< int > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< int > > > const *)arg1)->capacity();
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< int > > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< int > > >::size_type arg2 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > >::size_type arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< int > > >::size_type)jarg2; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< int > > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_0() {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
-  result = (std::vector< std::vector< cv::Mat< int > > > *)new std::vector< std::vector< cv::Mat< int > > >();
+  result = (std::vector< std::vector< cv::Mat_< int > > > *)new std::vector< std::vector< cv::Mat_< int > > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -13069,15 +13781,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = 0 ;
-  std::vector< std::vector< cv::Mat< int > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1;
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< int > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< int > > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< std::vector< cv::Mat< int > > > *)new std::vector< std::vector< cv::Mat< int > > >((std::vector< std::vector< cv::Mat< int > > > const &)*arg1);
+  result = (std::vector< std::vector< cv::Mat_< int > > > *)new std::vector< std::vector< cv::Mat_< int > > >((std::vector< std::vector< cv::Mat_< int > > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -13086,11 +13798,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_1(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< std::vector< cv::Mat< int > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< std::vector< cv::Mat< int > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< std::vector< cv::Mat_< int > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13104,35 +13816,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > result;
+  std::vector< cv::Mat_< int > > result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new std::vector< cv::Mat< int > >((const std::vector< cv::Mat< int > > &)result); 
+  jresult = new std::vector< cv::Mat_< int > >((const std::vector< cv::Mat_< int > > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *result = 0 ;
+  std::vector< cv::Mat_< int > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< int > > *) &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__getitem(arg1,arg2);
+    result = (std::vector< cv::Mat_< int > > *) &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13145,19 +13857,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitem(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *arg3 = 0 ;
+  std::vector< cv::Mat_< int > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< int > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< int > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat< int > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat_< int > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13168,31 +13880,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_setitem(void * jarg1, int jarg2
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_AddRange(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< int > > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< int > > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< int > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< int > > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat< int > > > const &)*arg2);
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat_< int > > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< std::vector< cv::Mat< int > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< std::vector< cv::Mat< int > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< std::vector< cv::Mat_< int > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13209,19 +13921,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_GetRange(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< int > > *arg3 = 0 ;
+  std::vector< cv::Mat_< int > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< int > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< int > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat< int > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat_< int > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13232,19 +13944,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Insert(void * jarg1, int jarg2,
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< int > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< int > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< int > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< int > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat< int > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< int > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13255,13 +13967,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_InsertRange(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13272,15 +13984,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveAt(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13296,18 +14008,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveRange(void * jarg1, int j
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< int > > *arg1 = 0 ;
+  std::vector< cv::Mat_< int > > *arg1 = 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< int > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< int > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< int > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< int > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< int > > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< std::vector< cv::Mat< int > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Repeat((std::vector< cv::Mat< int > > const &)*arg1,arg2);
+    result = (std::vector< std::vector< cv::Mat_< int > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Repeat((std::vector< cv::Mat_< int > > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13320,23 +14032,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_Repeat(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_0(void * jarg1) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13351,19 +14063,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_1(void * jarg1, i
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< int > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< int > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< int > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< int > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_int_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat< int > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_int_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< int > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13374,42 +14086,42 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_SetRange(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List2N(void * jarg1) {
-  std::vector< std::vector< cv::Mat< int > > > *arg1 = (std::vector< std::vector< cv::Mat< int > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< int > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Clear(void * jarg1) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Add(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
-  std::vector< cv::Mat< double > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
+  std::vector< cv::Mat_< double > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< double > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< double > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((std::vector< cv::Mat< double > > const &)*arg2);
+  (arg1)->push_back((std::vector< cv::Mat_< double > > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< double > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< double > > > const *)arg1)->size();
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< double > > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -13417,31 +14129,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_size(void * jarg1) 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< double > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< double > > > const *)arg1)->capacity();
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< double > > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< double > > >::size_type arg2 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > >::size_type arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< double > > >::size_type)jarg2; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< double > > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_0() {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
-  result = (std::vector< std::vector< cv::Mat< double > > > *)new std::vector< std::vector< cv::Mat< double > > >();
+  result = (std::vector< std::vector< cv::Mat_< double > > > *)new std::vector< std::vector< cv::Mat_< double > > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -13449,15 +14161,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = 0 ;
-  std::vector< std::vector< cv::Mat< double > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1;
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< double > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< double > > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< std::vector< cv::Mat< double > > > *)new std::vector< std::vector< cv::Mat< double > > >((std::vector< std::vector< cv::Mat< double > > > const &)*arg1);
+  result = (std::vector< std::vector< cv::Mat_< double > > > *)new std::vector< std::vector< cv::Mat_< double > > >((std::vector< std::vector< cv::Mat_< double > > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -13466,11 +14178,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_1(void * jarg1) 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< std::vector< cv::Mat< double > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< std::vector< cv::Mat< double > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< std::vector< cv::Mat_< double > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13484,35 +14196,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > result;
+  std::vector< cv::Mat_< double > > result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new std::vector< cv::Mat< double > >((const std::vector< cv::Mat< double > > &)result); 
+  jresult = new std::vector< cv::Mat_< double > >((const std::vector< cv::Mat_< double > > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *result = 0 ;
+  std::vector< cv::Mat_< double > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< double > > *) &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__getitem(arg1,arg2);
+    result = (std::vector< cv::Mat_< double > > *) &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13525,19 +14237,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitem(void * jarg1, int 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *arg3 = 0 ;
+  std::vector< cv::Mat_< double > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< double > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< double > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat< double > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat_< double > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13548,31 +14260,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_setitem(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_AddRange(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< double > > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< double > > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< double > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< double > > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat< double > > > const &)*arg2);
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat_< double > > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< std::vector< cv::Mat< double > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< std::vector< cv::Mat< double > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< std::vector< cv::Mat_< double > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13589,19 +14301,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_GetRange(void * jarg1, int
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< double > > *arg3 = 0 ;
+  std::vector< cv::Mat_< double > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< double > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< double > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat< double > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat_< double > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13612,19 +14324,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Insert(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< double > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< double > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< double > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< double > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat< double > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< double > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13635,13 +14347,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_InsertRange(void * jarg1, in
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13652,15 +14364,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveAt(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13676,18 +14388,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveRange(void * jarg1, in
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< double > > *arg1 = 0 ;
+  std::vector< cv::Mat_< double > > *arg1 = 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< double > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< double > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< double > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< double > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< double > > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< std::vector< cv::Mat< double > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Repeat((std::vector< cv::Mat< double > > const &)*arg1,arg2);
+    result = (std::vector< std::vector< cv::Mat_< double > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Repeat((std::vector< cv::Mat_< double > > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13700,23 +14412,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_Repeat(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_0(void * jarg1) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13731,19 +14443,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_1(void * jarg1
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< double > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< double > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< double > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< double > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_double_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat< double > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_double_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< double > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13754,42 +14466,42 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_SetRange(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List2N(void * jarg1) {
-  std::vector< std::vector< cv::Mat< double > > > *arg1 = (std::vector< std::vector< cv::Mat< double > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< double > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
   delete arg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Clear(void * jarg1) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   (arg1)->clear();
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Add(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
-  std::vector< cv::Mat< float > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
+  std::vector< cv::Mat_< float > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  arg2 = (std::vector< cv::Mat< float > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  arg2 = (std::vector< cv::Mat_< float > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
-  (arg1)->push_back((std::vector< cv::Mat< float > > const &)*arg2);
+  (arg1)->push_back((std::vector< cv::Mat_< float > > const &)*arg2);
 }
 
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_size(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< float > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< float > > > const *)arg1)->size();
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< float > > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
@@ -13797,31 +14509,31 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_size(void * jarg1) {
 
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_capacity(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< float > > >::size_type result;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > >::size_type result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  result = ((std::vector< std::vector< cv::Mat< float > > > const *)arg1)->capacity();
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  result = ((std::vector< std::vector< cv::Mat_< float > > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< float > > >::size_type arg2 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > >::size_type arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< float > > >::size_type)jarg2; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< float > > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_0() {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
-  result = (std::vector< std::vector< cv::Mat< float > > > *)new std::vector< std::vector< cv::Mat< float > > >();
+  result = (std::vector< std::vector< cv::Mat_< float > > > *)new std::vector< std::vector< cv::Mat_< float > > >();
   jresult = (void *)result; 
   return jresult;
 }
@@ -13829,15 +14541,15 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_0() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_1(void * jarg1) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = 0 ;
-  std::vector< std::vector< cv::Mat< float > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1;
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< float > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< float > > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< std::vector< cv::Mat< float > > > *)new std::vector< std::vector< cv::Mat< float > > >((std::vector< std::vector< cv::Mat< float > > > const &)*arg1);
+  result = (std::vector< std::vector< cv::Mat_< float > > > *)new std::vector< std::vector< cv::Mat_< float > > >((std::vector< std::vector< cv::Mat_< float > > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -13846,11 +14558,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_1(void * jarg1) {
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< std::vector< cv::Mat< float > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< std::vector< cv::Mat< float > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< std::vector< cv::Mat_< float > > > *)new_std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13864,35 +14576,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_2(int jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > result;
+  std::vector< cv::Mat_< float > > result;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = new std::vector< cv::Mat< float > >((const std::vector< cv::Mat< float > > &)result); 
+  jresult = new std::vector< cv::Mat_< float > >((const std::vector< cv::Mat_< float > > &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *result = 0 ;
+  std::vector< cv::Mat_< float > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< cv::Mat< float > > *) &std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__getitem(arg1,arg2);
+    result = (std::vector< cv::Mat_< float > > *) &std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13905,19 +14617,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitem(void * jarg1, int j
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *arg3 = 0 ;
+  std::vector< cv::Mat_< float > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< float > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< float > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat< float > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__setitem(arg1,arg2,(std::vector< cv::Mat_< float > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13928,31 +14640,31 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_setitem(void * jarg1, int jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_AddRange(void * jarg1, void * jarg2) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
-  std::vector< std::vector< cv::Mat< float > > > *arg2 = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  arg2 = (std::vector< std::vector< cv::Mat< float > > > *)jarg2;
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  arg2 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< float > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< float > > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat< float > > > const &)*arg2);
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__AddRange(arg1,(std::vector< std::vector< cv::Mat_< float > > > const &)*arg2);
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< std::vector< cv::Mat< float > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< std::vector< cv::Mat< float > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< std::vector< cv::Mat_< float > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13969,19 +14681,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_GetRange(void * jarg1, int 
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< cv::Mat< float > > *arg3 = 0 ;
+  std::vector< cv::Mat_< float > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< cv::Mat< float > > *)jarg3;
+  arg3 = (std::vector< cv::Mat_< float > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat< float > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Insert(arg1,arg2,(std::vector< cv::Mat_< float > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -13992,19 +14704,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Insert(void * jarg1, int jarg
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< float > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< float > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< float > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< float > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat< float > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< float > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14015,13 +14727,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_InsertRange(void * jarg1, int
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveAt(void * jarg1, int jarg2) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14032,15 +14744,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveAt(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14056,18 +14768,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveRange(void * jarg1, int
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< cv::Mat< float > > *arg1 = 0 ;
+  std::vector< cv::Mat_< float > > *arg1 = 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< float > > > *result = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
-  arg1 = (std::vector< cv::Mat< float > > *)jarg1;
+  arg1 = (std::vector< cv::Mat_< float > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat< float > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< cv::Mat_< float > > const & type is null", 0);
     return 0;
   } 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< std::vector< cv::Mat< float > > > *)std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Repeat((std::vector< cv::Mat< float > > const &)*arg1,arg2);
+    result = (std::vector< std::vector< cv::Mat_< float > > > *)std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Repeat((std::vector< cv::Mat_< float > > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14080,23 +14792,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_Repeat(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_0(void * jarg1) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
-  std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
+  std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14111,19 +14823,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_1(void * jarg1,
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
-  std::vector< std::vector< cv::Mat< float > > > *arg3 = 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::vector< cv::Mat< float > > > *)jarg3;
+  arg3 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat< float > > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::vector< cv::Mat_< float > > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_cv_Mat_Sl_float_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat< float > > > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__SetRange(arg1,arg2,(std::vector< std::vector< cv::Mat_< float > > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -14134,9 +14846,9 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_SetRange(void * jarg1, int ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMat_List2N(void * jarg1) {
-  std::vector< std::vector< cv::Mat< float > > > *arg1 = (std::vector< std::vector< cv::Mat< float > > > *) 0 ;
+  std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
-  arg1 = (std::vector< std::vector< cv::Mat< float > > > *)jarg1; 
+  arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
   delete arg1;
 }
 

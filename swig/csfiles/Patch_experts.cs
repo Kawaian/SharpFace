@@ -61,13 +61,13 @@ public class Patch_experts : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t sigma_components {
+  public FloatMat_List2N sigma_components {
     set {
-      LaandmrkDetectorPINVOKE.Patch_experts_sigma_components_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.Patch_experts_sigma_components_set(swigCPtr, FloatMat_List2N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.Patch_experts_sigma_components_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t(cPtr, false);
+      FloatMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List2N(cPtr, false);
       return ret;
     } 
   }
@@ -94,13 +94,13 @@ public class Patch_experts : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_int_t_t_t visibilities {
+  public IntMat_List2N visibilities {
     set {
-      LaandmrkDetectorPINVOKE.Patch_experts_visibilities_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_int_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.Patch_experts_visibilities_set(swigCPtr, IntMat_List2N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.Patch_experts_visibilities_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_int_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_int_t_t_t(cPtr, false);
+      IntMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntMat_List2N(cPtr, false);
       return ret;
     } 
   }
@@ -112,8 +112,8 @@ public class Patch_experts : global::System.IDisposable {
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Response(SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t patch_expert_responses, SWIGTYPE_p_cv__Matx22f sim_ref_to_img, SWIGTYPE_p_cv__Matx22d sim_img_to_ref, SWIGTYPE_p_cv__Mat_T_uchar_t grayscale_image, SWIGTYPE_p_PDM pdm, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_double_t params_local, int window_size, int scale) {
-    LaandmrkDetectorPINVOKE.Patch_experts_Response(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_float_t_t.getCPtr(patch_expert_responses), SWIGTYPE_p_cv__Matx22f.getCPtr(sim_ref_to_img), SWIGTYPE_p_cv__Matx22d.getCPtr(sim_img_to_ref), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(grayscale_image), SWIGTYPE_p_PDM.getCPtr(pdm), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), window_size, scale);
+  public void Response(FloatMat_List patch_expert_responses, SWIGTYPE_p_cv__Matx22f sim_ref_to_img, SWIGTYPE_p_cv__Matx22d sim_img_to_ref, SWIGTYPE_p_cv__Mat_T_uchar_t grayscale_image, SWIGTYPE_p_PDM pdm, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_double_t params_local, int window_size, int scale) {
+    LaandmrkDetectorPINVOKE.Patch_experts_Response(swigCPtr, FloatMat_List.getCPtr(patch_expert_responses), SWIGTYPE_p_cv__Matx22f.getCPtr(sim_ref_to_img), SWIGTYPE_p_cv__Matx22d.getCPtr(sim_img_to_ref), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(grayscale_image), SWIGTYPE_p_PDM.getCPtr(pdm), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), window_size, scale);
     if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 

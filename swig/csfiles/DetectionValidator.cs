@@ -82,24 +82,24 @@ public class DetectionValidator : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t ws {
+  public DoubleMat_List ws {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, DoubleMat_List.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_ws_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t(cPtr, false);
+      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_double_t_t_t ws_nn {
+  public DoubleMat_List2N ws_nn {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_double_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, DoubleMat_List2N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_ws_nn_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_double_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_double_t_t_t(cPtr, false);
+      DoubleMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List2N(cPtr, false);
       return ret;
     } 
   }
@@ -148,13 +148,13 @@ public class DetectionValidator : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_float_t_t_t cnn_convolutional_layers_bias {
+  public Float_List3N cnn_convolutional_layers_bias {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_float_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, Float_List3N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_float_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_float_t_t_t(cPtr, false);
+      Float_List3N ret = (cPtr == global::System.IntPtr.Zero) ? null : new Float_List3N(cPtr, false);
       return ret;
     } 
   }
@@ -170,13 +170,13 @@ public class DetectionValidator : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t cnn_fully_connected_layers_weights {
+  public FloatMat_List2N cnn_fully_connected_layers_weights {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, FloatMat_List2N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t(cPtr, false);
+      FloatMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List2N(cPtr, false);
       return ret;
     } 
   }
@@ -203,35 +203,35 @@ public class DetectionValidator : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t cnn_fully_connected_layers_biases {
+  public FloatMat_List2N cnn_fully_connected_layers_biases {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, FloatMat_List2N.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t(cPtr, false);
+      FloatMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List2N(cPtr, false);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t mean_images {
+  public DoubleMat_List mean_images {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, DoubleMat_List.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_mean_images_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t(cPtr, false);
+      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t standard_deviations {
+  public DoubleMat_List standard_deviations {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t.getCPtr(value));
+      LaandmrkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, DoubleMat_List.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_standard_deviations_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Mat_T_double_t_t(cPtr, false);
+      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
       return ret;
     } 
   }
