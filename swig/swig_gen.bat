@@ -8,5 +8,5 @@ swig -c++ -csharp -outdir csfiles^
 	 -I../LandmarkDetector.Windows/include^
 	 SharpFace.i
 
-echo Generated SWIG files!
+echo Generated wrappers!
 pause

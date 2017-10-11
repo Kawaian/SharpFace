@@ -243,7 +243,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_LaandmrkDetector(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_LandmarkDetector(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -271,7 +271,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_LaandmrkDetector(
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_LaandmrkDetector(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_LandmarkDetector(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -289,7 +289,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LaandmrkDetector(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LandmarkDetector(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -314,22 +314,6 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_LaandmrkDetector(SWIG_CSh
 #define  SWIG_NullReferenceError   -13
 
 
-
-
-// ------------- C++ API ------------- //
-
-#include "CCNF_patch_expert.h"
-#include "LandmarkDetectionValidator.h"
-#include "LandmarkDetectorFunc.h"
-#include "LandmarkDetectorModel.h"
-#include "LandmarkDetectorParameters.h"
-#include "LandmarkDetectorUtils.h"
-#include "Patch_experts.h"
-#include "PAW.h"
-#include "PDM.h"
-#include "SVR_patch_expert.h"
-
-using namespace LandmarkDetector;
 
 
 #include <stdexcept>
@@ -388,6 +372,25 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 
 
 #include <string>
+
+
+#include <string>
+
+
+// ------------- C++ API ------------- //
+
+#include "CCNF_patch_expert.h"
+#include "LandmarkDetectionValidator.h"
+#include "LandmarkDetectorFunc.h"
+#include "LandmarkDetectorModel.h"
+#include "LandmarkDetectorParameters.h"
+#include "LandmarkDetectorUtils.h"
+#include "Patch_experts.h"
+#include "PAW.h"
+#include "PDM.h"
+#include "SVR_patch_expert.h"
+
+using namespace LandmarkDetector;
 
 SWIGINTERN std::vector< int > *new_std_vector_Sl_int_Sg___SWIG_2(int capacity){
         std::vector< int >* pv = 0;
@@ -3724,6 +3727,9 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1,
   std::string arg2_str(jarg2);
   arg2 = &arg2_str; 
   if (arg1) (arg1)->face_detector_location = *arg2;
+  
+  //argout typemap for const std::string&
+  
 }
 
 
@@ -4419,6 +4425,9 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void *
   std::string arg2_str(jarg2);
   arg2 = &arg2_str; 
   if (arg1) (arg1)->model_location = *arg2;
+  
+  //argout typemap for const std::string&
+  
 }
 
 
@@ -4556,6 +4565,9 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_se
   std::string arg2_str(jarg2);
   arg2 = &arg2_str; 
   if (arg1) (arg1)->face_detector_location = *arg2;
+  
+  //argout typemap for const std::string&
+  
 }
 
 
@@ -4715,7 +4727,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, char** jarg5, void * jarg6) {
   std::vector< std::string > *arg1 = 0 ;
   std::vector< std::string > *arg2 = 0 ;
   std::vector< std::string > *arg3 = 0 ;
@@ -4743,17 +4755,21 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, v
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "bool & type is null", 0);
     return ;
   } 
-  arg5 = (std::string *)jarg5;
-  if (!arg5) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
-    return ;
-  } 
+  //typemap in
+  std::string temp;
+  arg5 = &temp; 
+  
   arg6 = (std::vector< std::string > *)jarg6;
   if (!arg6) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::string > & type is null", 0);
     return ;
   } 
   LandmarkDetector::get_video_input_output_params(*arg1,*arg2,*arg3,*arg4,*arg5,*arg6);
+  
+  //Typemap argout in c++ file.
+  //This will convert c++ string to c# string
+  *jarg5 = SWIG_csharp_string_callback(arg5->c_str());
+  
 }
 
 
@@ -6733,7 +6749,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Multi_SVR_patch_expert(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Clear(void * jarg1) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   
   arg1 = (std::vector< int > *)jarg1; 
@@ -6741,7 +6757,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Add(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Add(void * jarg1, int jarg2) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int *arg2 = 0 ;
   int temp2 ;
@@ -6753,7 +6769,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Add(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   std::vector< int >::size_type result;
@@ -6765,7 +6781,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   std::vector< int >::size_type result;
@@ -6777,7 +6793,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   std::vector< int >::size_type arg2 ;
   
@@ -6787,7 +6803,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_reserve(void * jarg1, unsigned long 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_0() {
   void * jresult ;
   std::vector< int > *result = 0 ;
   
@@ -6797,7 +6813,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< int > *arg1 = 0 ;
   std::vector< int > *result = 0 ;
@@ -6813,7 +6829,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< int > *result = 0 ;
@@ -6832,7 +6848,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitemcopy(void * jarg1, int jarg2) {
   int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
@@ -6853,7 +6869,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_getitemcopy(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitem(void * jarg1, int jarg2) {
   int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
@@ -6874,7 +6890,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_getitem(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_setitem(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_setitem(void * jarg1, int jarg2, int jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   int *arg3 = 0 ;
@@ -6895,7 +6911,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_setitem(void * jarg1, int jarg2, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_AddRange(void * jarg1, void * jarg2) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   std::vector< int > *arg2 = 0 ;
   
@@ -6909,7 +6925,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_AddRange(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
@@ -6936,7 +6952,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List_GetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Insert(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Insert(void * jarg1, int jarg2, int jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   int *arg3 = 0 ;
@@ -6957,7 +6973,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Insert(void * jarg1, int jarg2, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   std::vector< int > *arg3 = 0 ;
@@ -6980,7 +6996,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_InsertRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   
@@ -6997,7 +7013,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_RemoveAt(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7020,7 +7036,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_RemoveRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List_Repeat(int jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_Repeat(int jarg1, int jarg2) {
   void * jresult ;
   int *arg1 = 0 ;
   int arg2 ;
@@ -7043,7 +7059,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List_Repeat(int jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_0(void * jarg1) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   
   arg1 = (std::vector< int > *)jarg1; 
@@ -7051,7 +7067,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7074,7 +7090,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_Reverse__SWIG_1(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int arg2 ;
   std::vector< int > *arg3 = 0 ;
@@ -7097,7 +7113,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List_SetRange(void * jarg1, int jarg2, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_List_Contains(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Contains(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int *arg2 = 0 ;
@@ -7113,7 +7129,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_List_Contains(void * jarg1, int j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_IndexOf(void * jarg1, int jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_IntList_IndexOf(void * jarg1, int jarg2) {
   int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int *arg2 = 0 ;
@@ -7129,7 +7145,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_IndexOf(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_LastIndexOf(void * jarg1, int jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_IntList_LastIndexOf(void * jarg1, int jarg2) {
   int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int *arg2 = 0 ;
@@ -7145,7 +7161,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_List_LastIndexOf(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_List_Remove(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Remove(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   int *arg2 = 0 ;
@@ -7161,7 +7177,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_List_Remove(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList(void * jarg1) {
   std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   
   arg1 = (std::vector< int > *)jarg1; 
@@ -7169,7 +7185,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Clear(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   
   arg1 = (std::vector< float > *)jarg1; 
@@ -7177,7 +7193,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Add(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Add(void * jarg1, float jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
   float temp2 ;
@@ -7189,7 +7205,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Add(void * jarg1, float jarg2) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type result;
@@ -7201,7 +7217,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type result;
@@ -7213,7 +7229,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type arg2 ;
   
@@ -7223,7 +7239,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_reserve(void * jarg1, unsigned lon
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_0() {
   void * jresult ;
   std::vector< float > *result = 0 ;
   
@@ -7233,7 +7249,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< float > *arg1 = 0 ;
   std::vector< float > *result = 0 ;
@@ -7249,7 +7265,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< float > *result = 0 ;
@@ -7268,7 +7284,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_Float_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitemcopy(void * jarg1, int jarg2) {
   float jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
@@ -7289,7 +7305,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Float_List_getitemcopy(void * jarg1, int jar
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_Float_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitem(void * jarg1, int jarg2) {
   float jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
@@ -7310,7 +7326,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Float_List_getitem(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_setitem(void * jarg1, int jarg2, float jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_setitem(void * jarg1, int jarg2, float jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   float *arg3 = 0 ;
@@ -7331,7 +7347,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_setitem(void * jarg1, int jarg2, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_AddRange(void * jarg1, void * jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float > *arg2 = 0 ;
   
@@ -7345,7 +7361,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_AddRange(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
@@ -7372,7 +7388,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List_GetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Insert(void * jarg1, int jarg2, float jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Insert(void * jarg1, int jarg2, float jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   float *arg3 = 0 ;
@@ -7393,7 +7409,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Insert(void * jarg1, int jarg2, fl
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
@@ -7416,7 +7432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_InsertRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   
@@ -7433,7 +7449,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_RemoveAt(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7456,7 +7472,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_RemoveRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List_Repeat(float jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_Repeat(float jarg1, int jarg2) {
   void * jresult ;
   float *arg1 = 0 ;
   int arg2 ;
@@ -7479,7 +7495,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List_Repeat(float jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_0(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   
   arg1 = (std::vector< float > *)jarg1; 
@@ -7487,7 +7503,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7510,7 +7526,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_Reverse__SWIG_1(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
@@ -7533,7 +7549,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List_SetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_List_Contains(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Contains(void * jarg1, float jarg2) {
   unsigned int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
@@ -7549,7 +7565,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_List_Contains(void * jarg1, flo
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Float_List_IndexOf(void * jarg1, float jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_IndexOf(void * jarg1, float jarg2) {
   int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
@@ -7565,7 +7581,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Float_List_IndexOf(void * jarg1, float jarg2) 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Float_List_LastIndexOf(void * jarg1, float jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_LastIndexOf(void * jarg1, float jarg2) {
   int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
@@ -7581,7 +7597,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Float_List_LastIndexOf(void * jarg1, float jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_List_Remove(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Remove(void * jarg1, float jarg2) {
   unsigned int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
@@ -7597,7 +7613,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_List_Remove(void * jarg1, float
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   
   arg1 = (std::vector< float > *)jarg1; 
@@ -7605,7 +7621,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Clear(void * jarg1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = (std::vector< double > *)jarg1; 
@@ -7613,7 +7629,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Add(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Add(void * jarg1, double jarg2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   double *arg2 = 0 ;
   double temp2 ;
@@ -7625,7 +7641,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Add(void * jarg1, double jarg2) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
@@ -7637,7 +7653,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
@@ -7649,7 +7665,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_List_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type arg2 ;
   
@@ -7659,7 +7675,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_0() {
   void * jresult ;
   std::vector< double > *result = 0 ;
   
@@ -7669,7 +7685,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< double > *arg1 = 0 ;
   std::vector< double > *result = 0 ;
@@ -7685,7 +7701,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< double > *result = 0 ;
@@ -7704,7 +7720,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Double_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitemcopy(void * jarg1, int jarg2) {
   double jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
@@ -7725,7 +7741,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Double_List_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Double_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitem(void * jarg1, int jarg2) {
   double jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
@@ -7746,7 +7762,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Double_List_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_setitem(void * jarg1, int jarg2, double jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_setitem(void * jarg1, int jarg2, double jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   double *arg3 = 0 ;
@@ -7767,7 +7783,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_setitem(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_AddRange(void * jarg1, void * jarg2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double > *arg2 = 0 ;
   
@@ -7781,7 +7797,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
@@ -7808,7 +7824,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_List_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Insert(void * jarg1, int jarg2, double jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Insert(void * jarg1, int jarg2, double jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   double *arg3 = 0 ;
@@ -7829,7 +7845,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Insert(void * jarg1, int jarg2, d
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double > *arg3 = 0 ;
@@ -7852,7 +7868,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   
@@ -7869,7 +7885,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7892,7 +7908,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_List_Repeat(double jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_Repeat(double jarg1, int jarg2) {
   void * jresult ;
   double *arg1 = 0 ;
   int arg2 ;
@@ -7915,7 +7931,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_List_Repeat(double jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_0(void * jarg1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = (std::vector< double > *)jarg1; 
@@ -7923,7 +7939,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7946,7 +7962,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double > *arg3 = 0 ;
@@ -7969,7 +7985,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_List_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_List_Contains(void * jarg1, double jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Contains(void * jarg1, double jarg2) {
   unsigned int jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   double *arg2 = 0 ;
@@ -7985,7 +8001,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_List_Contains(void * jarg1, do
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Double_List_IndexOf(void * jarg1, double jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_IndexOf(void * jarg1, double jarg2) {
   int jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   double *arg2 = 0 ;
@@ -8001,7 +8017,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Double_List_IndexOf(void * jarg1, double jarg2
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Double_List_LastIndexOf(void * jarg1, double jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_LastIndexOf(void * jarg1, double jarg2) {
   int jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   double *arg2 = 0 ;
@@ -8017,7 +8033,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Double_List_LastIndexOf(void * jarg1, double j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_List_Remove(void * jarg1, double jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Remove(void * jarg1, double jarg2) {
   unsigned int jresult ;
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   double *arg2 = 0 ;
@@ -8033,7 +8049,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_List_Remove(void * jarg1, doub
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleList(void * jarg1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = (std::vector< double > *)jarg1; 
@@ -8041,7 +8057,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Clear(void * jarg1) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   
   arg1 = (std::vector< std::string > *)jarg1; 
@@ -8049,7 +8065,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Add(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Add(void * jarg1, char * jarg2) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::string *arg2 = 0 ;
   
@@ -8061,10 +8077,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Add(void * jarg1, char * jarg2) {
   std::string arg2_str(jarg2);
   arg2 = &arg2_str; 
   (arg1)->push_back((std::string const &)*arg2);
+  
+  //argout typemap for const std::string&
+  
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_String_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::vector< std::string >::size_type result;
@@ -8076,7 +8095,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_String_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_String_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::vector< std::string >::size_type result;
@@ -8088,7 +8107,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_String_List_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::vector< std::string >::size_type arg2 ;
   
@@ -8098,7 +8117,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_0() {
   void * jresult ;
   std::vector< std::string > *result = 0 ;
   
@@ -8108,7 +8127,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::string > *arg1 = 0 ;
   std::vector< std::string > *result = 0 ;
@@ -8124,7 +8143,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::string > *result = 0 ;
@@ -8143,7 +8162,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_String_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_String_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitemcopy(void * jarg1, int jarg2) {
   char * jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
@@ -8164,7 +8183,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_String_List_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_String_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitem(void * jarg1, int jarg2) {
   char * jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
@@ -8185,7 +8204,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_String_List_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_setitem(void * jarg1, int jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_setitem(void * jarg1, int jarg2, char * jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   std::string *arg3 = 0 ;
@@ -8206,10 +8225,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_setitem(void * jarg1, int jarg2, 
     return ;
   }
   
+  
+  //argout typemap for const std::string&
+  
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::vector< std::string > *arg2 = 0 ;
   
@@ -8223,7 +8245,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_String_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
@@ -8250,7 +8272,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_String_List_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Insert(void * jarg1, int jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Insert(void * jarg1, int jarg2, char * jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   std::string *arg3 = 0 ;
@@ -8271,10 +8293,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Insert(void * jarg1, int jarg2, c
     return ;
   }
   
+  
+  //argout typemap for const std::string&
+  
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   std::vector< std::string > *arg3 = 0 ;
@@ -8297,7 +8322,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   
@@ -8314,7 +8339,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -8337,7 +8362,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_String_List_Repeat(char * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_Repeat(char * jarg1, int jarg2) {
   void * jresult ;
   std::string *arg1 = 0 ;
   int arg2 ;
@@ -8359,11 +8384,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_String_List_Repeat(char * jarg1, int jarg2)
   }
   
   jresult = (void *)result; 
+  
+  //argout typemap for const std::string&
+  
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   
   arg1 = (std::vector< std::string > *)jarg1; 
@@ -8371,7 +8399,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -8394,7 +8422,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_String_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_StringList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   int arg2 ;
   std::vector< std::string > *arg3 = 0 ;
@@ -8417,7 +8445,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_String_List_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_String_List_Contains(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Contains(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::string *arg2 = 0 ;
@@ -8432,11 +8460,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_String_List_Contains(void * jarg1, ch
   arg2 = &arg2_str; 
   result = (bool)std_vector_Sl_std_string_Sg__Contains(arg1,(std::string const &)*arg2);
   jresult = result; 
+  
+  //argout typemap for const std::string&
+  
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_String_List_IndexOf(void * jarg1, char * jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_StringList_IndexOf(void * jarg1, char * jarg2) {
   int jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::string *arg2 = 0 ;
@@ -8451,11 +8482,14 @@ SWIGEXPORT int SWIGSTDCALL CSharp_String_List_IndexOf(void * jarg1, char * jarg2
   arg2 = &arg2_str; 
   result = (int)std_vector_Sl_std_string_Sg__IndexOf(arg1,(std::string const &)*arg2);
   jresult = result; 
+  
+  //argout typemap for const std::string&
+  
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_String_List_LastIndexOf(void * jarg1, char * jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_StringList_LastIndexOf(void * jarg1, char * jarg2) {
   int jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::string *arg2 = 0 ;
@@ -8470,11 +8504,14 @@ SWIGEXPORT int SWIGSTDCALL CSharp_String_List_LastIndexOf(void * jarg1, char * j
   arg2 = &arg2_str; 
   result = (int)std_vector_Sl_std_string_Sg__LastIndexOf(arg1,(std::string const &)*arg2);
   jresult = result; 
+  
+  //argout typemap for const std::string&
+  
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_String_List_Remove(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Remove(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   std::string *arg2 = 0 ;
@@ -8489,11 +8526,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_String_List_Remove(void * jarg1, char
   arg2 = &arg2_str; 
   result = (bool)std_vector_Sl_std_string_Sg__Remove(arg1,(std::string const &)*arg2);
   jresult = result; 
+  
+  //argout typemap for const std::string&
+  
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_String_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_StringList(void * jarg1) {
   std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   
   arg1 = (std::vector< std::string > *)jarg1; 
@@ -8501,7 +8541,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_String_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Clear(void * jarg1) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   
   arg1 = (std::vector< std::vector< int > > *)jarg1; 
@@ -8509,7 +8549,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   std::vector< int > *arg2 = 0 ;
   
@@ -8523,7 +8563,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Add(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   std::vector< std::vector< int > >::size_type result;
@@ -8535,7 +8575,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   std::vector< std::vector< int > >::size_type result;
@@ -8547,7 +8587,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_List2N_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   std::vector< std::vector< int > >::size_type arg2 ;
   
@@ -8557,7 +8597,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_reserve(void * jarg1, unsigned lon
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< int > > *result = 0 ;
   
@@ -8567,7 +8607,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< int > > *arg1 = 0 ;
   std::vector< std::vector< int > > *result = 0 ;
@@ -8583,7 +8623,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< int > > *result = 0 ;
@@ -8602,7 +8642,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_List2N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
@@ -8623,7 +8663,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitemcopy(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
@@ -8644,7 +8684,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   std::vector< int > *arg3 = 0 ;
@@ -8667,7 +8707,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_setitem(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   std::vector< std::vector< int > > *arg2 = 0 ;
   
@@ -8681,7 +8721,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_AddRange(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
@@ -8708,7 +8748,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_GetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   std::vector< int > *arg3 = 0 ;
@@ -8731,7 +8771,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Insert(void * jarg1, int jarg2, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< int > > *arg3 = 0 ;
@@ -8754,7 +8794,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_InsertRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   
@@ -8771,7 +8811,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveAt(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -8794,7 +8834,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_RemoveRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< int > *arg1 = 0 ;
   int arg2 ;
@@ -8819,7 +8859,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_List2N_Repeat(void * jarg1, int jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   
   arg1 = (std::vector< std::vector< int > > *)jarg1; 
@@ -8827,7 +8867,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -8850,7 +8890,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_Reverse__SWIG_1(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< int > > *arg3 = 0 ;
@@ -8873,7 +8913,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_List2N_SetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List2N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList2N(void * jarg1) {
   std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
   
   arg1 = (std::vector< std::vector< int > > *)jarg1; 
@@ -8881,7 +8921,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_List2N(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Clear(void * jarg1) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   
   arg1 = (std::vector< std::vector< float > > *)jarg1; 
@@ -8889,7 +8929,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   std::vector< float > *arg2 = 0 ;
   
@@ -8903,7 +8943,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Add(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   std::vector< std::vector< float > >::size_type result;
@@ -8915,7 +8955,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   std::vector< std::vector< float > >::size_type result;
@@ -8927,7 +8967,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List2N_capacity(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   std::vector< std::vector< float > >::size_type arg2 ;
   
@@ -8937,7 +8977,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_reserve(void * jarg1, unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< float > > *result = 0 ;
   
@@ -8947,7 +8987,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< float > > *arg1 = 0 ;
   std::vector< std::vector< float > > *result = 0 ;
@@ -8963,7 +9003,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< float > > *result = 0 ;
@@ -8982,7 +9022,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List2N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
@@ -9003,7 +9043,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitemcopy(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
@@ -9024,7 +9064,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_getitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
@@ -9047,7 +9087,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_setitem(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   std::vector< std::vector< float > > *arg2 = 0 ;
   
@@ -9061,7 +9101,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_AddRange(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
@@ -9088,7 +9128,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_GetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
@@ -9111,7 +9151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Insert(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< float > > *arg3 = 0 ;
@@ -9134,7 +9174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_InsertRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   
@@ -9151,7 +9191,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveAt(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -9174,7 +9214,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_RemoveRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< float > *arg1 = 0 ;
   int arg2 ;
@@ -9199,7 +9239,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List2N_Repeat(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   
   arg1 = (std::vector< std::vector< float > > *)jarg1; 
@@ -9207,7 +9247,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -9230,7 +9270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_Reverse__SWIG_1(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< float > > *arg3 = 0 ;
@@ -9253,7 +9293,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List2N_SetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List2N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList2N(void * jarg1) {
   std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
   
   arg1 = (std::vector< std::vector< float > > *)jarg1; 
@@ -9261,7 +9301,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List2N(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Clear(void * jarg1) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
@@ -9269,7 +9309,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   std::vector< std::vector< float > > *arg2 = 0 ;
   
@@ -9283,7 +9323,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Add(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   std::vector< std::vector< std::vector< float > > >::size_type result;
@@ -9295,7 +9335,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   std::vector< std::vector< std::vector< float > > >::size_type result;
@@ -9307,7 +9347,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_List3N_capacity(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   std::vector< std::vector< std::vector< float > > >::size_type arg2 ;
   
@@ -9317,7 +9357,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_reserve(void * jarg1, unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< std::vector< float > > > *result = 0 ;
   
@@ -9327,7 +9367,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = 0 ;
   std::vector< std::vector< std::vector< float > > > *result = 0 ;
@@ -9343,7 +9383,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< std::vector< float > > > *result = 0 ;
@@ -9362,7 +9402,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_List3N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
@@ -9383,7 +9423,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitemcopy(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
@@ -9404,7 +9444,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_getitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< float > > *arg3 = 0 ;
@@ -9427,7 +9467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_setitem(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   std::vector< std::vector< std::vector< float > > > *arg2 = 0 ;
   
@@ -9441,7 +9481,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_AddRange(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
@@ -9468,7 +9508,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_GetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< float > > *arg3 = 0 ;
@@ -9491,7 +9531,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Insert(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< std::vector< float > > > *arg3 = 0 ;
@@ -9514,7 +9554,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_InsertRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   
@@ -9531,7 +9571,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveAt(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -9554,7 +9594,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_RemoveRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< float > > *arg1 = 0 ;
   int arg2 ;
@@ -9579,7 +9619,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_List3N_Repeat(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
@@ -9587,7 +9627,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -9610,7 +9650,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_Reverse__SWIG_1(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< std::vector< float > > > *arg3 = 0 ;
@@ -9633,7 +9673,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_List3N_SetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List3N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList3N(void * jarg1) {
   std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< std::vector< float > > > *)jarg1; 
@@ -9641,7 +9681,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_List3N(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_0() {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *result = 0 ;
   
@@ -9651,7 +9691,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   cv::Point arg1 ;
   cv::Point arg2 ;
@@ -9677,7 +9717,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_1(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_2(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *arg1 = 0 ;
   std::pair< cv::Point,cv::Point > *result = 0 ;
@@ -9693,7 +9733,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair__SWIG_2(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_first_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_first_set(void * jarg1, void * jarg2) {
   std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
   cv::Point arg2 ;
   cv::Point *argp2 ;
@@ -9709,7 +9749,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_first_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_first_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_first_get(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
   cv::Point result;
@@ -9721,7 +9761,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_first_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_second_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_second_set(void * jarg1, void * jarg2) {
   std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
   cv::Point arg2 ;
   cv::Point *argp2 ;
@@ -9737,7 +9777,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_second_set(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_second_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_second_get(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
   cv::Point result;
@@ -9749,7 +9789,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_second_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_Pair(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPair(void * jarg1) {
   std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
   
   arg1 = (std::pair< cv::Point,cv::Point > *)jarg1; 
@@ -9757,7 +9797,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_Pair(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Clear(void * jarg1) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   
   arg1 = (std::vector< cv::Point > *)jarg1; 
@@ -9765,7 +9805,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   cv::Point *arg2 = 0 ;
   
@@ -9779,7 +9819,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Add(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   std::vector< cv::Point >::size_type result;
@@ -9791,7 +9831,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   std::vector< cv::Point >::size_type result;
@@ -9803,7 +9843,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_List_capacity(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   std::vector< cv::Point >::size_type arg2 ;
   
@@ -9813,7 +9853,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_reserve(void * jarg1, unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Point > *result = 0 ;
   
@@ -9823,7 +9863,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Point > *arg1 = 0 ;
   std::vector< cv::Point > *result = 0 ;
@@ -9839,7 +9879,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Point > *result = 0 ;
@@ -9858,7 +9898,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
@@ -9879,7 +9919,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_getitemcopy(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
@@ -9900,7 +9940,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_getitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   cv::Point *arg3 = 0 ;
@@ -9923,7 +9963,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_setitem(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   std::vector< cv::Point > *arg2 = 0 ;
   
@@ -9937,7 +9977,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_AddRange(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
@@ -9964,7 +10004,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_GetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   cv::Point *arg3 = 0 ;
@@ -9987,7 +10027,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Insert(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   std::vector< cv::Point > *arg3 = 0 ;
@@ -10010,7 +10050,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_InsertRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   
@@ -10027,7 +10067,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_RemoveAt(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10050,7 +10090,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_RemoveRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Point *arg1 = 0 ;
   int arg2 ;
@@ -10075,7 +10115,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_List_Repeat(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   
   arg1 = (std::vector< cv::Point > *)jarg1; 
@@ -10083,7 +10123,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10106,7 +10146,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_Reverse__SWIG_1(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   int arg2 ;
   std::vector< cv::Point > *arg3 = 0 ;
@@ -10129,7 +10169,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_List_SetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointList(void * jarg1) {
   std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
   
   arg1 = (std::vector< cv::Point > *)jarg1; 
@@ -10137,7 +10177,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Clear(void * jarg1) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *)jarg1; 
@@ -10145,7 +10185,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Add(void * jarg1, void * jarg2) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   std::pair< cv::Point,cv::Point > *arg2 = 0 ;
   
@@ -10159,7 +10199,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Add(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_Pair_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   std::vector< std::pair< cv::Point,cv::Point > >::size_type result;
@@ -10171,7 +10211,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_Pair_List_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_Pair_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   std::vector< std::pair< cv::Point,cv::Point > >::size_type result;
@@ -10183,7 +10223,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint_Pair_List_capacity(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   std::vector< std::pair< cv::Point,cv::Point > >::size_type arg2 ;
   
@@ -10193,7 +10233,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_reserve(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_0() {
   void * jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *result = 0 ;
   
@@ -10203,7 +10243,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = 0 ;
   std::vector< std::pair< cv::Point,cv::Point > > *result = 0 ;
@@ -10219,7 +10259,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::pair< cv::Point,cv::Point > > *result = 0 ;
@@ -10238,7 +10278,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint_Pair_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
@@ -10259,7 +10299,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_getitemcopy(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
@@ -10280,7 +10320,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_getitem(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   std::pair< cv::Point,cv::Point > *arg3 = 0 ;
@@ -10303,7 +10343,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_setitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg2 = 0 ;
   
@@ -10317,7 +10357,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_AddRange(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
@@ -10344,7 +10384,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_GetRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   std::pair< cv::Point,cv::Point > *arg3 = 0 ;
@@ -10367,7 +10407,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Insert(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg3 = 0 ;
@@ -10390,7 +10430,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_InsertRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   
@@ -10407,7 +10447,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_RemoveAt(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10430,7 +10470,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_RemoveRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::pair< cv::Point,cv::Point > *arg1 = 0 ;
   int arg2 ;
@@ -10455,7 +10495,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint_Pair_List_Repeat(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *)jarg1; 
@@ -10463,7 +10503,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Reverse__SWIG_0(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10486,7 +10526,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_Reverse__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   int arg2 ;
   std::vector< std::pair< cv::Point,cv::Point > > *arg3 = 0 ;
@@ -10509,7 +10549,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint_Pair_List_SetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_Pair_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPairList(void * jarg1) {
   std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *)jarg1; 
@@ -10517,7 +10557,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint_Pair_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_0() {
   void * jresult ;
   std::pair< cv::Point2d,cv::Point2d > *result = 0 ;
   
@@ -10527,7 +10567,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   cv::Point2d arg1 ;
   cv::Point2d arg2 ;
@@ -10553,7 +10593,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_1(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_2(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point2d,cv::Point2d > *arg1 = 0 ;
   std::pair< cv::Point2d,cv::Point2d > *result = 0 ;
@@ -10569,7 +10609,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair__SWIG_2(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_first_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_first_set(void * jarg1, void * jarg2) {
   std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
   cv::Point2d arg2 ;
   cv::Point2d *argp2 ;
@@ -10585,7 +10625,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_first_set(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_first_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_first_get(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
   cv::Point2d result;
@@ -10597,7 +10637,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_first_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_second_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_second_set(void * jarg1, void * jarg2) {
   std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
   cv::Point2d arg2 ;
   cv::Point2d *argp2 ;
@@ -10613,7 +10653,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_second_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_second_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_second_get(void * jarg1) {
   void * jresult ;
   std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
   cv::Point2d result;
@@ -10625,7 +10665,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_second_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_Pair(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPair(void * jarg1) {
   std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
   
   arg1 = (std::pair< cv::Point2d,cv::Point2d > *)jarg1; 
@@ -10633,7 +10673,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_Pair(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Clear(void * jarg1) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   
   arg1 = (std::vector< cv::Point2d > *)jarg1; 
@@ -10641,7 +10681,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   cv::Point2d *arg2 = 0 ;
   
@@ -10655,7 +10695,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Add(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   std::vector< cv::Point2d >::size_type result;
@@ -10667,7 +10707,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   std::vector< cv::Point2d >::size_type result;
@@ -10679,7 +10719,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_List_capacity(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   std::vector< cv::Point2d >::size_type arg2 ;
   
@@ -10689,7 +10729,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_reserve(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Point2d > *result = 0 ;
   
@@ -10699,7 +10739,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Point2d > *arg1 = 0 ;
   std::vector< cv::Point2d > *result = 0 ;
@@ -10715,7 +10755,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Point2d > *result = 0 ;
@@ -10734,7 +10774,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
@@ -10755,7 +10795,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_getitemcopy(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
@@ -10776,7 +10816,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_getitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   cv::Point2d *arg3 = 0 ;
@@ -10799,7 +10839,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_setitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   std::vector< cv::Point2d > *arg2 = 0 ;
   
@@ -10813,7 +10853,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_AddRange(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
@@ -10840,7 +10880,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_GetRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   cv::Point2d *arg3 = 0 ;
@@ -10863,7 +10903,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Insert(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   std::vector< cv::Point2d > *arg3 = 0 ;
@@ -10886,7 +10926,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_InsertRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   
@@ -10903,7 +10943,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_RemoveAt(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10926,7 +10966,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_RemoveRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Point2d *arg1 = 0 ;
   int arg2 ;
@@ -10951,7 +10991,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_List_Repeat(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   
   arg1 = (std::vector< cv::Point2d > *)jarg1; 
@@ -10959,7 +10999,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Reverse__SWIG_0(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -10982,7 +11022,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_Reverse__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   int arg2 ;
   std::vector< cv::Point2d > *arg3 = 0 ;
@@ -11005,7 +11045,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_List_SetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DList(void * jarg1) {
   std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
   
   arg1 = (std::vector< cv::Point2d > *)jarg1; 
@@ -11013,7 +11053,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Clear(void * jarg1) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *)jarg1; 
@@ -11021,7 +11061,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Add(void * jarg1, void * jarg2) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   std::pair< cv::Point2d,cv::Point2d > *arg2 = 0 ;
   
@@ -11035,7 +11075,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Add(void * jarg1, void * 
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_Pair_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > >::size_type result;
@@ -11047,7 +11087,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_Pair_List_size(void * jarg
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_Pair_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > >::size_type result;
@@ -11059,7 +11099,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2D_Pair_List_capacity(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > >::size_type arg2 ;
   
@@ -11069,7 +11109,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_reserve(void * jarg1, uns
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_0() {
   void * jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *result = 0 ;
   
@@ -11079,7 +11119,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = 0 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *result = 0 ;
@@ -11095,7 +11135,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *result = 0 ;
@@ -11114,7 +11154,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2D_Pair_List__SWIG_2(int jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
@@ -11135,7 +11175,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_getitemcopy(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
@@ -11156,7 +11196,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_getitem(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   std::pair< cv::Point2d,cv::Point2d > *arg3 = 0 ;
@@ -11179,7 +11219,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_setitem(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg2 = 0 ;
   
@@ -11193,7 +11233,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_AddRange(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
@@ -11220,7 +11260,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_GetRange(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   std::pair< cv::Point2d,cv::Point2d > *arg3 = 0 ;
@@ -11243,7 +11283,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Insert(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg3 = 0 ;
@@ -11266,7 +11306,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_InsertRange(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   
@@ -11283,7 +11323,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_RemoveAt(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -11306,7 +11346,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_RemoveRange(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::pair< cv::Point2d,cv::Point2d > *arg1 = 0 ;
   int arg2 ;
@@ -11331,7 +11371,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Repeat(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *)jarg1; 
@@ -11339,7 +11379,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Reverse__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -11362,7 +11402,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_Reverse__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   int arg2 ;
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg3 = 0 ;
@@ -11385,7 +11425,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2D_Pair_List_SetRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_Pair_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPairList(void * jarg1) {
   std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
   
   arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *)jarg1; 
@@ -11393,7 +11433,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2D_Pair_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Clear(void * jarg1) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Rect_< double > > *)jarg1; 
@@ -11401,7 +11441,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   cv::Rect_< double > *arg2 = 0 ;
   
@@ -11415,7 +11455,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Add(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRect_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   std::vector< cv::Rect_< double > >::size_type result;
@@ -11427,7 +11467,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRect_List_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRect_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   std::vector< cv::Rect_< double > >::size_type result;
@@ -11439,7 +11479,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRect_List_capacity(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   std::vector< cv::Rect_< double > >::size_type arg2 ;
   
@@ -11449,7 +11489,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_reserve(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Rect_< double > > *result = 0 ;
   
@@ -11459,7 +11499,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Rect_< double > > *arg1 = 0 ;
   std::vector< cv::Rect_< double > > *result = 0 ;
@@ -11475,7 +11515,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Rect_< double > > *result = 0 ;
@@ -11494,7 +11534,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRect_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
@@ -11515,7 +11555,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_getitemcopy(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
@@ -11536,7 +11576,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_getitem(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   cv::Rect_< double > *arg3 = 0 ;
@@ -11559,7 +11599,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_setitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   std::vector< cv::Rect_< double > > *arg2 = 0 ;
   
@@ -11573,7 +11613,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_AddRange(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
@@ -11600,7 +11640,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_GetRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   cv::Rect_< double > *arg3 = 0 ;
@@ -11623,7 +11663,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Insert(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   std::vector< cv::Rect_< double > > *arg3 = 0 ;
@@ -11646,7 +11686,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_InsertRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   
@@ -11663,7 +11703,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_RemoveAt(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -11686,7 +11726,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_RemoveRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Rect_< double > *arg1 = 0 ;
   int arg2 ;
@@ -11711,7 +11751,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRect_List_Repeat(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Rect_< double > > *)jarg1; 
@@ -11719,7 +11759,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Reverse__SWIG_0(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -11742,7 +11782,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_Reverse__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   int arg2 ;
   std::vector< cv::Rect_< double > > *arg3 = 0 ;
@@ -11765,7 +11805,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRect_List_SetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRect_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRectList(void * jarg1) {
   std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Rect_< double > > *)jarg1; 
@@ -11773,7 +11813,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRect_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Clear(void * jarg1) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
@@ -11781,7 +11821,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   cv::Mat_< float > *arg2 = 0 ;
   
@@ -11795,7 +11835,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   std::vector< cv::Mat_< float > >::size_type result;
@@ -11807,7 +11847,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   std::vector< cv::Mat_< float > >::size_type result;
@@ -11819,7 +11859,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   std::vector< cv::Mat_< float > >::size_type arg2 ;
   
@@ -11829,7 +11869,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_reserve(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Mat_< float > > *result = 0 ;
   
@@ -11839,7 +11879,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Mat_< float > > *arg1 = 0 ;
   std::vector< cv::Mat_< float > > *result = 0 ;
@@ -11855,7 +11895,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Mat_< float > > *result = 0 ;
@@ -11874,7 +11914,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
@@ -11895,7 +11935,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitemcopy(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
@@ -11916,7 +11956,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_getitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   cv::Mat_< float > *arg3 = 0 ;
@@ -11939,7 +11979,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_setitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   std::vector< cv::Mat_< float > > *arg2 = 0 ;
   
@@ -11953,7 +11993,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_AddRange(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
@@ -11980,7 +12020,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_GetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   cv::Mat_< float > *arg3 = 0 ;
@@ -12003,7 +12043,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Insert(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< float > > *arg3 = 0 ;
@@ -12026,7 +12066,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_InsertRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   
@@ -12043,7 +12083,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveAt(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12066,7 +12106,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_RemoveRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Mat_< float > *arg1 = 0 ;
   int arg2 ;
@@ -12091,7 +12131,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List_Repeat(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
@@ -12099,7 +12139,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12122,7 +12162,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_Reverse__SWIG_1(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< float > > *arg3 = 0 ;
@@ -12145,7 +12185,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List_SetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMat_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMatList(void * jarg1) {
   std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< float > > *)jarg1; 
@@ -12153,7 +12193,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMat_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Clear(void * jarg1) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
@@ -12161,7 +12201,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   cv::Mat_< double > *arg2 = 0 ;
   
@@ -12175,7 +12215,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Add(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   std::vector< cv::Mat_< double > >::size_type result;
@@ -12187,7 +12227,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   std::vector< cv::Mat_< double > >::size_type result;
@@ -12199,7 +12239,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List_capacity(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   std::vector< cv::Mat_< double > >::size_type arg2 ;
   
@@ -12209,7 +12249,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_reserve(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Mat_< double > > *result = 0 ;
   
@@ -12219,7 +12259,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Mat_< double > > *arg1 = 0 ;
   std::vector< cv::Mat_< double > > *result = 0 ;
@@ -12235,7 +12275,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Mat_< double > > *result = 0 ;
@@ -12254,7 +12294,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
@@ -12275,7 +12315,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitemcopy(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
@@ -12296,7 +12336,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_getitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   cv::Mat_< double > *arg3 = 0 ;
@@ -12319,7 +12359,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_setitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   std::vector< cv::Mat_< double > > *arg2 = 0 ;
   
@@ -12333,7 +12373,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_AddRange(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
@@ -12360,7 +12400,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_GetRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   cv::Mat_< double > *arg3 = 0 ;
@@ -12383,7 +12423,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Insert(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< double > > *arg3 = 0 ;
@@ -12406,7 +12446,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_InsertRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   
@@ -12423,7 +12463,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveAt(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12446,7 +12486,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_RemoveRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Mat_< double > *arg1 = 0 ;
   int arg2 ;
@@ -12471,7 +12511,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List_Repeat(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
@@ -12479,7 +12519,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_0(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12502,7 +12542,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_Reverse__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< double > > *arg3 = 0 ;
@@ -12525,7 +12565,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List_SetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList(void * jarg1) {
   std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< double > > *)jarg1; 
@@ -12533,7 +12573,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Clear(void * jarg1) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
@@ -12541,7 +12581,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Add(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   cv::Mat_< int > *arg2 = 0 ;
   
@@ -12555,7 +12595,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Add(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   std::vector< cv::Mat_< int > >::size_type result;
@@ -12567,7 +12607,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   std::vector< cv::Mat_< int > >::size_type result;
@@ -12579,7 +12619,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List_capacity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   std::vector< cv::Mat_< int > >::size_type arg2 ;
   
@@ -12589,7 +12629,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_0() {
   void * jresult ;
   std::vector< cv::Mat_< int > > *result = 0 ;
   
@@ -12599,7 +12639,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< cv::Mat_< int > > *arg1 = 0 ;
   std::vector< cv::Mat_< int > > *result = 0 ;
@@ -12615,7 +12655,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< cv::Mat_< int > > *result = 0 ;
@@ -12634,7 +12674,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
@@ -12655,7 +12695,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
@@ -12676,7 +12716,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   cv::Mat_< int > *arg3 = 0 ;
@@ -12699,7 +12739,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_setitem(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_AddRange(void * jarg1, void * jarg2) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   std::vector< cv::Mat_< int > > *arg2 = 0 ;
   
@@ -12713,7 +12753,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
@@ -12740,7 +12780,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   cv::Mat_< int > *arg3 = 0 ;
@@ -12763,7 +12803,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Insert(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< int > > *arg3 = 0 ;
@@ -12786,7 +12826,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveAt(void * jarg1, int jarg2) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   
@@ -12803,7 +12843,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12826,7 +12866,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   cv::Mat_< int > *arg1 = 0 ;
   int arg2 ;
@@ -12851,7 +12891,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_0(void * jarg1) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
@@ -12859,7 +12899,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -12882,7 +12922,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< int > > *arg3 = 0 ;
@@ -12905,7 +12945,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList(void * jarg1) {
   std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
   
   arg1 = (std::vector< cv::Mat_< int > > *)jarg1; 
@@ -12913,7 +12953,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_0() {
   void * jresult ;
   std::map< int,cv::Mat_< int > > *result = 0 ;
   
@@ -12923,7 +12963,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_1(void * jarg1) {
   void * jresult ;
   std::map< int,cv::Mat_< int >,std::less< int > > *arg1 = 0 ;
   std::map< int,cv::Mat_< int > > *result = 0 ;
@@ -12939,7 +12979,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMat_Map__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMat_Map_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMatMap_size(void * jarg1) {
   unsigned long jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::size_type result;
@@ -12951,7 +12991,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMat_Map_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_empty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_empty(void * jarg1) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   bool result;
@@ -12963,7 +13003,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_empty(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Clear(void * jarg1) {
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   
   arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
@@ -12971,7 +13011,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
@@ -12994,7 +13034,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_getitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
   std::map< int,cv::Mat_< int > >::mapped_type *arg3 = 0 ;
@@ -13012,7 +13052,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_setitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_ContainsKey(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_ContainsKey(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
@@ -13028,7 +13068,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_ContainsKey(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Add(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Add(void * jarg1, int jarg2, void * jarg3) {
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
   std::map< int,cv::Mat_< int > >::mapped_type *arg3 = 0 ;
@@ -13053,7 +13093,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_Add(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_Remove(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_Remove(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
@@ -13069,7 +13109,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMat_Map_Remove(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_create_iterator_begin(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_create_iterator_begin(void * jarg1) {
   void * jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int >,std::less< int > >::iterator *result = 0 ;
@@ -13081,7 +13121,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMat_Map_create_iterator_begin(void *
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMat_Map_get_next_key(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMatMap_get_next_key(void * jarg1, void * jarg2) {
   int jresult ;
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *) 0 ;
@@ -13095,7 +13135,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMat_Map_get_next_key(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_destroy_iterator(void * jarg1, void * jarg2) {
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   std::map< int,cv::Mat_< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *) 0 ;
   
@@ -13105,7 +13145,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMat_Map_destroy_iterator(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMat_Map(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMatMap(void * jarg1) {
   std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
   
   arg1 = (std::map< int,cv::Mat_< int > > *)jarg1; 
@@ -13113,7 +13153,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMat_Map(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_0() {
   void * jresult ;
   std::map< int,cv::Mat_< double > > *result = 0 ;
   
@@ -13123,7 +13163,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_1(void * jarg1) {
   void * jresult ;
   std::map< int,cv::Mat_< double >,std::less< int > > *arg1 = 0 ;
   std::map< int,cv::Mat_< double > > *result = 0 ;
@@ -13139,7 +13179,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMat_Map__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMat_Map_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMatMap_size(void * jarg1) {
   unsigned long jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::size_type result;
@@ -13151,7 +13191,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMat_Map_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_empty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_empty(void * jarg1) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   bool result;
@@ -13163,7 +13203,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_empty(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Clear(void * jarg1) {
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
@@ -13171,7 +13211,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13194,7 +13234,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_getitem(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
   std::map< int,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
@@ -13212,7 +13252,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_setitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_ContainsKey(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_ContainsKey(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13228,7 +13268,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_ContainsKey(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Add(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Add(void * jarg1, int jarg2, void * jarg3) {
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
   std::map< int,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
@@ -13253,7 +13293,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_Add(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_Remove(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_Remove(void * jarg1, int jarg2) {
   unsigned int jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13269,7 +13309,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMat_Map_Remove(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_create_iterator_begin(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_create_iterator_begin(void * jarg1) {
   void * jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double >,std::less< int > >::iterator *result = 0 ;
@@ -13281,7 +13321,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMat_Map_create_iterator_begin(voi
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMat_Map_get_next_key(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMatMap_get_next_key(void * jarg1, void * jarg2) {
   int jresult ;
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *) 0 ;
@@ -13295,7 +13335,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMat_Map_get_next_key(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2) {
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   std::map< int,cv::Mat_< double >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *) 0 ;
   
@@ -13305,7 +13345,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMat_Map_destroy_iterator(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMat_Map(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMatMap(void * jarg1) {
   std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::map< int,cv::Mat_< double > > *)jarg1; 
@@ -13313,7 +13353,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMat_Map(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_0() {
   void * jresult ;
   std::map< float,cv::Mat_< float > > *result = 0 ;
   
@@ -13323,7 +13363,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_1(void * jarg1) {
   void * jresult ;
   std::map< float,cv::Mat_< float >,std::less< float > > *arg1 = 0 ;
   std::map< float,cv::Mat_< float > > *result = 0 ;
@@ -13339,7 +13379,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMat_Map__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMat_Map_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMatMap_size(void * jarg1) {
   unsigned long jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::size_type result;
@@ -13351,7 +13391,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMat_Map_size(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_empty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_empty(void * jarg1) {
   unsigned int jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   bool result;
@@ -13363,7 +13403,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_empty(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Clear(void * jarg1) {
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   
   arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
@@ -13371,7 +13411,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_getitem(void * jarg1, float jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_getitem(void * jarg1, float jarg2) {
   void * jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
@@ -13394,7 +13434,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_getitem(void * jarg1, fl
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_setitem(void * jarg1, float jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_setitem(void * jarg1, float jarg2, void * jarg3) {
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
   std::map< float,cv::Mat_< float > >::mapped_type *arg3 = 0 ;
@@ -13412,7 +13452,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_setitem(void * jarg1, floa
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_ContainsKey(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_ContainsKey(void * jarg1, float jarg2) {
   unsigned int jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
@@ -13428,7 +13468,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_ContainsKey(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Add(void * jarg1, float jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Add(void * jarg1, float jarg2, void * jarg3) {
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
   std::map< float,cv::Mat_< float > >::mapped_type *arg3 = 0 ;
@@ -13453,7 +13493,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_Add(void * jarg1, float ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_Remove(void * jarg1, float jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_Remove(void * jarg1, float jarg2) {
   unsigned int jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
@@ -13469,7 +13509,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMat_Map_Remove(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_create_iterator_begin(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_create_iterator_begin(void * jarg1) {
   void * jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float >,std::less< float > >::iterator *result = 0 ;
@@ -13481,7 +13521,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMat_Map_create_iterator_begin(vo
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMat_Map_get_next_key(void * jarg1, void * jarg2) {
+SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMatMap_get_next_key(void * jarg1, void * jarg2) {
   float jresult ;
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *) 0 ;
@@ -13495,7 +13535,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMat_Map_get_next_key(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_destroy_iterator(void * jarg1, void * jarg2) {
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   std::map< float,cv::Mat_< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *) 0 ;
   
@@ -13505,7 +13545,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMat_Map_destroy_iterator(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMat_Map(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMatMap(void * jarg1) {
   std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
   
   arg1 = (std::map< float,cv::Mat_< float > > *)jarg1; 
@@ -13513,7 +13553,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMat_Map(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_0() {
   void * jresult ;
   std::map< double,cv::Mat_< double > > *result = 0 ;
   
@@ -13523,7 +13563,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_1(void * jarg1) {
   void * jresult ;
   std::map< double,cv::Mat_< double >,std::less< double > > *arg1 = 0 ;
   std::map< double,cv::Mat_< double > > *result = 0 ;
@@ -13539,7 +13579,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMat_Map__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMat_Map_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMatMap_size(void * jarg1) {
   unsigned long jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::size_type result;
@@ -13551,7 +13591,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMat_Map_size(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_empty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_empty(void * jarg1) {
   unsigned int jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   bool result;
@@ -13563,7 +13603,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_empty(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Clear(void * jarg1) {
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
@@ -13571,7 +13611,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_getitem(void * jarg1, double jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_getitem(void * jarg1, double jarg2) {
   void * jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13594,7 +13634,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_getitem(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_setitem(void * jarg1, double jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_setitem(void * jarg1, double jarg2, void * jarg3) {
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
   std::map< double,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
@@ -13612,7 +13652,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_setitem(void * jarg1, do
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_ContainsKey(void * jarg1, double jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_ContainsKey(void * jarg1, double jarg2) {
   unsigned int jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13628,7 +13668,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_ContainsKey(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Add(void * jarg1, double jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Add(void * jarg1, double jarg2, void * jarg3) {
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
   std::map< double,cv::Mat_< double > >::mapped_type *arg3 = 0 ;
@@ -13653,7 +13693,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_Add(void * jarg1, double
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_Remove(void * jarg1, double jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_Remove(void * jarg1, double jarg2) {
   unsigned int jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -13669,7 +13709,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMat_Map_Remove(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_create_iterator_begin(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_create_iterator_begin(void * jarg1) {
   void * jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double >,std::less< double > >::iterator *result = 0 ;
@@ -13681,7 +13721,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMat_Map_create_iterator_begin(
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMat_Map_get_next_key(void * jarg1, void * jarg2) {
+SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMatMap_get_next_key(void * jarg1, void * jarg2) {
   double jresult ;
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *) 0 ;
@@ -13695,7 +13735,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMat_Map_get_next_key(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_destroy_iterator(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2) {
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   std::map< double,cv::Mat_< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *) 0 ;
   
@@ -13705,7 +13745,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMat_Map_destroy_iterator(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMat_Map(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMatMap(void * jarg1) {
   std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
   
   arg1 = (std::map< double,cv::Mat_< double > > *)jarg1; 
@@ -13713,7 +13753,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMat_Map(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Clear(void * jarg1) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
@@ -13721,7 +13761,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   std::vector< cv::Mat_< int > > *arg2 = 0 ;
   
@@ -13735,7 +13775,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< int > > >::size_type result;
@@ -13747,7 +13787,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< int > > >::size_type result;
@@ -13759,7 +13799,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMat_List2N_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< int > > >::size_type arg2 ;
   
@@ -13769,7 +13809,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_reserve(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
   
@@ -13779,7 +13819,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = 0 ;
   std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
@@ -13795,7 +13835,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
@@ -13814,7 +13854,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMat_List2N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
@@ -13835,7 +13875,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitemcopy(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
@@ -13856,7 +13896,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_getitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< int > > *arg3 = 0 ;
@@ -13879,7 +13919,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_setitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< int > > > *arg2 = 0 ;
   
@@ -13893,7 +13933,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_AddRange(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
@@ -13920,7 +13960,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_GetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< int > > *arg3 = 0 ;
@@ -13943,7 +13983,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Insert(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< int > > > *arg3 = 0 ;
@@ -13966,7 +14006,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_InsertRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   
@@ -13983,7 +14023,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveAt(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14006,7 +14046,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_RemoveRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< int > > *arg1 = 0 ;
   int arg2 ;
@@ -14031,7 +14071,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMat_List2N_Repeat(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
@@ -14039,7 +14079,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14062,7 +14102,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_Reverse__SWIG_1(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< int > > > *arg3 = 0 ;
@@ -14085,7 +14125,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMat_List2N_SetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List2N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList2N(void * jarg1) {
   std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< int > > > *)jarg1; 
@@ -14093,7 +14133,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMat_List2N(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Clear(void * jarg1) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
@@ -14101,7 +14141,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   std::vector< cv::Mat_< double > > *arg2 = 0 ;
   
@@ -14115,7 +14155,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Add(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< double > > >::size_type result;
@@ -14127,7 +14167,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_size(void * jarg1) 
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< double > > >::size_type result;
@@ -14139,7 +14179,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMat_List2N_capacity(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< double > > >::size_type arg2 ;
   
@@ -14149,7 +14189,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_reserve(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
   
@@ -14159,7 +14199,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = 0 ;
   std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
@@ -14175,7 +14215,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_1(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
@@ -14194,7 +14234,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMat_List2N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
@@ -14215,7 +14255,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitemcopy(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
@@ -14236,7 +14276,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_getitem(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< double > > *arg3 = 0 ;
@@ -14259,7 +14299,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_setitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< double > > > *arg2 = 0 ;
   
@@ -14273,7 +14313,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_AddRange(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
@@ -14300,7 +14340,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_GetRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< double > > *arg3 = 0 ;
@@ -14323,7 +14363,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Insert(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< double > > > *arg3 = 0 ;
@@ -14346,7 +14386,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_InsertRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   
@@ -14363,7 +14403,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveAt(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14386,7 +14426,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_RemoveRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< double > > *arg1 = 0 ;
   int arg2 ;
@@ -14411,7 +14451,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMat_List2N_Repeat(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
@@ -14419,7 +14459,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14442,7 +14482,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_Reverse__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< double > > > *arg3 = 0 ;
@@ -14465,7 +14505,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMat_List2N_SetRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List2N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList2N(void * jarg1) {
   std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< double > > > *)jarg1; 
@@ -14473,7 +14513,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMat_List2N(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Clear(void * jarg1) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
@@ -14481,7 +14521,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Add(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Add(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   std::vector< cv::Mat_< float > > *arg2 = 0 ;
   
@@ -14495,7 +14535,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Add(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_size(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< float > > >::size_type result;
@@ -14507,7 +14547,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_size(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_capacity(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< float > > >::size_type result;
@@ -14519,7 +14559,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMat_List2N_capacity(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_reserve(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< float > > >::size_type arg2 ;
   
@@ -14529,7 +14569,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_reserve(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_0() {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
   
@@ -14539,7 +14579,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_1(void * jarg1) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = 0 ;
   std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
@@ -14555,7 +14595,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_2(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_2(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
@@ -14574,7 +14614,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMat_List2N__SWIG_2(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitemcopy(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitemcopy(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
@@ -14595,7 +14635,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitemcopy(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitem(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitem(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
@@ -14616,7 +14656,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_getitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_setitem(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_setitem(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< float > > *arg3 = 0 ;
@@ -14639,7 +14679,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_setitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_AddRange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_AddRange(void * jarg1, void * jarg2) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   std::vector< std::vector< cv::Mat_< float > > > *arg2 = 0 ;
   
@@ -14653,7 +14693,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_AddRange(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_GetRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_GetRange(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
@@ -14680,7 +14720,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_GetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Insert(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Insert(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   std::vector< cv::Mat_< float > > *arg3 = 0 ;
@@ -14703,7 +14743,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Insert(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< float > > > *arg3 = 0 ;
@@ -14726,7 +14766,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_InsertRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveAt(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveAt(void * jarg1, int jarg2) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   
@@ -14743,7 +14783,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveAt(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14766,7 +14806,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_RemoveRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_Repeat(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_Repeat(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< cv::Mat_< float > > *arg1 = 0 ;
   int arg2 ;
@@ -14791,7 +14831,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMat_List2N_Repeat(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_0(void * jarg1) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 
@@ -14799,7 +14839,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -14822,7 +14862,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_Reverse__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   int arg2 ;
   std::vector< std::vector< cv::Mat_< float > > > *arg3 = 0 ;
@@ -14845,7 +14885,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMat_List2N_SetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMat_List2N(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMatList2N(void * jarg1) {
   std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
   
   arg1 = (std::vector< std::vector< cv::Mat_< float > > > *)jarg1; 

@@ -31,7 +31,7 @@ public class CCNF_neuron : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LaandmrkDetectorPINVOKE.delete_CCNF_neuron(swigCPtr);
+          LandmarkDetectorPINVOKE.delete_CCNF_neuron(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,82 +41,82 @@ public class CCNF_neuron : global::System.IDisposable {
 
   public int neuron_type {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_neuron_type_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_set(swigCPtr, value);
     } 
     get {
-      int ret = LaandmrkDetectorPINVOKE.CCNF_neuron_neuron_type_get(swigCPtr);
+      int ret = LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_get(swigCPtr);
       return ret;
     } 
   }
 
   public double norm_weights {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_norm_weights_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.CCNF_neuron_norm_weights_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_get(swigCPtr);
       return ret;
     } 
   }
 
   public double bias {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_bias_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.CCNF_neuron_bias_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.CCNF_neuron_bias_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.CCNF_neuron_bias_get(swigCPtr);
       return ret;
     } 
   }
 
   public SWIGTYPE_p_cv__Mat_T_float_t weights {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LandmarkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LaandmrkDetectorPINVOKE.CCNF_neuron_weights_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.CCNF_neuron_weights_get(swigCPtr), true);
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Int_DoubleMat_Map weights_dfts {
+  public Int_DoubleMatMap weights_dfts {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, Int_DoubleMat_Map.getCPtr(value));
+      LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, Int_DoubleMatMap.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr);
-      Int_DoubleMat_Map ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMat_Map(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr);
+      Int_DoubleMatMap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMatMap(cPtr, false);
       return ret;
     } 
   }
 
   public double alpha {
     set {
-      LaandmrkDetectorPINVOKE.CCNF_neuron_alpha_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.CCNF_neuron_alpha_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.CCNF_neuron_alpha_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.CCNF_neuron_alpha_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CCNF_neuron() : this(LaandmrkDetectorPINVOKE.new_CCNF_neuron__SWIG_0(), true) {
+  public CCNF_neuron() : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_0(), true) {
   }
 
-  public CCNF_neuron(CCNF_neuron other) : this(LaandmrkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(CCNF_neuron.getCPtr(other)), true) {
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  public CCNF_neuron(CCNF_neuron other) : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(CCNF_neuron.getCPtr(other)), true) {
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Read(SWIGTYPE_p_std__ifstream stream) {
-    LaandmrkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Response(SWIGTYPE_p_cv__Mat_T_float_t im, SWIGTYPE_p_cv__Mat_T_double_t im_dft, SWIGTYPE_p_cv__Mat integral_img, SWIGTYPE_p_cv__Mat integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t resp) {
-    LaandmrkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(im), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(im_dft), SWIGTYPE_p_cv__Mat.getCPtr(integral_img), SWIGTYPE_p_cv__Mat.getCPtr(integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(resp));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(im), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(im_dft), SWIGTYPE_p_cv__Mat.getCPtr(integral_img), SWIGTYPE_p_cv__Mat.getCPtr(integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(resp));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

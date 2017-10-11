@@ -31,7 +31,7 @@ public class DetectionValidator : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LaandmrkDetectorPINVOKE.delete_DetectionValidator(swigCPtr);
+          LandmarkDetectorPINVOKE.delete_DetectionValidator(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,20 +41,20 @@ public class DetectionValidator : global::System.IDisposable {
 
   public int validator_type {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_validator_type_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.DetectionValidator_validator_type_set(swigCPtr, value);
     } 
     get {
-      int ret = LaandmrkDetectorPINVOKE.DetectionValidator_validator_type_get(swigCPtr);
+      int ret = LandmarkDetectorPINVOKE.DetectionValidator_validator_type_get(swigCPtr);
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_cv__Vec3d_t orientations {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_orientations_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Vec3d_t.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_orientations_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Vec3d_t.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_orientations_get(swigCPtr);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_orientations_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_cv__Vec3d_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_cv__Vec3d_t(cPtr, false);
       return ret;
     } 
@@ -62,76 +62,76 @@ public class DetectionValidator : global::System.IDisposable {
 
   public SWIGTYPE_p_std__vectorT_PAW_t paws {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_paws_set(swigCPtr, SWIGTYPE_p_std__vectorT_PAW_t.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_paws_set(swigCPtr, SWIGTYPE_p_std__vectorT_PAW_t.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_paws_get(swigCPtr);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_paws_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_PAW_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_PAW_t(cPtr, false);
       return ret;
     } 
   }
 
-  public Double_List bs {
+  public DoubleList bs {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_bs_set(swigCPtr, Double_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_bs_set(swigCPtr, DoubleList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_bs_get(swigCPtr);
-      Double_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new Double_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_bs_get(swigCPtr);
+      DoubleList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleList(cPtr, false);
       return ret;
     } 
   }
 
-  public DoubleMat_List ws {
+  public DoubleMatList ws {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, DoubleMat_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, DoubleMatList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_ws_get(swigCPtr);
-      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_ws_get(swigCPtr);
+      DoubleMatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMatList(cPtr, false);
       return ret;
     } 
   }
 
-  public DoubleMat_List2N ws_nn {
+  public DoubleMatList2N ws_nn {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, DoubleMat_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, DoubleMatList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_ws_nn_get(swigCPtr);
-      DoubleMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_ws_nn_get(swigCPtr);
+      DoubleMatList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMatList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public Int_List activation_fun {
+  public IntList activation_fun {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_activation_fun_set(swigCPtr, Int_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_activation_fun_set(swigCPtr, IntList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_activation_fun_get(swigCPtr);
-      Int_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_activation_fun_get(swigCPtr);
+      IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
       return ret;
     } 
   }
 
-  public Int_List output_fun {
+  public IntList output_fun {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_output_fun_set(swigCPtr, Int_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_output_fun_set(swigCPtr, IntList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_output_fun_get(swigCPtr);
-      Int_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_output_fun_get(swigCPtr);
+      IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t cnn_convolutional_layers {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_get(swigCPtr);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t(cPtr, false);
       return ret;
     } 
@@ -139,124 +139,124 @@ public class DetectionValidator : global::System.IDisposable {
 
   public SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t cnn_convolutional_layers_dft {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_get(swigCPtr);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t(cPtr, false);
       return ret;
     } 
   }
 
-  public Float_List3N cnn_convolutional_layers_bias {
+  public FloatList3N cnn_convolutional_layers_bias {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, Float_List3N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, FloatList3N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_get(swigCPtr);
-      Float_List3N ret = (cPtr == global::System.IntPtr.Zero) ? null : new Float_List3N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_get(swigCPtr);
+      FloatList3N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList3N(cPtr, false);
       return ret;
     } 
   }
 
-  public Int_List2N cnn_subsampling_layers {
+  public IntList2N cnn_subsampling_layers {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_set(swigCPtr, Int_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_set(swigCPtr, IntList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_get(swigCPtr);
-      Int_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_get(swigCPtr);
+      IntList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public FloatMat_List2N cnn_fully_connected_layers_weights {
+  public FloatMatList2N cnn_fully_connected_layers_weights {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, FloatMat_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, FloatMatList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_get(swigCPtr);
-      FloatMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_get(swigCPtr);
+      FloatMatList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMatList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public Float_List2N cnn_fully_connected_layers_bias {
+  public FloatList2N cnn_fully_connected_layers_bias {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_set(swigCPtr, Float_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_set(swigCPtr, FloatList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_get(swigCPtr);
-      Float_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new Float_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_get(swigCPtr);
+      FloatList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public Int_List2N cnn_layer_types {
+  public IntList2N cnn_layer_types {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_layer_types_set(swigCPtr, Int_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_layer_types_set(swigCPtr, IntList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_layer_types_get(swigCPtr);
-      Int_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_layer_types_get(swigCPtr);
+      IntList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public FloatMat_List2N cnn_fully_connected_layers_biases {
+  public FloatMatList2N cnn_fully_connected_layers_biases {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, FloatMat_List2N.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, FloatMatList2N.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_get(swigCPtr);
-      FloatMat_List2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMat_List2N(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_get(swigCPtr);
+      FloatMatList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMatList2N(cPtr, false);
       return ret;
     } 
   }
 
-  public DoubleMat_List mean_images {
+  public DoubleMatList mean_images {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, DoubleMat_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, DoubleMatList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_mean_images_get(swigCPtr);
-      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_mean_images_get(swigCPtr);
+      DoubleMatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMatList(cPtr, false);
       return ret;
     } 
   }
 
-  public DoubleMat_List standard_deviations {
+  public DoubleMatList standard_deviations {
     set {
-      LaandmrkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, DoubleMat_List.getCPtr(value));
+      LandmarkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, DoubleMatList.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.DetectionValidator_standard_deviations_get(swigCPtr);
-      DoubleMat_List ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMat_List(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.DetectionValidator_standard_deviations_get(swigCPtr);
+      DoubleMatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleMatList(cPtr, false);
       return ret;
     } 
   }
 
-  public DetectionValidator() : this(LaandmrkDetectorPINVOKE.new_DetectionValidator__SWIG_0(), true) {
+  public DetectionValidator() : this(LandmarkDetectorPINVOKE.new_DetectionValidator__SWIG_0(), true) {
   }
 
-  public DetectionValidator(DetectionValidator other) : this(LaandmrkDetectorPINVOKE.new_DetectionValidator__SWIG_1(DetectionValidator.getCPtr(other)), true) {
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  public DetectionValidator(DetectionValidator other) : this(LandmarkDetectorPINVOKE.new_DetectionValidator__SWIG_1(DetectionValidator.getCPtr(other)), true) {
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double Check(SWIGTYPE_p_cv__Vec3d orientation, SWIGTYPE_p_cv__Mat_T_uchar_t intensity_img, SWIGTYPE_p_cv__Mat_T_double_t detected_landmarks) {
-    double ret = LaandmrkDetectorPINVOKE.DetectionValidator_Check(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity_img), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(detected_landmarks));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    double ret = LandmarkDetectorPINVOKE.DetectionValidator_Check(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity_img), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(detected_landmarks));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Read(string location) {
-    LaandmrkDetectorPINVOKE.DetectionValidator_Read(swigCPtr, location);
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.DetectionValidator_Read(swigCPtr, location);
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetViewId(SWIGTYPE_p_cv__Vec3d orientation) {
-    int ret = LaandmrkDetectorPINVOKE.DetectionValidator_GetViewId(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    int ret = LandmarkDetectorPINVOKE.DetectionValidator_GetViewId(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

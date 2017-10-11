@@ -80,11 +80,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="headers">
-      <UniqueIdentifier>{75157eb9-2d21-482a-a1e2-e3e4100fffd7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="source">
       <UniqueIdentifier>{f50f893d-a6b2-4e45-8f94-529042834e49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
+      <UniqueIdentifier>{75157eb9-2d21-482a-a1e2-e3e4100fffd7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

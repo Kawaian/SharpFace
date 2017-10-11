@@ -31,7 +31,7 @@ public class SVR_patch_expert : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LaandmrkDetectorPINVOKE.delete_SVR_patch_expert(swigCPtr);
+          LandmarkDetectorPINVOKE.delete_SVR_patch_expert(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,87 +41,87 @@ public class SVR_patch_expert : global::System.IDisposable {
 
   public int type {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_type_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.SVR_patch_expert_type_set(swigCPtr, value);
     } 
     get {
-      int ret = LaandmrkDetectorPINVOKE.SVR_patch_expert_type_get(swigCPtr);
+      int ret = LandmarkDetectorPINVOKE.SVR_patch_expert_type_get(swigCPtr);
       return ret;
     } 
   }
 
   public double scaling {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_scaling_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.SVR_patch_expert_scaling_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.SVR_patch_expert_scaling_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.SVR_patch_expert_scaling_get(swigCPtr);
       return ret;
     } 
   }
 
   public double bias {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_bias_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.SVR_patch_expert_bias_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.SVR_patch_expert_bias_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.SVR_patch_expert_bias_get(swigCPtr);
       return ret;
     } 
   }
 
   public SWIGTYPE_p_cv__Mat_T_float_t weights {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LandmarkDetectorPINVOKE.SVR_patch_expert_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.SVR_patch_expert_weights_get(swigCPtr), true);
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Int_DoubleMat_Map weights_dfts {
+  public Int_DoubleMatMap weights_dfts {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_dfts_set(swigCPtr, Int_DoubleMat_Map.getCPtr(value));
+      LandmarkDetectorPINVOKE.SVR_patch_expert_weights_dfts_set(swigCPtr, Int_DoubleMatMap.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LaandmrkDetectorPINVOKE.SVR_patch_expert_weights_dfts_get(swigCPtr);
-      Int_DoubleMat_Map ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMat_Map(cPtr, false);
+      global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.SVR_patch_expert_weights_dfts_get(swigCPtr);
+      Int_DoubleMatMap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMatMap(cPtr, false);
       return ret;
     } 
   }
 
   public double confidence {
     set {
-      LaandmrkDetectorPINVOKE.SVR_patch_expert_confidence_set(swigCPtr, value);
+      LandmarkDetectorPINVOKE.SVR_patch_expert_confidence_set(swigCPtr, value);
     } 
     get {
-      double ret = LaandmrkDetectorPINVOKE.SVR_patch_expert_confidence_get(swigCPtr);
+      double ret = LandmarkDetectorPINVOKE.SVR_patch_expert_confidence_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SVR_patch_expert() : this(LaandmrkDetectorPINVOKE.new_SVR_patch_expert__SWIG_0(), true) {
+  public SVR_patch_expert() : this(LandmarkDetectorPINVOKE.new_SVR_patch_expert__SWIG_0(), true) {
   }
 
-  public SVR_patch_expert(SVR_patch_expert other) : this(LaandmrkDetectorPINVOKE.new_SVR_patch_expert__SWIG_1(SVR_patch_expert.getCPtr(other)), true) {
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  public SVR_patch_expert(SVR_patch_expert other) : this(LandmarkDetectorPINVOKE.new_SVR_patch_expert__SWIG_1(SVR_patch_expert.getCPtr(other)), true) {
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Read(SWIGTYPE_p_std__ifstream stream) {
-    LaandmrkDetectorPINVOKE.SVR_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.SVR_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Response(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response) {
-    LaandmrkDetectorPINVOKE.SVR_patch_expert_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.SVR_patch_expert_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ResponseDepth(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response) {
-    LaandmrkDetectorPINVOKE.SVR_patch_expert_ResponseDepth(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.SVR_patch_expert_ResponseDepth(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

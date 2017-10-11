@@ -31,7 +31,7 @@ public class PDM : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LaandmrkDetectorPINVOKE.delete_PDM(swigCPtr);
+          LandmarkDetectorPINVOKE.delete_PDM(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,115 +41,115 @@ public class PDM : global::System.IDisposable {
 
   public SWIGTYPE_p_cv__Mat_T_double_t mean_shape {
     set {
-      LaandmrkDetectorPINVOKE.PDM_mean_shape_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LandmarkDetectorPINVOKE.PDM_mean_shape_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LaandmrkDetectorPINVOKE.PDM_mean_shape_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LandmarkDetectorPINVOKE.PDM_mean_shape_get(swigCPtr), true);
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_cv__Mat_T_double_t princ_comp {
     set {
-      LaandmrkDetectorPINVOKE.PDM_princ_comp_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LandmarkDetectorPINVOKE.PDM_princ_comp_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LaandmrkDetectorPINVOKE.PDM_princ_comp_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LandmarkDetectorPINVOKE.PDM_princ_comp_get(swigCPtr), true);
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_cv__Mat_T_double_t eigen_values {
     set {
-      LaandmrkDetectorPINVOKE.PDM_eigen_values_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      LandmarkDetectorPINVOKE.PDM_eigen_values_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LaandmrkDetectorPINVOKE.PDM_eigen_values_get(swigCPtr), true);
-      if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_cv__Mat_T_double_t ret = new SWIGTYPE_p_cv__Mat_T_double_t(LandmarkDetectorPINVOKE.PDM_eigen_values_get(swigCPtr), true);
+      if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public PDM() : this(LaandmrkDetectorPINVOKE.new_PDM__SWIG_0(), true) {
+  public PDM() : this(LandmarkDetectorPINVOKE.new_PDM__SWIG_0(), true) {
   }
 
-  public PDM(PDM other) : this(LaandmrkDetectorPINVOKE.new_PDM__SWIG_1(PDM.getCPtr(other)), true) {
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+  public PDM(PDM other) : this(LandmarkDetectorPINVOKE.new_PDM__SWIG_1(PDM.getCPtr(other)), true) {
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Read(string location) {
-    LaandmrkDetectorPINVOKE.PDM_Read(swigCPtr, location);
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_Read(swigCPtr, location);
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int NumberOfPoints() {
-    int ret = LaandmrkDetectorPINVOKE.PDM_NumberOfPoints(swigCPtr);
+    int ret = LandmarkDetectorPINVOKE.PDM_NumberOfPoints(swigCPtr);
     return ret;
   }
 
   public int NumberOfModes() {
-    int ret = LaandmrkDetectorPINVOKE.PDM_NumberOfModes(swigCPtr);
+    int ret = LandmarkDetectorPINVOKE.PDM_NumberOfModes(swigCPtr);
     return ret;
   }
 
   public void Clamp(SWIGTYPE_p_cv__Mat_T_float_t params_local, SWIGTYPE_p_cv__Vec6d params_global, FaceModelParameters arg2) {
-    LaandmrkDetectorPINVOKE.PDM_Clamp(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), FaceModelParameters.getCPtr(arg2));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_Clamp(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), FaceModelParameters.getCPtr(arg2));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcShape3D(SWIGTYPE_p_cv__Mat_T_double_t out_shape, SWIGTYPE_p_cv__Mat_T_double_t params_local) {
-    LaandmrkDetectorPINVOKE.PDM_CalcShape3D(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_shape), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcShape3D(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_shape), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcShape2D(SWIGTYPE_p_cv__Mat_T_double_t out_shape, SWIGTYPE_p_cv__Mat_T_double_t params_local, SWIGTYPE_p_cv__Vec6d params_global) {
-    LaandmrkDetectorPINVOKE.PDM_CalcShape2D(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_shape), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcShape2D(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_shape), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcParams(SWIGTYPE_p_cv__Vec6d out_params_global, SWIGTYPE_p_cv__Rect_T_double_t bounding_box, SWIGTYPE_p_cv__Mat_T_double_t params_local, SWIGTYPE_p_cv__Vec3d rotation) {
-    LaandmrkDetectorPINVOKE.PDM_CalcParams__SWIG_0(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(bounding_box), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec3d.getCPtr(rotation));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcParams__SWIG_0(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(bounding_box), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec3d.getCPtr(rotation));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcParams(SWIGTYPE_p_cv__Vec6d out_params_global, SWIGTYPE_p_cv__Rect_T_double_t bounding_box, SWIGTYPE_p_cv__Mat_T_double_t params_local) {
-    LaandmrkDetectorPINVOKE.PDM_CalcParams__SWIG_1(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(bounding_box), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcParams__SWIG_1(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(bounding_box), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcParams(SWIGTYPE_p_cv__Vec6d out_params_global, SWIGTYPE_p_cv__Mat_T_double_t out_params_local, SWIGTYPE_p_cv__Mat_T_double_t landmark_locations, SWIGTYPE_p_cv__Vec3d rotation) {
-    LaandmrkDetectorPINVOKE.PDM_CalcParams__SWIG_2(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_params_local), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(landmark_locations), SWIGTYPE_p_cv__Vec3d.getCPtr(rotation));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcParams__SWIG_2(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_params_local), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(landmark_locations), SWIGTYPE_p_cv__Vec3d.getCPtr(rotation));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcParams(SWIGTYPE_p_cv__Vec6d out_params_global, SWIGTYPE_p_cv__Mat_T_double_t out_params_local, SWIGTYPE_p_cv__Mat_T_double_t landmark_locations) {
-    LaandmrkDetectorPINVOKE.PDM_CalcParams__SWIG_3(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_params_local), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(landmark_locations));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcParams__SWIG_3(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(out_params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(out_params_local), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(landmark_locations));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CalcBoundingBox(SWIGTYPE_p_cv__Rect out_bounding_box, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_double_t params_local) {
-    LaandmrkDetectorPINVOKE.PDM_CalcBoundingBox(swigCPtr, SWIGTYPE_p_cv__Rect.getCPtr(out_bounding_box), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_CalcBoundingBox(swigCPtr, SWIGTYPE_p_cv__Rect.getCPtr(out_bounding_box), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ComputeRigidJacobian(SWIGTYPE_p_cv__Mat_T_float_t params_local, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_float_t Jacob, SWIGTYPE_p_cv__Mat_T_float_t W, SWIGTYPE_p_cv__Mat_T_float_t Jacob_t_w) {
-    LaandmrkDetectorPINVOKE.PDM_ComputeRigidJacobian(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(W), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob_t_w));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_ComputeRigidJacobian(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(W), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob_t_w));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ComputeJacobian(SWIGTYPE_p_cv__Mat_T_float_t params_local, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_float_t Jacobian, SWIGTYPE_p_cv__Mat_T_float_t W, SWIGTYPE_p_cv__Mat_T_float_t Jacob_t_w) {
-    LaandmrkDetectorPINVOKE.PDM_ComputeJacobian(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacobian), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(W), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob_t_w));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_ComputeJacobian(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacobian), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(W), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(Jacob_t_w));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void UpdateModelParameters(SWIGTYPE_p_cv__Mat_T_float_t delta_p, SWIGTYPE_p_cv__Mat_T_float_t params_local, SWIGTYPE_p_cv__Vec6d params_global) {
-    LaandmrkDetectorPINVOKE.PDM_UpdateModelParameters(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(delta_p), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global));
-    if (LaandmrkDetectorPINVOKE.SWIGPendingException.Pending) throw LaandmrkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    LandmarkDetectorPINVOKE.PDM_UpdateModelParameters(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(delta_p), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(params_local), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global));
+    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }
