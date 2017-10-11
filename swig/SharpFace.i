@@ -1,5 +1,5 @@
 // Swig interface file to generate C# wrappers for LandmarkDetector
-%module LaandmrkDetector
+%module LandmarkDetector
 
 %{
 // ------------- C++ API ------------- //
