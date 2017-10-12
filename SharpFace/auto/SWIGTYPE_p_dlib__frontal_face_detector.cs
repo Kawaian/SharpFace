@@ -9,18 +9,22 @@
 //------------------------------------------------------------------------------
 
 
-public class SWIGTYPE_p_dlib__frontal_face_detector {
-  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+public class SWIGTYPE_p_dlib__frontal_face_detector
+{
+    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal SWIGTYPE_p_dlib__frontal_face_detector(global::System.IntPtr cPtr, bool futureUse) {
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-  }
+    internal SWIGTYPE_p_dlib__frontal_face_detector(global::System.IntPtr cPtr, bool futureUse)
+    {
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+    }
 
-  protected SWIGTYPE_p_dlib__frontal_face_detector() {
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-  }
+    protected SWIGTYPE_p_dlib__frontal_face_detector()
+    {
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+    }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_dlib__frontal_face_detector obj) {
-    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-  }
+    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_dlib__frontal_face_detector obj)
+    {
+        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+    }
 }

@@ -70,7 +70,6 @@
     <Compile Include="auto\PDM.cs" />
     <Compile Include="auto\StringList.cs" />
     <Compile Include="auto\SVR_patch_expert.cs" />
-    <Compile Include="auto\SWIGTYPE_p_bool.cs" />
     <Compile Include="auto\SWIGTYPE_p_CLNF.cs" />
     <Compile Include="auto\SWIGTYPE_p_cv__CascadeClassifier.cs" />
     <Compile Include="auto\SWIGTYPE_p_cv__Mat.cs" />
@@ -90,10 +89,7 @@
     <Compile Include="auto\SWIGTYPE_p_cv__Vec3d.cs" />
     <Compile Include="auto\SWIGTYPE_p_cv__Vec6d.cs" />
     <Compile Include="auto\SWIGTYPE_p_dlib__frontal_face_detector.cs" />
-    <Compile Include="auto\SWIGTYPE_p_double.cs" />
     <Compile Include="auto\SWIGTYPE_p_FaceModelParameters.cs" />
-    <Compile Include="auto\SWIGTYPE_p_float.cs" />
-    <Compile Include="auto\SWIGTYPE_p_int.cs" />
     <Compile Include="auto\SWIGTYPE_p_Patch_experts.cs" />
     <Compile Include="auto\SWIGTYPE_p_PDM.cs" />
     <Compile Include="auto\SWIGTYPE_p_std__ifstream.cs" />

@@ -10,8 +10,7 @@ namespace SharpFace.Tests
     {
         public void Run()
         {
-            // FaceModelParameters modelParameters = new FaceModelParameters(new String_List().Add(""));
-            
+            FaceModelParameters modelParameters = new FaceModelParameters(new StringList {""});
             CLNF model = new CLNF();
         }
     }

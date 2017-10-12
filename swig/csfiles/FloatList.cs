@@ -11,315 +11,378 @@
 
 public class FloatList : global::System.IDisposable, global::System.Collections.IEnumerable
     , global::System.Collections.Generic.IList<float>
- {
-  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
+{
+    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+    protected bool swigCMemOwn;
 
-  internal FloatList(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-  }
+    internal FloatList(global::System.IntPtr cPtr, bool cMemoryOwn)
+    {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+    }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(FloatList obj) {
-    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-  }
+    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(FloatList obj)
+    {
+        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+    }
 
-  ~FloatList() {
-    Dispose();
-  }
+    ~FloatList()
+    {
+        Dispose();
+    }
 
-  public virtual void Dispose() {
-    lock(this) {
-      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          LandmarkDetectorPINVOKE.delete_FloatList(swigCPtr);
+    public virtual void Dispose()
+    {
+        lock(this)
+        {
+            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            {
+                if (swigCMemOwn)
+                {
+                    swigCMemOwn = false;
+                    LandmarkDetectorPINVOKE.delete_FloatList(swigCPtr);
+                }
+                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+            }
+            global::System.GC.SuppressFinalize(this);
         }
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-      }
-      global::System.GC.SuppressFinalize(this);
-    }
-  }
-
-  public FloatList(global::System.Collections.ICollection c) : this() {
-    if (c == null)
-      throw new global::System.ArgumentNullException("c");
-    foreach (float element in c) {
-      this.Add(element);
-    }
-  }
-
-  public bool IsFixedSize {
-    get {
-      return false;
-    }
-  }
-
-  public bool IsReadOnly {
-    get {
-      return false;
-    }
-  }
-
-  public float this[int index]  {
-    get {
-      return getitem(index);
-    }
-    set {
-      setitem(index, value);
-    }
-  }
-
-  public int Capacity {
-    get {
-      return (int)capacity();
-    }
-    set {
-      if (value < size())
-        throw new global::System.ArgumentOutOfRangeException("Capacity");
-      reserve((uint)value);
-    }
-  }
-
-  public int Count {
-    get {
-      return (int)size();
-    }
-  }
-
-  public bool IsSynchronized {
-    get {
-      return false;
-    }
-  }
-
-  public void CopyTo(float[] array)
-  {
-    CopyTo(0, array, 0, this.Count);
-  }
-
-  public void CopyTo(float[] array, int arrayIndex)
-  {
-    CopyTo(0, array, arrayIndex, this.Count);
-  }
-
-  public void CopyTo(int index, float[] array, int arrayIndex, int count)
-  {
-    if (array == null)
-      throw new global::System.ArgumentNullException("array");
-    if (index < 0)
-      throw new global::System.ArgumentOutOfRangeException("index", "Value is less than zero");
-    if (arrayIndex < 0)
-      throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
-    if (count < 0)
-      throw new global::System.ArgumentOutOfRangeException("count", "Value is less than zero");
-    if (array.Rank > 1)
-      throw new global::System.ArgumentException("Multi dimensional array.", "array");
-    if (index+count > this.Count || arrayIndex+count > array.Length)
-      throw new global::System.ArgumentException("Number of elements to copy is too large.");
-    for (int i=0; i<count; i++)
-      array.SetValue(getitemcopy(index+i), arrayIndex+i);
-  }
-
-  global::System.Collections.Generic.IEnumerator<float> global::System.Collections.Generic.IEnumerable<float>.GetEnumerator() {
-    return new FloatListEnumerator(this);
-  }
-
-  global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new FloatListEnumerator(this);
-  }
-
-  public FloatListEnumerator GetEnumerator() {
-    return new FloatListEnumerator(this);
-  }
-
-  // Type-safe enumerator
-  /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
-  /// whenever the collection is modified. This has been done for changes in the size of the
-  /// collection but not when one of the elements of the collection is modified as it is a bit
-  /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class FloatListEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<float>
-  {
-    private FloatList collectionRef;
-    private int currentIndex;
-    private object currentObject;
-    private int currentSize;
-
-    public FloatListEnumerator(FloatList collection) {
-      collectionRef = collection;
-      currentIndex = -1;
-      currentObject = null;
-      currentSize = collectionRef.Count;
     }
 
-    // Type-safe iterator Current
-    public float Current {
-      get {
-        if (currentIndex == -1)
-          throw new global::System.InvalidOperationException("Enumeration not started.");
-        if (currentIndex > currentSize - 1)
-          throw new global::System.InvalidOperationException("Enumeration finished.");
-        if (currentObject == null)
-          throw new global::System.InvalidOperationException("Collection modified.");
-        return (float)currentObject;
-      }
+    public FloatList(global::System.Collections.ICollection c) : this()
+    {
+        if (c == null)
+            throw new global::System.ArgumentNullException("c");
+        foreach (float element in c)
+        {
+            this.Add(element);
+        }
     }
 
-    // Type-unsafe IEnumerator.Current
-    object global::System.Collections.IEnumerator.Current {
-      get {
-        return Current;
-      }
+    public bool IsFixedSize
+    {
+        get
+        {
+            return false;
+        }
     }
 
-    public bool MoveNext() {
-      int size = collectionRef.Count;
-      bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
-      if (moveOkay) {
-        currentIndex++;
-        currentObject = collectionRef[currentIndex];
-      } else {
-        currentObject = null;
-      }
-      return moveOkay;
+    public bool IsReadOnly
+    {
+        get
+        {
+            return false;
+        }
     }
 
-    public void Reset() {
-      currentIndex = -1;
-      currentObject = null;
-      if (collectionRef.Count != currentSize) {
-        throw new global::System.InvalidOperationException("Collection modified.");
-      }
+    public float this[int index]
+    {
+        get
+        {
+            return getitem(index);
+        }
+        set
+        {
+            setitem(index, value);
+        }
     }
 
-    public void Dispose() {
-        currentIndex = -1;
-        currentObject = null;
+    public int Capacity
+    {
+        get
+        {
+            return (int)capacity();
+        }
+        set
+        {
+            if (value < size())
+                throw new global::System.ArgumentOutOfRangeException("Capacity");
+            reserve((uint)value);
+        }
     }
-  }
 
-  public void Clear() {
-    LandmarkDetectorPINVOKE.FloatList_Clear(swigCPtr);
-  }
+    public int Count
+    {
+        get
+        {
+            return (int)size();
+        }
+    }
 
-  public void Add(float x) {
-    LandmarkDetectorPINVOKE.FloatList_Add(swigCPtr, x);
-  }
+    public bool IsSynchronized
+    {
+        get
+        {
+            return false;
+        }
+    }
 
-  private uint size() {
-    uint ret = LandmarkDetectorPINVOKE.FloatList_size(swigCPtr);
-    return ret;
-  }
+    public void CopyTo(float[] array)
+    {
+        CopyTo(0, array, 0, this.Count);
+    }
 
-  private uint capacity() {
-    uint ret = LandmarkDetectorPINVOKE.FloatList_capacity(swigCPtr);
-    return ret;
-  }
+    public void CopyTo(float[] array, int arrayIndex)
+    {
+        CopyTo(0, array, arrayIndex, this.Count);
+    }
 
-  private void reserve(uint n) {
-    LandmarkDetectorPINVOKE.FloatList_reserve(swigCPtr, n);
-  }
+    public void CopyTo(int index, float[] array, int arrayIndex, int count)
+    {
+        if (array == null)
+            throw new global::System.ArgumentNullException("array");
+        if (index < 0)
+            throw new global::System.ArgumentOutOfRangeException("index", "Value is less than zero");
+        if (arrayIndex < 0)
+            throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
+        if (count < 0)
+            throw new global::System.ArgumentOutOfRangeException("count", "Value is less than zero");
+        if (array.Rank > 1)
+            throw new global::System.ArgumentException("Multi dimensional array.", "array");
+        if (index+count > this.Count || arrayIndex+count > array.Length)
+            throw new global::System.ArgumentException("Number of elements to copy is too large.");
+        for (int i=0; i<count; i++)
+            array.SetValue(getitemcopy(index+i), arrayIndex+i);
+    }
 
-  public FloatList() : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_0(), true) {
-  }
+    global::System.Collections.Generic.IEnumerator<float> global::System.Collections.Generic.IEnumerable<float>.GetEnumerator()
+    {
+        return new FloatListEnumerator(this);
+    }
 
-  public FloatList(FloatList other) : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_1(FloatList.getCPtr(other)), true) {
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+    {
+        return new FloatListEnumerator(this);
+    }
 
-  public FloatList(int capacity) : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_2(capacity), true) {
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public FloatListEnumerator GetEnumerator()
+    {
+        return new FloatListEnumerator(this);
+    }
 
-  private float getitemcopy(int index) {
-    float ret = LandmarkDetectorPINVOKE.FloatList_getitemcopy(swigCPtr, index);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+    // Type-safe enumerator
+    /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
+    /// whenever the collection is modified. This has been done for changes in the size of the
+    /// collection but not when one of the elements of the collection is modified as it is a bit
+    /// tricky to detect unmanaged code that modifies the collection under our feet.
+    public sealed class FloatListEnumerator : global::System.Collections.IEnumerator
+        , global::System.Collections.Generic.IEnumerator<float>
+    {
+        private FloatList collectionRef;
+        private int currentIndex;
+        private object currentObject;
+        private int currentSize;
 
-  private float getitem(int index) {
-    float ret = LandmarkDetectorPINVOKE.FloatList_getitem(swigCPtr, index);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+        public FloatListEnumerator(FloatList collection)
+        {
+            collectionRef = collection;
+            currentIndex = -1;
+            currentObject = null;
+            currentSize = collectionRef.Count;
+        }
 
-  private void setitem(int index, float val) {
-    LandmarkDetectorPINVOKE.FloatList_setitem(swigCPtr, index, val);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        // Type-safe iterator Current
+        public float Current
+        {
+            get
+            {
+                if (currentIndex == -1)
+                    throw new global::System.InvalidOperationException("Enumeration not started.");
+                if (currentIndex > currentSize - 1)
+                    throw new global::System.InvalidOperationException("Enumeration finished.");
+                if (currentObject == null)
+                    throw new global::System.InvalidOperationException("Collection modified.");
+                return (float)currentObject;
+            }
+        }
 
-  public void AddRange(FloatList values) {
-    LandmarkDetectorPINVOKE.FloatList_AddRange(swigCPtr, FloatList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        // Type-unsafe IEnumerator.Current
+        object global::System.Collections.IEnumerator.Current
+        {
+            get
+            {
+                return Current;
+            }
+        }
 
-  public FloatList GetRange(int index, int count) {
-    global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatList_GetRange(swigCPtr, index, count);
-    FloatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList(cPtr, true);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+        public bool MoveNext()
+        {
+            int size = collectionRef.Count;
+            bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
+            if (moveOkay)
+            {
+                currentIndex++;
+                currentObject = collectionRef[currentIndex];
+            }
+            else
+            {
+                currentObject = null;
+            }
+            return moveOkay;
+        }
 
-  public void Insert(int index, float x) {
-    LandmarkDetectorPINVOKE.FloatList_Insert(swigCPtr, index, x);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        public void Reset()
+        {
+            currentIndex = -1;
+            currentObject = null;
+            if (collectionRef.Count != currentSize)
+            {
+                throw new global::System.InvalidOperationException("Collection modified.");
+            }
+        }
 
-  public void InsertRange(int index, FloatList values) {
-    LandmarkDetectorPINVOKE.FloatList_InsertRange(swigCPtr, index, FloatList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        public void Dispose()
+        {
+            currentIndex = -1;
+            currentObject = null;
+        }
+    }
 
-  public void RemoveAt(int index) {
-    LandmarkDetectorPINVOKE.FloatList_RemoveAt(swigCPtr, index);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public void Clear()
+    {
+        LandmarkDetectorPINVOKE.FloatList_Clear(swigCPtr);
+    }
 
-  public void RemoveRange(int index, int count) {
-    LandmarkDetectorPINVOKE.FloatList_RemoveRange(swigCPtr, index, count);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public void Add(float x)
+    {
+        LandmarkDetectorPINVOKE.FloatList_Add(swigCPtr, x);
+    }
 
-  public static FloatList Repeat(float value, int count) {
-    global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatList_Repeat(value, count);
-    FloatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList(cPtr, true);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+    private uint size()
+    {
+        uint ret = LandmarkDetectorPINVOKE.FloatList_size(swigCPtr);
+        return ret;
+    }
 
-  public void Reverse() {
-    LandmarkDetectorPINVOKE.FloatList_Reverse__SWIG_0(swigCPtr);
-  }
+    private uint capacity()
+    {
+        uint ret = LandmarkDetectorPINVOKE.FloatList_capacity(swigCPtr);
+        return ret;
+    }
 
-  public void Reverse(int index, int count) {
-    LandmarkDetectorPINVOKE.FloatList_Reverse__SWIG_1(swigCPtr, index, count);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    private void reserve(uint n)
+    {
+        LandmarkDetectorPINVOKE.FloatList_reserve(swigCPtr, n);
+    }
 
-  public void SetRange(int index, FloatList values) {
-    LandmarkDetectorPINVOKE.FloatList_SetRange(swigCPtr, index, FloatList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public FloatList() : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_0(), true)
+    {
+    }
 
-  public bool Contains(float value) {
-    bool ret = LandmarkDetectorPINVOKE.FloatList_Contains(swigCPtr, value);
-    return ret;
-  }
+    public FloatList(FloatList other) : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_1(FloatList.getCPtr(other)), true)
+    {
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
 
-  public int IndexOf(float value) {
-    int ret = LandmarkDetectorPINVOKE.FloatList_IndexOf(swigCPtr, value);
-    return ret;
-  }
+    public FloatList(int capacity) : this(LandmarkDetectorPINVOKE.new_FloatList__SWIG_2(capacity), true)
+    {
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
 
-  public int LastIndexOf(float value) {
-    int ret = LandmarkDetectorPINVOKE.FloatList_LastIndexOf(swigCPtr, value);
-    return ret;
-  }
+    private float getitemcopy(int index)
+    {
+        float ret = LandmarkDetectorPINVOKE.FloatList_getitemcopy(swigCPtr, index);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
 
-  public bool Remove(float value) {
-    bool ret = LandmarkDetectorPINVOKE.FloatList_Remove(swigCPtr, value);
-    return ret;
-  }
+    private float getitem(int index)
+    {
+        float ret = LandmarkDetectorPINVOKE.FloatList_getitem(swigCPtr, index);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    private void setitem(int index, float val)
+    {
+        LandmarkDetectorPINVOKE.FloatList_setitem(swigCPtr, index, val);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void AddRange(FloatList values)
+    {
+        LandmarkDetectorPINVOKE.FloatList_AddRange(swigCPtr, FloatList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public FloatList GetRange(int index, int count)
+    {
+        global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatList_GetRange(swigCPtr, index, count);
+        FloatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList(cPtr, true);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    public void Insert(int index, float x)
+    {
+        LandmarkDetectorPINVOKE.FloatList_Insert(swigCPtr, index, x);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void InsertRange(int index, FloatList values)
+    {
+        LandmarkDetectorPINVOKE.FloatList_InsertRange(swigCPtr, index, FloatList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void RemoveAt(int index)
+    {
+        LandmarkDetectorPINVOKE.FloatList_RemoveAt(swigCPtr, index);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void RemoveRange(int index, int count)
+    {
+        LandmarkDetectorPINVOKE.FloatList_RemoveRange(swigCPtr, index, count);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public static FloatList Repeat(float value, int count)
+    {
+        global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatList_Repeat(value, count);
+        FloatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatList(cPtr, true);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    public void Reverse()
+    {
+        LandmarkDetectorPINVOKE.FloatList_Reverse__SWIG_0(swigCPtr);
+    }
+
+    public void Reverse(int index, int count)
+    {
+        LandmarkDetectorPINVOKE.FloatList_Reverse__SWIG_1(swigCPtr, index, count);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void SetRange(int index, FloatList values)
+    {
+        LandmarkDetectorPINVOKE.FloatList_SetRange(swigCPtr, index, FloatList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public bool Contains(float value)
+    {
+        bool ret = LandmarkDetectorPINVOKE.FloatList_Contains(swigCPtr, value);
+        return ret;
+    }
+
+    public int IndexOf(float value)
+    {
+        int ret = LandmarkDetectorPINVOKE.FloatList_IndexOf(swigCPtr, value);
+        return ret;
+    }
+
+    public int LastIndexOf(float value)
+    {
+        int ret = LandmarkDetectorPINVOKE.FloatList_LastIndexOf(swigCPtr, value);
+        return ret;
+    }
+
+    public bool Remove(float value)
+    {
+        bool ret = LandmarkDetectorPINVOKE.FloatList_Remove(swigCPtr, value);
+        return ret;
+    }
 
 }

@@ -7,27 +7,11 @@
 %include <std_map.i>
 %include <std_string.i>
 
-
-// Lazy @MattMatt2000, need to review that :P
-// "Nah, I'll do it the next day"
+// TODO: Nani nani
 %include "modules/std_string_ref.i"
 
-
-// Brokenu :P
-/*
-// Primitive data types passed as references
-%apply int& 		OUTPUT {int& resultPointer};
-%apply bool& 		OUTPUT {bool& resultPointer};
-%apply float& 		OUTPUT {float& resultPointer};
-%apply double& 		OUTPUT {double& resultPointer};
-
-%apply int* 		OUTPUT {int* resultPointer};
-%apply bool* 		OUTPUT {bool* resultPointer};
-%apply float* 		OUTPUT {float* resultPointer};
-%apply double* 		OUTPUT {double* resultPointer};
-*/
-
 %{
+
 // ------------- C++ API ------------- //
 
 #include "CCNF_patch_expert.h"
@@ -44,6 +28,30 @@
 using namespace LandmarkDetector;
 %}
 
+/**
+    ---------------------------------------------------
+        Convert C++ references to C# references
+    ---------------------------------------------------
+**/
+
+// -- BOOL --
+%typemap(cstype)    bool & "/* cstype */ out bool"
+%typemap(csin)      bool & %{out $csinput%}
+
+// -- INT --
+%typemap(cstype)    int & "/* cstype */ out int"
+%typemap(csin)      int & %{out $csinput%}
+
+// -- DOUBLE --
+%typemap(cstype)    double & "/* cstype */ out double"
+%typemap(csin)      double & %{out $csinput%}
+
+// -- FLOAT --
+%typemap(cstype)    float & "/* cstype */ out float"
+%typemap(csin)      float & %{out $csinput%}
+
+
+
 %include "CCNF_patch_expert.h"
 %include "LandmarkDetectionValidator.h"
 %include "LandmarkDetectorFunc.h"
@@ -54,7 +62,6 @@ using namespace LandmarkDetector;
 %include "PDM.h"
 %include "SVR_patch_expert.h"
 
-// Passed by value
 
 %template(IntList)                 std::vector<int>;
 %template(FloatList)               std::vector<float>;
@@ -68,11 +75,11 @@ using namespace LandmarkDetector;
 
 %template(CVPointPair)             std::pair<cv::Point, cv::Point>;
 %template(CVPointList)             std::vector<cv::Point>;
-%template(CVPointPairList)        std::vector<std::pair<cv::Point, cv::Point>>;
+%template(CVPointPairList)         std::vector<std::pair<cv::Point, cv::Point>>;
 
 %template(CVPoint2DPair)           std::pair<cv::Point2d, cv::Point2d>;
 %template(CVPoint2DList)           std::vector<cv::Point2d>;
-%template(CVPoint2DPairList)      std::vector<std::pair<cv::Point2d, cv::Point2d>>;
+%template(CVPoint2DPairList)       std::vector<std::pair<cv::Point2d, cv::Point2d>>;
 
 %template(CVDoubleRectList)        std::vector<cv::Rect_<double>>;
 
@@ -89,3 +96,4 @@ using namespace LandmarkDetector;
 %template(IntMatList2N)            std::vector<std::vector<cv::Mat_<int>>>;
 %template(DoubleMatList2N)         std::vector<std::vector<cv::Mat_<double>>>;
 %template(FloatMatList2N)          std::vector<std::vector<cv::Mat_<float>>>;
+

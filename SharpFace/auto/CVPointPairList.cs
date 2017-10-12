@@ -11,296 +11,355 @@
 
 public class CVPointPairList : global::System.IDisposable, global::System.Collections.IEnumerable
     , global::System.Collections.Generic.IEnumerable<CVPointPair>
- {
-  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
+{
+    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+    protected bool swigCMemOwn;
 
-  internal CVPointPairList(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-  }
+    internal CVPointPairList(global::System.IntPtr cPtr, bool cMemoryOwn)
+    {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+    }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CVPointPairList obj) {
-    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-  }
+    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CVPointPairList obj)
+    {
+        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+    }
 
-  ~CVPointPairList() {
-    Dispose();
-  }
+    ~CVPointPairList()
+    {
+        Dispose();
+    }
 
-  public virtual void Dispose() {
-    lock(this) {
-      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          LandmarkDetectorPINVOKE.delete_CVPointPairList(swigCPtr);
+    public virtual void Dispose()
+    {
+        lock(this)
+        {
+            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            {
+                if (swigCMemOwn)
+                {
+                    swigCMemOwn = false;
+                    LandmarkDetectorPINVOKE.delete_CVPointPairList(swigCPtr);
+                }
+                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+            }
+            global::System.GC.SuppressFinalize(this);
         }
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-      }
-      global::System.GC.SuppressFinalize(this);
-    }
-  }
-
-  public CVPointPairList(global::System.Collections.ICollection c) : this() {
-    if (c == null)
-      throw new global::System.ArgumentNullException("c");
-    foreach (CVPointPair element in c) {
-      this.Add(element);
-    }
-  }
-
-  public bool IsFixedSize {
-    get {
-      return false;
-    }
-  }
-
-  public bool IsReadOnly {
-    get {
-      return false;
-    }
-  }
-
-  public CVPointPair this[int index]  {
-    get {
-      return getitem(index);
-    }
-    set {
-      setitem(index, value);
-    }
-  }
-
-  public int Capacity {
-    get {
-      return (int)capacity();
-    }
-    set {
-      if (value < size())
-        throw new global::System.ArgumentOutOfRangeException("Capacity");
-      reserve((uint)value);
-    }
-  }
-
-  public int Count {
-    get {
-      return (int)size();
-    }
-  }
-
-  public bool IsSynchronized {
-    get {
-      return false;
-    }
-  }
-
-  public void CopyTo(CVPointPair[] array)
-  {
-    CopyTo(0, array, 0, this.Count);
-  }
-
-  public void CopyTo(CVPointPair[] array, int arrayIndex)
-  {
-    CopyTo(0, array, arrayIndex, this.Count);
-  }
-
-  public void CopyTo(int index, CVPointPair[] array, int arrayIndex, int count)
-  {
-    if (array == null)
-      throw new global::System.ArgumentNullException("array");
-    if (index < 0)
-      throw new global::System.ArgumentOutOfRangeException("index", "Value is less than zero");
-    if (arrayIndex < 0)
-      throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
-    if (count < 0)
-      throw new global::System.ArgumentOutOfRangeException("count", "Value is less than zero");
-    if (array.Rank > 1)
-      throw new global::System.ArgumentException("Multi dimensional array.", "array");
-    if (index+count > this.Count || arrayIndex+count > array.Length)
-      throw new global::System.ArgumentException("Number of elements to copy is too large.");
-    for (int i=0; i<count; i++)
-      array.SetValue(getitemcopy(index+i), arrayIndex+i);
-  }
-
-  global::System.Collections.Generic.IEnumerator<CVPointPair> global::System.Collections.Generic.IEnumerable<CVPointPair>.GetEnumerator() {
-    return new CVPointPairListEnumerator(this);
-  }
-
-  global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new CVPointPairListEnumerator(this);
-  }
-
-  public CVPointPairListEnumerator GetEnumerator() {
-    return new CVPointPairListEnumerator(this);
-  }
-
-  // Type-safe enumerator
-  /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
-  /// whenever the collection is modified. This has been done for changes in the size of the
-  /// collection but not when one of the elements of the collection is modified as it is a bit
-  /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class CVPointPairListEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<CVPointPair>
-  {
-    private CVPointPairList collectionRef;
-    private int currentIndex;
-    private object currentObject;
-    private int currentSize;
-
-    public CVPointPairListEnumerator(CVPointPairList collection) {
-      collectionRef = collection;
-      currentIndex = -1;
-      currentObject = null;
-      currentSize = collectionRef.Count;
     }
 
-    // Type-safe iterator Current
-    public CVPointPair Current {
-      get {
-        if (currentIndex == -1)
-          throw new global::System.InvalidOperationException("Enumeration not started.");
-        if (currentIndex > currentSize - 1)
-          throw new global::System.InvalidOperationException("Enumeration finished.");
-        if (currentObject == null)
-          throw new global::System.InvalidOperationException("Collection modified.");
-        return (CVPointPair)currentObject;
-      }
+    public CVPointPairList(global::System.Collections.ICollection c) : this()
+    {
+        if (c == null)
+            throw new global::System.ArgumentNullException("c");
+        foreach (CVPointPair element in c)
+        {
+            this.Add(element);
+        }
     }
 
-    // Type-unsafe IEnumerator.Current
-    object global::System.Collections.IEnumerator.Current {
-      get {
-        return Current;
-      }
+    public bool IsFixedSize
+    {
+        get
+        {
+            return false;
+        }
     }
 
-    public bool MoveNext() {
-      int size = collectionRef.Count;
-      bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
-      if (moveOkay) {
-        currentIndex++;
-        currentObject = collectionRef[currentIndex];
-      } else {
-        currentObject = null;
-      }
-      return moveOkay;
+    public bool IsReadOnly
+    {
+        get
+        {
+            return false;
+        }
     }
 
-    public void Reset() {
-      currentIndex = -1;
-      currentObject = null;
-      if (collectionRef.Count != currentSize) {
-        throw new global::System.InvalidOperationException("Collection modified.");
-      }
+    public CVPointPair this[int index]
+    {
+        get
+        {
+            return getitem(index);
+        }
+        set
+        {
+            setitem(index, value);
+        }
     }
 
-    public void Dispose() {
-        currentIndex = -1;
-        currentObject = null;
+    public int Capacity
+    {
+        get
+        {
+            return (int)capacity();
+        }
+        set
+        {
+            if (value < size())
+                throw new global::System.ArgumentOutOfRangeException("Capacity");
+            reserve((uint)value);
+        }
     }
-  }
 
-  public void Clear() {
-    LandmarkDetectorPINVOKE.CVPointPairList_Clear(swigCPtr);
-  }
+    public int Count
+    {
+        get
+        {
+            return (int)size();
+        }
+    }
 
-  public void Add(CVPointPair x) {
-    LandmarkDetectorPINVOKE.CVPointPairList_Add(swigCPtr, CVPointPair.getCPtr(x));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public bool IsSynchronized
+    {
+        get
+        {
+            return false;
+        }
+    }
 
-  private uint size() {
-    uint ret = LandmarkDetectorPINVOKE.CVPointPairList_size(swigCPtr);
-    return ret;
-  }
+    public void CopyTo(CVPointPair[] array)
+    {
+        CopyTo(0, array, 0, this.Count);
+    }
 
-  private uint capacity() {
-    uint ret = LandmarkDetectorPINVOKE.CVPointPairList_capacity(swigCPtr);
-    return ret;
-  }
+    public void CopyTo(CVPointPair[] array, int arrayIndex)
+    {
+        CopyTo(0, array, arrayIndex, this.Count);
+    }
 
-  private void reserve(uint n) {
-    LandmarkDetectorPINVOKE.CVPointPairList_reserve(swigCPtr, n);
-  }
+    public void CopyTo(int index, CVPointPair[] array, int arrayIndex, int count)
+    {
+        if (array == null)
+            throw new global::System.ArgumentNullException("array");
+        if (index < 0)
+            throw new global::System.ArgumentOutOfRangeException("index", "Value is less than zero");
+        if (arrayIndex < 0)
+            throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
+        if (count < 0)
+            throw new global::System.ArgumentOutOfRangeException("count", "Value is less than zero");
+        if (array.Rank > 1)
+            throw new global::System.ArgumentException("Multi dimensional array.", "array");
+        if (index+count > this.Count || arrayIndex+count > array.Length)
+            throw new global::System.ArgumentException("Number of elements to copy is too large.");
+        for (int i=0; i<count; i++)
+            array.SetValue(getitemcopy(index+i), arrayIndex+i);
+    }
 
-  public CVPointPairList() : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_0(), true) {
-  }
+    global::System.Collections.Generic.IEnumerator<CVPointPair> global::System.Collections.Generic.IEnumerable<CVPointPair>.GetEnumerator()
+    {
+        return new CVPointPairListEnumerator(this);
+    }
 
-  public CVPointPairList(CVPointPairList other) : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_1(CVPointPairList.getCPtr(other)), true) {
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+    {
+        return new CVPointPairListEnumerator(this);
+    }
 
-  public CVPointPairList(int capacity) : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_2(capacity), true) {
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public CVPointPairListEnumerator GetEnumerator()
+    {
+        return new CVPointPairListEnumerator(this);
+    }
 
-  private CVPointPair getitemcopy(int index) {
-    CVPointPair ret = new CVPointPair(LandmarkDetectorPINVOKE.CVPointPairList_getitemcopy(swigCPtr, index), true);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+    // Type-safe enumerator
+    /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
+    /// whenever the collection is modified. This has been done for changes in the size of the
+    /// collection but not when one of the elements of the collection is modified as it is a bit
+    /// tricky to detect unmanaged code that modifies the collection under our feet.
+    public sealed class CVPointPairListEnumerator : global::System.Collections.IEnumerator
+        , global::System.Collections.Generic.IEnumerator<CVPointPair>
+    {
+        private CVPointPairList collectionRef;
+        private int currentIndex;
+        private object currentObject;
+        private int currentSize;
 
-  private CVPointPair getitem(int index) {
-    CVPointPair ret = new CVPointPair(LandmarkDetectorPINVOKE.CVPointPairList_getitem(swigCPtr, index), false);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+        public CVPointPairListEnumerator(CVPointPairList collection)
+        {
+            collectionRef = collection;
+            currentIndex = -1;
+            currentObject = null;
+            currentSize = collectionRef.Count;
+        }
 
-  private void setitem(int index, CVPointPair val) {
-    LandmarkDetectorPINVOKE.CVPointPairList_setitem(swigCPtr, index, CVPointPair.getCPtr(val));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        // Type-safe iterator Current
+        public CVPointPair Current
+        {
+            get
+            {
+                if (currentIndex == -1)
+                    throw new global::System.InvalidOperationException("Enumeration not started.");
+                if (currentIndex > currentSize - 1)
+                    throw new global::System.InvalidOperationException("Enumeration finished.");
+                if (currentObject == null)
+                    throw new global::System.InvalidOperationException("Collection modified.");
+                return (CVPointPair)currentObject;
+            }
+        }
 
-  public void AddRange(CVPointPairList values) {
-    LandmarkDetectorPINVOKE.CVPointPairList_AddRange(swigCPtr, CVPointPairList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        // Type-unsafe IEnumerator.Current
+        object global::System.Collections.IEnumerator.Current
+        {
+            get
+            {
+                return Current;
+            }
+        }
 
-  public CVPointPairList GetRange(int index, int count) {
-    global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVPointPairList_GetRange(swigCPtr, index, count);
-    CVPointPairList ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVPointPairList(cPtr, true);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+        public bool MoveNext()
+        {
+            int size = collectionRef.Count;
+            bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
+            if (moveOkay)
+            {
+                currentIndex++;
+                currentObject = collectionRef[currentIndex];
+            }
+            else
+            {
+                currentObject = null;
+            }
+            return moveOkay;
+        }
 
-  public void Insert(int index, CVPointPair x) {
-    LandmarkDetectorPINVOKE.CVPointPairList_Insert(swigCPtr, index, CVPointPair.getCPtr(x));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        public void Reset()
+        {
+            currentIndex = -1;
+            currentObject = null;
+            if (collectionRef.Count != currentSize)
+            {
+                throw new global::System.InvalidOperationException("Collection modified.");
+            }
+        }
 
-  public void InsertRange(int index, CVPointPairList values) {
-    LandmarkDetectorPINVOKE.CVPointPairList_InsertRange(swigCPtr, index, CVPointPairList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+        public void Dispose()
+        {
+            currentIndex = -1;
+            currentObject = null;
+        }
+    }
 
-  public void RemoveAt(int index) {
-    LandmarkDetectorPINVOKE.CVPointPairList_RemoveAt(swigCPtr, index);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public void Clear()
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_Clear(swigCPtr);
+    }
 
-  public void RemoveRange(int index, int count) {
-    LandmarkDetectorPINVOKE.CVPointPairList_RemoveRange(swigCPtr, index, count);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public void Add(CVPointPair x)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_Add(swigCPtr, CVPointPair.getCPtr(x));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
 
-  public static CVPointPairList Repeat(CVPointPair value, int count) {
-    global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVPointPairList_Repeat(CVPointPair.getCPtr(value), count);
-    CVPointPairList ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVPointPairList(cPtr, true);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
+    private uint size()
+    {
+        uint ret = LandmarkDetectorPINVOKE.CVPointPairList_size(swigCPtr);
+        return ret;
+    }
 
-  public void Reverse() {
-    LandmarkDetectorPINVOKE.CVPointPairList_Reverse__SWIG_0(swigCPtr);
-  }
+    private uint capacity()
+    {
+        uint ret = LandmarkDetectorPINVOKE.CVPointPairList_capacity(swigCPtr);
+        return ret;
+    }
 
-  public void Reverse(int index, int count) {
-    LandmarkDetectorPINVOKE.CVPointPairList_Reverse__SWIG_1(swigCPtr, index, count);
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    private void reserve(uint n)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_reserve(swigCPtr, n);
+    }
 
-  public void SetRange(int index, CVPointPairList values) {
-    LandmarkDetectorPINVOKE.CVPointPairList_SetRange(swigCPtr, index, CVPointPairList.getCPtr(values));
-    if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-  }
+    public CVPointPairList() : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_0(), true)
+    {
+    }
+
+    public CVPointPairList(CVPointPairList other) : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_1(CVPointPairList.getCPtr(other)), true)
+    {
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public CVPointPairList(int capacity) : this(LandmarkDetectorPINVOKE.new_CVPointPairList__SWIG_2(capacity), true)
+    {
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    private CVPointPair getitemcopy(int index)
+    {
+        CVPointPair ret = new CVPointPair(LandmarkDetectorPINVOKE.CVPointPairList_getitemcopy(swigCPtr, index), true);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    private CVPointPair getitem(int index)
+    {
+        CVPointPair ret = new CVPointPair(LandmarkDetectorPINVOKE.CVPointPairList_getitem(swigCPtr, index), false);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    private void setitem(int index, CVPointPair val)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_setitem(swigCPtr, index, CVPointPair.getCPtr(val));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void AddRange(CVPointPairList values)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_AddRange(swigCPtr, CVPointPairList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public CVPointPairList GetRange(int index, int count)
+    {
+        global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVPointPairList_GetRange(swigCPtr, index, count);
+        CVPointPairList ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVPointPairList(cPtr, true);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    public void Insert(int index, CVPointPair x)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_Insert(swigCPtr, index, CVPointPair.getCPtr(x));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void InsertRange(int index, CVPointPairList values)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_InsertRange(swigCPtr, index, CVPointPairList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void RemoveAt(int index)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_RemoveAt(swigCPtr, index);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void RemoveRange(int index, int count)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_RemoveRange(swigCPtr, index, count);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public static CVPointPairList Repeat(CVPointPair value, int count)
+    {
+        global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVPointPairList_Repeat(CVPointPair.getCPtr(value), count);
+        CVPointPairList ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVPointPairList(cPtr, true);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        return ret;
+    }
+
+    public void Reverse()
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_Reverse__SWIG_0(swigCPtr);
+    }
+
+    public void Reverse(int index, int count)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_Reverse__SWIG_1(swigCPtr, index, count);
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
+
+    public void SetRange(int index, CVPointPairList values)
+    {
+        LandmarkDetectorPINVOKE.CVPointPairList_SetRange(swigCPtr, index, CVPointPairList.getCPtr(values));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+    }
 
 }
