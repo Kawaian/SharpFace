@@ -8,7 +8,7 @@
 %include <std_string.i>
 
 // TODO: Nani nani
-%include "modules/std_string_ref.i"
+// %include "modules/std_string_ref.i"
 
 %{
 
@@ -34,22 +34,21 @@ using namespace LandmarkDetector;
     ---------------------------------------------------
 **/
 
-// -- BOOL --
-%typemap(cstype)    bool & "/* cstype */ out bool"
-%typemap(csin)      bool & %{out $csinput%}
-
-// -- INT --
-%typemap(cstype)    int & "/* cstype */ out int"
-%typemap(csin)      int & %{out $csinput%}
-
-// -- DOUBLE --
-%typemap(cstype)    double & "/* cstype */ out double"
-%typemap(csin)      double & %{out $csinput%}
-
-// -- FLOAT --
-%typemap(cstype)    float & "/* cstype */ out float"
-%typemap(csin)      float & %{out $csinput%}
-
+//   // -- BOOL --
+//   %typemap(cstype)    bool & "/* cstype */ out bool"
+//   %typemap(csin)      bool & %{out $csinput%}
+//   
+//   // -- INT --
+//   %typemap(cstype)    int & "/* cstype */ out int"
+//   %typemap(csin)      int & %{out $csinput%}
+//   
+//   // -- DOUBLE --
+//   %typemap(cstype)    double & "/* cstype */ out double"
+//   %typemap(csin)      double & %{out $csinput%}
+//   
+//   // -- FLOAT --
+//   %typemap(cstype)    float & "/* cstype */ out float"
+//   %typemap(csin)      float & %{out $csinput%}
 
 
 %include "CCNF_patch_expert.h"

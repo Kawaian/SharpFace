@@ -417,9 +417,6 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg)
 #include <string>
 
 
-#include <string>
-
-
 
 // ------------- C++ API ------------- //
 
@@ -4284,9 +4281,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1,
     std::string arg2_str(jarg2);
     arg2 = &arg2_str;
     if (arg1) (arg1)->face_detector_location = *arg2;
-
-    //argout typemap for const std::string&
-
 }
 
 
@@ -5051,9 +5045,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void *
     std::string arg2_str(jarg2);
     arg2 = &arg2_str;
     if (arg1) (arg1)->model_location = *arg2;
-
-    //argout typemap for const std::string&
-
 }
 
 
@@ -5204,9 +5195,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_se
     std::string arg2_str(jarg2);
     arg2 = &arg2_str;
     if (arg1) (arg1)->face_detector_location = *arg2;
-
-    //argout typemap for const std::string&
-
 }
 
 
@@ -5381,7 +5369,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, char** jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     std::vector< std::string > *arg1 = 0 ;
     std::vector< std::string > *arg2 = 0 ;
@@ -5414,10 +5402,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, v
         SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "bool & type is null", 0);
         return ;
     }
-    //typemap in
-    std::string temp;
-    arg5 = &temp;
-
+    arg5 = (std::string *)jarg5;
+    if (!arg5)
+    {
+        SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::string & type is null", 0);
+        return ;
+    }
     arg6 = (std::vector< std::string > *)jarg6;
     if (!arg6)
     {
@@ -5425,11 +5415,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, v
         return ;
     }
     LandmarkDetector::get_video_input_output_params(*arg1,*arg2,*arg3,*arg4,*arg5,*arg6);
-
-    //Typemap argout in c++ file.
-    //This will convert c++ string to c# string
-    *jarg5 = SWIG_csharp_string_callback(arg5->c_str());
-
 }
 
 
@@ -9166,9 +9151,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Add(void * jarg1, char * jarg2)
     std::string arg2_str(jarg2);
     arg2 = &arg2_str;
     (arg1)->push_back((std::string const &)*arg2);
-
-    //argout typemap for const std::string&
-
 }
 
 
@@ -9333,9 +9315,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_setitem(void * jarg1, int jarg2, c
         return ;
     }
 
-
-    //argout typemap for const std::string&
-
 }
 
 
@@ -9410,9 +9389,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Insert(void * jarg1, int jarg2, ch
         SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
         return ;
     }
-
-
-    //argout typemap for const std::string&
 
 }
 
@@ -9517,9 +9493,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_Repeat(char * jarg1, int jarg2)
     }
 
     jresult = (void *)result;
-
-    //argout typemap for const std::string&
-
     return jresult;
 }
 
@@ -9604,9 +9577,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Contains(void * jarg1, cha
     arg2 = &arg2_str;
     result = (bool)std_vector_Sl_std_string_Sg__Contains(arg1,(std::string const &)*arg2);
     jresult = result;
-
-    //argout typemap for const std::string&
-
     return jresult;
 }
 
@@ -9628,9 +9598,6 @@ SWIGEXPORT int SWIGSTDCALL CSharp_StringList_IndexOf(void * jarg1, char * jarg2)
     arg2 = &arg2_str;
     result = (int)std_vector_Sl_std_string_Sg__IndexOf(arg1,(std::string const &)*arg2);
     jresult = result;
-
-    //argout typemap for const std::string&
-
     return jresult;
 }
 
@@ -9652,9 +9619,6 @@ SWIGEXPORT int SWIGSTDCALL CSharp_StringList_LastIndexOf(void * jarg1, char * ja
     arg2 = &arg2_str;
     result = (int)std_vector_Sl_std_string_Sg__LastIndexOf(arg1,(std::string const &)*arg2);
     jresult = result;
-
-    //argout typemap for const std::string&
-
     return jresult;
 }
 
@@ -9676,9 +9640,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Remove(void * jarg1, char 
     arg2 = &arg2_str;
     result = (bool)std_vector_Sl_std_string_Sg__Remove(arg1,(std::string const &)*arg2);
     jresult = result;
-
-    //argout typemap for const std::string&
-
     return jresult;
 }
 

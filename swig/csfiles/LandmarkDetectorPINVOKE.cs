@@ -785,7 +785,7 @@ class LandmarkDetectorPINVOKE
     public static extern void delete_FaceModelParameters(global::System.Runtime.InteropServices.HandleRef jarg1);
 
     [global::System.Runtime.InteropServices.DllImport("LandmarkDetector", EntryPoint="CSharp_get_video_input_output_params")]
-    public static extern void get_video_input_output_params(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, /*imtype*/ out string jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
+    public static extern void get_video_input_output_params(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
     [global::System.Runtime.InteropServices.DllImport("LandmarkDetector", EntryPoint="CSharp_get_camera_params")]
     public static extern void get_camera_params(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
