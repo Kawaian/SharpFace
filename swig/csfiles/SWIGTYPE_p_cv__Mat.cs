@@ -16,9 +16,19 @@ namespace SharpFace
 
         private volatile System.IntPtr swigCPtr;
 
-        public SWIGTYPE_p_cv__Mat(System.Runtime.InteropServices.HandleRef hRef)
+        public SWIGTYPE_p_cv__Mat(System.Runtime.InteropServices.HandleRef hRef, bool meanless) : this(hRef.Handle)
         {
-            swigCPtr = hRef.Handle;
+
+        }
+
+        public SWIGTYPE_p_cv__Mat(System.Runtime.InteropServices.HandleRef hRef) : this(hRef, true)
+        {
+
+        }
+
+        public SWIGTYPE_p_cv__Mat(System.IntPtr ptr, bool meanless) : this(ptr)
+        {
+
         }
 
         public SWIGTYPE_p_cv__Mat(System.IntPtr ptr)
@@ -29,6 +39,11 @@ namespace SharpFace
         public SWIGTYPE_p_cv__Mat()
         {
             swigCPtr = System.IntPtr.Zero;
+        }
+
+        public static System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_cv__Mat obj)
+        {
+            return new System.Runtime.InteropServices.HandleRef(obj, obj.swigCPtr);
         }
 
         public System.IntPtr Pointer => swigCPtr;

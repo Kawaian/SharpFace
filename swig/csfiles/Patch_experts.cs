@@ -53,7 +53,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_svr_expert_intensity_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_svr_expert_intensity_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t.getCPtr(value));
             }
             get
             {
@@ -67,7 +67,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_ccnf_expert_intensity_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_ccnf_expert_intensity_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_LandmarkDetector__CCNF_patch_expert_t_t_t.getCPtr(value));
             }
             get
             {
@@ -81,7 +81,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_sigma_components_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_sigma_components_set(swigCPtr, FloatMatList2N.getCPtr(value));
             }
             get
             {
@@ -95,7 +95,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_patch_scaling_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_patch_scaling_set(swigCPtr, DoubleList.getCPtr(value));
             }
             get
             {
@@ -109,7 +109,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_centers_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_centers_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Vec3d_t_t.getCPtr(value));
             }
             get
             {
@@ -123,7 +123,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Patch_experts_visibilities_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Patch_experts_visibilities_set(swigCPtr, IntMatList2N.getCPtr(value));
             }
             get
             {
@@ -137,20 +137,20 @@ namespace SharpFace
         {
         }
 
-        public Patch_experts(Patch_experts other) : this(LandmarkDetectorPINVOKE.new_Patch_experts__SWIG_1(other.Pointer), true)
+        public Patch_experts(Patch_experts other) : this(LandmarkDetectorPINVOKE.new_Patch_experts__SWIG_1(Patch_experts.getCPtr(other)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Response(FloatMatList patch_expert_responses, SWIGTYPE_p_cv__Matx22f sim_ref_to_img, SWIGTYPE_p_cv__Matx22d sim_img_to_ref, SWIGTYPE_p_cv__Mat_T_uchar_t grayscale_image, SWIGTYPE_p_PDM pdm, SWIGTYPE_p_cv__Vec6d params_global, SWIGTYPE_p_cv__Mat_T_double_t params_local, int window_size, int scale)
         {
-            LandmarkDetectorPINVOKE.Patch_experts_Response(swigCPtr, patch_expert_responses.Pointer, sim_ref_to_img.Pointer, sim_img_to_ref.Pointer, grayscale_image.Pointer, pdm.Pointer, params_global.Pointer, params_local.Pointer, window_size, scale);
+            LandmarkDetectorPINVOKE.Patch_experts_Response(swigCPtr, FloatMatList.getCPtr(patch_expert_responses), SWIGTYPE_p_cv__Matx22f.getCPtr(sim_ref_to_img), SWIGTYPE_p_cv__Matx22d.getCPtr(sim_img_to_ref), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(grayscale_image), SWIGTYPE_p_PDM.getCPtr(pdm), SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(params_local), window_size, scale);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public int GetViewIdx(SWIGTYPE_p_cv__Vec6d params_global, int scale)
         {
-            int ret = LandmarkDetectorPINVOKE.Patch_experts_GetViewIdx(swigCPtr, params_global.Pointer, scale);
+            int ret = LandmarkDetectorPINVOKE.Patch_experts_GetViewIdx(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(params_global), scale);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
         }
@@ -169,7 +169,7 @@ namespace SharpFace
 
         public void Read(StringList intensity_svr_expert_locations, StringList intensity_ccnf_expert_locations)
         {
-            LandmarkDetectorPINVOKE.Patch_experts_Read(swigCPtr, intensity_svr_expert_locations.Pointer, intensity_ccnf_expert_locations.Pointer);
+            LandmarkDetectorPINVOKE.Patch_experts_Read(swigCPtr, StringList.getCPtr(intensity_svr_expert_locations), StringList.getCPtr(intensity_ccnf_expert_locations));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

@@ -105,7 +105,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_set(swigCPtr, IntList.getCPtr(value));
             }
             get
             {
@@ -119,7 +119,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_set(swigCPtr, IntList.getCPtr(value));
             }
             get
             {
@@ -133,7 +133,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_set(swigCPtr, IntList.getCPtr(value));
             }
             get
             {
@@ -333,7 +333,7 @@ namespace SharpFace
         {
         }
 
-        public FaceModelParameters(StringList arguments) : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_1(arguments.Pointer), true)
+        public FaceModelParameters(StringList arguments) : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_1(StringList.getCPtr(arguments)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }

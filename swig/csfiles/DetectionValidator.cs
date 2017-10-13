@@ -66,7 +66,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_orientations_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_orientations_set(swigCPtr, SWIGTYPE_p_std__vectorT_cv__Vec3d_t.getCPtr(value));
             }
             get
             {
@@ -80,7 +80,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_paws_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_paws_set(swigCPtr, SWIGTYPE_p_std__vectorT_PAW_t.getCPtr(value));
             }
             get
             {
@@ -94,7 +94,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_bs_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_bs_set(swigCPtr, DoubleList.getCPtr(value));
             }
             get
             {
@@ -108,7 +108,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_ws_set(swigCPtr, DoubleMatList.getCPtr(value));
             }
             get
             {
@@ -122,7 +122,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_ws_nn_set(swigCPtr, DoubleMatList2N.getCPtr(value));
             }
             get
             {
@@ -136,7 +136,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_activation_fun_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_activation_fun_set(swigCPtr, IntList.getCPtr(value));
             }
             get
             {
@@ -150,7 +150,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_output_fun_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_output_fun_set(swigCPtr, IntList.getCPtr(value));
             }
             get
             {
@@ -164,7 +164,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.getCPtr(value));
             }
             get
             {
@@ -178,7 +178,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_dft_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.getCPtr(value));
             }
             get
             {
@@ -192,7 +192,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_convolutional_layers_bias_set(swigCPtr, FloatList3N.getCPtr(value));
             }
             get
             {
@@ -206,7 +206,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_subsampling_layers_set(swigCPtr, IntList2N.getCPtr(value));
             }
             get
             {
@@ -220,7 +220,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_weights_set(swigCPtr, FloatMatList2N.getCPtr(value));
             }
             get
             {
@@ -234,7 +234,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_bias_set(swigCPtr, FloatList2N.getCPtr(value));
             }
             get
             {
@@ -248,7 +248,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_layer_types_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_layer_types_set(swigCPtr, IntList2N.getCPtr(value));
             }
             get
             {
@@ -262,7 +262,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_cnn_fully_connected_layers_biases_set(swigCPtr, FloatMatList2N.getCPtr(value));
             }
             get
             {
@@ -276,7 +276,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_mean_images_set(swigCPtr, DoubleMatList.getCPtr(value));
             }
             get
             {
@@ -290,7 +290,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.DetectionValidator_standard_deviations_set(swigCPtr, DoubleMatList.getCPtr(value));
             }
             get
             {
@@ -304,14 +304,14 @@ namespace SharpFace
         {
         }
 
-        public DetectionValidator(DetectionValidator other) : this(LandmarkDetectorPINVOKE.new_DetectionValidator__SWIG_1(other.Pointer), true)
+        public DetectionValidator(DetectionValidator other) : this(LandmarkDetectorPINVOKE.new_DetectionValidator__SWIG_1(DetectionValidator.getCPtr(other)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public double Check(SWIGTYPE_p_cv__Vec3d orientation, SWIGTYPE_p_cv__Mat_T_uchar_t intensity_img, SWIGTYPE_p_cv__Mat_T_double_t detected_landmarks)
         {
-            double ret = LandmarkDetectorPINVOKE.DetectionValidator_Check(swigCPtr, orientation.Pointer, intensity_img.Pointer, detected_landmarks.Pointer);
+            double ret = LandmarkDetectorPINVOKE.DetectionValidator_Check(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity_img), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(detected_landmarks));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
         }
@@ -324,7 +324,7 @@ namespace SharpFace
 
         public int GetViewId(SWIGTYPE_p_cv__Vec3d orientation)
         {
-            int ret = LandmarkDetectorPINVOKE.DetectionValidator_GetViewId(swigCPtr, orientation.Pointer);
+            int ret = LandmarkDetectorPINVOKE.DetectionValidator_GetViewId(swigCPtr, SWIGTYPE_p_cv__Vec3d.getCPtr(orientation));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
         }

@@ -10,7 +10,7 @@ namespace SharpFace.Tests.Windows
     {
         static void Main(string[] args)
         {
-            LandmarkTestImg t = new LandmarkTestImg();
+            LandmarkTestVid t = new LandmarkTestVid();
             t.Run();
             Console.Write("testfin");
             Console.ReadLine();

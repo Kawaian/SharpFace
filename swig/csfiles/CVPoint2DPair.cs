@@ -53,12 +53,12 @@ namespace SharpFace
         {
         }
 
-        public CVPoint2DPair(SWIGTYPE_p_cv__Point2d t, SWIGTYPE_p_cv__Point2d u) : this(LandmarkDetectorPINVOKE.new_CVPoint2DPair__SWIG_1(t.Pointer, u.Pointer), true)
+        public CVPoint2DPair(SWIGTYPE_p_cv__Point2d t, SWIGTYPE_p_cv__Point2d u) : this(LandmarkDetectorPINVOKE.new_CVPoint2DPair__SWIG_1(SWIGTYPE_p_cv__Point2d.getCPtr(t), SWIGTYPE_p_cv__Point2d.getCPtr(u)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
-        public CVPoint2DPair(CVPoint2DPair p) : this(LandmarkDetectorPINVOKE.new_CVPoint2DPair__SWIG_2(p.Pointer), true)
+        public CVPoint2DPair(CVPoint2DPair p) : this(LandmarkDetectorPINVOKE.new_CVPoint2DPair__SWIG_2(CVPoint2DPair.getCPtr(p)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
@@ -67,7 +67,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CVPoint2DPair_first_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.CVPoint2DPair_first_set(swigCPtr, SWIGTYPE_p_cv__Point2d.getCPtr(value));
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -82,7 +82,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CVPoint2DPair_second_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.CVPoint2DPair_second_set(swigCPtr, SWIGTYPE_p_cv__Point2d.getCPtr(value));
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get

@@ -246,7 +246,7 @@ namespace SharpFace
 
         public void Add(SWIGTYPE_p_cv__Rect_T_double_t x)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_Add(swigCPtr, x.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_Add(swigCPtr, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(x));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -271,7 +271,7 @@ namespace SharpFace
         {
         }
 
-        public CVDoubleRectList(CVDoubleRectList other) : this(LandmarkDetectorPINVOKE.new_CVDoubleRectList__SWIG_1(other.Pointer), true)
+        public CVDoubleRectList(CVDoubleRectList other) : this(LandmarkDetectorPINVOKE.new_CVDoubleRectList__SWIG_1(CVDoubleRectList.getCPtr(other)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
@@ -297,13 +297,13 @@ namespace SharpFace
 
         private void setitem(int index, SWIGTYPE_p_cv__Rect_T_double_t val)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_setitem(swigCPtr, index, val.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_setitem(swigCPtr, index, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(val));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void AddRange(CVDoubleRectList values)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_AddRange(swigCPtr, values.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_AddRange(swigCPtr, CVDoubleRectList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -317,13 +317,13 @@ namespace SharpFace
 
         public void Insert(int index, SWIGTYPE_p_cv__Rect_T_double_t x)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_Insert(swigCPtr, index, x.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_Insert(swigCPtr, index, SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(x));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void InsertRange(int index, CVDoubleRectList values)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_InsertRange(swigCPtr, index, values.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_InsertRange(swigCPtr, index, CVDoubleRectList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -341,7 +341,7 @@ namespace SharpFace
 
         public static CVDoubleRectList Repeat(SWIGTYPE_p_cv__Rect_T_double_t value, int count)
         {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVDoubleRectList_Repeat(value.Pointer, count);
+            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CVDoubleRectList_Repeat(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(value), count);
             CVDoubleRectList ret = (cPtr == global::System.IntPtr.Zero) ? null : new CVDoubleRectList(cPtr, true);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
@@ -360,7 +360,7 @@ namespace SharpFace
 
         public void SetRange(int index, CVDoubleRectList values)
         {
-            LandmarkDetectorPINVOKE.CVDoubleRectList_SetRange(swigCPtr, index, values.Pointer);
+            LandmarkDetectorPINVOKE.CVDoubleRectList_SetRange(swigCPtr, index, CVDoubleRectList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

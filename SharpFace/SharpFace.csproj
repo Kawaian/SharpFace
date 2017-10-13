@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\swig\csfiles\CCNF_neuron.cs">
@@ -140,9 +142,6 @@
     <Compile Include="..\swig\csfiles\SVR_patch_expert.cs">
       <Link>auto\SVR_patch_expert.cs</Link>
     </Compile>
-    <Compile Include="..\swig\csfiles\SWIGTYPE_p_bool.cs">
-      <Link>auto\SWIGTYPE_p_bool.cs</Link>
-    </Compile>
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_CLNF.cs">
       <Link>auto\SWIGTYPE_p_CLNF.cs</Link>
     </Compile>
@@ -200,17 +199,8 @@
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_dlib__frontal_face_detector.cs">
       <Link>auto\SWIGTYPE_p_dlib__frontal_face_detector.cs</Link>
     </Compile>
-    <Compile Include="..\swig\csfiles\SWIGTYPE_p_double.cs">
-      <Link>auto\SWIGTYPE_p_double.cs</Link>
-    </Compile>
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_FaceModelParameters.cs">
       <Link>auto\SWIGTYPE_p_FaceModelParameters.cs</Link>
-    </Compile>
-    <Compile Include="..\swig\csfiles\SWIGTYPE_p_float.cs">
-      <Link>auto\SWIGTYPE_p_float.cs</Link>
-    </Compile>
-    <Compile Include="..\swig\csfiles\SWIGTYPE_p_int.cs">
-      <Link>auto\SWIGTYPE_p_int.cs</Link>
     </Compile>
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_Patch_experts.cs">
       <Link>auto\SWIGTYPE_p_Patch_experts.cs</Link>
@@ -220,9 +210,6 @@
     </Compile>
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__ifstream.cs">
       <Link>auto\SWIGTYPE_p_std__ifstream.cs</Link>
-    </Compile>
-    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__string.cs">
-      <Link>auto\SWIGTYPE_p_std__string.cs</Link>
     </Compile>
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_cv__Vec3d_t.cs">
       <Link>auto\SWIGTYPE_p_std__vectorT_cv__Vec3d_t.cs</Link>
@@ -264,6 +251,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Tests\LandmarkTestImg.cs" />
+    <Compile Include="Tests\LandmarkTestVid.cs" />
+    <Compile Include="Tests\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">

@@ -270,7 +270,7 @@ namespace SharpFace
         {
         }
 
-        public DoubleList(DoubleList other) : this(LandmarkDetectorPINVOKE.new_DoubleList__SWIG_1(other.Pointer), true)
+        public DoubleList(DoubleList other) : this(LandmarkDetectorPINVOKE.new_DoubleList__SWIG_1(DoubleList.getCPtr(other)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
@@ -302,7 +302,7 @@ namespace SharpFace
 
         public void AddRange(DoubleList values)
         {
-            LandmarkDetectorPINVOKE.DoubleList_AddRange(swigCPtr, values.Pointer);
+            LandmarkDetectorPINVOKE.DoubleList_AddRange(swigCPtr, DoubleList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -322,7 +322,7 @@ namespace SharpFace
 
         public void InsertRange(int index, DoubleList values)
         {
-            LandmarkDetectorPINVOKE.DoubleList_InsertRange(swigCPtr, index, values.Pointer);
+            LandmarkDetectorPINVOKE.DoubleList_InsertRange(swigCPtr, index, DoubleList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -359,7 +359,7 @@ namespace SharpFace
 
         public void SetRange(int index, DoubleList values)
         {
-            LandmarkDetectorPINVOKE.DoubleList_SetRange(swigCPtr, index, values.Pointer);
+            LandmarkDetectorPINVOKE.DoubleList_SetRange(swigCPtr, index, DoubleList.getCPtr(values));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

@@ -79,7 +79,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_svr_patch_experts_set(swigCPtr, value.Pointer);
+                LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_svr_patch_experts_set(swigCPtr, SWIGTYPE_p_std__vectorT_LandmarkDetector__SVR_patch_expert_t.getCPtr(value));
             }
             get
             {
@@ -93,26 +93,26 @@ namespace SharpFace
         {
         }
 
-        public Multi_SVR_patch_expert(Multi_SVR_patch_expert other) : this(LandmarkDetectorPINVOKE.new_Multi_SVR_patch_expert__SWIG_1(other.Pointer), true)
+        public Multi_SVR_patch_expert(Multi_SVR_patch_expert other) : this(LandmarkDetectorPINVOKE.new_Multi_SVR_patch_expert__SWIG_1(Multi_SVR_patch_expert.getCPtr(other)), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Read(SWIGTYPE_p_std__ifstream stream)
         {
-            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_Read(swigCPtr, stream.Pointer);
+            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Response(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response)
         {
-            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_Response(swigCPtr, area_of_interest.Pointer, response.Pointer);
+            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void ResponseDepth(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response)
         {
-            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_ResponseDepth(swigCPtr, area_of_interest.Pointer, response.Pointer);
+            LandmarkDetectorPINVOKE.Multi_SVR_patch_expert_ResponseDepth(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
