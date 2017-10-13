@@ -5,7 +5,7 @@ echo Generating C# wrappers with SWIG
 echo ======================================
 
 swig -c++ -csharp^
-	 -namespace LandmarkDetector^
+	 -namespace SharpFace^
 	 -outdir csfiles^
 	 -I../LandmarkDetector.Windows/include^
 	 SharpFace.i
