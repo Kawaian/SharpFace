@@ -79,7 +79,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_set(swigCPtr, SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -93,7 +93,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_set(swigCPtr, IntList.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -107,7 +107,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, FloatMatList.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -121,7 +121,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_set(swigCPtr, DoubleList.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -148,26 +148,26 @@ namespace SharpFace
         {
         }
 
-        public CCNF_patch_expert(CCNF_patch_expert other) : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_1(CCNF_patch_expert.getCPtr(other)), true)
+        public CCNF_patch_expert(CCNF_patch_expert other) : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_1(other.Pointer), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Read(SWIGTYPE_p_std__ifstream stream, IntList window_sizes, FloatMatList2N sigma_components)
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream), IntList.getCPtr(window_sizes), FloatMatList2N.getCPtr(sigma_components));
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, stream.Pointer, window_sizes.Pointer, sigma_components.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Response(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response)
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_Response(swigCPtr, area_of_interest.Pointer, response.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void ComputeSigmas(FloatMatList sigma_components, int window_size)
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, FloatMatList.getCPtr(sigma_components), window_size);
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, sigma_components.Pointer, window_size);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

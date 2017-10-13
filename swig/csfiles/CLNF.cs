@@ -53,7 +53,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_pdm_set(swigCPtr, SWIGTYPE_p_PDM.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_pdm_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -68,7 +68,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_patch_experts_set(swigCPtr, SWIGTYPE_p_Patch_experts.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_patch_experts_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -83,7 +83,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_params_local_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_params_local_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -98,7 +98,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_params_global_set(swigCPtr, SWIGTYPE_p_cv__Vec6d.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_params_global_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -113,7 +113,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_hierarchical_models_set(swigCPtr, SWIGTYPE_p_std__vectorT_LandmarkDetector__CLNF_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_hierarchical_models_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -127,7 +127,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_hierarchical_model_names_set(swigCPtr, StringList.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_hierarchical_model_names_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -141,7 +141,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_hierarchical_mapping_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_hierarchical_mapping_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -155,7 +155,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_hierarchical_params_set(swigCPtr, SWIGTYPE_p_std__vectorT_FaceModelParameters_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_hierarchical_params_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -169,7 +169,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_face_detector_HAAR_set(swigCPtr, SWIGTYPE_p_cv__CascadeClassifier.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_face_detector_HAAR_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -199,7 +199,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_face_detector_HOG_set(swigCPtr, SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_face_detector_HOG_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -214,7 +214,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_landmark_validator_set(swigCPtr, DetectionValidator.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_landmark_validator_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -280,7 +280,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_triangulations_set(swigCPtr, IntMatList.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_triangulations_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -294,7 +294,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_detected_landmarks_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_detected_landmarks_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -322,7 +322,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_landmark_likelihoods_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_landmark_likelihoods_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -350,7 +350,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_face_template_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_face_template_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -365,7 +365,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CLNF_preference_det_set(swigCPtr, SWIGTYPE_p_cv__Point_T_double_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CLNF_preference_det_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -385,14 +385,14 @@ namespace SharpFace
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
-        public CLNF(CLNF other) : this(LandmarkDetectorPINVOKE.new_CLNF__SWIG_2(CLNF.getCPtr(other)), true)
+        public CLNF(CLNF other) : this(LandmarkDetectorPINVOKE.new_CLNF__SWIG_2(other.Pointer), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public bool DetectLandmarks(SWIGTYPE_p_cv__Mat_T_uchar_t image, SWIGTYPE_p_FaceModelParameters arg1)
         {
-            bool ret = LandmarkDetectorPINVOKE.CLNF_DetectLandmarks(swigCPtr, SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(image), SWIGTYPE_p_FaceModelParameters.getCPtr(arg1));
+            bool ret = LandmarkDetectorPINVOKE.CLNF_DetectLandmarks(swigCPtr, image.Pointer, arg1.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
         }

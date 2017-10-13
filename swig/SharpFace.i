@@ -1,6 +1,6 @@
 // Swig interface file to generate C# wrappers for LandmarkDetector
 
-// %include "modules/remap_handlref.i"
+%include "modules/remap_handlref.i"
 
 %include <typemaps.i>
 %include <std_vector.i>
@@ -9,7 +9,7 @@
 %include <std_string.i>
 
 // TODO: Nani nani
-// %include "modules/std_string_ref.i"
+%include "modules/std_string_ref.i"
 
 %module LandmarkDetector
 %{

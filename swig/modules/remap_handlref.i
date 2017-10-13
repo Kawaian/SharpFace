@@ -4,13 +4,18 @@
 %typemap(csbody) SWIGTYPE *, SWIGTYPE &, SWIGTYPE [], SWIGTYPE (CLASS::*) %{
 
   private volatile System.IntPtr swigCPtr;
-
-  protected $csclassname() 
+  
+  public $csclassname(System.IntPtr ptr)
+  {
+    swigCPtr = ptr;
+  }
+  
+  public $csclassname()
   {
     swigCPtr = System.IntPtr.Zero;
   }
 
-  internal System.IntPtr Pointer
+  public System.IntPtr Pointer
   {
     get
     {

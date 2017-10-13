@@ -246,7 +246,7 @@ namespace SharpFace
 
         public void Add(FloatMatList x)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_Add(swigCPtr, FloatMatList.getCPtr(x));
+            LandmarkDetectorPINVOKE.FloatMatList2N_Add(swigCPtr, x.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -271,7 +271,7 @@ namespace SharpFace
         {
         }
 
-        public FloatMatList2N(FloatMatList2N other) : this(LandmarkDetectorPINVOKE.new_FloatMatList2N__SWIG_1(FloatMatList2N.getCPtr(other)), true)
+        public FloatMatList2N(FloatMatList2N other) : this(LandmarkDetectorPINVOKE.new_FloatMatList2N__SWIG_1(other.Pointer), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
@@ -297,13 +297,13 @@ namespace SharpFace
 
         private void setitem(int index, FloatMatList val)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_setitem(swigCPtr, index, FloatMatList.getCPtr(val));
+            LandmarkDetectorPINVOKE.FloatMatList2N_setitem(swigCPtr, index, val.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void AddRange(FloatMatList2N values)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_AddRange(swigCPtr, FloatMatList2N.getCPtr(values));
+            LandmarkDetectorPINVOKE.FloatMatList2N_AddRange(swigCPtr, values.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -317,13 +317,13 @@ namespace SharpFace
 
         public void Insert(int index, FloatMatList x)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_Insert(swigCPtr, index, FloatMatList.getCPtr(x));
+            LandmarkDetectorPINVOKE.FloatMatList2N_Insert(swigCPtr, index, x.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void InsertRange(int index, FloatMatList2N values)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_InsertRange(swigCPtr, index, FloatMatList2N.getCPtr(values));
+            LandmarkDetectorPINVOKE.FloatMatList2N_InsertRange(swigCPtr, index, values.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -341,7 +341,7 @@ namespace SharpFace
 
         public static FloatMatList2N Repeat(FloatMatList value, int count)
         {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatMatList2N_Repeat(FloatMatList.getCPtr(value), count);
+            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FloatMatList2N_Repeat(value.Pointer, count);
             FloatMatList2N ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMatList2N(cPtr, true);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             return ret;
@@ -360,7 +360,7 @@ namespace SharpFace
 
         public void SetRange(int index, FloatMatList2N values)
         {
-            LandmarkDetectorPINVOKE.FloatMatList2N_SetRange(swigCPtr, index, FloatMatList2N.getCPtr(values));
+            LandmarkDetectorPINVOKE.FloatMatList2N_SetRange(swigCPtr, index, values.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

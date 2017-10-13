@@ -92,7 +92,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, value.Pointer);
                 if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
             }
             get
@@ -107,7 +107,7 @@ namespace SharpFace
         {
             set
             {
-                LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, Int_DoubleMatMap.getCPtr(value));
+                LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, value.Pointer);
             }
             get
             {
@@ -134,20 +134,20 @@ namespace SharpFace
         {
         }
 
-        public CCNF_neuron(CCNF_neuron other) : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(CCNF_neuron.getCPtr(other)), true)
+        public CCNF_neuron(CCNF_neuron other) : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(other.Pointer), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Read(SWIGTYPE_p_std__ifstream stream)
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
+            LandmarkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, stream.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
         public void Response(SWIGTYPE_p_cv__Mat_T_float_t im, SWIGTYPE_p_cv__Mat_T_double_t im_dft, SWIGTYPE_p_cv__Mat integral_img, SWIGTYPE_p_cv__Mat integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t resp)
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(im), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(im_dft), SWIGTYPE_p_cv__Mat.getCPtr(integral_img), SWIGTYPE_p_cv__Mat.getCPtr(integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(resp));
+            LandmarkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, im.Pointer, im_dft.Pointer, integral_img.Pointer, integral_img_sq.Pointer, resp.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 

@@ -13,21 +13,25 @@ namespace SharpFace
 
     public class SWIGTYPE_p_FaceModelParameters
     {
-        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-        internal SWIGTYPE_p_FaceModelParameters(global::System.IntPtr cPtr, bool futureUse)
+        private volatile System.IntPtr swigCPtr;
+
+        public SWIGTYPE_p_FaceModelParameters(System.IntPtr ptr)
         {
-            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+            swigCPtr = ptr;
         }
 
-        protected SWIGTYPE_p_FaceModelParameters()
+        public SWIGTYPE_p_FaceModelParameters()
         {
-            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+            swigCPtr = System.IntPtr.Zero;
         }
 
-        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_FaceModelParameters obj)
+        public System.IntPtr Pointer
         {
-            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+            get
+            {
+                return swigCPtr;
+            }
         }
     }
 

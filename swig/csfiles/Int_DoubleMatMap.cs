@@ -277,7 +277,7 @@ namespace SharpFace
         {
         }
 
-        public Int_DoubleMatMap(Int_DoubleMatMap other) : this(LandmarkDetectorPINVOKE.new_Int_DoubleMatMap__SWIG_1(Int_DoubleMatMap.getCPtr(other)), true)
+        public Int_DoubleMatMap(Int_DoubleMatMap other) : this(LandmarkDetectorPINVOKE.new_Int_DoubleMatMap__SWIG_1(other.Pointer), true)
         {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
@@ -308,7 +308,7 @@ namespace SharpFace
 
         private void setitem(int key, SWIGTYPE_p_cv__Mat_T_double_t x)
         {
-            LandmarkDetectorPINVOKE.Int_DoubleMatMap_setitem(swigCPtr, key, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(x));
+            LandmarkDetectorPINVOKE.Int_DoubleMatMap_setitem(swigCPtr, key, x.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
@@ -320,7 +320,7 @@ namespace SharpFace
 
         public void Add(int key, SWIGTYPE_p_cv__Mat_T_double_t val)
         {
-            LandmarkDetectorPINVOKE.Int_DoubleMatMap_Add(swigCPtr, key, SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(val));
+            LandmarkDetectorPINVOKE.Int_DoubleMatMap_Add(swigCPtr, key, val.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
 
