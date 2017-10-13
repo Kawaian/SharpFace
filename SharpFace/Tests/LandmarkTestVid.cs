@@ -10,6 +10,8 @@ namespace SharpFace.Tests
 {
     public class LandmarkTestVid : TestBase
     {
+        public Size Size = new Size(320, 240);
+
         // Some globals for tracking timing information for visualisation
         double fps_tracker = -1.0;
         long t0 = 0;
@@ -160,6 +162,7 @@ namespace SharpFace.Tests
 
                 Mat captured_image = new Mat();
                 video_capture.Read(captured_image);
+                captured_image = captured_image.Resize(Size);
 
                 // If optical centers are not defined just use center of image
                 if (cx_undefined)
@@ -237,12 +240,12 @@ namespace SharpFace.Tests
                     {
                         writerFace.Write(captured_image);
                     }
-
-
+                    
                     video_capture.Read(captured_image);
+                    captured_image = captured_image.Resize(Size);
 
                     // detect key presses
-                    char character_press = (char)Cv2.WaitKey(1);
+                    char character_press = (char)Cv2.WaitKey(30);
 
                     // restart the tracker
                     if (character_press == 'r')
