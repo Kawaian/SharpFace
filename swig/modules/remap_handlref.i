@@ -5,6 +5,11 @@
 
   private volatile System.IntPtr swigCPtr;
   
+  public $csclassname(System.Runtime.InteropServices.HandleRef hRef)
+  {
+    swigCPtr = hRef.Handle;
+  }
+  
   public $csclassname(System.IntPtr ptr)
   {
     swigCPtr = ptr;
@@ -15,11 +20,5 @@
     swigCPtr = System.IntPtr.Zero;
   }
 
-  public System.IntPtr Pointer
-  {
-    get
-    {
-      return swigCPtr;
-    }
-  }
+  public System.IntPtr Pointer => swigCPtr;
 %}

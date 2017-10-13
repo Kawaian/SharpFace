@@ -16,6 +16,11 @@ namespace SharpFace
 
         private volatile System.IntPtr swigCPtr;
 
+        public SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t(System.Runtime.InteropServices.HandleRef hRef)
+        {
+            swigCPtr = hRef.Handle;
+        }
+
         public SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t(System.IntPtr ptr)
         {
             swigCPtr = ptr;
@@ -26,13 +31,7 @@ namespace SharpFace
             swigCPtr = System.IntPtr.Zero;
         }
 
-        public System.IntPtr Pointer
-        {
-            get
-            {
-                return swigCPtr;
-            }
-        }
+        public System.IntPtr Pointer => swigCPtr;
     }
 
 }

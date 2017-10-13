@@ -231,7 +231,7 @@ namespace SharpFace.Tests
                     }
 
                     // The actual facial landmark detection / tracking
-                    bool detection_success = LandmarkDetector.DetectLandmarksInVideo(new SWIGTYPE_p_cv__Mat_T_uchar_t(grayscale_image.CvPtr, true), new SWIGTYPE_p_CLNF(CLNF.getCPtr(clnf_model)), new SWIGTYPE_p_FaceModelParameters(FaceModelParameters.getCPtr(det_parameters)));
+                    bool detection_success = LandmarkDetector.DetectLandmarksInVideo(new SWIGTYPE_p_cv__Mat_T_uchar_t(grayscale_image.CvPtr), new SWIGTYPE_p_CLNF(CLNF.getCPtr(clnf_model)), new SWIGTYPE_p_FaceModelParameters(FaceModelParameters.getCPtr(det_parameters)));
 
                     // Visualising the results
                     // Drawing the facial landmarks on the face and the bounding box around it if tracking is successful and initialised
