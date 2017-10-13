@@ -38,18 +38,22 @@ using namespace LandmarkDetector;
 
 // -- BOOL --
 %typemap(cstype)    bool & "/* cstype */ out bool"
+%typemap(imtype)    bool & "/* imtype */ out bool"
 %typemap(csin)      bool & %{out $csinput%}
 
 // -- INT --
 %typemap(cstype)    int & "/* cstype */ out int"
+%typemap(imtype)    int & "/* imtype */ out int"
 %typemap(csin)      int & %{out $csinput%}
 
 // -- DOUBLE --
 %typemap(cstype)    double & "/* cstype */ out double"
+%typemap(imtype)    double & "/* imtype */ out double"
 %typemap(csin)      double & %{out $csinput%}
 
 // -- FLOAT --
 %typemap(cstype)    float & "/* cstype */ out float"
+%typemap(imtype)    float & "/* imtype */ out float"
 %typemap(csin)      float & %{out $csinput%}
 
 
