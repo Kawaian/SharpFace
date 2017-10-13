@@ -8,87 +8,91 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class CVPointPair : global::System.IDisposable
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-    protected bool swigCMemOwn;
 
-    internal CVPointPair(global::System.IntPtr cPtr, bool cMemoryOwn)
+    public class CVPointPair : global::System.IDisposable
     {
-        swigCMemOwn = cMemoryOwn;
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-    }
+        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        protected bool swigCMemOwn;
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CVPointPair obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
-
-    ~CVPointPair()
-    {
-        Dispose();
-    }
-
-    public virtual void Dispose()
-    {
-        lock(this)
+        internal CVPointPair(global::System.IntPtr cPtr, bool cMemoryOwn)
         {
-            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+        }
+
+        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CVPointPair obj)
+        {
+            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~CVPointPair()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            lock(this)
             {
-                if (swigCMemOwn)
+                if (swigCPtr.Handle != global::System.IntPtr.Zero)
                 {
-                    swigCMemOwn = false;
-                    LandmarkDetectorPINVOKE.delete_CVPointPair(swigCPtr);
+                    if (swigCMemOwn)
+                    {
+                        swigCMemOwn = false;
+                        LandmarkDetectorPINVOKE.delete_CVPointPair(swigCPtr);
+                    }
+                    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
                 }
-                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+                global::System.GC.SuppressFinalize(this);
             }
-            global::System.GC.SuppressFinalize(this);
         }
-    }
 
-    public CVPointPair() : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_0(), true)
-    {
-    }
-
-    public CVPointPair(SWIGTYPE_p_cv__Point t, SWIGTYPE_p_cv__Point u) : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_1(SWIGTYPE_p_cv__Point.getCPtr(t), SWIGTYPE_p_cv__Point.getCPtr(u)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public CVPointPair(CVPointPair p) : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_2(CVPointPair.getCPtr(p)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public SWIGTYPE_p_cv__Point first
-    {
-        set
+        public CVPointPair() : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_0(), true)
         {
-            LandmarkDetectorPINVOKE.CVPointPair_first_set(swigCPtr, SWIGTYPE_p_cv__Point.getCPtr(value));
+        }
+
+        public CVPointPair(SWIGTYPE_p_cv__Point t, SWIGTYPE_p_cv__Point u) : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_1(t.Pointer, u.Pointer), true)
+        {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
-        {
-            SWIGTYPE_p_cv__Point ret = new SWIGTYPE_p_cv__Point(LandmarkDetectorPINVOKE.CVPointPair_first_get(swigCPtr), true);
-            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-            return ret;
-        }
-    }
 
-    public SWIGTYPE_p_cv__Point second
-    {
-        set
+        public CVPointPair(CVPointPair p) : this(LandmarkDetectorPINVOKE.new_CVPointPair__SWIG_2(p.Pointer), true)
         {
-            LandmarkDetectorPINVOKE.CVPointPair_second_set(swigCPtr, SWIGTYPE_p_cv__Point.getCPtr(value));
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
+
+        public SWIGTYPE_p_cv__Point first
         {
-            SWIGTYPE_p_cv__Point ret = new SWIGTYPE_p_cv__Point(LandmarkDetectorPINVOKE.CVPointPair_second_get(swigCPtr), true);
-            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-            return ret;
+            set
+            {
+                LandmarkDetectorPINVOKE.CVPointPair_first_set(swigCPtr, value.Pointer);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            }
+            get
+            {
+                SWIGTYPE_p_cv__Point ret = new SWIGTYPE_p_cv__Point(LandmarkDetectorPINVOKE.CVPointPair_first_get(swigCPtr), true);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+                return ret;
+            }
         }
+
+        public SWIGTYPE_p_cv__Point second
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.CVPointPair_second_set(swigCPtr, value.Pointer);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            }
+            get
+            {
+                SWIGTYPE_p_cv__Point ret = new SWIGTYPE_p_cv__Point(LandmarkDetectorPINVOKE.CVPointPair_second_get(swigCPtr), true);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+                return ret;
+            }
+        }
+
     }
 
 }

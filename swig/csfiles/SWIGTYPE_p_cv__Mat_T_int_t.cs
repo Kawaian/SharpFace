@@ -8,23 +8,26 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class SWIGTYPE_p_cv__Mat_T_int_t
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-    internal SWIGTYPE_p_cv__Mat_T_int_t(global::System.IntPtr cPtr, bool futureUse)
+    public class SWIGTYPE_p_cv__Mat_T_int_t
     {
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+
+        private volatile System.IntPtr swigCPtr;
+
+        protected SWIGTYPE_p_cv__Mat_T_int_t()
+        {
+            swigCPtr = System.IntPtr.Zero;
+        }
+
+        internal System.IntPtr Pointer
+        {
+            get
+            {
+                return swigCPtr;
+            }
+        }
     }
 
-    protected SWIGTYPE_p_cv__Mat_T_int_t()
-    {
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-    }
-
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_cv__Mat_T_int_t obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
 }

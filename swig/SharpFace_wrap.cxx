@@ -2694,7 +2694,7 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_cv_Mat__Sl_float_Sg__Sg__Sg__SetRang
 extern "C" {
 #endif
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_neuron_type_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     int arg2 ;
@@ -2705,7 +2705,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_set(void * jarg1, int
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_neuron_type_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2718,7 +2718,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_neuron_neuron_type_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_norm_weights_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     double arg2 ;
@@ -2729,7 +2729,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_set(void * jarg1, do
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_norm_weights_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2742,7 +2742,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_norm_weights_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_bias_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_bias_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     double arg2 ;
@@ -2753,7 +2753,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_bias_set(void * jarg1, double jar
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_bias_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_bias_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2766,7 +2766,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_bias_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_weights_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     cv::Mat_< float > arg2 ;
@@ -2784,7 +2784,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_set(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_weights_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2797,7 +2797,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_weights_dfts_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     std::map< int,cv::Mat_< double >,std::less< int > > *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > > *) 0 ;
@@ -2808,7 +2808,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_weights_dfts_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2821,7 +2821,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_neuron_weights_dfts_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_alpha_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_alpha_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     double arg2 ;
@@ -2832,7 +2832,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_alpha_set(void * jarg1, double ja
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_alpha_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_alpha_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
@@ -2845,7 +2845,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_neuron_alpha_get(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CCNF_neuron__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::CCNF_neuron *result = 0 ;
@@ -2856,7 +2856,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CCNF_neuron__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_neuron *arg1 = 0 ;
@@ -2874,7 +2874,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_neuron__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Read(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_Read(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     std::ifstream *arg2 = 0 ;
@@ -2890,7 +2890,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Read(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_neuron_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -2934,7 +2934,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_neuron_Response(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_neuron(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CCNF_neuron(void * jarg1)
 {
     LandmarkDetector::CCNF_neuron *arg1 = (LandmarkDetector::CCNF_neuron *) 0 ;
 
@@ -2943,7 +2943,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_neuron(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_width_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_width_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     int arg2 ;
@@ -2954,7 +2954,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_width_set(void * jarg1, int
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_width_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_width_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -2967,7 +2967,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_width_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_height_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_height_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     int arg2 ;
@@ -2978,7 +2978,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_height_set(void * jarg1, in
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_height_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_height_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -2991,7 +2991,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CCNF_patch_expert_height_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_neurons_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::vector< LandmarkDetector::CCNF_neuron > *arg2 = (std::vector< LandmarkDetector::CCNF_neuron > *) 0 ;
@@ -3002,7 +3002,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_set(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_neurons_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -3015,7 +3015,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_neurons_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_window_sizes_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -3026,7 +3026,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_set(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_window_sizes_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -3039,7 +3039,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_window_sizes_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_Sigmas_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::vector< cv::Mat_< float > > *arg2 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -3050,7 +3050,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_Sigmas_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -3063,7 +3063,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_Sigmas_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_betas_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_betas_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::vector< double > *arg2 = (std::vector< double > *) 0 ;
@@ -3074,7 +3074,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_betas_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_betas_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_betas_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -3087,7 +3087,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CCNF_patch_expert_betas_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_patch_confidence_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     double arg2 ;
@@ -3098,7 +3098,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_set(void *
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_patch_confidence_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
@@ -3111,7 +3111,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CCNF_patch_expert_patch_confidence_get(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CCNF_patch_expert__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *result = 0 ;
@@ -3122,7 +3122,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CCNF_patch_expert__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CCNF_patch_expert *arg1 = 0 ;
@@ -3140,7 +3140,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CCNF_patch_expert__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Read(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_Read(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::ifstream *arg2 = 0 ;
@@ -3174,7 +3174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Read(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -3197,7 +3197,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_Response(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_ComputeSigmas(void * jarg1, void * jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CCNF_patch_expert_ComputeSigmas(void * jarg1, void * jarg2, int jarg3)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
     std::vector< cv::Mat_< float > > arg2 ;
@@ -3217,7 +3217,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CCNF_patch_expert_ComputeSigmas(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_patch_expert(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CCNF_patch_expert(void * jarg1)
 {
     LandmarkDetector::CCNF_patch_expert *arg1 = (LandmarkDetector::CCNF_patch_expert *) 0 ;
 
@@ -3226,7 +3226,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CCNF_patch_expert(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_validator_type_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_validator_type_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     int arg2 ;
@@ -3237,7 +3237,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_validator_type_set(void * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_validator_type_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_validator_type_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3250,7 +3250,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_validator_type_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_orientations_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_orientations_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< cv::Vec3d > *arg2 = (std::vector< cv::Vec3d > *) 0 ;
@@ -3261,7 +3261,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_orientations_set(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_orientations_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_orientations_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3274,7 +3274,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_orientations_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_paws_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_paws_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< PAW > *arg2 = (std::vector< PAW > *) 0 ;
@@ -3285,7 +3285,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_paws_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_paws_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_paws_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3298,7 +3298,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_paws_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_bs_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_bs_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< double > *arg2 = (std::vector< double > *) 0 ;
@@ -3309,7 +3309,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_bs_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_bs_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_bs_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3322,7 +3322,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_bs_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_ws_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< cv::Mat_< double > > *arg2 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -3333,7 +3333,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_ws_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3346,7 +3346,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_nn_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_ws_nn_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< cv::Mat_< double > > > *arg2 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -3357,7 +3357,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_ws_nn_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_nn_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_ws_nn_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3370,7 +3370,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_ws_nn_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_activation_fun_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_activation_fun_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -3381,7 +3381,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_activation_fun_set(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_activation_fun_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_activation_fun_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3394,7 +3394,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_activation_fun_get(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_output_fun_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_output_fun_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -3405,7 +3405,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_output_fun_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_output_fun_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_output_fun_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3418,7 +3418,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_output_fun_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< std::vector< std::vector< cv::Mat_< float > > > > > *arg2 = (std::vector< std::vector< std::vector< std::vector< cv::Mat_< float > > > > > *) 0 ;
@@ -3429,7 +3429,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_s
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3442,7 +3442,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_dft_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< std::vector< std::vector< std::pair< int,cv::Mat_< double > > > > > > *arg2 = (std::vector< std::vector< std::vector< std::vector< std::pair< int,cv::Mat_< double > > > > > > *) 0 ;
@@ -3453,7 +3453,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_d
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_dft_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_dft_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3466,7 +3466,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_bias_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< std::vector< float > > > *arg2 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -3477,7 +3477,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_b
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers_bias_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_convolutional_layers_bias_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3490,7 +3490,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_convolutional_layers
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_subsampling_layers_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< int > > *arg2 = (std::vector< std::vector< int > > *) 0 ;
@@ -3501,7 +3501,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_set
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_subsampling_layers_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3514,7 +3514,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_subsampling_layers_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_weights_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< cv::Mat_< float > > > *arg2 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -3525,7 +3525,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_weights_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_weights_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3538,7 +3538,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_laye
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_bias_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< float > > *arg2 = (std::vector< std::vector< float > > *) 0 ;
@@ -3549,7 +3549,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_bias_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_bias_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3562,7 +3562,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_laye
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_layer_types_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< int > > *arg2 = (std::vector< std::vector< int > > *) 0 ;
@@ -3573,7 +3573,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_set(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_layer_types_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3586,7 +3586,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_layer_types_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_biases_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< std::vector< cv::Mat_< float > > > *arg2 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -3597,7 +3597,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_layers_biases_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_cnn_fully_connected_layers_biases_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3610,7 +3610,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_cnn_fully_connected_laye
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_mean_images_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_mean_images_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< cv::Mat_< double > > *arg2 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -3621,7 +3621,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_mean_images_set(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_mean_images_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_mean_images_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3634,7 +3634,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_mean_images_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_standard_deviations_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::vector< cv::Mat_< double > > *arg2 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -3645,7 +3645,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_set(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_standard_deviations_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3658,7 +3658,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DetectionValidator_standard_deviations_get(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DetectionValidator__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *result = 0 ;
@@ -3669,7 +3669,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DetectionValidator__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::DetectionValidator *arg1 = 0 ;
@@ -3687,7 +3687,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DetectionValidator__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_DetectionValidator_Check(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_Check(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     double jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3721,7 +3721,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_DetectionValidator_Check(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_Read(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_Read(void * jarg1, char * jarg2)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
     std::string arg2 ;
@@ -3737,7 +3737,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DetectionValidator_Read(void * jarg1, char * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_GetViewId(void * jarg1, void * jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_DetectionValidator_GetViewId(void * jarg1, void * jarg2)
 {
     int jresult ;
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -3757,7 +3757,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_DetectionValidator_GetViewId(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DetectionValidator(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_DetectionValidator(void * jarg1)
 {
     LandmarkDetector::DetectionValidator *arg1 = (LandmarkDetector::DetectionValidator *) 0 ;
 
@@ -3766,7 +3766,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DetectionValidator(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectLandmarksInVideo__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     cv::Mat_< uchar > *arg1 = 0 ;
@@ -3798,7 +3798,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_0(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectLandmarksInVideo__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     unsigned int jresult ;
     cv::Mat_< uchar > *arg1 = 0 ;
@@ -3839,7 +3839,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInVideo__SWIG_1(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectLandmarksInImage__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     cv::Mat_< uchar > *arg1 = 0 ;
@@ -3871,7 +3871,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_0(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectLandmarksInImage__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     unsigned int jresult ;
     cv::Mat_< uchar > *arg1 = 0 ;
@@ -3912,7 +3912,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectLandmarksInImage__SWIG_1(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_GetPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
 {
     void * jresult ;
     CLNF *arg1 = 0 ;
@@ -3938,7 +3938,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseCamera(void * jarg1, double jarg2, d
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_GetPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
 {
     void * jresult ;
     CLNF *arg1 = 0 ;
@@ -3964,7 +3964,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GetPoseWorld(void * jarg1, double jarg2, do
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_GetCorrectedPoseCamera(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
 {
     void * jresult ;
     CLNF *arg1 = 0 ;
@@ -3990,7 +3990,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseCamera(void * jarg1, double
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_GetCorrectedPoseWorld(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
 {
     void * jresult ;
     CLNF *arg1 = 0 ;
@@ -4016,7 +4016,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_GetCorrectedPoseWorld(void * jarg1, double 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_pdm_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_pdm_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     PDM arg2 ;
@@ -4034,7 +4034,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_pdm_set(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_pdm_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_pdm_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4047,7 +4047,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_pdm_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_patch_experts_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_patch_experts_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     Patch_experts arg2 ;
@@ -4065,7 +4065,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_patch_experts_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_patch_experts_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_patch_experts_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4078,7 +4078,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_patch_experts_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_local_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_params_local_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -4096,7 +4096,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_local_set(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_local_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_params_local_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4109,7 +4109,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_local_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_global_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_params_global_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Vec6d arg2 ;
@@ -4127,7 +4127,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_params_global_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_global_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_params_global_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4140,7 +4140,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_params_global_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_models_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_models_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::vector< LandmarkDetector::CLNF > *arg2 = (std::vector< LandmarkDetector::CLNF > *) 0 ;
@@ -4151,7 +4151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_models_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_models_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_models_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4164,7 +4164,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_models_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_model_names_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::vector< std::string > *arg2 = (std::vector< std::string > *) 0 ;
@@ -4175,7 +4175,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_model_names_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4188,7 +4188,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_model_names_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_mapping_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::vector< std::vector< std::pair< int,int > > > *arg2 = (std::vector< std::vector< std::pair< int,int > > > *) 0 ;
@@ -4199,7 +4199,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_set(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_mapping_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4212,7 +4212,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_mapping_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_params_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_params_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::vector< FaceModelParameters > *arg2 = (std::vector< FaceModelParameters > *) 0 ;
@@ -4223,7 +4223,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_hierarchical_params_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_params_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_hierarchical_params_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4236,7 +4236,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_hierarchical_params_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_HAAR_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::CascadeClassifier arg2 ;
@@ -4254,7 +4254,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_HAAR_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4267,7 +4267,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HAAR_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_location_set(void * jarg1, char * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::string *arg2 = 0 ;
@@ -4284,7 +4284,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_location_set(void * jarg1,
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CLNF_face_detector_location_get(void * jarg1)
+SWIGEXPORT char * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_location_get(void * jarg1)
 {
     char * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4297,7 +4297,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CLNF_face_detector_location_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HOG_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_HOG_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     dlib::frontal_face_detector arg2 ;
@@ -4315,7 +4315,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_detector_HOG_set(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HOG_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_detector_HOG_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4328,7 +4328,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_detector_HOG_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_validator_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_landmark_validator_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     LandmarkDetector::DetectionValidator *arg2 = (LandmarkDetector::DetectionValidator *) 0 ;
@@ -4339,7 +4339,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_validator_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_validator_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_landmark_validator_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4352,7 +4352,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_validator_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_success_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detection_success_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     bool arg2 ;
@@ -4363,7 +4363,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_success_set(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_detection_success_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detection_success_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4376,7 +4376,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_detection_success_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_tracking_initialised_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_tracking_initialised_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     bool arg2 ;
@@ -4387,7 +4387,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_tracking_initialised_set(void * jarg1, u
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_tracking_initialised_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_CLNF_tracking_initialised_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4400,7 +4400,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_tracking_initialised_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_certainty_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detection_certainty_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     double arg2 ;
@@ -4411,7 +4411,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detection_certainty_set(void * jarg1, do
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_detection_certainty_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detection_certainty_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4424,7 +4424,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_detection_certainty_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_eye_model_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_eye_model_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     bool arg2 ;
@@ -4435,7 +4435,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_eye_model_set(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_eye_model_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_CLNF_eye_model_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4448,7 +4448,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_eye_model_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_triangulations_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_triangulations_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::vector< cv::Mat_< int > > *arg2 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -4459,7 +4459,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_triangulations_set(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_triangulations_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_triangulations_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4472,7 +4472,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_triangulations_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detected_landmarks_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detected_landmarks_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -4490,7 +4490,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_detected_landmarks_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_detected_landmarks_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_detected_landmarks_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4503,7 +4503,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_detected_landmarks_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_model_likelihood_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_model_likelihood_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     double arg2 ;
@@ -4514,7 +4514,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_model_likelihood_set(void * jarg1, doubl
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_model_likelihood_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_CLNF_model_likelihood_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4527,7 +4527,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CLNF_model_likelihood_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_landmark_likelihoods_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -4545,7 +4545,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_set(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_landmark_likelihoods_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4558,7 +4558,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_landmark_likelihoods_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_failures_in_a_row_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_failures_in_a_row_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     int arg2 ;
@@ -4569,7 +4569,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_failures_in_a_row_set(void * jarg1, int 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CLNF_failures_in_a_row_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_CLNF_failures_in_a_row_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4582,7 +4582,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CLNF_failures_in_a_row_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_template_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_template_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Mat_< uchar > arg2 ;
@@ -4600,7 +4600,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_face_template_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_template_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_face_template_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4613,7 +4613,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_face_template_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_preference_det_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_preference_det_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     cv::Point_< double > arg2 ;
@@ -4631,7 +4631,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_preference_det_set(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_preference_det_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_preference_det_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4644,7 +4644,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_preference_det_get(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CLNF__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::CLNF *result = 0 ;
@@ -4655,7 +4655,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_1(char * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CLNF__SWIG_1(char * jarg1)
 {
     void * jresult ;
     std::string arg1 ;
@@ -4673,7 +4673,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_1(char * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_2(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CLNF__SWIG_2(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = 0 ;
@@ -4691,7 +4691,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CLNF__SWIG_2(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CLNF(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CLNF(void * jarg1)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
 
@@ -4700,7 +4700,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CLNF(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_DetectLandmarks(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_CLNF_DetectLandmarks(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4727,7 +4727,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CLNF_DetectLandmarks(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetShape(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_GetShape(void * jarg1, double jarg2, double jarg3, double jarg4, double jarg5)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4748,7 +4748,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetShape(void * jarg1, double jarg2, d
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetBoundingBox(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CLNF_GetBoundingBox(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
@@ -4761,7 +4761,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CLNF_GetBoundingBox(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_Reset__SWIG_0(void * jarg1)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
 
@@ -4770,7 +4770,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_1(void * jarg1, double jarg2, double jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_Reset__SWIG_1(void * jarg1, double jarg2, double jarg3)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     double arg2 ;
@@ -4783,7 +4783,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Reset__SWIG_1(void * jarg1, double jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_Read(void * jarg1, char * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::string arg2 ;
@@ -4799,7 +4799,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read(void * jarg1, char * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read_CLNF(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CLNF_Read_CLNF(void * jarg1, char * jarg2)
 {
     LandmarkDetector::CLNF *arg1 = (LandmarkDetector::CLNF *) 0 ;
     std::string arg2 ;
@@ -4815,7 +4815,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CLNF_Read_CLNF(void * jarg1, char * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_num_optimisation_iteration_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     int arg2 ;
@@ -4826,7 +4826,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteratio
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_num_optimisation_iteration_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4839,7 +4839,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_num_optimisation_iteration
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_limit_pose_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -4850,7 +4850,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_set(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_limit_pose_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4863,7 +4863,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_limit_pose_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_validate_detections_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -4874,7 +4874,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_set(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_validate_detections_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_validate_detections_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4887,7 +4887,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_validate_detectio
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_validation_boundary_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     double arg2 ;
@@ -4898,7 +4898,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_set(v
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_validation_boundary_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4911,7 +4911,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_validation_boundary_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_small_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -4922,7 +4922,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_set(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_small_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4935,7 +4935,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_small_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_init_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -4946,7 +4946,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_set(voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_init_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4959,7 +4959,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_init_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_current_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     std::vector< int > *arg2 = (std::vector< int > *) 0 ;
@@ -4970,7 +4970,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_set(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_window_sizes_current_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -4983,7 +4983,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FaceModelParameters_window_sizes_current_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_face_template_scale_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     double arg2 ;
@@ -4994,7 +4994,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_set(v
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_face_template_scale_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5007,7 +5007,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_face_template_scale_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_use_face_template_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5018,7 +5018,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_set(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_use_face_template_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_use_face_template_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5031,7 +5031,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_use_face_template
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_model_location_set(void * jarg1, char * jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     std::string *arg2 = 0 ;
@@ -5048,7 +5048,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_model_location_set(void *
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FaceModelParameters_model_location_get(void * jarg1)
+SWIGEXPORT char * SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_model_location_get(void * jarg1)
 {
     char * jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5061,7 +5061,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FaceModelParameters_model_location_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_sigma_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_sigma_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     double arg2 ;
@@ -5072,7 +5072,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_sigma_set(void * jarg1, d
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_sigma_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_sigma_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5085,7 +5085,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_sigma_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_reg_factor_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     double arg2 ;
@@ -5096,7 +5096,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_set(void * jar
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_reg_factor_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5109,7 +5109,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_reg_factor_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_weight_factor_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     double arg2 ;
@@ -5120,7 +5120,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_set(void * 
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_weight_factor_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5133,7 +5133,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_FaceModelParameters_weight_factor_get(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_multi_view_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_multi_view_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5144,7 +5144,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_multi_view_set(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_multi_view_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_multi_view_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5157,7 +5157,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_multi_view_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_reinit_video_every_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     int arg2 ;
@@ -5168,7 +5168,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_set(vo
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_reinit_video_every_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5181,7 +5181,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_reinit_video_every_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_set(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_face_detector_location_set(void * jarg1, char * jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     std::string *arg2 = 0 ;
@@ -5198,7 +5198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_se
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_get(void * jarg1)
+SWIGEXPORT char * SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_face_detector_location_get(void * jarg1)
 {
     char * jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5211,7 +5211,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FaceModelParameters_face_detector_location_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_curr_face_detector_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     LandmarkDetector::FaceModelParameters::FaceDetector arg2 ;
@@ -5222,7 +5222,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_set(vo
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_curr_face_detector_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5235,7 +5235,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FaceModelParameters_curr_face_detector_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_quiet_mode_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5246,7 +5246,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_set(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_quiet_mode_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5259,7 +5259,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_quiet_mode_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_refine_hierarchical_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5270,7 +5270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_set(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchical_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_refine_hierarchical_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5283,7 +5283,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_hierarchic
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_refine_parameters_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5294,7 +5294,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_set(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_refine_parameters_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5307,7 +5307,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_refine_parameters
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_set(void * jarg1, unsigned int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_track_gaze_set(void * jarg1, unsigned int jarg2)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
     bool arg2 ;
@@ -5318,7 +5318,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_set(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_get(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FaceModelParameters_track_gaze_get(void * jarg1)
 {
     unsigned int jresult ;
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
@@ -5331,7 +5331,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FaceModelParameters_track_gaze_get(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FaceModelParameters__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::FaceModelParameters *result = 0 ;
@@ -5342,7 +5342,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FaceModelParameters__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::string > *arg1 = 0 ;
@@ -5360,7 +5360,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FaceModelParameters__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FaceModelParameters(void * jarg1)
 {
     LandmarkDetector::FaceModelParameters *arg1 = (LandmarkDetector::FaceModelParameters *) 0 ;
 
@@ -5369,7 +5369,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FaceModelParameters(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_get_video_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     std::vector< std::string > *arg1 = 0 ;
     std::vector< std::string > *arg2 = 0 ;
@@ -5418,7 +5418,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_video_input_output_params(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_get_camera_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_get_camera_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     int *arg1 = 0 ;
     float *arg2 = 0 ;
@@ -5467,7 +5467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_camera_params(void * jarg1, void * jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_get_image_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_get_image_input_output_params(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     std::vector< std::string > *arg1 = 0 ;
     std::vector< std::string > *arg2 = 0 ;
@@ -5516,7 +5516,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_get_image_input_output_params(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_matchTemplate_m(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, int jarg8)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_matchTemplate_m(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, int jarg8)
 {
     cv::Mat_< float > *arg1 = 0 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -5574,7 +5574,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_matchTemplate_m(void * jarg1, void * jarg2, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesKabsch2D(void * jarg1, void * jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_AlignShapesKabsch2D(void * jarg1, void * jarg2)
 {
     void * jresult ;
     cv::Mat_< double > *arg1 = 0 ;
@@ -5599,7 +5599,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesKabsch2D(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesWithScale(void * jarg1, void * jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_AlignShapesWithScale(void * jarg1, void * jarg2)
 {
     void * jresult ;
     cv::Mat_< double > *arg1 = 0 ;
@@ -5626,7 +5626,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AlignShapesWithScale(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Project(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Project(void * jarg1, void * jarg2, double jarg3, double jarg4, double jarg5, double jarg6)
 {
     cv::Mat_< double > *arg1 = 0 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -5655,7 +5655,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Project(void * jarg1, void * jarg2, double ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_0(void * jarg1, void * jarg2, void * jarg3, int jarg4, float jarg5, float jarg6, float jarg7, float jarg8)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DrawBox__SWIG_0(void * jarg1, void * jarg2, void * jarg3, int jarg4, float jarg5, float jarg6, float jarg7, float jarg8)
 {
     cv::Mat arg1 ;
     cv::Vec6d arg2 ;
@@ -5699,7 +5699,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_0(void * jarg1, void * jarg2, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateBox(void * jarg1, float jarg2, float jarg3, float jarg4, float jarg5)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CalculateBox(void * jarg1, float jarg2, float jarg3, float jarg4, float jarg5)
 {
     void * jresult ;
     cv::Vec6d arg1 ;
@@ -5727,7 +5727,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateBox(void * jarg1, float jarg2, flo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_1(void * jarg1, void * jarg2, void * jarg3, int jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DrawBox__SWIG_1(void * jarg1, void * jarg2, void * jarg3, int jarg4)
 {
     std::vector< std::pair< cv::Point,cv::Point > > arg1 ;
     cv::Mat arg2 ;
@@ -5763,7 +5763,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DrawBox__SWIG_1(void * jarg1, void * jarg2, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_0(void * jarg1, void * jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CalculateLandmarks__SWIG_0(void * jarg1, void * jarg2)
 {
     void * jresult ;
     cv::Mat_< double > *arg1 = 0 ;
@@ -5788,7 +5788,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_0(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CalculateLandmarks__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::CLNF *arg1 = 0 ;
@@ -5806,7 +5806,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CalculateLandmarks__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DrawLandmarks(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DrawLandmarks(void * jarg1, void * jarg2)
 {
     cv::Mat arg1 ;
     std::vector< cv::Point > arg2 ;
@@ -5831,7 +5831,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DrawLandmarks(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Draw__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
 {
     cv::Mat arg1 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -5861,7 +5861,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_0(void * jarg1, void * jarg2, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_1(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Draw__SWIG_1(void * jarg1, void * jarg2)
 {
     cv::Mat arg1 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -5884,7 +5884,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_1(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_2(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Draw__SWIG_2(void * jarg1, void * jarg2)
 {
     cv::Mat arg1 ;
     LandmarkDetector::CLNF *arg2 = 0 ;
@@ -5907,7 +5907,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Draw__SWIG_2(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2RotationMatrix(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Euler2RotationMatrix(void * jarg1)
 {
     void * jresult ;
     cv::Vec3d *arg1 = 0 ;
@@ -5925,7 +5925,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2RotationMatrix(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2Euler(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_RotationMatrix2Euler(void * jarg1)
 {
     void * jresult ;
     cv::Matx33d *arg1 = 0 ;
@@ -5943,7 +5943,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2Euler(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2AxisAngle(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Euler2AxisAngle(void * jarg1)
 {
     void * jresult ;
     cv::Vec3d *arg1 = 0 ;
@@ -5961,7 +5961,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Euler2AxisAngle(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2Euler(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_AxisAngle2Euler(void * jarg1)
 {
     void * jresult ;
     cv::Vec3d *arg1 = 0 ;
@@ -5979,7 +5979,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2Euler(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2RotationMatrix(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_AxisAngle2RotationMatrix(void * jarg1)
 {
     void * jresult ;
     cv::Vec3d *arg1 = 0 ;
@@ -5997,7 +5997,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AxisAngle2RotationMatrix(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2AxisAngle(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_RotationMatrix2AxisAngle(void * jarg1)
 {
     void * jresult ;
     cv::Matx33d *arg1 = 0 ;
@@ -6015,7 +6015,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RotationMatrix2AxisAngle(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_0(void * jarg1, void * jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectFaces__SWIG_0(void * jarg1, void * jarg2)
 {
     unsigned int jresult ;
     std::vector< cv::Rect_< double > > *arg1 = 0 ;
@@ -6040,7 +6040,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_0(void * jarg1, voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_1(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectFaces__SWIG_1(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     std::vector< cv::Rect_< double > > *arg1 = 0 ;
@@ -6072,7 +6072,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFaces__SWIG_1(void * jarg1, voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectSingleFace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     unsigned int jresult ;
     cv::Rect_< double > *arg1 = 0 ;
@@ -6113,7 +6113,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_1(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectSingleFace__SWIG_1(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     cv::Rect_< double > *arg1 = 0 ;
@@ -6145,7 +6145,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFace__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectFacesHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3)
 {
     unsigned int jresult ;
     std::vector< cv::Rect_< double > > *arg1 = 0 ;
@@ -6177,7 +6177,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_0(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectFacesHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     unsigned int jresult ;
     std::vector< cv::Rect_< double > > *arg1 = 0 ;
@@ -6216,7 +6216,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectFacesHOG__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectSingleFaceHOG__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
 {
     unsigned int jresult ;
     cv::Rect_< double > *arg1 = 0 ;
@@ -6264,7 +6264,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DetectSingleFaceHOG__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     unsigned int jresult ;
     cv::Rect_< double > *arg1 = 0 ;
@@ -6303,7 +6303,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DetectSingleFaceHOG__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadMatBin(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_ReadMatBin(void * jarg1, void * jarg2)
 {
     std::ifstream *arg1 = 0 ;
     cv::Mat *arg2 = 0 ;
@@ -6324,7 +6324,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ReadMatBin(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadMat(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_ReadMat(void * jarg1, void * jarg2)
 {
     std::ifstream *arg1 = 0 ;
     cv::Mat *arg2 = 0 ;
@@ -6345,7 +6345,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ReadMat(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SkipComments(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SkipComments(void * jarg1)
 {
     std::ifstream *arg1 = 0 ;
 
@@ -6359,7 +6359,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SkipComments(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_svr_expert_intensity_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::vector< std::vector< Multi_SVR_patch_expert > > > *arg2 = (std::vector< std::vector< std::vector< Multi_SVR_patch_expert > > > *) 0 ;
@@ -6370,7 +6370,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_set(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_svr_expert_intensity_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6383,7 +6383,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_svr_expert_intensity_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_ccnf_expert_intensity_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::vector< std::vector< LandmarkDetector::CCNF_patch_expert > > > *arg2 = (std::vector< std::vector< std::vector< LandmarkDetector::CCNF_patch_expert > > > *) 0 ;
@@ -6394,7 +6394,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_set(void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_ccnf_expert_intensity_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6407,7 +6407,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_ccnf_expert_intensity_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_sigma_components_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_sigma_components_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::vector< cv::Mat_< float > > > *arg2 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -6418,7 +6418,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_sigma_components_set(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_sigma_components_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_sigma_components_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6431,7 +6431,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_sigma_components_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_patch_scaling_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_patch_scaling_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< double > *arg2 = (std::vector< double > *) 0 ;
@@ -6442,7 +6442,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_patch_scaling_set(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_patch_scaling_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_patch_scaling_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6455,7 +6455,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_patch_scaling_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_centers_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_centers_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::vector< cv::Vec3d > > *arg2 = (std::vector< std::vector< cv::Vec3d > > *) 0 ;
@@ -6466,7 +6466,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_centers_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_centers_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_centers_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6479,7 +6479,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_centers_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_visibilities_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_visibilities_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::vector< cv::Mat_< int > > > *arg2 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -6490,7 +6490,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_visibilities_set(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_visibilities_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_visibilities_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6503,7 +6503,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Patch_experts_visibilities_get(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Patch_experts__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *result = 0 ;
@@ -6514,7 +6514,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Patch_experts__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Patch_experts *arg1 = 0 ;
@@ -6532,7 +6532,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Patch_experts__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, int jarg9, int jarg10)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_Response(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, int jarg9, int jarg10)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< cv::Mat_< float > > *arg2 = 0 ;
@@ -6594,7 +6594,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Response(void * jarg1, void * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_GetViewIdx(void * jarg1, void * jarg2, int jarg3)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_GetViewIdx(void * jarg1, void * jarg2, int jarg3)
 {
     int jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6616,7 +6616,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_GetViewIdx(void * jarg1, void * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_0(void * jarg1, unsigned long jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_nViews__SWIG_0(void * jarg1, unsigned long jarg2)
 {
     int jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6631,7 +6631,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_0(void * jarg1, uns
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_1(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_nViews__SWIG_1(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
@@ -6644,7 +6644,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Patch_experts_nViews__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Read(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Patch_experts_Read(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
     std::vector< std::string > arg2 ;
@@ -6671,7 +6671,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Patch_experts_Read(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Patch_experts(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Patch_experts(void * jarg1)
 {
     LandmarkDetector::Patch_experts *arg1 = (LandmarkDetector::Patch_experts *) 0 ;
 
@@ -6680,7 +6680,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Patch_experts(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_mean_shape_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_mean_shape_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -6698,7 +6698,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_mean_shape_set(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_mean_shape_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_PDM_mean_shape_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
@@ -6711,7 +6711,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_mean_shape_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_princ_comp_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_princ_comp_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -6729,7 +6729,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_princ_comp_set(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_princ_comp_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_PDM_princ_comp_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
@@ -6742,7 +6742,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_princ_comp_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_eigen_values_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_eigen_values_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< double > arg2 ;
@@ -6760,7 +6760,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_eigen_values_set(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_eigen_values_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_PDM_eigen_values_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
@@ -6773,7 +6773,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PDM_eigen_values_get(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_PDM__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::PDM *result = 0 ;
@@ -6784,7 +6784,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_PDM__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::PDM *arg1 = 0 ;
@@ -6802,7 +6802,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PDM__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Read(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_Read(void * jarg1, char * jarg2)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     std::string arg2 ;
@@ -6818,7 +6818,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Read(void * jarg1, char * jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfPoints(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_PDM_NumberOfPoints(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
@@ -6831,7 +6831,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfPoints(void * jarg1)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfModes(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_PDM_NumberOfModes(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
@@ -6844,7 +6844,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PDM_NumberOfModes(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Clamp(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_Clamp(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -6874,7 +6874,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_Clamp(void * jarg1, void * jarg2, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape3D(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcShape3D(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -6897,7 +6897,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape3D(void * jarg1, void * jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape2D(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcShape2D(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -6927,7 +6927,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcShape2D(void * jarg1, void * jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcParams__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Vec6d *arg2 = 0 ;
@@ -6966,7 +6966,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_0(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcParams__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Vec6d *arg2 = 0 ;
@@ -6996,7 +6996,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_1(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcParams__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Vec6d *arg2 = 0 ;
@@ -7035,7 +7035,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_2(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcParams__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Vec6d *arg2 = 0 ;
@@ -7065,7 +7065,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcParams__SWIG_3(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcBoundingBox(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_CalcBoundingBox(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Rect *arg2 = 0 ;
@@ -7095,7 +7095,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_CalcBoundingBox(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeRigidJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_ComputeRigidJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7141,7 +7141,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeRigidJacobian(void * jarg1, void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_ComputeJacobian(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7187,7 +7187,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_ComputeJacobian(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PDM_UpdateModelParameters(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_PDM_UpdateModelParameters(void * jarg1, void * jarg2, void * jarg3, void * jarg4)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7217,7 +7217,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PDM_UpdateModelParameters(void * jarg1, void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PDM(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_PDM(void * jarg1)
 {
     LandmarkDetector::PDM *arg1 = (LandmarkDetector::PDM *) 0 ;
 
@@ -7226,7 +7226,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PDM(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_type_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_type_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     int arg2 ;
@@ -7237,7 +7237,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_type_set(void * jarg1, int j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_SVR_patch_expert_type_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_type_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7250,7 +7250,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_SVR_patch_expert_type_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_scaling_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_scaling_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     double arg2 ;
@@ -7261,7 +7261,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_scaling_set(void * jarg1, do
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_scaling_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_scaling_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7274,7 +7274,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_scaling_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_bias_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_bias_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     double arg2 ;
@@ -7285,7 +7285,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_bias_set(void * jarg1, doubl
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_bias_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_bias_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7298,7 +7298,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_bias_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_weights_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     cv::Mat_< float > arg2 ;
@@ -7316,7 +7316,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_weights_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7329,7 +7329,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_weights_dfts_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     std::map< int,cv::Mat_< double >,std::less< int > > *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > > *) 0 ;
@@ -7340,7 +7340,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_weights_dfts_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7353,7 +7353,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_SVR_patch_expert_weights_dfts_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_confidence_set(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_confidence_set(void * jarg1, double jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     double arg2 ;
@@ -7364,7 +7364,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_confidence_set(void * jarg1,
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_confidence_get(void * jarg1)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_confidence_get(void * jarg1)
 {
     double jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
@@ -7377,7 +7377,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_SVR_patch_expert_confidence_get(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_SVR_patch_expert__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::SVR_patch_expert *result = 0 ;
@@ -7388,7 +7388,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_SVR_patch_expert__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::SVR_patch_expert *arg1 = 0 ;
@@ -7406,7 +7406,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SVR_patch_expert__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Read(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_Read(void * jarg1, void * jarg2)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     std::ifstream *arg2 = 0 ;
@@ -7422,7 +7422,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Read(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7445,7 +7445,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_Response(void * jarg1, void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7468,7 +7468,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SVR_patch_expert_ResponseDepth(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SVR_patch_expert(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_SVR_patch_expert(void * jarg1)
 {
     LandmarkDetector::SVR_patch_expert *arg1 = (LandmarkDetector::SVR_patch_expert *) 0 ;
 
@@ -7477,7 +7477,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_SVR_patch_expert(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_width_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     int arg2 ;
@@ -7488,7 +7488,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_set(void * jarg1
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_width_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
@@ -7501,7 +7501,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_width_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_set(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_height_set(void * jarg1, int jarg2)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     int arg2 ;
@@ -7512,7 +7512,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_set(void * jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_get(void * jarg1)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_height_get(void * jarg1)
 {
     int jresult ;
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
@@ -7525,7 +7525,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Multi_SVR_patch_expert_height_get(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_svr_patch_experts_set(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     std::vector< LandmarkDetector::SVR_patch_expert > *arg2 = (std::vector< LandmarkDetector::SVR_patch_expert > *) 0 ;
@@ -7536,7 +7536,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_set(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_svr_patch_experts_get(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
@@ -7549,7 +7549,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Multi_SVR_patch_expert_svr_patch_experts_ge
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Multi_SVR_patch_expert__SWIG_0()
 {
     void * jresult ;
     LandmarkDetector::Multi_SVR_patch_expert *result = 0 ;
@@ -7560,7 +7560,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Multi_SVR_patch_expert__SWIG_1(void * jarg1)
 {
     void * jresult ;
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = 0 ;
@@ -7578,7 +7578,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Multi_SVR_patch_expert__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Read(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_Read(void * jarg1, void * jarg2)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     std::ifstream *arg2 = 0 ;
@@ -7594,7 +7594,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Read(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_Response(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7617,7 +7617,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_Response(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Multi_SVR_patch_expert_ResponseDepth(void * jarg1, void * jarg2, void * jarg3)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -7640,7 +7640,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Multi_SVR_patch_expert_ResponseDepth(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Multi_SVR_patch_expert(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Multi_SVR_patch_expert(void * jarg1)
 {
     LandmarkDetector::Multi_SVR_patch_expert *arg1 = (LandmarkDetector::Multi_SVR_patch_expert *) 0 ;
 
@@ -7649,7 +7649,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Multi_SVR_patch_expert(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_Clear(void * jarg1)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
 
@@ -7658,7 +7658,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Add(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_Add(void * jarg1, int jarg2)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int *arg2 = 0 ;
@@ -7671,7 +7671,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Add(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -7684,7 +7684,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -7697,7 +7697,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     std::vector< int >::size_type arg2 ;
@@ -7708,7 +7708,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_reserve(void * jarg1, unsigned long j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList__SWIG_0()
 {
     void * jresult ;
     std::vector< int > *result = 0 ;
@@ -7719,7 +7719,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< int > *arg1 = 0 ;
@@ -7737,7 +7737,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -7759,7 +7759,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_IntList_getitemcopy(void * jarg1, int jarg2)
 {
     int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -7783,7 +7783,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitemcopy(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_IntList_getitem(void * jarg1, int jarg2)
 {
     int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -7807,7 +7807,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntList_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_setitem(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_setitem(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -7831,7 +7831,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_setitem(void * jarg1, int jarg2, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     std::vector< int > *arg2 = 0 ;
@@ -7847,7 +7847,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_AddRange(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -7878,7 +7878,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_GetRange(void * jarg1, int jarg2, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Insert(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_Insert(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -7902,7 +7902,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Insert(void * jarg1, int jarg2, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -7929,7 +7929,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_InsertRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -7949,7 +7949,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -7976,7 +7976,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_RemoveRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_Repeat(int jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList_Repeat(int jarg1, int jarg2)
 {
     void * jresult ;
     int *arg1 = 0 ;
@@ -8002,7 +8002,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList_Repeat(int jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
 
@@ -8011,7 +8011,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -8038,7 +8038,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_Reverse__SWIG_1(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
     int arg2 ;
@@ -8065,7 +8065,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList_SetRange(void * jarg1, int jarg2, voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Contains(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_IntList_Contains(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -8082,7 +8082,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Contains(void * jarg1, int ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_IntList_IndexOf(void * jarg1, int jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_IntList_IndexOf(void * jarg1, int jarg2)
 {
     int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -8099,7 +8099,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntList_IndexOf(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_IntList_LastIndexOf(void * jarg1, int jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_IntList_LastIndexOf(void * jarg1, int jarg2)
 {
     int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -8116,7 +8116,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntList_LastIndexOf(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Remove(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_IntList_Remove(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
@@ -8133,7 +8133,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IntList_Remove(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_IntList(void * jarg1)
 {
     std::vector< int > *arg1 = (std::vector< int > *) 0 ;
 
@@ -8142,7 +8142,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Clear(void * jarg1)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
 
@@ -8151,7 +8151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Add(void * jarg1, float jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Add(void * jarg1, float jarg2)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     float *arg2 = 0 ;
@@ -8164,7 +8164,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Add(void * jarg1, float jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8177,7 +8177,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8190,7 +8190,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     std::vector< float >::size_type arg2 ;
@@ -8201,7 +8201,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_reserve(void * jarg1, unsigned long
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList__SWIG_0()
 {
     void * jresult ;
     std::vector< float > *result = 0 ;
@@ -8212,7 +8212,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< float > *arg1 = 0 ;
@@ -8230,7 +8230,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -8252,7 +8252,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT float SWIGSTDCALL CSharp_LandmarkDetector_FloatList_getitemcopy(void * jarg1, int jarg2)
 {
     float jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8276,7 +8276,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitemcopy(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT float SWIGSTDCALL CSharp_LandmarkDetector_FloatList_getitem(void * jarg1, int jarg2)
 {
     float jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8300,7 +8300,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_FloatList_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_setitem(void * jarg1, int jarg2, float jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_setitem(void * jarg1, int jarg2, float jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8324,7 +8324,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_setitem(void * jarg1, int jarg2, fl
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     std::vector< float > *arg2 = 0 ;
@@ -8340,7 +8340,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_AddRange(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8371,7 +8371,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_GetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Insert(void * jarg1, int jarg2, float jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Insert(void * jarg1, int jarg2, float jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8395,7 +8395,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Insert(void * jarg1, int jarg2, flo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8422,7 +8422,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_InsertRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8442,7 +8442,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8469,7 +8469,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_RemoveRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_Repeat(float jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Repeat(float jarg1, int jarg2)
 {
     void * jresult ;
     float *arg1 = 0 ;
@@ -8495,7 +8495,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList_Repeat(float jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
 
@@ -8504,7 +8504,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8531,7 +8531,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_Reverse__SWIG_1(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
     int arg2 ;
@@ -8558,7 +8558,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList_SetRange(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Contains(void * jarg1, float jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Contains(void * jarg1, float jarg2)
 {
     unsigned int jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8575,7 +8575,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Contains(void * jarg1, floa
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_IndexOf(void * jarg1, float jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_FloatList_IndexOf(void * jarg1, float jarg2)
 {
     int jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8592,7 +8592,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_IndexOf(void * jarg1, float jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_LastIndexOf(void * jarg1, float jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_FloatList_LastIndexOf(void * jarg1, float jarg2)
 {
     int jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8609,7 +8609,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FloatList_LastIndexOf(void * jarg1, float jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Remove(void * jarg1, float jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_FloatList_Remove(void * jarg1, float jarg2)
 {
     unsigned int jresult ;
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
@@ -8626,7 +8626,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FloatList_Remove(void * jarg1, float 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FloatList(void * jarg1)
 {
     std::vector< float > *arg1 = (std::vector< float > *) 0 ;
 
@@ -8635,7 +8635,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Clear(void * jarg1)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
 
@@ -8644,7 +8644,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Add(void * jarg1, double jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Add(void * jarg1, double jarg2)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     double *arg2 = 0 ;
@@ -8657,7 +8657,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Add(void * jarg1, double jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -8670,7 +8670,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -8683,7 +8683,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     std::vector< double >::size_type arg2 ;
@@ -8694,7 +8694,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_reserve(void * jarg1, unsigned lon
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleList__SWIG_0()
 {
     void * jresult ;
     std::vector< double > *result = 0 ;
@@ -8705,7 +8705,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< double > *arg1 = 0 ;
@@ -8723,7 +8723,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -8745,7 +8745,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_getitemcopy(void * jarg1, int jarg2)
 {
     double jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -8769,7 +8769,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitemcopy(void * jarg1, int ja
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_getitem(void * jarg1, int jarg2)
 {
     double jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -8793,7 +8793,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_DoubleList_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_setitem(void * jarg1, int jarg2, double jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_setitem(void * jarg1, int jarg2, double jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -8817,7 +8817,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_setitem(void * jarg1, int jarg2, d
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     std::vector< double > *arg2 = 0 ;
@@ -8833,7 +8833,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_AddRange(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -8864,7 +8864,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_GetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Insert(void * jarg1, int jarg2, double jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Insert(void * jarg1, int jarg2, double jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -8888,7 +8888,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Insert(void * jarg1, int jarg2, do
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -8915,7 +8915,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_InsertRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -8935,7 +8935,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -8962,7 +8962,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_RemoveRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_Repeat(double jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Repeat(double jarg1, int jarg2)
 {
     void * jresult ;
     double *arg1 = 0 ;
@@ -8988,7 +8988,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleList_Repeat(double jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
 
@@ -8997,7 +8997,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -9024,7 +9024,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_Reverse__SWIG_1(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
     int arg2 ;
@@ -9051,7 +9051,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleList_SetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Contains(void * jarg1, double jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Contains(void * jarg1, double jarg2)
 {
     unsigned int jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -9068,7 +9068,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Contains(void * jarg1, dou
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_IndexOf(void * jarg1, double jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_IndexOf(void * jarg1, double jarg2)
 {
     int jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -9085,7 +9085,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_IndexOf(void * jarg1, double jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_LastIndexOf(void * jarg1, double jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_LastIndexOf(void * jarg1, double jarg2)
 {
     int jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -9102,7 +9102,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_DoubleList_LastIndexOf(void * jarg1, double ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Remove(void * jarg1, double jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_DoubleList_Remove(void * jarg1, double jarg2)
 {
     unsigned int jresult ;
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
@@ -9119,7 +9119,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DoubleList_Remove(void * jarg1, doubl
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_DoubleList(void * jarg1)
 {
     std::vector< double > *arg1 = (std::vector< double > *) 0 ;
 
@@ -9128,7 +9128,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_Clear(void * jarg1)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
 
@@ -9137,7 +9137,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Add(void * jarg1, char * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_Add(void * jarg1, char * jarg2)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     std::string *arg2 = 0 ;
@@ -9154,7 +9154,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Add(void * jarg1, char * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_StringList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9167,7 +9167,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_StringList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9180,7 +9180,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_StringList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     std::vector< std::string >::size_type arg2 ;
@@ -9191,7 +9191,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_reserve(void * jarg1, unsigned lon
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_StringList__SWIG_0()
 {
     void * jresult ;
     std::vector< std::string > *result = 0 ;
@@ -9202,7 +9202,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_StringList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::string > *arg1 = 0 ;
@@ -9220,7 +9220,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_StringList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -9242,7 +9242,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_StringList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT char * SWIGSTDCALL CSharp_LandmarkDetector_StringList_getitemcopy(void * jarg1, int jarg2)
 {
     char * jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9266,7 +9266,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitemcopy(void * jarg1, int ja
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT char * SWIGSTDCALL CSharp_LandmarkDetector_StringList_getitem(void * jarg1, int jarg2)
 {
     char * jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9290,7 +9290,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_StringList_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_setitem(void * jarg1, int jarg2, char * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_setitem(void * jarg1, int jarg2, char * jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9318,7 +9318,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_setitem(void * jarg1, int jarg2, c
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     std::vector< std::string > *arg2 = 0 ;
@@ -9334,7 +9334,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_AddRange(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_StringList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9365,7 +9365,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_GetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Insert(void * jarg1, int jarg2, char * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_Insert(void * jarg1, int jarg2, char * jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9393,7 +9393,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Insert(void * jarg1, int jarg2, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9420,7 +9420,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_InsertRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9440,7 +9440,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9467,7 +9467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_RemoveRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_Repeat(char * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_StringList_Repeat(char * jarg1, int jarg2)
 {
     void * jresult ;
     std::string *arg1 = 0 ;
@@ -9497,7 +9497,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_StringList_Repeat(char * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
 
@@ -9506,7 +9506,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9533,7 +9533,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_Reverse__SWIG_1(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_StringList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_StringList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
     int arg2 ;
@@ -9560,7 +9560,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_StringList_SetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Contains(void * jarg1, char * jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_StringList_Contains(void * jarg1, char * jarg2)
 {
     unsigned int jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9581,7 +9581,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Contains(void * jarg1, cha
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_StringList_IndexOf(void * jarg1, char * jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_StringList_IndexOf(void * jarg1, char * jarg2)
 {
     int jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9602,7 +9602,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_StringList_IndexOf(void * jarg1, char * jarg2)
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_StringList_LastIndexOf(void * jarg1, char * jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_StringList_LastIndexOf(void * jarg1, char * jarg2)
 {
     int jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9623,7 +9623,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_StringList_LastIndexOf(void * jarg1, char * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Remove(void * jarg1, char * jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_StringList_Remove(void * jarg1, char * jarg2)
 {
     unsigned int jresult ;
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
@@ -9644,7 +9644,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_StringList_Remove(void * jarg1, char 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_StringList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_StringList(void * jarg1)
 {
     std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
 
@@ -9653,7 +9653,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_StringList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Clear(void * jarg1)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
 
@@ -9662,7 +9662,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     std::vector< int > *arg2 = 0 ;
@@ -9678,7 +9678,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
@@ -9691,7 +9691,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
@@ -9704,7 +9704,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntList2N_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     std::vector< std::vector< int > >::size_type arg2 ;
@@ -9715,7 +9715,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_reserve(void * jarg1, unsigned long
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList2N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< int > > *result = 0 ;
@@ -9726,7 +9726,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList2N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< int > > *arg1 = 0 ;
@@ -9744,7 +9744,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntList2N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -9766,7 +9766,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntList2N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
@@ -9790,7 +9790,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitemcopy(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
@@ -9814,7 +9814,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -9841,7 +9841,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_setitem(void * jarg1, int jarg2, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     std::vector< std::vector< int > > *arg2 = 0 ;
@@ -9857,7 +9857,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_AddRange(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
@@ -9888,7 +9888,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_GetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -9915,7 +9915,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Insert(void * jarg1, int jarg2, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -9942,7 +9942,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_InsertRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -9962,7 +9962,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -9989,7 +9989,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_RemoveRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< int > *arg1 = 0 ;
@@ -10018,7 +10018,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntList2N_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
 
@@ -10027,7 +10027,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -10054,7 +10054,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_Reverse__SWIG_1(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
     int arg2 ;
@@ -10081,7 +10081,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntList2N_SetRange(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList2N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_IntList2N(void * jarg1)
 {
     std::vector< std::vector< int > > *arg1 = (std::vector< std::vector< int > > *) 0 ;
 
@@ -10090,7 +10090,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntList2N(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Clear(void * jarg1)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
 
@@ -10099,7 +10099,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     std::vector< float > *arg2 = 0 ;
@@ -10115,7 +10115,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
@@ -10128,7 +10128,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
@@ -10141,7 +10141,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList2N_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     std::vector< std::vector< float > >::size_type arg2 ;
@@ -10152,7 +10152,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList2N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< float > > *result = 0 ;
@@ -10163,7 +10163,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList2N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< float > > *arg1 = 0 ;
@@ -10181,7 +10181,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList2N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -10203,7 +10203,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList2N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
@@ -10227,7 +10227,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
@@ -10251,7 +10251,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10278,7 +10278,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_setitem(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     std::vector< std::vector< float > > *arg2 = 0 ;
@@ -10294,7 +10294,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
@@ -10325,7 +10325,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10352,7 +10352,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Insert(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10379,7 +10379,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10399,7 +10399,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10426,7 +10426,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< float > *arg1 = 0 ;
@@ -10455,7 +10455,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList2N_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
 
@@ -10464,7 +10464,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10491,7 +10491,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
     int arg2 ;
@@ -10518,7 +10518,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList2N_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList2N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FloatList2N(void * jarg1)
 {
     std::vector< std::vector< float > > *arg1 = (std::vector< std::vector< float > > *) 0 ;
 
@@ -10527,7 +10527,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList2N(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Clear(void * jarg1)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
 
@@ -10536,7 +10536,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     std::vector< std::vector< float > > *arg2 = 0 ;
@@ -10552,7 +10552,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -10565,7 +10565,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -10578,7 +10578,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatList3N_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     std::vector< std::vector< std::vector< float > > >::size_type arg2 ;
@@ -10589,7 +10589,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList3N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< std::vector< float > > > *result = 0 ;
@@ -10600,7 +10600,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList3N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = 0 ;
@@ -10618,7 +10618,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatList3N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -10640,7 +10640,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatList3N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -10664,7 +10664,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -10688,7 +10688,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10715,7 +10715,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_setitem(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     std::vector< std::vector< std::vector< float > > > *arg2 = 0 ;
@@ -10731,7 +10731,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
@@ -10762,7 +10762,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10789,7 +10789,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Insert(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10816,7 +10816,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10836,7 +10836,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10863,7 +10863,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< float > > *arg1 = 0 ;
@@ -10892,7 +10892,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatList3N_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
 
@@ -10901,7 +10901,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10928,7 +10928,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatList3N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
     int arg2 ;
@@ -10955,7 +10955,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatList3N_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList3N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FloatList3N(void * jarg1)
 {
     std::vector< std::vector< std::vector< float > > > *arg1 = (std::vector< std::vector< std::vector< float > > > *) 0 ;
 
@@ -10964,7 +10964,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatList3N(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPair__SWIG_0()
 {
     void * jresult ;
     std::pair< cv::Point,cv::Point > *result = 0 ;
@@ -10975,7 +10975,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_1(void * jarg1, void * jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPair__SWIG_1(void * jarg1, void * jarg2)
 {
     void * jresult ;
     cv::Point arg1 ;
@@ -11004,7 +11004,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_1(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_2(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPair__SWIG_2(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point,cv::Point > *arg1 = 0 ;
@@ -11022,7 +11022,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPair__SWIG_2(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_first_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPair_first_set(void * jarg1, void * jarg2)
 {
     std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
     cv::Point arg2 ;
@@ -11040,7 +11040,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_first_set(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_first_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPair_first_get(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
@@ -11053,7 +11053,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_first_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_second_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPair_second_set(void * jarg1, void * jarg2)
 {
     std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
     cv::Point arg2 ;
@@ -11071,7 +11071,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPair_second_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_second_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPair_second_get(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
@@ -11084,7 +11084,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPair_second_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPair(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPointPair(void * jarg1)
 {
     std::pair< cv::Point,cv::Point > *arg1 = (std::pair< cv::Point,cv::Point > *) 0 ;
 
@@ -11093,7 +11093,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPair(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Clear(void * jarg1)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
 
@@ -11102,7 +11102,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     cv::Point *arg2 = 0 ;
@@ -11118,7 +11118,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
@@ -11131,7 +11131,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
@@ -11144,7 +11144,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     std::vector< cv::Point >::size_type arg2 ;
@@ -11155,7 +11155,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_reserve(void * jarg1, unsigned lo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Point > *result = 0 ;
@@ -11166,7 +11166,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Point > *arg1 = 0 ;
@@ -11184,7 +11184,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -11206,7 +11206,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
@@ -11230,7 +11230,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitemcopy(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
@@ -11254,7 +11254,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_getitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11281,7 +11281,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_setitem(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     std::vector< cv::Point > *arg2 = 0 ;
@@ -11297,7 +11297,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_AddRange(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
@@ -11328,7 +11328,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_GetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11355,7 +11355,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Insert(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11382,7 +11382,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_InsertRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11402,7 +11402,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11429,7 +11429,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_RemoveRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Point *arg1 = 0 ;
@@ -11458,7 +11458,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointList_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
 
@@ -11467,7 +11467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11494,7 +11494,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_Reverse__SWIG_1(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
     int arg2 ;
@@ -11521,7 +11521,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointList_SetRange(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPointList(void * jarg1)
 {
     std::vector< cv::Point > *arg1 = (std::vector< cv::Point > *) 0 ;
 
@@ -11530,7 +11530,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Clear(void * jarg1)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
 
@@ -11539,7 +11539,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     std::pair< cv::Point,cv::Point > *arg2 = 0 ;
@@ -11555,7 +11555,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Add(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
@@ -11568,7 +11568,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
@@ -11581,7 +11581,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPointPairList_capacity(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     std::vector< std::pair< cv::Point,cv::Point > >::size_type arg2 ;
@@ -11592,7 +11592,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_reserve(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPairList__SWIG_0()
 {
     void * jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *result = 0 ;
@@ -11603,7 +11603,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPairList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = 0 ;
@@ -11621,7 +11621,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPointPairList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -11643,7 +11643,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPointPairList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
@@ -11667,7 +11667,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitemcopy(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
@@ -11691,7 +11691,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_getitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11718,7 +11718,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_setitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg2 = 0 ;
@@ -11734,7 +11734,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_AddRange(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
@@ -11765,7 +11765,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_GetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11792,7 +11792,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Insert(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11819,7 +11819,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_InsertRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11839,7 +11839,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveAt(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11866,7 +11866,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_RemoveRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::pair< cv::Point,cv::Point > *arg1 = 0 ;
@@ -11895,7 +11895,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPointPairList_Repeat(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
 
@@ -11904,7 +11904,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11931,7 +11931,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_Reverse__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPointPairList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
     int arg2 ;
@@ -11958,7 +11958,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPointPairList_SetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPairList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPointPairList(void * jarg1)
 {
     std::vector< std::pair< cv::Point,cv::Point > > *arg1 = (std::vector< std::pair< cv::Point,cv::Point > > *) 0 ;
 
@@ -11967,7 +11967,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPointPairList(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPair__SWIG_0()
 {
     void * jresult ;
     std::pair< cv::Point2d,cv::Point2d > *result = 0 ;
@@ -11978,7 +11978,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_1(void * jarg1, void * jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPair__SWIG_1(void * jarg1, void * jarg2)
 {
     void * jresult ;
     cv::Point2d arg1 ;
@@ -12007,7 +12007,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_1(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_2(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPair__SWIG_2(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point2d,cv::Point2d > *arg1 = 0 ;
@@ -12025,7 +12025,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPair__SWIG_2(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_first_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPair_first_set(void * jarg1, void * jarg2)
 {
     std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
     cv::Point2d arg2 ;
@@ -12043,7 +12043,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_first_set(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_first_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPair_first_get(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
@@ -12056,7 +12056,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_first_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_second_set(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPair_second_set(void * jarg1, void * jarg2)
 {
     std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
     cv::Point2d arg2 ;
@@ -12074,7 +12074,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPair_second_set(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_second_get(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPair_second_get(void * jarg1)
 {
     void * jresult ;
     std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
@@ -12087,7 +12087,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPair_second_get(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPair(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPoint2DPair(void * jarg1)
 {
     std::pair< cv::Point2d,cv::Point2d > *arg1 = (std::pair< cv::Point2d,cv::Point2d > *) 0 ;
 
@@ -12096,7 +12096,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPair(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Clear(void * jarg1)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
 
@@ -12105,7 +12105,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     cv::Point2d *arg2 = 0 ;
@@ -12121,7 +12121,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
@@ -12134,7 +12134,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
@@ -12147,7 +12147,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     std::vector< cv::Point2d >::size_type arg2 ;
@@ -12158,7 +12158,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_reserve(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Point2d > *result = 0 ;
@@ -12169,7 +12169,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Point2d > *arg1 = 0 ;
@@ -12187,7 +12187,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -12209,7 +12209,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
@@ -12233,7 +12233,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitemcopy(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
@@ -12257,7 +12257,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_getitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12284,7 +12284,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_setitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     std::vector< cv::Point2d > *arg2 = 0 ;
@@ -12300,7 +12300,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_AddRange(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
@@ -12331,7 +12331,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_GetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12358,7 +12358,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Insert(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12385,7 +12385,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_InsertRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12405,7 +12405,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveAt(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12432,7 +12432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_RemoveRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Point2d *arg1 = 0 ;
@@ -12461,7 +12461,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DList_Repeat(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
 
@@ -12470,7 +12470,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12497,7 +12497,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_Reverse__SWIG_1(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
     int arg2 ;
@@ -12524,7 +12524,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DList_SetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPoint2DList(void * jarg1)
 {
     std::vector< cv::Point2d > *arg1 = (std::vector< cv::Point2d > *) 0 ;
 
@@ -12533,7 +12533,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Clear(void * jarg1)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
 
@@ -12542,7 +12542,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     std::pair< cv::Point2d,cv::Point2d > *arg2 = 0 ;
@@ -12558,7 +12558,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Add(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
@@ -12571,7 +12571,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
@@ -12584,7 +12584,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVPoint2DPairList_capacity(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > >::size_type arg2 ;
@@ -12595,7 +12595,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_reserve(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPairList__SWIG_0()
 {
     void * jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *result = 0 ;
@@ -12606,7 +12606,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPairList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = 0 ;
@@ -12624,7 +12624,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVPoint2DPairList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -12646,7 +12646,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVPoint2DPairList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
@@ -12670,7 +12670,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitemcopy(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
@@ -12694,7 +12694,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_getitem(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12721,7 +12721,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_setitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg2 = 0 ;
@@ -12737,7 +12737,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_AddRange(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
@@ -12768,7 +12768,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_GetRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12795,7 +12795,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Insert(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12822,7 +12822,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_InsertRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12842,7 +12842,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveAt(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12869,7 +12869,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_RemoveRange(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::pair< cv::Point2d,cv::Point2d > *arg1 = 0 ;
@@ -12898,7 +12898,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVPoint2DPairList_Repeat(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
 
@@ -12907,7 +12907,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_0(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12934,7 +12934,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_Reverse__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVPoint2DPairList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
     int arg2 ;
@@ -12961,7 +12961,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVPoint2DPairList_SetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPairList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVPoint2DPairList(void * jarg1)
 {
     std::vector< std::pair< cv::Point2d,cv::Point2d > > *arg1 = (std::vector< std::pair< cv::Point2d,cv::Point2d > > *) 0 ;
 
@@ -12970,7 +12970,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVPoint2DPairList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Clear(void * jarg1)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
 
@@ -12979,7 +12979,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     cv::Rect_< double > *arg2 = 0 ;
@@ -12995,7 +12995,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Add(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
@@ -13008,7 +13008,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
@@ -13021,7 +13021,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_CVDoubleRectList_capacity(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     std::vector< cv::Rect_< double > >::size_type arg2 ;
@@ -13032,7 +13032,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_reserve(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVDoubleRectList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Rect_< double > > *result = 0 ;
@@ -13043,7 +13043,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVDoubleRectList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Rect_< double > > *arg1 = 0 ;
@@ -13061,7 +13061,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_CVDoubleRectList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -13083,7 +13083,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_CVDoubleRectList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
@@ -13107,7 +13107,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitemcopy(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
@@ -13131,7 +13131,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_getitem(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13158,7 +13158,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_setitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     std::vector< cv::Rect_< double > > *arg2 = 0 ;
@@ -13174,7 +13174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_AddRange(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
@@ -13205,7 +13205,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_GetRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13232,7 +13232,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Insert(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13259,7 +13259,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_InsertRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13279,7 +13279,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveAt(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13306,7 +13306,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_RemoveRange(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Rect_< double > *arg1 = 0 ;
@@ -13335,7 +13335,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_CVDoubleRectList_Repeat(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
 
@@ -13344,7 +13344,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13371,7 +13371,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_Reverse__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_CVDoubleRectList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
     int arg2 ;
@@ -13398,7 +13398,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CVDoubleRectList_SetRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRectList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_CVDoubleRectList(void * jarg1)
 {
     std::vector< cv::Rect_< double > > *arg1 = (std::vector< cv::Rect_< double > > *) 0 ;
 
@@ -13407,7 +13407,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CVDoubleRectList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Clear(void * jarg1)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
 
@@ -13416,7 +13416,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     cv::Mat_< float > *arg2 = 0 ;
@@ -13432,7 +13432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -13445,7 +13445,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -13458,7 +13458,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     std::vector< cv::Mat_< float > >::size_type arg2 ;
@@ -13469,7 +13469,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_reserve(void * jarg1, unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *result = 0 ;
@@ -13480,7 +13480,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *arg1 = 0 ;
@@ -13498,7 +13498,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -13520,7 +13520,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -13544,7 +13544,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitemcopy(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -13568,7 +13568,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_getitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13595,7 +13595,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_setitem(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     std::vector< cv::Mat_< float > > *arg2 = 0 ;
@@ -13611,7 +13611,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_AddRange(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
@@ -13642,7 +13642,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_GetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13669,7 +13669,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Insert(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13696,7 +13696,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_InsertRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13716,7 +13716,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveAt(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13743,7 +13743,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_RemoveRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Mat_< float > *arg1 = 0 ;
@@ -13772,7 +13772,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList_Repeat(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
 
@@ -13781,7 +13781,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13808,7 +13808,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_Reverse__SWIG_1(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
     int arg2 ;
@@ -13835,7 +13835,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList_SetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMatList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FloatMatList(void * jarg1)
 {
     std::vector< cv::Mat_< float > > *arg1 = (std::vector< cv::Mat_< float > > *) 0 ;
 
@@ -13844,7 +13844,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMatList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Clear(void * jarg1)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
 
@@ -13853,7 +13853,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     cv::Mat_< double > *arg2 = 0 ;
@@ -13869,7 +13869,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -13882,7 +13882,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -13895,7 +13895,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     std::vector< cv::Mat_< double > >::size_type arg2 ;
@@ -13906,7 +13906,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_reserve(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *result = 0 ;
@@ -13917,7 +13917,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *arg1 = 0 ;
@@ -13935,7 +13935,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -13957,7 +13957,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -13981,7 +13981,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitemcopy(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -14005,7 +14005,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_getitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14032,7 +14032,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_setitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     std::vector< cv::Mat_< double > > *arg2 = 0 ;
@@ -14048,7 +14048,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_AddRange(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
@@ -14079,7 +14079,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_GetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14106,7 +14106,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Insert(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14133,7 +14133,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_InsertRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14153,7 +14153,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveAt(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14180,7 +14180,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_RemoveRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Mat_< double > *arg1 = 0 ;
@@ -14209,7 +14209,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList_Repeat(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
 
@@ -14218,7 +14218,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14245,7 +14245,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_Reverse__SWIG_1(void * jarg1, i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
     int arg2 ;
@@ -14272,7 +14272,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList_SetRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_DoubleMatList(void * jarg1)
 {
     std::vector< cv::Mat_< double > > *arg1 = (std::vector< cv::Mat_< double > > *) 0 ;
 
@@ -14281,7 +14281,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Clear(void * jarg1)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
 
@@ -14290,7 +14290,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Add(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     cv::Mat_< int > *arg2 = 0 ;
@@ -14306,7 +14306,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -14319,7 +14319,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -14332,7 +14332,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     std::vector< cv::Mat_< int > >::size_type arg2 ;
@@ -14343,7 +14343,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_reserve(void * jarg1, unsigned lon
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList__SWIG_0()
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *result = 0 ;
@@ -14354,7 +14354,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *arg1 = 0 ;
@@ -14372,7 +14372,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -14394,7 +14394,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -14418,7 +14418,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitemcopy(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -14442,7 +14442,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_getitem(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14469,7 +14469,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_setitem(void * jarg1, int jarg2, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     std::vector< cv::Mat_< int > > *arg2 = 0 ;
@@ -14485,7 +14485,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_AddRange(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
@@ -14516,7 +14516,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_GetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14543,7 +14543,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Insert(void * jarg1, int jarg2, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14570,7 +14570,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_InsertRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14590,7 +14590,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveAt(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14617,7 +14617,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_RemoveRange(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     cv::Mat_< int > *arg1 = 0 ;
@@ -14646,7 +14646,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList_Repeat(void * jarg1, int jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
 
@@ -14655,7 +14655,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14682,7 +14682,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_Reverse__SWIG_1(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
     int arg2 ;
@@ -14709,7 +14709,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList_SetRange(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_IntMatList(void * jarg1)
 {
     std::vector< cv::Mat_< int > > *arg1 = (std::vector< cv::Mat_< int > > *) 0 ;
 
@@ -14718,7 +14718,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Int_IntMatMap__SWIG_0()
 {
     void * jresult ;
     std::map< int,cv::Mat_< int > > *result = 0 ;
@@ -14729,7 +14729,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Int_IntMatMap__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::map< int,cv::Mat_< int >,std::less< int > > *arg1 = 0 ;
@@ -14747,7 +14747,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_IntMatMap__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMatMap_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_size(void * jarg1)
 {
     unsigned long jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14760,7 +14760,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_IntMatMap_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_empty(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_empty(void * jarg1)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14773,7 +14773,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_empty(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_Clear(void * jarg1)
 {
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
 
@@ -14782,7 +14782,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14808,7 +14808,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_getitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
     std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
@@ -14828,7 +14828,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_setitem(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_ContainsKey(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_ContainsKey(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14845,7 +14845,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_ContainsKey(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Add(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_Add(void * jarg1, int jarg2, void * jarg3)
 {
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
     std::map< int,cv::Mat_< int > >::key_type *arg2 = 0 ;
@@ -14874,7 +14874,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_Add(void * jarg1, int jarg2, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_Remove(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_Remove(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14891,7 +14891,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_IntMatMap_Remove(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_create_iterator_begin(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_create_iterator_begin(void * jarg1)
 {
     void * jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14904,7 +14904,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_IntMatMap_create_iterator_begin(void * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMatMap_get_next_key(void * jarg1, void * jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_get_next_key(void * jarg1, void * jarg2)
 {
     int jresult ;
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
@@ -14919,7 +14919,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_IntMatMap_get_next_key(void * jarg1, void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_destroy_iterator(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_IntMatMap_destroy_iterator(void * jarg1, void * jarg2)
 {
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
     std::map< int,cv::Mat_< int >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< int >,std::less< int > >::iterator *) 0 ;
@@ -14930,7 +14930,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_IntMatMap_destroy_iterator(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMatMap(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Int_IntMatMap(void * jarg1)
 {
     std::map< int,cv::Mat_< int > > *arg1 = (std::map< int,cv::Mat_< int > > *) 0 ;
 
@@ -14939,7 +14939,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_IntMatMap(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Int_DoubleMatMap__SWIG_0()
 {
     void * jresult ;
     std::map< int,cv::Mat_< double > > *result = 0 ;
@@ -14950,7 +14950,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Int_DoubleMatMap__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::map< int,cv::Mat_< double >,std::less< int > > *arg1 = 0 ;
@@ -14968,7 +14968,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Int_DoubleMatMap__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMatMap_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_size(void * jarg1)
 {
     unsigned long jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -14981,7 +14981,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Int_DoubleMatMap_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_empty(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_empty(void * jarg1)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -14994,7 +14994,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_empty(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_Clear(void * jarg1)
 {
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
 
@@ -15003,7 +15003,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -15029,7 +15029,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_getitem(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
     std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -15049,7 +15049,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_setitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_ContainsKey(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_ContainsKey(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -15066,7 +15066,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_ContainsKey(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Add(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_Add(void * jarg1, int jarg2, void * jarg3)
 {
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
     std::map< int,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -15095,7 +15095,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_Add(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_Remove(void * jarg1, int jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_Remove(void * jarg1, int jarg2)
 {
     unsigned int jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -15112,7 +15112,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Int_DoubleMatMap_Remove(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_create_iterator_begin(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_create_iterator_begin(void * jarg1)
 {
     void * jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -15125,7 +15125,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Int_DoubleMatMap_create_iterator_begin(void
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMatMap_get_next_key(void * jarg1, void * jarg2)
+SWIGEXPORT int SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_get_next_key(void * jarg1, void * jarg2)
 {
     int jresult ;
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
@@ -15140,7 +15140,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Int_DoubleMatMap_get_next_key(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Int_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2)
 {
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
     std::map< int,cv::Mat_< double >,std::less< int > >::iterator *arg2 = (std::map< int,cv::Mat_< double >,std::less< int > >::iterator *) 0 ;
@@ -15151,7 +15151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Int_DoubleMatMap_destroy_iterator(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMatMap(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Int_DoubleMatMap(void * jarg1)
 {
     std::map< int,cv::Mat_< double > > *arg1 = (std::map< int,cv::Mat_< double > > *) 0 ;
 
@@ -15160,7 +15160,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Int_DoubleMatMap(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Float_FloatMatMap__SWIG_0()
 {
     void * jresult ;
     std::map< float,cv::Mat_< float > > *result = 0 ;
@@ -15171,7 +15171,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Float_FloatMatMap__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::map< float,cv::Mat_< float >,std::less< float > > *arg1 = 0 ;
@@ -15189,7 +15189,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Float_FloatMatMap__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMatMap_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_size(void * jarg1)
 {
     unsigned long jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15202,7 +15202,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Float_FloatMatMap_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_empty(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_empty(void * jarg1)
 {
     unsigned int jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15215,7 +15215,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_empty(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_Clear(void * jarg1)
 {
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
 
@@ -15224,7 +15224,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_getitem(void * jarg1, float jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_getitem(void * jarg1, float jarg2)
 {
     void * jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15250,7 +15250,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_getitem(void * jarg1, flo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_setitem(void * jarg1, float jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_setitem(void * jarg1, float jarg2, void * jarg3)
 {
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
     std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
@@ -15270,7 +15270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_setitem(void * jarg1, float
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_ContainsKey(void * jarg1, float jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_ContainsKey(void * jarg1, float jarg2)
 {
     unsigned int jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15287,7 +15287,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_ContainsKey(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Add(void * jarg1, float jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_Add(void * jarg1, float jarg2, void * jarg3)
 {
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
     std::map< float,cv::Mat_< float > >::key_type *arg2 = 0 ;
@@ -15316,7 +15316,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_Add(void * jarg1, float jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_Remove(void * jarg1, float jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_Remove(void * jarg1, float jarg2)
 {
     unsigned int jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15333,7 +15333,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Float_FloatMatMap_Remove(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_create_iterator_begin(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_create_iterator_begin(void * jarg1)
 {
     void * jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15346,7 +15346,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Float_FloatMatMap_create_iterator_begin(voi
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMatMap_get_next_key(void * jarg1, void * jarg2)
+SWIGEXPORT float SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_get_next_key(void * jarg1, void * jarg2)
 {
     float jresult ;
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
@@ -15361,7 +15361,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Float_FloatMatMap_get_next_key(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_destroy_iterator(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Float_FloatMatMap_destroy_iterator(void * jarg1, void * jarg2)
 {
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
     std::map< float,cv::Mat_< float >,std::less< float > >::iterator *arg2 = (std::map< float,cv::Mat_< float >,std::less< float > >::iterator *) 0 ;
@@ -15372,7 +15372,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Float_FloatMatMap_destroy_iterator(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMatMap(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Float_FloatMatMap(void * jarg1)
 {
     std::map< float,cv::Mat_< float > > *arg1 = (std::map< float,cv::Mat_< float > > *) 0 ;
 
@@ -15381,7 +15381,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Float_FloatMatMap(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Double_DoubleMatMap__SWIG_0()
 {
     void * jresult ;
     std::map< double,cv::Mat_< double > > *result = 0 ;
@@ -15392,7 +15392,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_Double_DoubleMatMap__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::map< double,cv::Mat_< double >,std::less< double > > *arg1 = 0 ;
@@ -15410,7 +15410,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Double_DoubleMatMap__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMatMap_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_size(void * jarg1)
 {
     unsigned long jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15423,7 +15423,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Double_DoubleMatMap_size(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_empty(void * jarg1)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_empty(void * jarg1)
 {
     unsigned int jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15436,7 +15436,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_empty(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_Clear(void * jarg1)
 {
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
 
@@ -15445,7 +15445,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_getitem(void * jarg1, double jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_getitem(void * jarg1, double jarg2)
 {
     void * jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15471,7 +15471,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_getitem(void * jarg1, d
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_setitem(void * jarg1, double jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_setitem(void * jarg1, double jarg2, void * jarg3)
 {
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
     std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -15491,7 +15491,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_setitem(void * jarg1, dou
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_ContainsKey(void * jarg1, double jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_ContainsKey(void * jarg1, double jarg2)
 {
     unsigned int jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15508,7 +15508,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_ContainsKey(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Add(void * jarg1, double jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_Add(void * jarg1, double jarg2, void * jarg3)
 {
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
     std::map< double,cv::Mat_< double > >::key_type *arg2 = 0 ;
@@ -15537,7 +15537,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_Add(void * jarg1, double 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_Remove(void * jarg1, double jarg2)
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_Remove(void * jarg1, double jarg2)
 {
     unsigned int jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15554,7 +15554,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Double_DoubleMatMap_Remove(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_create_iterator_begin(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_create_iterator_begin(void * jarg1)
 {
     void * jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15567,7 +15567,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Double_DoubleMatMap_create_iterator_begin(v
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMatMap_get_next_key(void * jarg1, void * jarg2)
+SWIGEXPORT double SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_get_next_key(void * jarg1, void * jarg2)
 {
     double jresult ;
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
@@ -15582,7 +15582,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Double_DoubleMatMap_get_next_key(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_Double_DoubleMatMap_destroy_iterator(void * jarg1, void * jarg2)
 {
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
     std::map< double,cv::Mat_< double >,std::less< double > >::iterator *arg2 = (std::map< double,cv::Mat_< double >,std::less< double > >::iterator *) 0 ;
@@ -15593,7 +15593,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Double_DoubleMatMap_destroy_iterator(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMatMap(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_Double_DoubleMatMap(void * jarg1)
 {
     std::map< double,cv::Mat_< double > > *arg1 = (std::map< double,cv::Mat_< double > > *) 0 ;
 
@@ -15602,7 +15602,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Double_DoubleMatMap(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Clear(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
 
@@ -15611,7 +15611,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     std::vector< cv::Mat_< int > > *arg2 = 0 ;
@@ -15627,7 +15627,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Add(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -15640,7 +15640,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -15653,7 +15653,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_IntMatList2N_capacity(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< int > > >::size_type arg2 ;
@@ -15664,7 +15664,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_reserve(void * jarg1, unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList2N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *result = 0 ;
@@ -15675,7 +15675,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList2N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = 0 ;
@@ -15693,7 +15693,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_IntMatList2N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -15715,7 +15715,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IntMatList2N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -15739,7 +15739,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitemcopy(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -15763,7 +15763,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_getitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -15790,7 +15790,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_setitem(void * jarg1, int jarg2,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< int > > > *arg2 = 0 ;
@@ -15806,7 +15806,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_AddRange(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
@@ -15837,7 +15837,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_GetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -15864,7 +15864,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Insert(void * jarg1, int jarg2, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -15891,7 +15891,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_InsertRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -15911,7 +15911,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveAt(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -15938,7 +15938,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_RemoveRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< int > > *arg1 = 0 ;
@@ -15967,7 +15967,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_IntMatList2N_Repeat(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
 
@@ -15976,7 +15976,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -16003,7 +16003,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_Reverse__SWIG_1(void * jarg1, in
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_IntMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
     int arg2 ;
@@ -16030,7 +16030,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_IntMatList2N_SetRange(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList2N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_IntMatList2N(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< int > > > *arg1 = (std::vector< std::vector< cv::Mat_< int > > > *) 0 ;
 
@@ -16039,7 +16039,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IntMatList2N(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Clear(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
 
@@ -16048,7 +16048,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     std::vector< cv::Mat_< double > > *arg2 = 0 ;
@@ -16064,7 +16064,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Add(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -16077,7 +16077,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -16090,7 +16090,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_DoubleMatList2N_capacity(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< double > > >::size_type arg2 ;
@@ -16101,7 +16101,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_reserve(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList2N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *result = 0 ;
@@ -16112,7 +16112,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList2N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = 0 ;
@@ -16130,7 +16130,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_DoubleMatList2N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -16152,7 +16152,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DoubleMatList2N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -16176,7 +16176,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitemcopy(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -16200,7 +16200,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_getitem(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16227,7 +16227,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_setitem(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< double > > > *arg2 = 0 ;
@@ -16243,7 +16243,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_AddRange(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
@@ -16274,7 +16274,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_GetRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16301,7 +16301,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Insert(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16328,7 +16328,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_InsertRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16348,7 +16348,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveAt(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16375,7 +16375,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_RemoveRange(void * jarg1, int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< double > > *arg1 = 0 ;
@@ -16404,7 +16404,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DoubleMatList2N_Repeat(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
 
@@ -16413,7 +16413,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16440,7 +16440,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_Reverse__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_DoubleMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
     int arg2 ;
@@ -16467,7 +16467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DoubleMatList2N_SetRange(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList2N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_DoubleMatList2N(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< double > > > *arg1 = (std::vector< std::vector< cv::Mat_< double > > > *) 0 ;
 
@@ -16476,7 +16476,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DoubleMatList2N(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Clear(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Clear(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
 
@@ -16485,7 +16485,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Clear(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Add(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Add(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     std::vector< cv::Mat_< float > > *arg2 = 0 ;
@@ -16501,7 +16501,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Add(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_size(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_size(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -16514,7 +16514,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_capacity(void * jarg1)
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_capacity(void * jarg1)
 {
     unsigned long jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -16527,7 +16527,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_FloatMatList2N_capacity(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_reserve(void * jarg1, unsigned long jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_reserve(void * jarg1, unsigned long jarg2)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< float > > >::size_type arg2 ;
@@ -16538,7 +16538,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_reserve(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_0()
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList2N__SWIG_0()
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *result = 0 ;
@@ -16549,7 +16549,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_0()
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_1(void * jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList2N__SWIG_1(void * jarg1)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = 0 ;
@@ -16567,7 +16567,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_1(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_2(int jarg1)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_new_FloatMatList2N__SWIG_2(int jarg1)
 {
     void * jresult ;
     int arg1 ;
@@ -16589,7 +16589,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FloatMatList2N__SWIG_2(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitemcopy(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_getitemcopy(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -16613,7 +16613,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitemcopy(void * jarg1, in
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitem(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_getitem(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -16637,7 +16637,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_getitem(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_setitem(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16664,7 +16664,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_setitem(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_AddRange(void * jarg1, void * jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_AddRange(void * jarg1, void * jarg2)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     std::vector< std::vector< cv::Mat_< float > > > *arg2 = 0 ;
@@ -16680,7 +16680,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_AddRange(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_GetRange(void * jarg1, int jarg2, int jarg3)
 {
     void * jresult ;
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
@@ -16711,7 +16711,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_GetRange(void * jarg1, int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Insert(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16738,7 +16738,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Insert(void * jarg1, int jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_InsertRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16765,7 +16765,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_InsertRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveAt(void * jarg1, int jarg2)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_RemoveAt(void * jarg1, int jarg2)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16785,7 +16785,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveAt(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_RemoveRange(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16812,7 +16812,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_RemoveRange(void * jarg1, int 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_Repeat(void * jarg1, int jarg2)
+SWIGEXPORT void * SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Repeat(void * jarg1, int jarg2)
 {
     void * jresult ;
     std::vector< cv::Mat_< float > > *arg1 = 0 ;
@@ -16841,7 +16841,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FloatMatList2N_Repeat(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_0(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Reverse__SWIG_0(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
 
@@ -16850,7 +16850,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_0(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16877,7 +16877,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_Reverse__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_FloatMatList2N_SetRange(void * jarg1, int jarg2, void * jarg3)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
     int arg2 ;
@@ -16904,7 +16904,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FloatMatList2N_SetRange(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FloatMatList2N(void * jarg1)
+SWIGEXPORT void SWIGSTDCALL CSharp_LandmarkDetector_delete_FloatMatList2N(void * jarg1)
 {
     std::vector< std::vector< cv::Mat_< float > > > *arg1 = (std::vector< std::vector< cv::Mat_< float > > > *) 0 ;
 
