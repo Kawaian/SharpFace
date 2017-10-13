@@ -8,341 +8,345 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class Float_FloatMatMap : global::System.IDisposable
-    , global::System.Collections.Generic.IDictionary<float, SWIGTYPE_p_cv__Mat_T_float_t>
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-    protected bool swigCMemOwn;
 
-    internal Float_FloatMatMap(global::System.IntPtr cPtr, bool cMemoryOwn)
+    public class Float_FloatMatMap : global::System.IDisposable
+        , global::System.Collections.Generic.IDictionary<float, SWIGTYPE_p_cv__Mat_T_float_t>
     {
-        swigCMemOwn = cMemoryOwn;
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-    }
+        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        protected bool swigCMemOwn;
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Float_FloatMatMap obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
-
-    ~Float_FloatMatMap()
-    {
-        Dispose();
-    }
-
-    public virtual void Dispose()
-    {
-        lock(this)
+        internal Float_FloatMatMap(global::System.IntPtr cPtr, bool cMemoryOwn)
         {
-            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+        }
+
+        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Float_FloatMatMap obj)
+        {
+            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~Float_FloatMatMap()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            lock(this)
             {
-                if (swigCMemOwn)
+                if (swigCPtr.Handle != global::System.IntPtr.Zero)
                 {
-                    swigCMemOwn = false;
-                    LandmarkDetectorPINVOKE.delete_Float_FloatMatMap(swigCPtr);
+                    if (swigCMemOwn)
+                    {
+                        swigCMemOwn = false;
+                        LandmarkDetectorPINVOKE.delete_Float_FloatMatMap(swigCPtr);
+                    }
+                    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
                 }
-                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+                global::System.GC.SuppressFinalize(this);
             }
-            global::System.GC.SuppressFinalize(this);
-        }
-    }
-
-
-    public SWIGTYPE_p_cv__Mat_T_float_t this[float key]
-    {
-        get
-        {
-            return getitem(key);
         }
 
-        set
-        {
-            setitem(key, value);
-        }
-    }
 
-    public bool TryGetValue(float key, out SWIGTYPE_p_cv__Mat_T_float_t value)
-    {
-        if (this.ContainsKey(key))
-        {
-            value = this[key];
-            return true;
-        }
-        value = default(SWIGTYPE_p_cv__Mat_T_float_t);
-        return false;
-    }
-
-    public int Count
-    {
-        get
-        {
-            return (int)size();
-        }
-    }
-
-    public bool IsReadOnly
-    {
-        get
-        {
-            return false;
-        }
-    }
-
-    public global::System.Collections.Generic.ICollection<float> Keys
-    {
-        get
-        {
-            global::System.Collections.Generic.ICollection<float> keys = new global::System.Collections.Generic.List<float>();
-            int size = this.Count;
-            if (size > 0)
-            {
-                global::System.IntPtr iter = create_iterator_begin();
-                for (int i = 0; i < size; i++)
-                {
-                    keys.Add(get_next_key(iter));
-                }
-                destroy_iterator(iter);
-            }
-            return keys;
-        }
-    }
-
-    public global::System.Collections.Generic.ICollection<SWIGTYPE_p_cv__Mat_T_float_t> Values
-    {
-        get
-        {
-            global::System.Collections.Generic.ICollection<SWIGTYPE_p_cv__Mat_T_float_t> vals = new global::System.Collections.Generic.List<SWIGTYPE_p_cv__Mat_T_float_t>();
-            foreach (global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> pair in this)
-            {
-                vals.Add(pair.Value);
-            }
-            return vals;
-        }
-    }
-
-    public void Add(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
-    {
-        Add(item.Key, item.Value);
-    }
-
-    public bool Remove(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
-    {
-        if (Contains(item))
-        {
-            return Remove(item.Key);
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    public bool Contains(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
-    {
-        if (this[item.Key] == item.Value)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    public void CopyTo(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>[] array)
-    {
-        CopyTo(array, 0);
-    }
-
-    public void CopyTo(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>[] array, int arrayIndex)
-    {
-        if (array == null)
-            throw new global::System.ArgumentNullException("array");
-        if (arrayIndex < 0)
-            throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
-        if (array.Rank > 1)
-            throw new global::System.ArgumentException("Multi dimensional array.", "array");
-        if (arrayIndex+this.Count > array.Length)
-            throw new global::System.ArgumentException("Number of elements to copy is too large.");
-
-        global::System.Collections.Generic.IList<float> keyList = new global::System.Collections.Generic.List<float>(this.Keys);
-        for (int i = 0; i < keyList.Count; i++)
-        {
-            float currentKey = keyList[i];
-            array.SetValue(new global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>(currentKey, this[currentKey]), arrayIndex+i);
-        }
-    }
-
-    global::System.Collections.Generic.IEnumerator<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>> global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>>.GetEnumerator()
-    {
-        return new Float_FloatMatMapEnumerator(this);
-    }
-
-    global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
-    {
-        return new Float_FloatMatMapEnumerator(this);
-    }
-
-    public Float_FloatMatMapEnumerator GetEnumerator()
-    {
-        return new Float_FloatMatMapEnumerator(this);
-    }
-
-    // Type-safe enumerator
-    /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
-    /// whenever the collection is modified. This has been done for changes in the size of the
-    /// collection but not when one of the elements of the collection is modified as it is a bit
-    /// tricky to detect unmanaged code that modifies the collection under our feet.
-    public sealed class Float_FloatMatMapEnumerator : global::System.Collections.IEnumerator,
-        global::System.Collections.Generic.IEnumerator<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>>
-    {
-        private Float_FloatMatMap collectionRef;
-        private global::System.Collections.Generic.IList<float> keyCollection;
-        private int currentIndex;
-        private object currentObject;
-        private int currentSize;
-
-        public Float_FloatMatMapEnumerator(Float_FloatMatMap collection)
-        {
-            collectionRef = collection;
-            keyCollection = new global::System.Collections.Generic.List<float>(collection.Keys);
-            currentIndex = -1;
-            currentObject = null;
-            currentSize = collectionRef.Count;
-        }
-
-        // Type-safe iterator Current
-        public global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> Current
+        public SWIGTYPE_p_cv__Mat_T_float_t this[float key]
         {
             get
             {
-                if (currentIndex == -1)
-                    throw new global::System.InvalidOperationException("Enumeration not started.");
-                if (currentIndex > currentSize - 1)
-                    throw new global::System.InvalidOperationException("Enumeration finished.");
-                if (currentObject == null)
-                    throw new global::System.InvalidOperationException("Collection modified.");
-                return (global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>)currentObject;
+                return getitem(key);
+            }
+
+            set
+            {
+                setitem(key, value);
             }
         }
 
-        // Type-unsafe IEnumerator.Current
-        object global::System.Collections.IEnumerator.Current
+        public bool TryGetValue(float key, out SWIGTYPE_p_cv__Mat_T_float_t value)
+        {
+            if (this.ContainsKey(key))
+            {
+                value = this[key];
+                return true;
+            }
+            value = default(SWIGTYPE_p_cv__Mat_T_float_t);
+            return false;
+        }
+
+        public int Count
         {
             get
             {
-                return Current;
+                return (int)size();
             }
         }
 
-        public bool MoveNext()
+        public bool IsReadOnly
         {
-            int size = collectionRef.Count;
-            bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
-            if (moveOkay)
+            get
             {
-                currentIndex++;
-                float currentKey = keyCollection[currentIndex];
-                currentObject = new global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>(currentKey, collectionRef[currentKey]);
+                return false;
+            }
+        }
+
+        public global::System.Collections.Generic.ICollection<float> Keys
+        {
+            get
+            {
+                global::System.Collections.Generic.ICollection<float> keys = new global::System.Collections.Generic.List<float>();
+                int size = this.Count;
+                if (size > 0)
+                {
+                    global::System.IntPtr iter = create_iterator_begin();
+                    for (int i = 0; i < size; i++)
+                    {
+                        keys.Add(get_next_key(iter));
+                    }
+                    destroy_iterator(iter);
+                }
+                return keys;
+            }
+        }
+
+        public global::System.Collections.Generic.ICollection<SWIGTYPE_p_cv__Mat_T_float_t> Values
+        {
+            get
+            {
+                global::System.Collections.Generic.ICollection<SWIGTYPE_p_cv__Mat_T_float_t> vals = new global::System.Collections.Generic.List<SWIGTYPE_p_cv__Mat_T_float_t>();
+                foreach (global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> pair in this)
+                {
+                    vals.Add(pair.Value);
+                }
+                return vals;
+            }
+        }
+
+        public void Add(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
+        {
+            Add(item.Key, item.Value);
+        }
+
+        public bool Remove(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
+        {
+            if (Contains(item))
+            {
+                return Remove(item.Key);
             }
             else
             {
+                return false;
+            }
+        }
+
+        public bool Contains(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> item)
+        {
+            if (this[item.Key] == item.Value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void CopyTo(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>[] array)
+        {
+            CopyTo(array, 0);
+        }
+
+        public void CopyTo(global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>[] array, int arrayIndex)
+        {
+            if (array == null)
+                throw new global::System.ArgumentNullException("array");
+            if (arrayIndex < 0)
+                throw new global::System.ArgumentOutOfRangeException("arrayIndex", "Value is less than zero");
+            if (array.Rank > 1)
+                throw new global::System.ArgumentException("Multi dimensional array.", "array");
+            if (arrayIndex+this.Count > array.Length)
+                throw new global::System.ArgumentException("Number of elements to copy is too large.");
+
+            global::System.Collections.Generic.IList<float> keyList = new global::System.Collections.Generic.List<float>(this.Keys);
+            for (int i = 0; i < keyList.Count; i++)
+            {
+                float currentKey = keyList[i];
+                array.SetValue(new global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>(currentKey, this[currentKey]), arrayIndex+i);
+            }
+        }
+
+        global::System.Collections.Generic.IEnumerator<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>> global::System.Collections.Generic.IEnumerable<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>>.GetEnumerator()
+        {
+            return new Float_FloatMatMapEnumerator(this);
+        }
+
+        global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+        {
+            return new Float_FloatMatMapEnumerator(this);
+        }
+
+        public Float_FloatMatMapEnumerator GetEnumerator()
+        {
+            return new Float_FloatMatMapEnumerator(this);
+        }
+
+        // Type-safe enumerator
+        /// Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
+        /// whenever the collection is modified. This has been done for changes in the size of the
+        /// collection but not when one of the elements of the collection is modified as it is a bit
+        /// tricky to detect unmanaged code that modifies the collection under our feet.
+        public sealed class Float_FloatMatMapEnumerator : global::System.Collections.IEnumerator,
+            global::System.Collections.Generic.IEnumerator<global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>>
+        {
+            private Float_FloatMatMap collectionRef;
+            private global::System.Collections.Generic.IList<float> keyCollection;
+            private int currentIndex;
+            private object currentObject;
+            private int currentSize;
+
+            public Float_FloatMatMapEnumerator(Float_FloatMatMap collection)
+            {
+                collectionRef = collection;
+                keyCollection = new global::System.Collections.Generic.List<float>(collection.Keys);
+                currentIndex = -1;
+                currentObject = null;
+                currentSize = collectionRef.Count;
+            }
+
+            // Type-safe iterator Current
+            public global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t> Current
+            {
+                get
+                {
+                    if (currentIndex == -1)
+                        throw new global::System.InvalidOperationException("Enumeration not started.");
+                    if (currentIndex > currentSize - 1)
+                        throw new global::System.InvalidOperationException("Enumeration finished.");
+                    if (currentObject == null)
+                        throw new global::System.InvalidOperationException("Collection modified.");
+                    return (global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>)currentObject;
+                }
+            }
+
+            // Type-unsafe IEnumerator.Current
+            object global::System.Collections.IEnumerator.Current
+            {
+                get
+                {
+                    return Current;
+                }
+            }
+
+            public bool MoveNext()
+            {
+                int size = collectionRef.Count;
+                bool moveOkay = (currentIndex+1 < size) && (size == currentSize);
+                if (moveOkay)
+                {
+                    currentIndex++;
+                    float currentKey = keyCollection[currentIndex];
+                    currentObject = new global::System.Collections.Generic.KeyValuePair<float, SWIGTYPE_p_cv__Mat_T_float_t>(currentKey, collectionRef[currentKey]);
+                }
+                else
+                {
+                    currentObject = null;
+                }
+                return moveOkay;
+            }
+
+            public void Reset()
+            {
+                currentIndex = -1;
+                currentObject = null;
+                if (collectionRef.Count != currentSize)
+                {
+                    throw new global::System.InvalidOperationException("Collection modified.");
+                }
+            }
+
+            public void Dispose()
+            {
+                currentIndex = -1;
                 currentObject = null;
             }
-            return moveOkay;
         }
 
-        public void Reset()
+
+        public Float_FloatMatMap() : this(LandmarkDetectorPINVOKE.new_Float_FloatMatMap__SWIG_0(), true)
         {
-            currentIndex = -1;
-            currentObject = null;
-            if (collectionRef.Count != currentSize)
-            {
-                throw new global::System.InvalidOperationException("Collection modified.");
-            }
         }
 
-        public void Dispose()
+        public Float_FloatMatMap(Float_FloatMatMap other) : this(LandmarkDetectorPINVOKE.new_Float_FloatMatMap__SWIG_1(other.Pointer), true)
         {
-            currentIndex = -1;
-            currentObject = null;
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-    }
 
+        private uint size()
+        {
+            uint ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_size(swigCPtr);
+            return ret;
+        }
 
-    public Float_FloatMatMap() : this(LandmarkDetectorPINVOKE.new_Float_FloatMatMap__SWIG_0(), true)
-    {
-    }
+        public bool empty()
+        {
+            bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_empty(swigCPtr);
+            return ret;
+        }
 
-    public Float_FloatMatMap(Float_FloatMatMap other) : this(LandmarkDetectorPINVOKE.new_Float_FloatMatMap__SWIG_1(Float_FloatMatMap.getCPtr(other)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
+        public void Clear()
+        {
+            LandmarkDetectorPINVOKE.Float_FloatMatMap_Clear(swigCPtr);
+        }
 
-    private uint size()
-    {
-        uint ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_size(swigCPtr);
-        return ret;
-    }
+        private SWIGTYPE_p_cv__Mat_T_float_t getitem(float key)
+        {
+            SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.Float_FloatMatMap_getitem(swigCPtr, key), false);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            return ret;
+        }
 
-    public bool empty()
-    {
-        bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_empty(swigCPtr);
-        return ret;
-    }
+        private void setitem(float key, SWIGTYPE_p_cv__Mat_T_float_t x)
+        {
+            LandmarkDetectorPINVOKE.Float_FloatMatMap_setitem(swigCPtr, key, x.Pointer);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        }
 
-    public void Clear()
-    {
-        LandmarkDetectorPINVOKE.Float_FloatMatMap_Clear(swigCPtr);
-    }
+        public bool ContainsKey(float key)
+        {
+            bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_ContainsKey(swigCPtr, key);
+            return ret;
+        }
 
-    private SWIGTYPE_p_cv__Mat_T_float_t getitem(float key)
-    {
-        SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.Float_FloatMatMap_getitem(swigCPtr, key), false);
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-        return ret;
-    }
+        public void Add(float key, SWIGTYPE_p_cv__Mat_T_float_t val)
+        {
+            LandmarkDetectorPINVOKE.Float_FloatMatMap_Add(swigCPtr, key, val.Pointer);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        }
 
-    private void setitem(float key, SWIGTYPE_p_cv__Mat_T_float_t x)
-    {
-        LandmarkDetectorPINVOKE.Float_FloatMatMap_setitem(swigCPtr, key, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(x));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
+        public bool Remove(float key)
+        {
+            bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_Remove(swigCPtr, key);
+            return ret;
+        }
 
-    public bool ContainsKey(float key)
-    {
-        bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_ContainsKey(swigCPtr, key);
-        return ret;
-    }
+        private global::System.IntPtr create_iterator_begin()
+        {
+            global::System.IntPtr ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_create_iterator_begin(swigCPtr);
+            return ret;
+        }
 
-    public void Add(float key, SWIGTYPE_p_cv__Mat_T_float_t val)
-    {
-        LandmarkDetectorPINVOKE.Float_FloatMatMap_Add(swigCPtr, key, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(val));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
+        private float get_next_key(global::System.IntPtr swigiterator)
+        {
+            float ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_get_next_key(swigCPtr, swigiterator);
+            return ret;
+        }
 
-    public bool Remove(float key)
-    {
-        bool ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_Remove(swigCPtr, key);
-        return ret;
-    }
+        private void destroy_iterator(global::System.IntPtr swigiterator)
+        {
+            LandmarkDetectorPINVOKE.Float_FloatMatMap_destroy_iterator(swigCPtr, swigiterator);
+        }
 
-    private global::System.IntPtr create_iterator_begin()
-    {
-        global::System.IntPtr ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_create_iterator_begin(swigCPtr);
-        return ret;
-    }
-
-    private float get_next_key(global::System.IntPtr swigiterator)
-    {
-        float ret = LandmarkDetectorPINVOKE.Float_FloatMatMap_get_next_key(swigCPtr, swigiterator);
-        return ret;
-    }
-
-    private void destroy_iterator(global::System.IntPtr swigiterator)
-    {
-        LandmarkDetectorPINVOKE.Float_FloatMatMap_destroy_iterator(swigCPtr, swigiterator);
     }
 
 }

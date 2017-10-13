@@ -11,12 +11,12 @@
 namespace LandmarkDetector
 {
 
-    public class SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t
+    public class SWIGTYPE_p_float
     {
 
         private volatile System.IntPtr swigCPtr;
 
-        protected SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t()
+        protected SWIGTYPE_p_float()
         {
             swigCPtr = System.IntPtr.Zero;
         }

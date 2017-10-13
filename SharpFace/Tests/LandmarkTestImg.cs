@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using OpenCvSharp;
+using LandmarkDetector;
 
 namespace SharpFace.Tests
 {

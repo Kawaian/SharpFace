@@ -67,17 +67,26 @@ public class LandmarkDetector
         return ret;
     }
 
-    public static void get_video_input_output_params(StringList input_video_file, StringList output_files, StringList output_video_files, /* cstype */ out bool world_coordinates_pose, /*cstype*/ out string output_codec, StringList arguments)
+    public static void get_video_input_output_params(StringList input_video_file, StringList output_files, StringList output_video_files, SWIGTYPE_p_bool world_coordinates_pose, SWIGTYPE_p_std__string output_codec, StringList arguments)
     {
+<<<<<<< HEAD
         //LandmarkDetectorPINVOKE.get_video_input_output_params(StringList.getCPtr(input_video_file), StringList.getCPtr(output_files), StringList.getCPtr(output_video_files), out world_coordinates_pose, out output_codec, StringList.getCPtr(arguments));
         //if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         throw new System.Exception();
+=======
+        LandmarkDetectorPINVOKE.get_video_input_output_params(StringList.getCPtr(input_video_file), StringList.getCPtr(output_files), StringList.getCPtr(output_video_files), SWIGTYPE_p_bool.getCPtr(world_coordinates_pose), SWIGTYPE_p_std__string.getCPtr(output_codec), StringList.getCPtr(arguments));
+        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+>>>>>>> b13a6231d6e2e2ed6c77999a303ab040e69c0983
     }
 
-    public static void get_camera_params(/* cstype */ out int device, /* cstype */ out float fx, /* cstype */ out float fy, /* cstype */ out float cx, /* cstype */ out float cy, StringList arguments)
+    public static void get_camera_params(SWIGTYPE_p_int device, SWIGTYPE_p_float fx, SWIGTYPE_p_float fy, SWIGTYPE_p_float cx, SWIGTYPE_p_float cy, StringList arguments)
     {
+<<<<<<< HEAD
         throw new System.Exception();
         //LandmarkDetectorPINVOKE.get_camera_params(out device, out fx, out fy, out cx, out cy, StringList.getCPtr(arguments));
+=======
+        LandmarkDetectorPINVOKE.get_camera_params(SWIGTYPE_p_int.getCPtr(device), SWIGTYPE_p_float.getCPtr(fx), SWIGTYPE_p_float.getCPtr(fy), SWIGTYPE_p_float.getCPtr(cx), SWIGTYPE_p_float.getCPtr(cy), StringList.getCPtr(arguments));
+>>>>>>> b13a6231d6e2e2ed6c77999a303ab040e69c0983
         if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     }
 
@@ -254,18 +263,26 @@ public class LandmarkDetector
         return ret;
     }
 
-    public static bool DetectSingleFaceHOG(SWIGTYPE_p_cv__Rect_T_double_t o_region, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, /* cstype */ out double confidence, SWIGTYPE_p_cv__Point preference)
+    public static bool DetectSingleFaceHOG(SWIGTYPE_p_cv__Rect_T_double_t o_region, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, SWIGTYPE_p_double confidence, SWIGTYPE_p_cv__Point preference)
     {
+<<<<<<< HEAD
         throw new System.Exception();
         //bool ret = LandmarkDetectorPINVOKE.DetectSingleFaceHOG__SWIG_0(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(o_region), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), out confidence, SWIGTYPE_p_cv__Point.getCPtr(preference));
+=======
+        bool ret = LandmarkDetectorPINVOKE.DetectSingleFaceHOG__SWIG_0(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(o_region), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), SWIGTYPE_p_double.getCPtr(confidence), SWIGTYPE_p_cv__Point.getCPtr(preference));
+>>>>>>> b13a6231d6e2e2ed6c77999a303ab040e69c0983
         if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         //return ret;
     }
 
-    public static bool DetectSingleFaceHOG(SWIGTYPE_p_cv__Rect_T_double_t o_region, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, /* cstype */ out double confidence)
+    public static bool DetectSingleFaceHOG(SWIGTYPE_p_cv__Rect_T_double_t o_region, SWIGTYPE_p_cv__Mat_T_uchar_t intensity, SWIGTYPE_p_dlib__frontal_face_detector classifier, SWIGTYPE_p_double confidence)
     {
+<<<<<<< HEAD
         throw new System.Exception();
         //bool ret = LandmarkDetectorPINVOKE.DetectSingleFaceHOG__SWIG_1(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(o_region), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), out confidence);
+=======
+        bool ret = LandmarkDetectorPINVOKE.DetectSingleFaceHOG__SWIG_1(SWIGTYPE_p_cv__Rect_T_double_t.getCPtr(o_region), SWIGTYPE_p_cv__Mat_T_uchar_t.getCPtr(intensity), SWIGTYPE_p_dlib__frontal_face_detector.getCPtr(classifier), SWIGTYPE_p_double.getCPtr(confidence));
+>>>>>>> b13a6231d6e2e2ed6c77999a303ab040e69c0983
         if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         //return ret;
     }

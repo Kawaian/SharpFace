@@ -8,338 +8,342 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class FaceModelParameters : global::System.IDisposable
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-    protected bool swigCMemOwn;
 
-    internal FaceModelParameters(global::System.IntPtr cPtr, bool cMemoryOwn)
+    public class FaceModelParameters : global::System.IDisposable
     {
-        swigCMemOwn = cMemoryOwn;
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-    }
+        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        protected bool swigCMemOwn;
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(FaceModelParameters obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
-
-    ~FaceModelParameters()
-    {
-        Dispose();
-    }
-
-    public virtual void Dispose()
-    {
-        lock(this)
+        internal FaceModelParameters(global::System.IntPtr cPtr, bool cMemoryOwn)
         {
-            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+        }
+
+        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(FaceModelParameters obj)
+        {
+            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~FaceModelParameters()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            lock(this)
             {
-                if (swigCMemOwn)
+                if (swigCPtr.Handle != global::System.IntPtr.Zero)
                 {
-                    swigCMemOwn = false;
-                    LandmarkDetectorPINVOKE.delete_FaceModelParameters(swigCPtr);
+                    if (swigCMemOwn)
+                    {
+                        swigCMemOwn = false;
+                        LandmarkDetectorPINVOKE.delete_FaceModelParameters(swigCPtr);
+                    }
+                    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
                 }
-                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+                global::System.GC.SuppressFinalize(this);
             }
-            global::System.GC.SuppressFinalize(this);
         }
-    }
 
-    public int num_optimisation_iteration
-    {
-        set
+        public int num_optimisation_iteration
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_num_optimisation_iteration_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_num_optimisation_iteration_set(swigCPtr, value);
+            }
+            get
+            {
+                int ret = LandmarkDetectorPINVOKE.FaceModelParameters_num_optimisation_iteration_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            int ret = LandmarkDetectorPINVOKE.FaceModelParameters_num_optimisation_iteration_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public bool limit_pose
-    {
-        set
+        public bool limit_pose
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_limit_pose_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_limit_pose_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_limit_pose_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_limit_pose_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public bool validate_detections
-    {
-        set
+        public bool validate_detections
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_validate_detections_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_validate_detections_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_validate_detections_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_validate_detections_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public double validation_boundary
-    {
-        set
+        public double validation_boundary
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_validation_boundary_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_validation_boundary_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.FaceModelParameters_validation_boundary_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.FaceModelParameters_validation_boundary_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public IntList window_sizes_small
-    {
-        set
+        public IntList window_sizes_small
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_set(swigCPtr, IntList.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_get(swigCPtr);
+                IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
+                return ret;
+            }
         }
-        get
-        {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_small_get(swigCPtr);
-            IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
-            return ret;
-        }
-    }
 
-    public IntList window_sizes_init
-    {
-        set
+        public IntList window_sizes_init
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_set(swigCPtr, IntList.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_get(swigCPtr);
+                IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
+                return ret;
+            }
         }
-        get
-        {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_init_get(swigCPtr);
-            IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
-            return ret;
-        }
-    }
 
-    public IntList window_sizes_current
-    {
-        set
+        public IntList window_sizes_current
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_set(swigCPtr, IntList.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_get(swigCPtr);
+                IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
+                return ret;
+            }
         }
-        get
-        {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.FaceModelParameters_window_sizes_current_get(swigCPtr);
-            IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
-            return ret;
-        }
-    }
 
-    public double face_template_scale
-    {
-        set
+        public double face_template_scale
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_face_template_scale_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_face_template_scale_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.FaceModelParameters_face_template_scale_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.FaceModelParameters_face_template_scale_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public bool use_face_template
-    {
-        set
+        public bool use_face_template
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_use_face_template_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_use_face_template_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_use_face_template_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_use_face_template_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public string model_location
-    {
-        set
+        public string model_location
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_model_location_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_model_location_set(swigCPtr, value);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            }
+            get
+            {
+                string ret = LandmarkDetectorPINVOKE.FaceModelParameters_model_location_get(swigCPtr);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+                return ret;
+            }
+        }
+
+        public double sigma
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_sigma_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.FaceModelParameters_sigma_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public double reg_factor
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_reg_factor_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.FaceModelParameters_reg_factor_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public double weight_factor
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_weight_factor_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.FaceModelParameters_weight_factor_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public bool multi_view
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_multi_view_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_multi_view_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public int reinit_video_every
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_reinit_video_every_set(swigCPtr, value);
+            }
+            get
+            {
+                int ret = LandmarkDetectorPINVOKE.FaceModelParameters_reinit_video_every_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public string face_detector_location
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_face_detector_location_set(swigCPtr, value);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            }
+            get
+            {
+                string ret = LandmarkDetectorPINVOKE.FaceModelParameters_face_detector_location_get(swigCPtr);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+                return ret;
+            }
+        }
+
+        public FaceModelParameters.FaceDetector curr_face_detector
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_curr_face_detector_set(swigCPtr, (int)value);
+            }
+            get
+            {
+                FaceModelParameters.FaceDetector ret = (FaceModelParameters.FaceDetector)LandmarkDetectorPINVOKE.FaceModelParameters_curr_face_detector_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public bool quiet_mode
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_quiet_mode_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_quiet_mode_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public bool refine_hierarchical
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_refine_hierarchical_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_refine_hierarchical_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public bool refine_parameters
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_refine_parameters_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_refine_parameters_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public bool track_gaze
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.FaceModelParameters_track_gaze_set(swigCPtr, value);
+            }
+            get
+            {
+                bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_track_gaze_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public FaceModelParameters() : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_0(), true)
+        {
+        }
+
+        public FaceModelParameters(StringList arguments) : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_1(arguments.Pointer), true)
+        {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
-        {
-            string ret = LandmarkDetectorPINVOKE.FaceModelParameters_model_location_get(swigCPtr);
-            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-            return ret;
-        }
-    }
 
-    public double sigma
-    {
-        set
+        public enum FaceDetector
         {
-            LandmarkDetectorPINVOKE.FaceModelParameters_sigma_set(swigCPtr, value);
+            HAAR_DETECTOR,
+            HOG_SVM_DETECTOR
         }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.FaceModelParameters_sigma_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public double reg_factor
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_reg_factor_set(swigCPtr, value);
-        }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.FaceModelParameters_reg_factor_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public double weight_factor
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_weight_factor_set(swigCPtr, value);
-        }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.FaceModelParameters_weight_factor_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public bool multi_view
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_multi_view_set(swigCPtr, value);
-        }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_multi_view_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public int reinit_video_every
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_reinit_video_every_set(swigCPtr, value);
-        }
-        get
-        {
-            int ret = LandmarkDetectorPINVOKE.FaceModelParameters_reinit_video_every_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public string face_detector_location
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_face_detector_location_set(swigCPtr, value);
-            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-        }
-        get
-        {
-            string ret = LandmarkDetectorPINVOKE.FaceModelParameters_face_detector_location_get(swigCPtr);
-            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-            return ret;
-        }
-    }
-
-    public FaceModelParameters.FaceDetector curr_face_detector
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_curr_face_detector_set(swigCPtr, (int)value);
-        }
-        get
-        {
-            FaceModelParameters.FaceDetector ret = (FaceModelParameters.FaceDetector)LandmarkDetectorPINVOKE.FaceModelParameters_curr_face_detector_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public bool quiet_mode
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_quiet_mode_set(swigCPtr, value);
-        }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_quiet_mode_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public bool refine_hierarchical
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_refine_hierarchical_set(swigCPtr, value);
-        }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_refine_hierarchical_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public bool refine_parameters
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_refine_parameters_set(swigCPtr, value);
-        }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_refine_parameters_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public bool track_gaze
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.FaceModelParameters_track_gaze_set(swigCPtr, value);
-        }
-        get
-        {
-            bool ret = LandmarkDetectorPINVOKE.FaceModelParameters_track_gaze_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public FaceModelParameters() : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_0(), true)
-    {
-    }
-
-    public FaceModelParameters(StringList arguments) : this(LandmarkDetectorPINVOKE.new_FaceModelParameters__SWIG_1(StringList.getCPtr(arguments)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public enum FaceDetector
-    {
-        HAAR_DETECTOR,
-        HOG_SVM_DETECTOR
     }
 
 }

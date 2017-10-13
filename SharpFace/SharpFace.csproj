@@ -35,76 +35,231 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="auto\CCNF_neuron.cs" />
-    <Compile Include="auto\CCNF_patch_expert.cs" />
-    <Compile Include="auto\CLNF.cs" />
-    <Compile Include="auto\CVDoubleRectList.cs" />
-    <Compile Include="auto\CVPoint2DList.cs" />
-    <Compile Include="auto\CVPoint2DPair.cs" />
-    <Compile Include="auto\CVPoint2DPairList.cs" />
-    <Compile Include="auto\CVPointList.cs" />
-    <Compile Include="auto\CVPointPair.cs" />
-    <Compile Include="auto\CVPointPairList.cs" />
-    <Compile Include="auto\DetectionValidator.cs" />
-    <Compile Include="auto\DoubleList.cs" />
-    <Compile Include="auto\DoubleMatList.cs" />
-    <Compile Include="auto\DoubleMatList2N.cs" />
-    <Compile Include="auto\Double_DoubleMatMap.cs" />
-    <Compile Include="auto\FaceModelParameters.cs" />
-    <Compile Include="auto\FloatList.cs" />
-    <Compile Include="auto\FloatList2N.cs" />
-    <Compile Include="auto\FloatList3N.cs" />
-    <Compile Include="auto\FloatMatList.cs" />
-    <Compile Include="auto\FloatMatList2N.cs" />
-    <Compile Include="auto\Float_FloatMatMap.cs" />
-    <Compile Include="auto\IntList.cs" />
-    <Compile Include="auto\IntList2N.cs" />
-    <Compile Include="auto\IntMatList.cs" />
-    <Compile Include="auto\IntMatList2N.cs" />
-    <Compile Include="auto\Int_DoubleMatMap.cs" />
-    <Compile Include="auto\Int_IntMatMap.cs" />
-    <Compile Include="auto\LandmarkDetector.cs" />
-    <Compile Include="auto\LandmarkDetectorPINVOKE.cs" />
-    <Compile Include="auto\Multi_SVR_patch_expert.cs" />
-    <Compile Include="auto\Patch_experts.cs" />
-    <Compile Include="auto\PDM.cs" />
-    <Compile Include="auto\StringList.cs" />
-    <Compile Include="auto\SVR_patch_expert.cs" />
-    <Compile Include="auto\SWIGTYPE_p_CLNF.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__CascadeClassifier.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Mat.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Matx22d.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Matx22f.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Matx33d.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Mat_T_double_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Mat_T_float_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Mat_T_int_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Mat_T_uchar_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Point.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Point2d.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Point_T_double_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Rect.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Rect_T_double_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Scalar.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Vec3d.cs" />
-    <Compile Include="auto\SWIGTYPE_p_cv__Vec6d.cs" />
-    <Compile Include="auto\SWIGTYPE_p_dlib__frontal_face_detector.cs" />
-    <Compile Include="auto\SWIGTYPE_p_FaceModelParameters.cs" />
-    <Compile Include="auto\SWIGTYPE_p_Patch_experts.cs" />
-    <Compile Include="auto\SWIGTYPE_p_PDM.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__ifstream.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_cv__Vec3d_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_FaceModelParameters_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__CLNF_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__SVR_patch_expert_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_PAW_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_cv__Vec3d_t_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_LandmarkDetector__CCNF_patch_expert_t_t_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.cs" />
-    <Compile Include="auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs" />
+    <Compile Include="..\swig\csfiles\CCNF_neuron.cs">
+      <Link>auto\CCNF_neuron.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CCNF_patch_expert.cs">
+      <Link>auto\CCNF_patch_expert.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CLNF.cs">
+      <Link>auto\CLNF.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVDoubleRectList.cs">
+      <Link>auto\CVDoubleRectList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPoint2DList.cs">
+      <Link>auto\CVPoint2DList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPoint2DPair.cs">
+      <Link>auto\CVPoint2DPair.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPoint2DPairList.cs">
+      <Link>auto\CVPoint2DPairList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPointList.cs">
+      <Link>auto\CVPointList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPointPair.cs">
+      <Link>auto\CVPointPair.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\CVPointPairList.cs">
+      <Link>auto\CVPointPairList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\DetectionValidator.cs">
+      <Link>auto\DetectionValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\DoubleList.cs">
+      <Link>auto\DoubleList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\DoubleMatList.cs">
+      <Link>auto\DoubleMatList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\DoubleMatList2N.cs">
+      <Link>auto\DoubleMatList2N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Double_DoubleMatMap.cs">
+      <Link>auto\Double_DoubleMatMap.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FaceModelParameters.cs">
+      <Link>auto\FaceModelParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FloatList.cs">
+      <Link>auto\FloatList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FloatList2N.cs">
+      <Link>auto\FloatList2N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FloatList3N.cs">
+      <Link>auto\FloatList3N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FloatMatList.cs">
+      <Link>auto\FloatMatList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\FloatMatList2N.cs">
+      <Link>auto\FloatMatList2N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Float_FloatMatMap.cs">
+      <Link>auto\Float_FloatMatMap.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\IntList.cs">
+      <Link>auto\IntList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\IntList2N.cs">
+      <Link>auto\IntList2N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\IntMatList.cs">
+      <Link>auto\IntMatList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\IntMatList2N.cs">
+      <Link>auto\IntMatList2N.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Int_DoubleMatMap.cs">
+      <Link>auto\Int_DoubleMatMap.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Int_IntMatMap.cs">
+      <Link>auto\Int_IntMatMap.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\LandmarkDetector.cs">
+      <Link>auto\LandmarkDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\LandmarkDetectorPINVOKE.cs">
+      <Link>auto\LandmarkDetectorPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Multi_SVR_patch_expert.cs">
+      <Link>auto\Multi_SVR_patch_expert.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\Patch_experts.cs">
+      <Link>auto\Patch_experts.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\PDM.cs">
+      <Link>auto\PDM.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\StringList.cs">
+      <Link>auto\StringList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SVR_patch_expert.cs">
+      <Link>auto\SVR_patch_expert.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_bool.cs">
+      <Link>auto\SWIGTYPE_p_bool.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_CLNF.cs">
+      <Link>auto\SWIGTYPE_p_CLNF.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__CascadeClassifier.cs">
+      <Link>auto\SWIGTYPE_p_cv__CascadeClassifier.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Mat.cs">
+      <Link>auto\SWIGTYPE_p_cv__Mat.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Matx22d.cs">
+      <Link>auto\SWIGTYPE_p_cv__Matx22d.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Matx22f.cs">
+      <Link>auto\SWIGTYPE_p_cv__Matx22f.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Matx33d.cs">
+      <Link>auto\SWIGTYPE_p_cv__Matx33d.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Mat_T_double_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Mat_T_double_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Mat_T_float_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Mat_T_float_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Mat_T_int_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Mat_T_int_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Mat_T_uchar_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Mat_T_uchar_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Point.cs">
+      <Link>auto\SWIGTYPE_p_cv__Point.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Point2d.cs">
+      <Link>auto\SWIGTYPE_p_cv__Point2d.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Point_T_double_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Point_T_double_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Rect.cs">
+      <Link>auto\SWIGTYPE_p_cv__Rect.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Rect_T_double_t.cs">
+      <Link>auto\SWIGTYPE_p_cv__Rect_T_double_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Scalar.cs">
+      <Link>auto\SWIGTYPE_p_cv__Scalar.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Vec3d.cs">
+      <Link>auto\SWIGTYPE_p_cv__Vec3d.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_cv__Vec6d.cs">
+      <Link>auto\SWIGTYPE_p_cv__Vec6d.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_dlib__frontal_face_detector.cs">
+      <Link>auto\SWIGTYPE_p_dlib__frontal_face_detector.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_double.cs">
+      <Link>auto\SWIGTYPE_p_double.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_FaceModelParameters.cs">
+      <Link>auto\SWIGTYPE_p_FaceModelParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_float.cs">
+      <Link>auto\SWIGTYPE_p_float.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_int.cs">
+      <Link>auto\SWIGTYPE_p_int.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_Patch_experts.cs">
+      <Link>auto\SWIGTYPE_p_Patch_experts.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_PDM.cs">
+      <Link>auto\SWIGTYPE_p_PDM.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__ifstream.cs">
+      <Link>auto\SWIGTYPE_p_std__ifstream.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__string.cs">
+      <Link>auto\SWIGTYPE_p_std__string.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_cv__Vec3d_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_cv__Vec3d_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_FaceModelParameters_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_FaceModelParameters_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_LandmarkDetector__CLNF_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__CLNF_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_LandmarkDetector__SVR_patch_expert_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_LandmarkDetector__SVR_patch_expert_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_PAW_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_PAW_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_cv__Vec3d_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_cv__Vec3d_t_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__pairT_int_int_t_t_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_LandmarkDetector__CCNF_patch_expert_t_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_LandmarkDetector__CCNF_patch_expert_t_t_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_Multi_SVR_patch_expert_t_t_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_cv__Mat_T_float_t_t_t_t_t.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs">
+      <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs</Link>
+    </Compile>
     <Compile Include="HandleRef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Exceptions.cs" />

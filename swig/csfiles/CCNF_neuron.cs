@@ -8,145 +8,149 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class CCNF_neuron : global::System.IDisposable
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-    protected bool swigCMemOwn;
 
-    internal CCNF_neuron(global::System.IntPtr cPtr, bool cMemoryOwn)
+    public class CCNF_neuron : global::System.IDisposable
     {
-        swigCMemOwn = cMemoryOwn;
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-    }
+        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        protected bool swigCMemOwn;
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CCNF_neuron obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
-
-    ~CCNF_neuron()
-    {
-        Dispose();
-    }
-
-    public virtual void Dispose()
-    {
-        lock(this)
+        internal CCNF_neuron(global::System.IntPtr cPtr, bool cMemoryOwn)
         {
-            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+        }
+
+        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CCNF_neuron obj)
+        {
+            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~CCNF_neuron()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            lock(this)
             {
-                if (swigCMemOwn)
+                if (swigCPtr.Handle != global::System.IntPtr.Zero)
                 {
-                    swigCMemOwn = false;
-                    LandmarkDetectorPINVOKE.delete_CCNF_neuron(swigCPtr);
+                    if (swigCMemOwn)
+                    {
+                        swigCMemOwn = false;
+                        LandmarkDetectorPINVOKE.delete_CCNF_neuron(swigCPtr);
+                    }
+                    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
                 }
-                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+                global::System.GC.SuppressFinalize(this);
             }
-            global::System.GC.SuppressFinalize(this);
         }
-    }
 
-    public int neuron_type
-    {
-        set
+        public int neuron_type
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_set(swigCPtr, value);
+            }
+            get
+            {
+                int ret = LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            int ret = LandmarkDetectorPINVOKE.CCNF_neuron_neuron_type_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public double norm_weights
-    {
-        set
+        public double norm_weights
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.CCNF_neuron_norm_weights_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public double bias
-    {
-        set
+        public double bias
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_bias_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_bias_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.CCNF_neuron_bias_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.CCNF_neuron_bias_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public SWIGTYPE_p_cv__Mat_T_float_t weights
-    {
-        set
+        public SWIGTYPE_p_cv__Mat_T_float_t weights
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_weights_set(swigCPtr, value.Pointer);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+            }
+            get
+            {
+                SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.CCNF_neuron_weights_get(swigCPtr), true);
+                if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+                return ret;
+            }
+        }
+
+        public Int_DoubleMatMap weights_dfts
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr);
+                Int_DoubleMatMap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMatMap(cPtr, false);
+                return ret;
+            }
+        }
+
+        public double alpha
+        {
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_neuron_alpha_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.CCNF_neuron_alpha_get(swigCPtr);
+                return ret;
+            }
+        }
+
+        public CCNF_neuron() : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_0(), true)
+        {
+        }
+
+        public CCNF_neuron(CCNF_neuron other) : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(other.Pointer), true)
+        {
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
+
+        public void Read(SWIGTYPE_p_std__ifstream stream)
         {
-            SWIGTYPE_p_cv__Mat_T_float_t ret = new SWIGTYPE_p_cv__Mat_T_float_t(LandmarkDetectorPINVOKE.CCNF_neuron_weights_get(swigCPtr), true);
+            LandmarkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, stream.Pointer);
             if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-            return ret;
         }
-    }
 
-    public Int_DoubleMatMap weights_dfts
-    {
-        set
+        public void Response(SWIGTYPE_p_cv__Mat_T_float_t im, SWIGTYPE_p_cv__Mat_T_double_t im_dft, SWIGTYPE_p_cv__Mat integral_img, SWIGTYPE_p_cv__Mat integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t resp)
         {
-            LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_set(swigCPtr, Int_DoubleMatMap.getCPtr(value));
+            LandmarkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, im.Pointer, im_dft.Pointer, integral_img.Pointer, integral_img_sq.Pointer, resp.Pointer);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
-        {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_neuron_weights_dfts_get(swigCPtr);
-            Int_DoubleMatMap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Int_DoubleMatMap(cPtr, false);
-            return ret;
-        }
-    }
 
-    public double alpha
-    {
-        set
-        {
-            LandmarkDetectorPINVOKE.CCNF_neuron_alpha_set(swigCPtr, value);
-        }
-        get
-        {
-            double ret = LandmarkDetectorPINVOKE.CCNF_neuron_alpha_get(swigCPtr);
-            return ret;
-        }
-    }
-
-    public CCNF_neuron() : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_0(), true)
-    {
-    }
-
-    public CCNF_neuron(CCNF_neuron other) : this(LandmarkDetectorPINVOKE.new_CCNF_neuron__SWIG_1(CCNF_neuron.getCPtr(other)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public void Read(SWIGTYPE_p_std__ifstream stream)
-    {
-        LandmarkDetectorPINVOKE.CCNF_neuron_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public void Response(SWIGTYPE_p_cv__Mat_T_float_t im, SWIGTYPE_p_cv__Mat_T_double_t im_dft, SWIGTYPE_p_cv__Mat integral_img, SWIGTYPE_p_cv__Mat integral_img_sq, SWIGTYPE_p_cv__Mat_T_float_t resp)
-    {
-        LandmarkDetectorPINVOKE.CCNF_neuron_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(im), SWIGTYPE_p_cv__Mat_T_double_t.getCPtr(im_dft), SWIGTYPE_p_cv__Mat.getCPtr(integral_img), SWIGTYPE_p_cv__Mat.getCPtr(integral_img_sq), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(resp));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     }
 
 }

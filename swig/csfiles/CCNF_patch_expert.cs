@@ -8,165 +8,169 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-
-public class CCNF_patch_expert : global::System.IDisposable
+namespace LandmarkDetector
 {
-    private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-    protected bool swigCMemOwn;
 
-    internal CCNF_patch_expert(global::System.IntPtr cPtr, bool cMemoryOwn)
+    public class CCNF_patch_expert : global::System.IDisposable
     {
-        swigCMemOwn = cMemoryOwn;
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-    }
+        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        protected bool swigCMemOwn;
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CCNF_patch_expert obj)
-    {
-        return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-    }
-
-    ~CCNF_patch_expert()
-    {
-        Dispose();
-    }
-
-    public virtual void Dispose()
-    {
-        lock(this)
+        internal CCNF_patch_expert(global::System.IntPtr cPtr, bool cMemoryOwn)
         {
-            if (swigCPtr.Handle != global::System.IntPtr.Zero)
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+        }
+
+        internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CCNF_patch_expert obj)
+        {
+            return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~CCNF_patch_expert()
+        {
+            Dispose();
+        }
+
+        public virtual void Dispose()
+        {
+            lock(this)
             {
-                if (swigCMemOwn)
+                if (swigCPtr.Handle != global::System.IntPtr.Zero)
                 {
-                    swigCMemOwn = false;
-                    LandmarkDetectorPINVOKE.delete_CCNF_patch_expert(swigCPtr);
+                    if (swigCMemOwn)
+                    {
+                        swigCMemOwn = false;
+                        LandmarkDetectorPINVOKE.delete_CCNF_patch_expert(swigCPtr);
+                    }
+                    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
                 }
-                swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+                global::System.GC.SuppressFinalize(this);
             }
-            global::System.GC.SuppressFinalize(this);
         }
-    }
 
-    public int width
-    {
-        set
+        public int width
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_width_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_width_set(swigCPtr, value);
+            }
+            get
+            {
+                int ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_width_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            int ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_width_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public int height
-    {
-        set
+        public int height
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_height_set(swigCPtr, value);
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_height_set(swigCPtr, value);
+            }
+            get
+            {
+                int ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_height_get(swigCPtr);
+                return ret;
+            }
         }
-        get
-        {
-            int ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_height_get(swigCPtr);
-            return ret;
-        }
-    }
 
-    public SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t neurons
-    {
-        set
+        public SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t neurons
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_set(swigCPtr, SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_get(swigCPtr);
+                SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t(cPtr, false);
+                return ret;
+            }
         }
-        get
-        {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_neurons_get(swigCPtr);
-            SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_LandmarkDetector__CCNF_neuron_t(cPtr, false);
-            return ret;
-        }
-    }
 
-    public IntList window_sizes
-    {
-        set
+        public IntList window_sizes
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_set(swigCPtr, IntList.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_get(swigCPtr);
+                IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
+                return ret;
+            }
         }
-        get
+
+        public FloatMatList Sigmas
         {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_window_sizes_get(swigCPtr);
-            IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, false);
-            return ret;
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_get(swigCPtr);
+                FloatMatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMatList(cPtr, false);
+                return ret;
+            }
         }
-    }
 
-    public FloatMatList Sigmas
-    {
-        set
+        public DoubleList betas
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_set(swigCPtr, FloatMatList.getCPtr(value));
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_set(swigCPtr, value.Pointer);
+            }
+            get
+            {
+                global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_get(swigCPtr);
+                DoubleList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleList(cPtr, false);
+                return ret;
+            }
         }
-        get
+
+        public double patch_confidence
         {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_Sigmas_get(swigCPtr);
-            FloatMatList ret = (cPtr == global::System.IntPtr.Zero) ? null : new FloatMatList(cPtr, false);
-            return ret;
+            set
+            {
+                LandmarkDetectorPINVOKE.CCNF_patch_expert_patch_confidence_set(swigCPtr, value);
+            }
+            get
+            {
+                double ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_patch_confidence_get(swigCPtr);
+                return ret;
+            }
         }
-    }
 
-    public DoubleList betas
-    {
-        set
+        public CCNF_patch_expert() : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_0(), true)
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_set(swigCPtr, DoubleList.getCPtr(value));
         }
-        get
+
+        public CCNF_patch_expert(CCNF_patch_expert other) : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_1(other.Pointer), true)
         {
-            global::System.IntPtr cPtr = LandmarkDetectorPINVOKE.CCNF_patch_expert_betas_get(swigCPtr);
-            DoubleList ret = (cPtr == global::System.IntPtr.Zero) ? null : new DoubleList(cPtr, false);
-            return ret;
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-    }
 
-    public double patch_confidence
-    {
-        set
+        public void Read(SWIGTYPE_p_std__ifstream stream, IntList window_sizes, FloatMatList2N sigma_components)
         {
-            LandmarkDetectorPINVOKE.CCNF_patch_expert_patch_confidence_set(swigCPtr, value);
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, stream.Pointer, window_sizes.Pointer, sigma_components.Pointer);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-        get
+
+        public void Response(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response)
         {
-            double ret = LandmarkDetectorPINVOKE.CCNF_patch_expert_patch_confidence_get(swigCPtr);
-            return ret;
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_Response(swigCPtr, area_of_interest.Pointer, response.Pointer);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
         }
-    }
 
-    public CCNF_patch_expert() : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_0(), true)
-    {
-    }
+        public void ComputeSigmas(FloatMatList sigma_components, int window_size)
+        {
+            LandmarkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, sigma_components.Pointer, window_size);
+            if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
+        }
 
-    public CCNF_patch_expert(CCNF_patch_expert other) : this(LandmarkDetectorPINVOKE.new_CCNF_patch_expert__SWIG_1(CCNF_patch_expert.getCPtr(other)), true)
-    {
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public void Read(SWIGTYPE_p_std__ifstream stream, IntList window_sizes, FloatMatList2N sigma_components)
-    {
-        LandmarkDetectorPINVOKE.CCNF_patch_expert_Read(swigCPtr, SWIGTYPE_p_std__ifstream.getCPtr(stream), IntList.getCPtr(window_sizes), FloatMatList2N.getCPtr(sigma_components));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public void Response(SWIGTYPE_p_cv__Mat_T_float_t area_of_interest, SWIGTYPE_p_cv__Mat_T_float_t response)
-    {
-        LandmarkDetectorPINVOKE.CCNF_patch_expert_Response(swigCPtr, SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(area_of_interest), SWIGTYPE_p_cv__Mat_T_float_t.getCPtr(response));
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
-    }
-
-    public void ComputeSigmas(FloatMatList sigma_components, int window_size)
-    {
-        LandmarkDetectorPINVOKE.CCNF_patch_expert_ComputeSigmas(swigCPtr, FloatMatList.getCPtr(sigma_components), window_size);
-        if (LandmarkDetectorPINVOKE.SWIGPendingException.Pending) throw LandmarkDetectorPINVOKE.SWIGPendingException.Retrieve();
     }
 
 }
