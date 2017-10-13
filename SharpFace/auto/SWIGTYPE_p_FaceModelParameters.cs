@@ -13,6 +13,11 @@ public class SWIGTYPE_p_FaceModelParameters
 {
     private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
+    public SWIGTYPE_p_FaceModelParameters(System.Runtime.InteropServices.HandleRef handle)
+    {
+        swigCPtr = handle;
+    }
+
     internal SWIGTYPE_p_FaceModelParameters(global::System.IntPtr cPtr, bool futureUse)
     {
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);

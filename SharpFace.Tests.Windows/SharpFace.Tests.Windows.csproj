@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OpenCvSharp\src\OpenCvSharp.Windows\OpenCvSharp.Windows.csproj">
+      <Project>{d7856971-d877-4cb1-a08c-c2a763ebfad1}</Project>
+      <Name>OpenCvSharp.Windows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharpFace.Windows\SharpFace.Windows.csproj">
       <Project>{7a473bf1-ae5d-47ff-878e-e49112561ca3}</Project>
       <Name>SharpFace.Windows</Name>

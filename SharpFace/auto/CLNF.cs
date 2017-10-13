@@ -20,7 +20,7 @@ public class CLNF : global::System.IDisposable
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
     }
 
-    internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CLNF obj)
+    public static global::System.Runtime.InteropServices.HandleRef getC0Ptr(CLNF obj)
     {
         return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
     }

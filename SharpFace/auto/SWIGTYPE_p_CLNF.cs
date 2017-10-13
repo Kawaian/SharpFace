@@ -13,6 +13,11 @@ public class SWIGTYPE_p_CLNF
 {
     private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
+    public SWIGTYPE_p_CLNF(System.Runtime.InteropServices.HandleRef swigCPtr)
+    {
+        this.swigCPtr = swigCPtr;
+    }
+
     internal SWIGTYPE_p_CLNF(global::System.IntPtr cPtr, bool futureUse)
     {
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);

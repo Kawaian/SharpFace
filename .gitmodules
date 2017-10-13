@@ -1,3 +1,6 @@
 [submodule "SharpFace.External"]
 	path = SharpFace.External
 	url = https://github.com/Kawaian/SharpFace.External.git
+[submodule "OpenCvSharp"]
+	path = OpenCvSharp
+	url = https://github.com/Kawaian/OpenCvSharp.git

@@ -10,7 +10,10 @@ namespace SharpFace.Tests.Windows
     {
         static void Main(string[] args)
         {
-            LandmarkDetector d = new LandmarkDetector();
+            LandmarkTestImg t = new LandmarkTestImg();
+            t.Run();
+            Console.Write("testfin");
+            Console.ReadLine();
         }
     }
 }
