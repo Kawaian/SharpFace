@@ -10,13 +10,14 @@ namespace SharpFace.Tests
 {
     public class LandmarkTestVid : TestBase
     {
+        public double SizeFactor = 2;
         public Size Size = new Size(320, 240);
 
         // Some globals for tracking timing information for visualisation
         double fps_tracker = -1.0;
         long t0 = 0;
 
-        unsafe void visualise_tracking(ref Mat captured_image, ref CLNF face_model, ref FaceModelParameters det_parameters, Point3f gazeDirection0, Point3f gazeDirection1, int frame_count, double fx, double fy, double cx, double cy)
+        unsafe void visualise_tracking(Mat captured_image, ref CLNF face_model, ref FaceModelParameters det_parameters, int frame_count, double fx, double fy, double cx, double cy)
         {
             //Drawing the facial landmarks on the face and the bounding box around it if tracking is successful and initialised
             double detection_certainty = face_model.detection_certainty;
@@ -47,12 +48,6 @@ namespace SharpFace.Tests
                 //Draw it in reddish if uncertain, blueish if certain
                 var color = new Scalar((1 - vis_certainty) * 255.0, 0, vis_certainty * 255);
                 LandmarkDetector.DrawBox(new SWIGTYPE_p_cv__Mat(captured_image.CvPtr), new SWIGTYPE_p_cv__Vec6d(new IntPtr(&pose_estimate_to_draw)), new SWIGTYPE_p_cv__Scalar(new IntPtr(&(color))), thickness, (float)fx, (float)fy, (float)cx, (float)cy);
-
-                if (det_parameters.track_gaze && detection_success && face_model.eye_model)
-                {
-                    //TODO: WTF
-                    //FaceAnalysis.DrawGaze(captured_image, face_model, gazeDirection0, gazeDirection1, fx, fy, cx, cy);
-                }
             }
 
             //Work out the framerate
@@ -64,13 +59,15 @@ namespace SharpFace.Tests
             }
 
             //Write out the framerate on the image before displaying it
-            string fpsSt = "FPS: " + fps_tracker;
+            string fpsSt = "FPS: " + Math.Round(fps_tracker).ToString("0.0");
             Cv2.PutText(captured_image, fpsSt, new Point(10, 20), HersheyFonts.HersheySimplex, 0.5, new Scalar(255, 0, 0));
 
             if (!det_parameters.quiet_mode)
             {
-                Cv2.NamedWindow("tracking_result", (WindowMode)1);
-                Cv2.ImShow("tracking_result", captured_image);
+                using (Mat resize = captured_image.Resize(new Size(Size.Width * SizeFactor, Size.Height * SizeFactor)))
+                {
+                    Cv2.ImShow("tracking_result", resize);
+                }
             }
         }
 
@@ -130,15 +127,6 @@ namespace SharpFace.Tests
                 VideoCapture video_capture;
                 if (current_file.Length > 0)
                 {
-                    //if (!boost::filesystem::exists(current_file))
-                    //{
-                    //    FATAL_STREAM("File does not exist");
-                    //    return 1;
-                    //}
-
-                    //current_file = boost::filesystem::path(current_file).generic_string();
-
-                    //INFO_STREAM("Attempting to read from file: " << current_file);
                     video_capture = new VideoCapture(current_file);
                 }
                 else
@@ -146,9 +134,6 @@ namespace SharpFace.Tests
                     INFO_STREAM("Attempting to capture from device: " + device);
                     video_capture = new VideoCapture(device);
 
-                    // Read a first frame often empty in camera
-                    //cv::Mat captured_image;
-                    //video_capture >> captured_image;
                     using (Mat dummy = new Mat())
                         video_capture.Read(dummy);
                 }
@@ -160,39 +145,41 @@ namespace SharpFace.Tests
                 }
                 else INFO_STREAM("Device or file opened");
 
-                Mat captured_image = new Mat();
-                video_capture.Read(captured_image);
-                captured_image = captured_image.Resize(Size);
-
-                // If optical centers are not defined just use center of image
-                if (cx_undefined)
-                {
-                    cx = captured_image.Cols / 2.0f;
-                    cy = captured_image.Rows / 2.0f;
-                }
-                // Use a rough guess-timate of focal length
-                if (fx_undefined)
-                {
-                    fx = (float)(500 * (captured_image.Cols / 640.0));
-                    fy = (float)(500 * (captured_image.Rows / 480.0));
-
-                    fx = (float)((fx + fy) / 2.0);
-                    fy = fx;
-                }
-
                 int frame_count = 0;
-
-                // saving the videos
+                Mat captured_image = new Mat();
                 VideoWriter writerFace = null;
-                if (output_video_files.Count != 0)
+
+                video_capture.Read(captured_image);
+                Size = new Size(captured_image.Width / SizeFactor, captured_image.Height / SizeFactor);
+                using (var resized_image = captured_image.Resize(Size))
                 {
-                    try
+                    // If optical centers are not defined just use center of image
+                    if (cx_undefined)
                     {
-                        writerFace = new VideoWriter(output_video_files[f_n], CV_FOURCC(output_codec[0], output_codec[1], output_codec[2], output_codec[3]), 30, captured_image.Size(), true);
+                        cx = resized_image.Cols / 2.0f;
+                        cy = resized_image.Rows / 2.0f;
                     }
-                    catch (Exception e)
+                    // Use a rough guess-timate of focal length
+                    if (fx_undefined)
                     {
-                        WARN_STREAM("Could not open VideoWriter, OUTPUT FILE WILL NOT BE WRITTEN. Currently using codec " + output_codec + ", try using an other one (-oc option)");
+                        fx = (float)(500 * (resized_image.Cols / 640.0));
+                        fy = (float)(500 * (resized_image.Rows / 480.0));
+
+                        fx = (float)((fx + fy) / 2.0);
+                        fy = fx;
+                    }
+
+                    // saving the videos
+                    if (output_video_files.Count != 0)
+                    {
+                        try
+                        {
+                            writerFace = new VideoWriter(output_video_files[f_n], CV_FOURCC(output_codec[0], output_codec[1], output_codec[2], output_codec[3]), 30, captured_image.Size(), true);
+                        }
+                        catch (Exception e)
+                        {
+                            WARN_STREAM("Could not open VideoWriter, OUTPUT FILE WILL NOT BE WRITTEN. Currently using codec " + output_codec + ", try using an other one (-oc option)");
+                        }
                     }
                 }
 
@@ -200,66 +187,56 @@ namespace SharpFace.Tests
                 long t_initial = Cv2.GetTickCount();
 
                 INFO_STREAM("Starting tracking");
-                while (!captured_image.Empty())
+                while (video_capture.Read(captured_image))
                 {
-
-                    // Reading the images
-                    MatOfByte grayscale_image = new MatOfByte();
-
-                    if (captured_image.Channels() == 3)
+                    using (var resized_image = captured_image.Resize(Size))
                     {
-                        Cv2.CvtColor(captured_image, grayscale_image, ColorConversionCodes.BGR2GRAY);
+                        // Reading the images
+                        MatOfByte grayscale_image = new MatOfByte();
+
+                        if (resized_image.Channels() == 3)
+                        {
+                            Cv2.CvtColor(resized_image, grayscale_image, ColorConversionCodes.BGR2GRAY);
+                        }
+                        else
+                        {
+                            grayscale_image = (MatOfByte)resized_image.Clone();
+                        }
+
+                        // The actual facial landmark detection / tracking
+                        bool detection_success = LandmarkDetector.DetectLandmarksInVideo(new SWIGTYPE_p_cv__Mat_T_uchar_t(grayscale_image.CvPtr), new SWIGTYPE_p_CLNF(CLNF.getCPtr(clnf_model)), new SWIGTYPE_p_FaceModelParameters(FaceModelParameters.getCPtr(det_parameters)));
+
+                        // Visualising the results
+                        // Drawing the facial landmarks on the face and the bounding box around it if tracking is successful and initialised
+                        double detection_certainty = clnf_model.detection_certainty;
+
+                        visualise_tracking(resized_image, ref clnf_model, ref det_parameters, frame_count, fx, fy, cx, cy);
+
+                        // output the tracked video
+                        if (output_video_files.Count != 0)
+                        {
+                            writerFace.Write(resized_image);
+                        }
+
+                        // detect key presses
+                        char character_press = (char)Cv2.WaitKey(1);
+
+                        // restart the tracker
+                        if (character_press == 'r')
+                        {
+                            clnf_model.Reset();
+                        }
+                        else if (character_press == 'q')
+                        {
+                            return (0);
+                        }
+
+                        // Update the frame count
+                        frame_count++;
+
+                        grayscale_image.Dispose();
+                        grayscale_image = null;
                     }
-                    else
-                    {
-                        grayscale_image = (MatOfByte)captured_image.Clone();
-                    }
-
-                    // The actual facial landmark detection / tracking
-                    bool detection_success = LandmarkDetector.DetectLandmarksInVideo(new SWIGTYPE_p_cv__Mat_T_uchar_t(grayscale_image.CvPtr), new SWIGTYPE_p_CLNF(CLNF.getCPtr(clnf_model)), new SWIGTYPE_p_FaceModelParameters(FaceModelParameters.getCPtr(det_parameters)));
-
-                    // Visualising the results
-                    // Drawing the facial landmarks on the face and the bounding box around it if tracking is successful and initialised
-                    double detection_certainty = clnf_model.detection_certainty;
-
-                    // Gaze tracking, absolute gaze direction
-                    Point3f gazeDirection0 = new Point3f(0, 0, -1);
-                    Point3f gazeDirection1 = new Point3f(0, 0, -1);
-
-                    if (det_parameters.track_gaze && detection_success && clnf_model.eye_model)
-                    {
-                        //TODO: WTF
-                        //FaceAnalysis.EstimateGaze(clnf_model, gazeDirection0, fx, fy, cx, cy, true);
-                        //FaceAnalysis.EstimateGaze(clnf_model, gazeDirection1, fx, fy, cx, cy, false);
-                    }
-
-                    visualise_tracking(ref captured_image, ref clnf_model, ref det_parameters, gazeDirection0, gazeDirection1, frame_count, fx, fy, cx, cy);
-
-                    // output the tracked video
-                    if (output_video_files.Count != 0)
-                    {
-                        writerFace.Write(captured_image);
-                    }
-                    
-                    video_capture.Read(captured_image);
-                    captured_image = captured_image.Resize(Size);
-
-                    // detect key presses
-                    char character_press = (char)Cv2.WaitKey(30);
-
-                    // restart the tracker
-                    if (character_press == 'r')
-                    {
-                        clnf_model.Reset();
-                    }
-                    // quit the application
-                    else if (character_press == 'q')
-                    {
-                        return (0);
-                    }
-
-                    // Update the frame count
-                    frame_count++;
                 }
 
                 frame_count = 0;

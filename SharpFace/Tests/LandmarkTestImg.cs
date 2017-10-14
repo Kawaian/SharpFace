@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenCvSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,7 +88,7 @@ namespace SharpFace.Tests
 
             //            cv::CascadeClassifier classifier(det_parameters.face_detector_location);
             //            dlib::frontal_face_detector face_detector_hog = dlib::get_frontal_face_detector();
-            OpenCvSharp.CascadeClassifier classifier = new OpenCvSharp.CascadeClassifier(detParameters.face_detector_location);
+            CascadeClassifier classifier = new CascadeClassifier(detParameters.face_detector_location);
             SWIGTYPE_p_dlib__frontal_face_detector faceDetectorHog;
 
             //            // Loading the AU prediction models

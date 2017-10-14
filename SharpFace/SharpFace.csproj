@@ -252,6 +252,8 @@
     <Compile Include="Exceptions.cs" />
     <Compile Include="Tests\LandmarkTestImg.cs" />
     <Compile Include="Tests\LandmarkTestVid.cs" />
+    <Compile Include="Tests\Logger.cs" />
+    <Compile Include="Tests\Profiler.cs" />
     <Compile Include="Tests\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,17 +11,17 @@ namespace SharpFace.Tests
     {
         protected void INFO_STREAM(string msg)
         {
-            Debug.WriteLine(msg);
+            Logger.Log(msg);
         }
 
         protected void FATAL_STREAM(string msg)
         {
-            Debug.WriteLine("[ERROR] " + msg);
+            Logger.Error("[ERROR] " + msg);
         }
 
         protected void WARN_STREAM(string msg)
         {
-            Debug.WriteLine("[WARN] " + msg);
+            Logger.Log("[WARN] " + msg);
         }
 
         protected int CV_FOURCC(char c1, char c2, char c3, char c4)
