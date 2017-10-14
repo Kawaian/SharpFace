@@ -34,7 +34,7 @@
     <ClCompile Include="src\LandmarkDetectorParameters.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="..\swig\SharpFace_wrap.cxx">
+    <ClCompile Include="..\swig\SharpFace_wrap_pch.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
