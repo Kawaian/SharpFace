@@ -104,7 +104,9 @@
       <Link>tbb_preview.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\x64\Debug\LandmarkDetector.dll">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\x64\Release\LandmarkDetector.dll">
       <Link>LandmarkDetector.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
