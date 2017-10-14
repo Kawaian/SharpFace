@@ -14,26 +14,44 @@ namespace SharpFace.Tests
         {
             //            //Convert arguments to more convenient vector form
             //            vector<string> arguments = get_arguments(argc, argv);
+            var arguments = new StringList { "./" };
 
             //            // Search paths
             //            boost::filesystem::path config_path = boost::filesystem::path(CONFIG_DIR);
             //            boost::filesystem::path parent_path = boost::filesystem::path(arguments[0]).parent_path();
+            var configPath = "some/config/path";
+            var parentPath = arguments[0];
+
 
             //            // Some initial parameters that can be overriden from command line
             //            vector<string> files, output_images, output_landmark_locations, output_pose_locations;
 
+            StringList files = new StringList(), 
+                       outputImages = new StringList(), 
+                       outputLandmarkLocations = new StringList(),
+                       outputPoseLocations = new StringList();
+
             //            // Bounding boxes for a face in each image (optional)
             //            vector<cv::Rect_<double>> bounding_boxes;
+            CVDoubleRectList boundingBoxes = new CVDoubleRectList();
 
             //            LandmarkDetector::get_image_input_output_params(files, output_landmark_locations, output_pose_locations, output_images, bounding_boxes, arguments);
+            LandmarkDetector.get_image_input_output_params(files, outputLandmarkLocations, outputPoseLocations, outputImages, boundingBoxes, arguments);
+
             //            LandmarkDetector::FaceModelParameters det_parameters(arguments);
+            FaceModelParameters detParameters = new FaceModelParameters(arguments);
+
             //            // No need to validate detections, as we're not doing tracking
             //            det_parameters.validate_detections = false;
+            detParameters.validate_detections = false;
 
             //            // Grab camera parameters if provided (only used for pose and eye gaze and are quite important for accurate estimates)
             //            float fx = 0, fy = 0, cx = 0, cy = 0;
             //            int device = -1;
             //            LandmarkDetector::get_camera_params(device, fx, fy, cx, cy, arguments);
+            float fx = 0, fy = 0, cx = 0, cy = 0;
+            int device = -1;
+            LandmarkDetector.get_camera_params(out device, out fx, out fy, out cx, out cy, arguments);
 
             //            // If cx (optical axis centre) is undefined will use the image size/2 as an estimate
             //            bool cx_undefined = false;
@@ -47,18 +65,38 @@ namespace SharpFace.Tests
             //                fx_undefined = true;
             //            }
 
+            bool cx_undefined = false;
+            bool fx_undefined = false;
+
+            if (cx == 0 || cy == 0)
+                cx_undefined = true;
+            if (fx == 0 || fy == 0)
+                fx_undefined = true;
+
+
             //            // The modules that are being used for tracking
             //            cout << "Loading the model" << endl;
             //            LandmarkDetector::CLNF clnf_model(det_parameters.model_location);
             //            cout << "Model loaded" << endl;
 
+            INFO_STREAM("Loading the model");
+            CLNF clnfModel = new CLNF(detParameters.model_location);
+            INFO_STREAM("Model loaded");
+
+            // TODO: dlib::frontal_face_detector ??? NANI ???
+
             //            cv::CascadeClassifier classifier(det_parameters.face_detector_location);
             //            dlib::frontal_face_detector face_detector_hog = dlib::get_frontal_face_detector();
+            OpenCvSharp.CascadeClassifier classifier = new OpenCvSharp.CascadeClassifier(detParameters.face_detector_location);
+            SWIGTYPE_p_dlib__frontal_face_detector faceDetectorHog;
 
             //            // Loading the AU prediction models
             //            string au_loc = "AU_predictors/AU_all_static.txt";
+            string auLoc = "AU_predictors/AU_all_static.txt";
 
             //            boost::filesystem::path au_loc_path = boost::filesystem::path(au_loc);
+            
+
             //            if (boost::filesystem::exists(au_loc_path))
             //            {
             //                au_loc = au_loc_path.string();
