@@ -48,7 +48,11 @@ namespace SharpFace
 
         public void Draw(Mat mat)
         {
-
+            var list = LandmarkDetector.CalculateLandmarks(Model);
+            foreach (var item in list)
+            {
+                var pt = item.ToPoint2d();
+            }
         }
 
         public void Load()
