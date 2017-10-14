@@ -166,12 +166,10 @@ void Patch_experts::Response(vector<cv::Mat_<float> >& patch_expert_responses, c
 	tbb::parallel_for(0, (int)n, [&](int i){
 	//for(int i = 0; i < n; i++)
 	{
-			
 		if(visibilities[scale][view_id].rows == n)
 		{
 			if(visibilities[scale][view_id].at<int>(i,0) != 0)
 			{
-
 				// Work out how big the area of interest has to be to get a response of window size
 				int area_of_interest_width;
 				int area_of_interest_height;

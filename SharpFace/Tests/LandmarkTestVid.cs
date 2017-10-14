@@ -10,7 +10,7 @@ namespace SharpFace.Tests
 {
     public class LandmarkTestVid : TestBase
     {
-        public double SizeFactor = 2;
+        public double SizeFactor = 1;
         public Size Size = new Size(320, 240);
 
         // Some globals for tracking timing information for visualisation
@@ -34,7 +34,6 @@ namespace SharpFace.Tests
                 if (vis_certainty > 1)
                     vis_certainty = 1;
                 if (vis_certainty < -1)
-
                     vis_certainty = -1;
 
                 vis_certainty = (vis_certainty + 1) / (visualisation_boundary + 1);
@@ -58,16 +57,11 @@ namespace SharpFace.Tests
                 t0 = (long)t1;
             }
 
-            //Write out the framerate on the image before displaying it
-            string fpsSt = "FPS: " + Math.Round(fps_tracker).ToString("0.0");
-            Cv2.PutText(captured_image, fpsSt, new Point(10, 20), HersheyFonts.HersheySimplex, 0.5, new Scalar(255, 0, 0));
-
-            if (!det_parameters.quiet_mode)
+            using (Mat resize = captured_image.Resize(new Size(Size.Width * SizeFactor, Size.Height * SizeFactor)))
             {
-                using (Mat resize = captured_image.Resize(new Size(Size.Width * SizeFactor, Size.Height * SizeFactor)))
-                {
-                    Cv2.ImShow("tracking_result", resize);
-                }
+                string fpsSt = "FPS: " + Math.Round(fps_tracker).ToString("0.0");
+                Cv2.PutText(captured_image, fpsSt, new Point(10, 20), HersheyFonts.HersheyPlain, 0.5, new Scalar(0, 255, 0), 2, LineTypes.AntiAlias);
+                Cv2.ImShow("tracking_result", resize);
             }
         }
 
@@ -101,42 +95,12 @@ namespace SharpFace.Tests
                 fx_undefined = true;
             }
 
-            // If multiple video files are tracked, use this to indicate if we are done
-            bool done = false;
-            int f_n = -1;
-
-            det_parameters.track_gaze = true;
-
-            while (!done) // this is not a for loop as we might also be reading from a webcam
+            //// Do some grabbing
+            INFO_STREAM("Attempting to capture from device: " + device);
+            using (VideoCapture video_capture = new VideoCapture(device))
             {
-                string current_file = "";
-
-                //// We might specify multiple video files as arguments
-                if (files.Count > 0)
-                {
-                    f_n++;
-                    current_file = files[f_n];
-                }
-                else
-                {
-                    // If we want to write out from webcam
-                    f_n = 0;
-                }
-
-                //// Do some grabbing
-                VideoCapture video_capture;
-                if (current_file.Length > 0)
-                {
-                    video_capture = new VideoCapture(current_file);
-                }
-                else
-                {
-                    INFO_STREAM("Attempting to capture from device: " + device);
-                    video_capture = new VideoCapture(device);
-
-                    using (Mat dummy = new Mat())
-                        video_capture.Read(dummy);
-                }
+                using (Mat dummy = new Mat())
+                    video_capture.Read(dummy);
 
                 if (!video_capture.IsOpened())
                 {
@@ -147,8 +111,6 @@ namespace SharpFace.Tests
 
                 int frame_count = 0;
                 Mat captured_image = new Mat();
-                VideoWriter writerFace = null;
-
                 video_capture.Read(captured_image);
                 Size = new Size(captured_image.Width / SizeFactor, captured_image.Height / SizeFactor);
                 using (var resized_image = captured_image.Resize(Size))
@@ -167,19 +129,6 @@ namespace SharpFace.Tests
 
                         fx = (float)((fx + fy) / 2.0);
                         fy = fx;
-                    }
-
-                    // saving the videos
-                    if (output_video_files.Count != 0)
-                    {
-                        try
-                        {
-                            writerFace = new VideoWriter(output_video_files[f_n], CV_FOURCC(output_codec[0], output_codec[1], output_codec[2], output_codec[3]), 30, captured_image.Size(), true);
-                        }
-                        catch (Exception e)
-                        {
-                            WARN_STREAM("Could not open VideoWriter, OUTPUT FILE WILL NOT BE WRITTEN. Currently using codec " + output_codec + ", try using an other one (-oc option)");
-                        }
                     }
                 }
 
@@ -212,12 +161,6 @@ namespace SharpFace.Tests
 
                         visualise_tracking(resized_image, ref clnf_model, ref det_parameters, frame_count, fx, fy, cx, cy);
 
-                        // output the tracked video
-                        if (output_video_files.Count != 0)
-                        {
-                            writerFace.Write(resized_image);
-                        }
-
                         // detect key presses
                         char character_press = (char)Cv2.WaitKey(1);
 
@@ -228,7 +171,7 @@ namespace SharpFace.Tests
                         }
                         else if (character_press == 'q')
                         {
-                            return (0);
+                            return 0;
                         }
 
                         // Update the frame count
@@ -237,17 +180,6 @@ namespace SharpFace.Tests
                         grayscale_image.Dispose();
                         grayscale_image = null;
                     }
-                }
-
-                frame_count = 0;
-
-                // Reset the model, for the next video
-                clnf_model.Reset();
-
-                // break out of the loop if done with all the files (or using a webcam)
-                if (f_n == files.Count - 1 || files.Count != 0)
-                {
-                    done = true;
                 }
             }
 

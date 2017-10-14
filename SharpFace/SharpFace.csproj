@@ -248,10 +248,12 @@
       <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs</Link>
     </Compile>
     <Compile Include="HandleRef.cs" />
+    <Compile Include="LandmarkDetectorWrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Tests\LandmarkTestImg.cs" />
     <Compile Include="Tests\LandmarkTestVid.cs" />
+    <Compile Include="Tests\LandmarkWrapperTest.cs" />
     <Compile Include="Tests\Logger.cs" />
     <Compile Include="Tests\Profiler.cs" />
     <Compile Include="Tests\TestBase.cs" />

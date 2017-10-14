@@ -1038,7 +1038,6 @@ void Draw(cv::Mat img, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& vis
 {
 	int n = shape2D.rows/2;
 	
-
 	// Drawing feature points
 	if(n >= 66)
 	{
@@ -1054,7 +1053,6 @@ void Draw(cv::Mat img, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& vis
 
 				cv::circle(img, featurePoint, 1 * draw_multiplier, cv::Scalar(0, 0, 255), thickness, CV_AA, draw_shiftbits);
 				cv::circle(img, featurePoint, 1 * draw_multiplier, cv::Scalar(255, 0, 0), thickness_2, CV_AA, draw_shiftbits);
-
 			}
 		}
 	}
@@ -1145,7 +1143,6 @@ void Draw(cv::Mat img, const cv::Mat_<double>& shape2D)
 // Drawing detected landmarks on a face image
 void Draw(cv::Mat img, const CLNF& clnf_model)
 {
-
 	int idx = clnf_model.patch_experts.GetViewIdx(clnf_model.params_global, 0);
 
 	// Because we only draw visible points, need to find which points patch experts consider visible at a certain orientation
@@ -1164,8 +1161,7 @@ void Draw(cv::Mat img, const CLNF& clnf_model)
 void DrawLandmarks(cv::Mat img, vector<cv::Point> landmarks)
 {
 	for(cv::Point p : landmarks)
-	{		
-
+	{
 		// A rough heuristic for drawn point size
 		int thickness = (int)std::ceil(5.0* ((double)img.cols) / 640.0);
 		int thickness_2 = (int)std::ceil(1.5* ((double)img.cols) / 640.0);
@@ -1173,7 +1169,6 @@ void DrawLandmarks(cv::Mat img, vector<cv::Point> landmarks)
 		cv::circle(img, p, 1, cv::Scalar(0,0,255), thickness, CV_AA);
 		cv::circle(img, p, 1, cv::Scalar(255,0,0), thickness_2, CV_AA);
 	}
-	
 }
 
 //===========================================================================

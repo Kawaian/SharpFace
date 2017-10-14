@@ -106,7 +106,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\x64\Release\LandmarkDetector.dll">
+    <None Include="..\x64\Release\LandmarkDetector.dll">
       <Link>LandmarkDetector.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
