@@ -109,7 +109,7 @@
     <None Include="..\x64\Release\LandmarkDetector.dll">
       <Link>LandmarkDetector.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
