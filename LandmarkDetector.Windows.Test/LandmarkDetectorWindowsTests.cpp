@@ -33,6 +33,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // FaceTrackingVid.cpp : Defines the entry point for the console application for tracking faces in videos.
 // Libraries for landmark detection (includes CLNF and CLM modules)
+
+// #include "stdafx.h"
 #include "LandmarkCoreIncludes.h"
 
 #include <cstdint>

@@ -53,7 +53,7 @@ namespace LandmarkDetector
 // Contains the utility functions to help manipulate the model
 
 class OPENFACE_API PDM{
-	public:    
+	public:
     
 		// The 3D mean shape vector of the PDM [x1,..,xn,y1,...yn,z1,...,zn]
 		cv::Mat_<double> mean_shape;	
