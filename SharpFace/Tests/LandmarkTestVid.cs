@@ -10,7 +10,7 @@ namespace SharpFace.Tests
 {
     public class LandmarkTestVid : TestBase
     {
-        public double SizeFactor = 1;
+        public double SizeFactor = 2;
         public Size Size = new Size(320, 240);
 
         // Some globals for tracking timing information for visualisation
@@ -60,7 +60,7 @@ namespace SharpFace.Tests
             using (Mat resize = captured_image.Resize(new Size(Size.Width * SizeFactor, Size.Height * SizeFactor)))
             {
                 string fpsSt = "FPS: " + Math.Round(fps_tracker).ToString("0.0");
-                Cv2.PutText(captured_image, fpsSt, new Point(10, 20), HersheyFonts.HersheyPlain, 0.5, new Scalar(0, 255, 0), 2, LineTypes.AntiAlias);
+                Cv2.PutText(resize, fpsSt, new Point(10, 20), HersheyFonts.HersheyPlain, 1, new Scalar(0, 255, 0), 1, LineTypes.AntiAlias);
                 Cv2.ImShow("tracking_result", resize);
             }
         }
@@ -162,16 +162,14 @@ namespace SharpFace.Tests
                         visualise_tracking(resized_image, ref clnf_model, ref det_parameters, frame_count, fx, fy, cx, cy);
 
                         // detect key presses
-                        char character_press = (char)Cv2.WaitKey(1);
-
-                        // restart the tracker
-                        if (character_press == 'r')
+                        char character_press = (char)Cv2.WaitKey(15);
+                        switch (character_press)
                         {
-                            clnf_model.Reset();
-                        }
-                        else if (character_press == 'q')
-                        {
-                            return 0;
+                            case 'r':
+                                clnf_model.Reset();
+                                break;
+                            case 'q':
+                                return 0;
                         }
 
                         // Update the frame count

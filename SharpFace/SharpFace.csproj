@@ -247,6 +247,7 @@
     <Compile Include="..\swig\csfiles\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs">
       <Link>auto\SWIGTYPE_p_std__vectorT_std__vectorT_std__vectorT_std__vectorT_std__pairT_int_cv__Mat_T_double_t_t_t_t_t_t.cs</Link>
     </Compile>
+    <Compile Include="Converters.cs" />
     <Compile Include="HandleRef.cs" />
     <Compile Include="LandmarkDetectorWrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
