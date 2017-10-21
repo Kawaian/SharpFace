@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SharpFace.Tests
 {
-    public abstract class TestBase
+    public abstract class TestBase : IDisposable
     {
         protected void INFO_STREAM(string msg)
         {
@@ -30,5 +30,7 @@ namespace SharpFace.Tests
         }
 
         public abstract int Run();
+
+        public abstract void Dispose();
     }
 }

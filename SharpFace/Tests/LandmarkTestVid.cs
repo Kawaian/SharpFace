@@ -183,5 +183,10 @@ namespace SharpFace.Tests
 
             return 0;
         }
+
+        public override void Dispose()
+        {
+            
+        }
     }
 }

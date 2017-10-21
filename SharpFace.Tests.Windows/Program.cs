@@ -10,8 +10,13 @@ namespace SharpFace.Tests.Windows
     {
         static void Main(string[] args)
         {
-            TestBase t = new LandmarkTestVid();
+            SharpFace.Windows.Native.Init();
+
+            TestBase t =
+                //new LandmarkTestVid();
+                new LandmarkWrapperTest();
             var ret = t.Run();
+
             Console.Write($"======== Test Finished {ret} =======");
             Console.Read();
         }

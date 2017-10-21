@@ -13,7 +13,7 @@ namespace SharpFace
 
     public class CLNF : global::System.IDisposable
     {
-        private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        public global::System.Runtime.InteropServices.HandleRef swigCPtr;
         protected bool swigCMemOwn;
 
         internal CLNF(global::System.IntPtr cPtr, bool cMemoryOwn)

@@ -9,24 +9,21 @@ namespace SharpFace.Tests
 {
     public class LandmarkTestImg : TestBase
     {
+        public override void Dispose()
+        {
 
+        }
 
         public override int Run()
         {
-            //            //Convert arguments to more convenient vector form
-            //            vector<string> arguments = get_arguments(argc, argv);
+            //Convert arguments to more convenient vector form
             var arguments = new StringList { "./" };
 
-            //            // Search paths
-            //            boost::filesystem::path config_path = boost::filesystem::path(CONFIG_DIR);
-            //            boost::filesystem::path parent_path = boost::filesystem::path(arguments[0]).parent_path();
+            // Search paths
             var configPath = "some/config/path";
             var parentPath = arguments[0];
-
-
-            //            // Some initial parameters that can be overriden from command line
-            //            vector<string> files, output_images, output_landmark_locations, output_pose_locations;
-
+            
+            // Some initial parameters that can be overriden from command line
             StringList files = new StringList(), 
                        outputImages = new StringList(), 
                        outputLandmarkLocations = new StringList(),
