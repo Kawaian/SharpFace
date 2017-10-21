@@ -162,9 +162,10 @@ void Patch_experts::Response(vector<cv::Mat_<float> >& patch_expert_responses, c
 	// this might work well on some machines, while potentially have an adverse effect on others
 #ifdef _OPENMP
 #pragma omp parallel for
-#endif
+    for(int i = 0; i < n; i++)
+#else
 	tbb::parallel_for(0, (int)n, [&](int i){
-	//for(int i = 0; i < n; i++)
+#endif
 	{
 		if(visibilities[scale][view_id].rows == n)
 		{
@@ -214,8 +215,10 @@ void Patch_experts::Response(vector<cv::Mat_<float> >& patch_expert_responses, c
 			}
 		}
 	}
-	});
 
+#ifndef _OPENMP
+});
+#endif
 }
 
 //=============================================================================
