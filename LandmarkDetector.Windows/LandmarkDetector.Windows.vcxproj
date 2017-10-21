@@ -200,7 +200,9 @@
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <FloatingPointModel>Fast</FloatingPointModel>
-      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <OmitFramePointers>true</OmitFramePointers>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -215,6 +217,8 @@
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libboost_filesystem-vc140-mt-s-1_60.lib;libboost_system-vc140-mt-s-1_60.lib;opencv_world320.lib;tbb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -225,6 +229,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\FuncStubs.cpp" />
     <ClCompile Include="src\LandmarkDetectorModel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>

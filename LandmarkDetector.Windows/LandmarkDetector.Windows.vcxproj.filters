@@ -37,6 +37,7 @@
     <ClCompile Include="..\swig\SharpFace_wrap_pch.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="src\FuncStubs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CCNF_patch_expert.h">
