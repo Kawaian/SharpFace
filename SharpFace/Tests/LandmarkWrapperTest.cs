@@ -70,6 +70,7 @@ namespace SharpFace.Tests
             {
                 if (!read.Empty())
                 {
+                    Cv2.Flip(read, read, FlipMode.Y);
                     if (onFace)
                     {
                         wrap.DetectImage(read);

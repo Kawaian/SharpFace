@@ -76,14 +76,6 @@
       <Link>irml\irml_debug.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\SharpFace.External\bin\windows\x64\opencv_ffmpeg310_64.dll">
-      <Link>opencv_ffmpeg310_64.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\SharpFace.External\bin\windows\x64\opencv_world310.dll">
-      <Link>opencv_world310.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\SharpFace.External\bin\windows\x64\tbb.dll">
       <Link>tbb.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
