@@ -263,3 +263,18 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Unignore DLib binaries
+!ARM/Release/libdlib_Droid.a
+!ARM/Release/libdlib_Droid.a.recipe
+!ARM64/Release/libdlib_Droid.a
+!ARM64/Release/libdlib_Droid.a.recipe
+!x64/Release/libdlib_Droid.a
+!x86/Release/libdlib_Droid.a.recipe
+
+!ARM/Debug/libdlib_Droid.a
+!ARM/Debug/libdlib_Droid.a.recipe
+!ARM64/Debug/libdlib_Droid.a
+!ARM64/Debug/libdlib_Droid.a.recipe
+!x64/Debug/libdlib_Droid.a
+!x86/Debug/libdlib_Droid.a.recipe
