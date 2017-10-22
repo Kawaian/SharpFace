@@ -63,8 +63,8 @@
     <ClCompile Include="src\SVR_patch_expert.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="external\dlib\dlib.Droid.vcxproj">
-      <Project>{0b3816ac-cb04-44d7-83cf-5f0e438de302}</Project>
+    <ProjectReference Include="..\OpenCvSharp\src\OpenCvSharpExternDroid\OpenCvSharpExternDroid.vcxproj">
+      <Project>{707296f9-6aef-4548-a66d-4cf3e5795b1a}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">

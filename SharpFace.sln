@@ -22,6 +22,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFace.Windows", "SharpF
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LandmarkDetector.Droid", "LandmarkDetector.Droid\LandmarkDetector.Droid.vcxproj", "{470BD53A-6967-40AF-B88E-9AC2A56828B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A} = {707296F9-6AEF-4548-A66D-4CF3E5795B1A}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlib.Windows", "LandmarkDetector.Windows\external\dlib\dlib.Windows.vcxproj", "{B47A5F12-2567-44E9-AE49-35763EC82149}"
 EndProject
@@ -49,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFace.Tests.Android", "SharpFace.Tests.Android\SharpFace.Tests.Android.csproj", "{F52A3BD0-37FD-4F4B-B7EB-D91B512983B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCvSharp.Android", "OpenCvSharp\src\OpenCvSharp.Android\OpenCvSharp.Android.csproj", "{F94F9E8A-E239-45EA-9C61-C7855C8B6F25}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCvSharpExternDroid", "OpenCvSharp\src\OpenCvSharpExternDroid\OpenCvSharpExternDroid.vcxproj", "{707296F9-6AEF-4548-A66D-4CF3E5795B1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -332,6 +337,25 @@ Global
 		{F94F9E8A-E239-45EA-9C61-C7855C8B6F25}.Release|x64.Build.0 = Release|Any CPU
 		{F94F9E8A-E239-45EA-9C61-C7855C8B6F25}.Release|x86.ActiveCfg = Release|Any CPU
 		{F94F9E8A-E239-45EA-9C61-C7855C8B6F25}.Release|x86.Build.0 = Release|Any CPU
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|Any CPU.ActiveCfg = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|Any CPU.Build.0 = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|ARM.ActiveCfg = Release|ARM
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|ARM.Build.0 = Release|ARM
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|ARM64.ActiveCfg = Release|ARM64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|ARM64.Build.0 = Release|ARM64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|x64.ActiveCfg = Release|x64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|x64.Build.0 = Release|x64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|x86.ActiveCfg = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Debug|x86.Build.0 = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|Any CPU.ActiveCfg = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|ARM.ActiveCfg = Release|ARM
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|ARM.Build.0 = Release|ARM
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|ARM64.ActiveCfg = Release|ARM64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|ARM64.Build.0 = Release|ARM64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x64.ActiveCfg = Release|x64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x64.Build.0 = Release|x64
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x86.ActiveCfg = Release|x86
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -354,6 +378,7 @@ Global
 		{95A85F6A-F038-4CC1-8AC9-058A30921A0E} = {981A6663-3ACC-4F76-A230-AFF4D98EC79D}
 		{F52A3BD0-37FD-4F4B-B7EB-D91B512983B0} = {33F17ABB-DBB3-4FD9-BECB-E2DF7076ED6C}
 		{F94F9E8A-E239-45EA-9C61-C7855C8B6F25} = {BD5045FD-8BF0-421D-8252-4F30679ECDDC}
+		{707296F9-6AEF-4548-A66D-4CF3E5795B1A} = {BD5045FD-8BF0-421D-8252-4F30679ECDDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68E571A3-7DD3-4CF8-99AE-D7BA19E9F407}
