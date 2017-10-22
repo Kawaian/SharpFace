@@ -106,7 +106,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb_debug.dll" "$(OutDir)"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
@@ -137,7 +138,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb_debug.dll" "$(OutDir)"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
@@ -170,7 +172,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb.dll" "$(OutDir)"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
@@ -212,7 +215,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>xcopy /I /E /Y /D /C "$(SolutionDir)SharpFace.External\bin\windows\$(PlatformShortName)\tbb.dll" "$(OutDir)"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>

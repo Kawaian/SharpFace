@@ -26,6 +26,11 @@ namespace SharpFace
             return *(Vec3d*)vec.Pointer;
         }
 
+        public unsafe static Rect2d ToRect2d(this SWIGTYPE_p_cv__Rect_T_double_t t)
+        {
+            return *(Rect2d*)t.Pointer;
+        }
+
         #endregion ToManaged
 
         #region ToSwig

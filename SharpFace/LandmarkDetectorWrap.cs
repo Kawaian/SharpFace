@@ -1,6 +1,7 @@
 ﻿using OpenCvSharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace SharpFace
         
         public double Correct => Model.detection_certainty;
 
+        public Rect2d BoundaryBox { get; private set; }
         public List<Point2d> Landmarks { get; private set; }
         public Vec6d PoseVec { get; private set; }
         public double[] Transform { get; private set; } = new double[3];
@@ -44,6 +46,7 @@ namespace SharpFace
         {
             var argument = new StringList { modelRoot };
             Parameters = new FaceModelParameters(argument);
+            Parameters.track_gaze = false;
         }
 
         public bool DetectROI(Mat mat, Rect roi)
@@ -182,6 +185,10 @@ namespace SharpFace
             RodriguesRotation[0] = rod[0];
             RodriguesRotation[1] = rod[1];
             RodriguesRotation[2] = rod[2];
+
+            var nativeBox = Model.GetBoundingBox();
+            var box = nativeBox.ToRect2d();
+            BoundaryBox = box;
         }
 
         public void Dispose()
