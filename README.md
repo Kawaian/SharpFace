@@ -1,16 +1,22 @@
 # C# port of [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
-By 이희준, 김진관, マティアス コンスタンス
+By 이희준, 김진관, Matyas Yves Constans
+
+## Demos
+![](Doc/Web/demo1.gif)
+
+## Summary
+![](Doc/Web/homepage.gif)
 
 Modified version of OpenFace with C# port.
 The modified version can be found in Native.
 
-![](Doc/Web/homepage.gif)
-
 **Credit goes to the creators of OpenFace.**
 
-## Modifications
-- Added DLL and SWIG support
+- Added support for dynamic linking in LandmarkDetector.
+- Added optimization options
 - Reorganized source files
+- C# wrappers
+- Watched a lot of anime while coding
 
 ## Platforms:
 - Windows **x86**, **x64**
