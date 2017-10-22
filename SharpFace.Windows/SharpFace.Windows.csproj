@@ -62,6 +62,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OpenCvSharp\src\OpenCvSharp.Windows\OpenCvSharp.Windows.csproj">
+      <Project>{d7856971-d877-4cb1-a08c-c2a763ebfad1}</Project>
+      <Name>OpenCvSharp.Windows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharpFace\SharpFace.csproj">
       <Project>{b3a225b9-1a79-4330-9b4e-a3c4e07bbeab}</Project>
       <Name>SharpFace</Name>
