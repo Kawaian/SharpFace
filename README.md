@@ -4,6 +4,8 @@ By 이희준, 김진관, マティアス コンスタンス
 Modified version of OpenFace with C# port.
 The modified version can be found in Native.
 
+![](Doc/Web/homepage.gif)
+
 **Credit goes to the creators of OpenFace.**
 
 ## Modifications
