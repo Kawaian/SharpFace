@@ -1,27 +1,34 @@
-# C# port of [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
-By Heejun Lee, Matyas Yves Constans, Jinkwan Kim
+# SharpFace
+C# port of [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) with Xamarin supports by Heejun Lee, Matyas Yves Constans, Jinkwan Kim
 
-## Demos
+## Demo
 ![](Doc/Web/demo1.gif)
 
 ## Summary
-![](Doc/Web/homepage.gif)
-
 Modified version of OpenFace with C# port.
 The modified version can be found in Native.
+
 **Credit goes to the creators of OpenFace.**
 
-- Added support for dynamic linking in LandmarkDetector.
+- C# wrappers
+- .Net Standard, Xamarin supports
+- Support for dynamic linking in LandmarkDetector
 - Added optimization options
 - Reorganized source files
-- C# wrappers
 - Watched a lot of anime while coding
 
-## Platforms:
-- Windows **x86**, **x64**
+## Platforms
+- Windows ~~**x86**~~, **x64**
 - Android **x86**, **x64**, **arm**, **arm64**
 
-# Original README:
+> x86 build on Windows is not available, because some of binaries are not compatiable to x86.
+
+## Some Kawai
+![](Doc/Web/homepage.gif)
+
+Nyan
+
+# Original README
 ## OpenFace: an open source facial behavior analysis toolkit
 
 [![Build Status](https://travis-ci.org/TadasBaltrusaitis/OpenFace.svg?branch=master)](https://travis-ci.org/TadasBaltrusaitis/OpenFace)
