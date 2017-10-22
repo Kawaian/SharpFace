@@ -79,6 +79,7 @@ namespace SharpFace.Tests
                     }
                     else
                     {
+                        Cv2.Resize(read, read, new Size(320, 240));
                         var faces = cascade.DetectMultiScale(read, 1.4, 2, HaarDetectionType.ScaleImage, new Size(read.Width * 0.2, read.Height * 0.2), read.Size());
                         foreach (var face in faces)
                         {

@@ -110,7 +110,7 @@ namespace SharpFace
             return ret;
         }
 
-        private void CheckFocus(Mat mat)
+        public void CheckFocus(Mat mat)
         {
             if (needFocusUpdate)
             {
