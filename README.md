@@ -1,5 +1,5 @@
 # C# port of [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
-By 이희준, 김진관, Matyas Yves Constans
+By Heejun Lee, Matyas Yves Constans, Jinkwan Kim
 
 ## Demos
 ![](Doc/Web/demo1.gif)
@@ -9,7 +9,6 @@ By 이희준, 김진관, Matyas Yves Constans
 
 Modified version of OpenFace with C# port.
 The modified version can be found in Native.
-
 **Credit goes to the creators of OpenFace.**
 
 - Added support for dynamic linking in LandmarkDetector.
@@ -105,7 +104,4 @@ For inquiries about the commercial licensing of the OpenFace toolkit please cont
 
 # Final remarks
 
-I did my best to make sure that the code runs out of the box but there are always issues and I would be grateful for your understanding that this is research code and not full fledged product. However, if you encounter any problems/bugs/issues please contact me on github or by emailing me at Tadas.Baltrusaitis@cl.cam.ac.uk for any bug reports/questions/suggestions. 
-
-
-	
+I did my best to make sure that the code runs out of the box but there are always issues and I would be grateful for your understanding that this is research code and not full fledged product. However, if you encounter any problems/bugs/issues please contact me on github or by emailing me at Tadas.Baltrusaitis@cl.cam.ac.uk for any bug reports/questions/suggestions.
