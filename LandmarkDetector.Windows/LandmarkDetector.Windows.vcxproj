@@ -83,7 +83,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;EIGEN_MPL2_ONLY;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -110,14 +110,14 @@
       </Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libboost_filesystem-vc141-mt-gd-1_60.lib;libboost_system-vc141-mt-gd-1_60.lib;opencv_world310.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_DEBUG;_LIB;EIGEN_MPL2_ONLY;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -142,7 +142,7 @@
       </Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(ProjectDir)..\OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(ProjectDir)..\SharpFace.External\lib\windows\$(PlatformShortName)\;$(ProjectDir)..\OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libboost_filesystem-vc140-mt-s-1_60.lib;libboost_system-vc140-mt-s-1_60.lib;opencv_world320.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -150,7 +150,7 @@
     <ClCompile>
       <Optimization>Full</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -176,15 +176,15 @@
       </Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libboost_filesystem-vc141-mt-1_60.lib;libboost_system-vc141-mt-1_60.lib;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\opencv_world320.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\SharpFace.External\lib\windows\$(PlatformShortName)\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_filesystem-vc141-mt-1_60.lib;libboost_system-vc141-mt-1_60.lib;$(ProjectDir)..\OpenCvSharp\opencv\3.2\x64\vc14\dynlib\opencv_world320.lib;tbb.lib;tbbmalloc.lib;tbbmalloc_proxy.lib;tbbmalloc_s.lib;tbbproxy.lib;tbb_debug.lib;tbb_preview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\windows;$(SolutionDir)SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -219,7 +219,7 @@
       </Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(SolutionDir)OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(SolutionDir)SharpFace.External\lib\windows\$(PlatformShortName)\;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\OpenCvSharp\opencv\3.2\x64\vc14\staticlib\;$(ProjectDir)..\OpenCvSharp\opencv\3.2\x64\vc14\dynlib\;$(ProjectDir)..\SharpFace.External\lib\windows\$(PlatformShortName)\;$(ProjectDir)..\OpenCvSharp\src\OpenCvSharpExtern\bin\Release\x64\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libboost_filesystem-vc140-mt-s-1_60.lib;libboost_system-vc140-mt-s-1_60.lib;opencv_world320.lib;tbb.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
