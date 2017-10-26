@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCvSharp.Android", "Open
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCvSharpExternDroid", "OpenCvSharp\src\OpenCvSharpExternDroid\OpenCvSharpExternDroid.vcxproj", "{707296F9-6AEF-4548-A66D-4CF3E5795B1A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eastl.Windows", "LandmarkDetector.Windows\external\eastl\eastl.Windows.vcxproj", "{A1D82248-9B00-4269-9867-86A5C89C1966}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -356,6 +358,20 @@ Global
 		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x64.Build.0 = Release|x64
 		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x86.ActiveCfg = Release|x86
 		{707296F9-6AEF-4548-A66D-4CF3E5795B1A}.Release|x86.Build.0 = Release|x86
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|ARM.ActiveCfg = Debug|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|x64.ActiveCfg = Debug|x64
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|x64.Build.0 = Debug|x64
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|x86.ActiveCfg = Debug|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Debug|x86.Build.0 = Debug|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|Any CPU.ActiveCfg = Release|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|ARM.ActiveCfg = Release|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|ARM64.ActiveCfg = Release|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|x64.ActiveCfg = Release|x64
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|x64.Build.0 = Release|x64
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|x86.ActiveCfg = Release|Win32
+		{A1D82248-9B00-4269-9867-86A5C89C1966}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -379,6 +395,7 @@ Global
 		{F52A3BD0-37FD-4F4B-B7EB-D91B512983B0} = {33F17ABB-DBB3-4FD9-BECB-E2DF7076ED6C}
 		{F94F9E8A-E239-45EA-9C61-C7855C8B6F25} = {BD5045FD-8BF0-421D-8252-4F30679ECDDC}
 		{707296F9-6AEF-4548-A66D-4CF3E5795B1A} = {BD5045FD-8BF0-421D-8252-4F30679ECDDC}
+		{A1D82248-9B00-4269-9867-86A5C89C1966} = {C91E7A4E-965F-4031-9D6C-5A2BFEB0887A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68E571A3-7DD3-4CF8-99AE-D7BA19E9F407}

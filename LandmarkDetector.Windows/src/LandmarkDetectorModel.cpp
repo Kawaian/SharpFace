@@ -260,7 +260,7 @@ void CLNF::Read_CLNF(string clnf_location)
 		string location;
 
 		// figure out which module is to be read from which file
-		lineStream >> module;
+		lineStream >> module; 
 		
 		getline(lineStream, location);
 
