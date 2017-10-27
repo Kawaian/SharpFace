@@ -485,8 +485,8 @@ double DetectionValidator::Check(const cv::Vec3d& orientation, const cv::Mat_<uc
     else if (validator_type == 3)
     {
         // On some machines the non-TBB version may be faster
-        //dec = CheckCNN(warped, id);
-        dec = CheckCNN_tbb(warped, id);
+        dec = CheckCNN(warped, id);
+        // dec = CheckCNN_tbb(warped, id);
     }
     return dec;
 }
@@ -797,7 +797,6 @@ double DetectionValidator::CheckCNN_old(const cv::Mat_<double>& warped_img, int 
 // Convolutional Neural Network
 double DetectionValidator::CheckCNN_tbb(const cv::Mat_<double>& warped_img, int view_id)
 {
-
     cv::Mat_<double> feature_vec;
     NormaliseWarpedToVector(warped_img, feature_vec, view_id);
 
@@ -889,8 +888,8 @@ double DetectionValidator::CheckCNN_tbb(const cv::Mat_<double>& warped_img, int 
 
 
                 // TBB pass for the remaining kernels, empirically helps with layers with more kernels
-                tbb::parallel_for(1, (int)cnn_convolutional_layers[view_id][cnn_layer][in].size(), [&](int k) {
-                // for(int k = 1; k < (int)cnn_convolutional_layers[view_id][cnn_layer][in].size(); k++)
+                // tbb::parallel_for(1, (int)cnn_convolutional_layers[view_id][cnn_layer][in].size(), [&](int k) {
+                for(int k = 1; k < (int)cnn_convolutional_layers[view_id][cnn_layer][in].size(); k++)
                 {
                         cv::Mat_<float> kernel = cnn_convolutional_layers[view_id][cnn_layer][in][k];
 
@@ -922,7 +921,7 @@ double DetectionValidator::CheckCNN_tbb(const cv::Mat_<double>& warped_img, int 
                             outputs[k] = outputs[k] + output;
                         }
                     }
-                });
+                // });
             }
 
             for (size_t k = 0; k < cnn_convolutional_layers[view_id][cnn_layer][0].size(); ++k)
