@@ -160,10 +160,10 @@ void Patch_experts::Response(vector<cv::Mat_<float> >& patch_expert_responses, c
 
 	// calculate the patch responses for every landmark, Actual work happens here. If openMP is turned on it is possible to do this in parallel,
 	// this might work well on some machines, while potentially have an adverse effect on others
-#ifdef _OPENMP
+#if 0
 #pragma omp parallel for
-    for(int i = 0; i < n; i++)
 #else
+//    for(int i = 0; i < n; i++)
 	tbb::parallel_for(0, (int)n, [&](int i){
 #endif
 	{
@@ -216,8 +216,8 @@ void Patch_experts::Response(vector<cv::Mat_<float> >& patch_expert_responses, c
 		}
 	}
 
-#ifndef _OPENMP
-});
+#if 1
+    });
 #endif
 }
 

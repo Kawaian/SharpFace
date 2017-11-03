@@ -485,9 +485,9 @@ double DetectionValidator::Check(const cv::Vec3d& orientation, const cv::Mat_<uc
 	else if (validator_type == 3)
 	{
 		// On some machines the non-TBB version may be faster
-		//dec = CheckCNN(warped, id);
-		dec = CheckCNN_tbb(warped, id);
-	}
+		dec = CheckCNN(warped, id);
+		// dec = CheckCNN_tbb(warped, id);
+    }
 	return dec;
 }
 
