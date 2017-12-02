@@ -160,7 +160,7 @@
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -176,7 +176,7 @@
       <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -194,7 +194,7 @@
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\arm64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\arm64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -210,7 +210,7 @@
       <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -227,7 +227,7 @@
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -243,7 +243,7 @@
       <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -261,7 +261,7 @@
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\arm64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\arm64\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -277,7 +277,7 @@
       <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\libOpenCvSharpExtern.so;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-lm -lz</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
