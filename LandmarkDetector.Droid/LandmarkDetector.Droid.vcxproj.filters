@@ -83,5 +83,7 @@
     <ClCompile Include="src\LandmarkDetectionValidator.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="..\swig\SharpFace_wrap.cxx" />
+    <ClCompile Include="src\RuntimeInfo.cpp" />
   </ItemGroup>
 </Project>

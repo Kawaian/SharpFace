@@ -38,6 +38,7 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="src\FuncStubs.cpp" />
+    <ClCompile Include="src\RuntimeInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CCNF_patch_expert.h">

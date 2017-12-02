@@ -50,6 +50,7 @@
     <ClInclude Include="include\SVR_patch_expert.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\swig\SharpFace_wrap.cxx" />
     <ClCompile Include="src\CCNF_patch_expert.cpp" />
     <ClCompile Include="src\LandmarkDetectionValidator.cpp" />
     <ClCompile Include="src\LandmarkDetectorFunc.cpp" />
@@ -59,6 +60,7 @@
     <ClCompile Include="src\Patch_experts.cpp" />
     <ClCompile Include="src\PAW.cpp" />
     <ClCompile Include="src\PDM.cpp" />
+    <ClCompile Include="src\RuntimeInfo.cpp" />
     <ClCompile Include="src\stdafx.cpp" />
     <ClCompile Include="src\SVR_patch_expert.cpp" />
   </ItemGroup>

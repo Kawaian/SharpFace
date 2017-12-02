@@ -1,0 +1,32 @@
+/** 
+ * file: RuntimeInfo.cpp
+ * author: Matyas Constans
+ * info: Exports basic runtime information.
+ */
+
+#ifdef _WIN32
+#define RTI_EXPORT __declspec(dllexport)
+#define RTI_STD_CALL __stdcall
+
+#else
+#define RTI_EXPORT __attribute__((visibility("default")))
+#define RTI_STD_CALL
+
+#endif
+
+#define RTI_API(return_) RTI_EXPORT return_ RTI_STD_CALL
+
+typedef unsigned char   int8;
+typedef char            uint8;
+
+RTI_API(int8) RTI_GetPointerSize()
+{
+    return sizeof(size_t);
+}
+
+RTI_API(uint8) TryInvoke()
+{
+    return 0x001;
+}
+
+
