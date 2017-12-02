@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths>G:\Users\Matyas\Projects\SharpFace\x64\Release\libLandmarkDetector.so;C:\ProgramData\Microsoft\AndroidNDK64\android-ndk-r13b\prebuilt\android-x86_64\gdbserver\gdbserver;C:\ProgramData\Microsoft\AndroidNDK64\android-ndk-r13b\sources\cxx-stl\gnu-libstdc++\4.9\libs\x86_64\libgnustl_static.a</SOLibPaths>
+  <AndroidLibPaths />
+  <OObjPaths>G:\Users\Matyas\Projects\SharpFace\LandmarkDetector.Droid\x64\Release</OObjPaths>
+  <Configuration>Release</Configuration>
+  <Platform>x64</Platform>
+  <AndroidArchitecture>x86_64</AndroidArchitecture>
+  <!--links to other recipe files-->
+  <RecipeFiles>bin\Release\x64\libOpenCvSharpExtern.so.recipe</RecipeFiles>
+</project>
