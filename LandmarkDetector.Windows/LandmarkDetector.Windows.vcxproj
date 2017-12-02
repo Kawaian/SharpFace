@@ -117,7 +117,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost;$(ProjectDir)external\eastl\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_DEBUG;_LIB;EIGEN_MPL2_ONLY;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -185,7 +185,7 @@
     <ClCompile>
       <Optimization>Full</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost;$(ProjectDir)external\eastl\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(ProjectDir)..\SharpFace.External\include\windows;$(ProjectDir)..\SharpFace.External\include\windows\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions);DLL_EXPORT</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -309,9 +309,6 @@
   <ItemGroup>
     <ProjectReference Include="external\dlib\dlib.Windows.vcxproj">
       <Project>{b47a5f12-2567-44e9-ae49-35763ec82149}</Project>
-    </ProjectReference>
-    <ProjectReference Include="external\eastl\eastl.Windows.vcxproj">
-      <Project>{a1d82248-9b00-4269-9867-86a5c89c1966}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
