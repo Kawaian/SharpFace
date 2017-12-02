@@ -252,8 +252,6 @@
     <Compile Include="LandmarkDetectorWrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Exceptions.cs" />
-    <Compile Include="Tests\LandmarkTestImg.cs" />
-    <Compile Include="Tests\LandmarkTestVid.cs" />
     <Compile Include="Tests\LandmarkWrapperTest.cs" />
     <Compile Include="Tests\Logger.cs" />
     <Compile Include="Tests\Profiler.cs" />

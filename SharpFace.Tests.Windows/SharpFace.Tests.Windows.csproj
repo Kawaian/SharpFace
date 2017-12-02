@@ -80,6 +80,10 @@
       <Project>{d7856971-d877-4cb1-a08c-c2a763ebfad1}</Project>
       <Name>OpenCvSharp.Windows</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenCvSharp\src\OpenCvSharp\OpenCvSharp.csproj">
+      <Project>{658C140F-2E73-4E22-80A7-F05DF0A83318}</Project>
+      <Name>OpenCvSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharpFace.Windows\SharpFace.Windows.csproj">
       <Project>{7a473bf1-ae5d-47ff-878e-e49112561ca3}</Project>
       <Name>SharpFace.Windows</Name>

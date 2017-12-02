@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace SharpFace
 {
+    public static class NativeTest
+    {
+        public static void Test()
+        {
+
+        }
+    }
     public class LandmarkDetectorWrap : IDisposable
     {
         private bool _inVideo = false;

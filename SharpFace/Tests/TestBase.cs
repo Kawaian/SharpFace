@@ -29,7 +29,14 @@ namespace SharpFace.Tests
             return (((c1) & 255) + (((c2) & 255) << 8) + (((c3) & 255) << 16) + (((c4) & 255) << 24));
         }
 
-        public abstract int Run();
+        public abstract void Start();
+        public abstract void Stop();
+        public abstract void Wait();
+        public void Run()
+        {
+            Start();
+            Wait();
+        }
 
         public abstract void Dispose();
     }

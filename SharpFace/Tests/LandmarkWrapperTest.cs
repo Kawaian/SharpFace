@@ -1,4 +1,5 @@
 ﻿using OpenCvSharp;
+using OpenCvSharp.Native;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,11 +13,17 @@ namespace SharpFace.Tests
     {
         LandmarkDetectorWrap wrap = new LandmarkDetectorWrap();
         CascadeClassifier cascade = new CascadeClassifier();
-        VideoCapture capture;
+        Capture capture;
         Stopwatch sw;
 
-        public LandmarkWrapperTest()
+        public LandmarkWrapperTest(int index = 0)
         {
+            capture = NativeBindings.Kernal.NewCapture(index);
+            capture.FrameReady += (sender, arg) =>
+            {
+                Proc(arg.Mat, arg);
+            };
+
             sw = new Stopwatch();
             sw.Start();
 
@@ -35,16 +42,19 @@ namespace SharpFace.Tests
             }
         }
 
-        public override int Run()
+        public override void Start()
         {
-            capture = new VideoCapture(0);
+            capture.Start();
+        }
 
-            int ret = InternalRun();
+        public override void Stop()
+        {
+            capture.Stop();
+        }
 
-            Cv2.DestroyAllWindows();
-            capture.Dispose();
-
-            return ret;
+        public override void Wait()
+        {
+            capture.Wait();
         }
 
         private void DrawInROI(Mat mat, Rect roi, List<Point2d> pt)
@@ -64,64 +74,56 @@ namespace SharpFace.Tests
             mat.PutText($"T:{pos[0].ToString(fmt)},{pos[1].ToString(fmt)},{pos[2].ToString(fmt)}", new Point(pt.X, pt.Y+20), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
         }
 
-        private int InternalRun()
+        long lastMs = 0;
+        long time = 0;
+        bool onFace = true;
+        private void Proc(Mat read, FrameArgs args)
         {
-            if (!capture.IsOpened())
-                return -1;
-
-            long lastMs = 0;
-            long time = 0;
-            bool onFace = true;
-            Mat read = new Mat();
-            while (capture.Read(read))
+            if (!read.Empty())
             {
-                if (!read.Empty())
+                lastMs = sw.ElapsedMilliseconds;
+                Cv2.Flip(read, read, FlipMode.Y);
+                if (onFace)
                 {
-                    lastMs = sw.ElapsedMilliseconds;
-                    Cv2.Flip(read, read, FlipMode.Y);
-                    if (onFace)
+                    wrap.DetectImage(read);
+                    wrap.Draw(read);
+                    var box = wrap.BoundaryBox;
+                    Cv2.Rectangle(read, new Rect((int)box.X, (int)box.Y, (int)box.Width, (int)box.Height), Scalar.Aqua, 2);
+                    DrawInfo(read, new Point2d(10, 20));
+                }
+                else
+                {
+                    Cv2.Resize(read, read, new Size(320, 240));
+                    wrap.CheckFocus(read);
+                    var faces = cascade.DetectMultiScale(read, 1.4, 2, HaarDetectionType.ScaleImage, new Size(read.Width * 0.2, read.Height * 0.2), read.Size());
+                    foreach (var face in faces)
                     {
-                        wrap.DetectImage(read);
+                        wrap.DetectROI(read, face);
                         wrap.Draw(read);
-                        var box = wrap.BoundaryBox;
-                        Cv2.Rectangle(read, new Rect((int)box.X, (int)box.Y, (int)box.Width, (int)box.Height), Scalar.Aqua, 2);
-                        DrawInfo(read, new Point2d(10, 20));
+                        DrawInfo(read, face.TopLeft);
+                        read.Rectangle(face, Scalar.Blue, 2, LineTypes.AntiAlias);
                     }
-                    else
-                    {
-                        Cv2.Resize(read, read, new Size(320, 240));
-                        wrap.CheckFocus(read);
-                        var faces = cascade.DetectMultiScale(read, 1.4, 2, HaarDetectionType.ScaleImage, new Size(read.Width * 0.2, read.Height * 0.2), read.Size());
-                        foreach (var face in faces)
-                        {
-                            wrap.DetectROI(read, face);
-                            wrap.Draw(read);
-                            DrawInfo(read, face.TopLeft);
-                            read.Rectangle(face, Scalar.Blue, 2, LineTypes.AntiAlias);
-                        }
-                    }
-                    time = sw.ElapsedMilliseconds - lastMs;
-                    read.PutText($"fps:{time}", new Point(10, 100), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
-                    Cv2.ImShow("test", read);
                 }
-
-                char c = (char)Cv2.WaitKey(1);
-                switch (c)
-                {
-                    case 'r':
-                        wrap.Reset();
-                        break;
-                    case 'i':
-                        wrap.InVideo = !wrap.InVideo;
-                        break;
-                    case 'f':
-                        onFace = !onFace;
-                        break;
-                    case 'q':
-                        return 0;
-                }
+                time = sw.ElapsedMilliseconds - lastMs;
+                read.PutText($"fps:{time}", new Point(10, 100), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
+                Cv2.ImShow("test", read);
             }
-            return 0;
+
+            switch (args.LastKey)
+            {
+                case 'r':
+                    wrap.Reset();
+                    break;
+                case 'i':
+                    wrap.InVideo = !wrap.InVideo;
+                    break;
+                case 'f':
+                    onFace = !onFace;
+                    break;
+                case 'q':
+                    args.Break = true;
+                    break;
+            }
         }
     }
 }

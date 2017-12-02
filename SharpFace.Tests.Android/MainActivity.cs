@@ -10,20 +10,17 @@ namespace SharpFace.Tests.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Set our view from the "main" layout resource
+            
             SetContentView(Resource.Layout.Main);
 
-            // Run LandmarkDetector tests
+            ImageView imgView = FindViewById<ImageView>(Resource.Id.imageView1);
+            OpenCvSharp.Android.NativeBinding.Init(this, this, imgView);
             SharpFace.Android.Native.Init();
 
-            TestBase t =
-                //new LandmarkTestVid();
-                new LandmarkWrapperTest();
-            var ret = t.Run();
+            Button button = FindViewById<Button>(Resource.Id.button1);
 
-            // Console.Write($"======== Test Finished {ret} =======");
-            // Console.Read();
+            TestBase t = new LandmarkWrapperTest();
+            t.Start();
         }
     }
 }

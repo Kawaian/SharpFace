@@ -10,14 +10,15 @@ namespace SharpFace.Tests.Windows
     {
         static void Main(string[] args)
         {
+            OpenCvSharp.Windows.NativeBindings.Init();
             SharpFace.Windows.Native.Init();
 
             TestBase t =
                 //new LandmarkTestVid();
                 new LandmarkWrapperTest();
-            var ret = t.Run();
+            t.Run();
 
-            Console.Write($"======== Test Finished {ret} =======");
+            Console.Write($"======== Test Finished =======");
             Console.Read();
         }
     }
