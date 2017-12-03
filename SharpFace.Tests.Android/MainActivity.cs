@@ -16,6 +16,7 @@ namespace SharpFace.Tests.Android
             ImageView imgView = FindViewById<ImageView>(Resource.Id.imageView1);
             OpenCvSharp.Android.NativeBinding.Init(this, this, imgView);
             SharpFace.Android.Native.Init();
+            SharpFace.NativeTest.Test();
 
             Button button = FindViewById<Button>(Resource.Id.button1);
 

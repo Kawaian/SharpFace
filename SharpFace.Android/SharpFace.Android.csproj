@@ -48,27 +48,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenCvSharp\src\OpenCvSharp.Android\OpenCvSharp.Android.csproj">
-      <Project>{f94f9e8a-e239-45ea-9c61-c7855c8b6f25}</Project>
-      <Name>OpenCvSharp.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SharpFace\SharpFace.csproj">
       <Project>{b3a225b9-1a79-4330-9b4e-a3c4e07bbeab}</Project>
       <Name>SharpFace</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedNativeLibrary Include="Native\arm64-v8a\libLandmarkDetector.so">
-      <Abi>arm64-v8a</Abi>
+    <EmbeddedNativeLibrary Include="..\ARM64\Release\libLandmarkDetector.so">
+      <Link>lib\arm64-v8a\libLandmarkDetector.so</Link>
     </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="Native\armeabi-v7a\libLandmarkDetector.so">
-      <Abi>armeabi-v7a</Abi>
+    <EmbeddedNativeLibrary Include="..\ARM\Release\libLandmarkDetector.so">
+      <Link>lib\armeabi-v7a\libLandmarkDetector.so</Link>
     </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="Native\x86\libLandmarkDetector.so">
-      <Abi>x86</Abi>
+    <EmbeddedNativeLibrary Include="..\x64\Release\libLandmarkDetector.so">
+      <Link>lib\x86_64\libLandmarkDetector.so</Link>
     </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="Native\x86_64\libLandmarkDetector.so">
-      <Abi>x86_64</Abi>
+    <EmbeddedNativeLibrary Include="..\x86\Release\libLandmarkDetector.so">
+      <Link>lib\x86\libLandmarkDetector.so</Link>
     </EmbeddedNativeLibrary>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

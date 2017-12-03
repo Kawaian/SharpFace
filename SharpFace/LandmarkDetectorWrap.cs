@@ -12,7 +12,8 @@ namespace SharpFace
     {
         public static void Test()
         {
-
+            var s = new StringList();
+            s.Dispose();
         }
     }
     public class LandmarkDetectorWrap : IDisposable
