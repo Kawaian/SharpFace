@@ -10,7 +10,7 @@ namespace SharpFace.Windows
     {
         public static void Init()
         {
-
+            SharpFace.NativeTest.Test();
         }
     }
 }
