@@ -65,7 +65,8 @@ FaceModelParameters::FaceModelParameters(vector<string> &arguments)
 {
 	l("local");
 	//setlocale(LC_CTYPE, "C");
-	l("local");
+	l("localCCC");
+	setenv("LC_ALL", "C", 1);
 	//setlocale(LC_ALL, "C");
 	//l("local1");
 	std::locale::global(std::locale(""));

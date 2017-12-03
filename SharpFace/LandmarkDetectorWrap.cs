@@ -134,7 +134,7 @@ namespace SharpFace
         {
             foreach (var pt in Landmarks)
             {
-                mat.DrawMarker((int)pt.X, (int)pt.Y, Scalar.Red, MarkerStyle.CircleAndCross, 10, LineTypes.AntiAlias, 1);
+                mat.DrawMarker((int)pt.X, (int)pt.Y, Scalar.Red, MarkerStyle.Cross, 6, LineTypes.AntiAlias, 1);
             }
             LandmarkDetector.DrawBox(mat.ToSwig(), PoseVec.ToSwig(), Scalar.Magenta.ToSwig(), 2, FocalX, FocalY, CenterX, CenterY);
         }

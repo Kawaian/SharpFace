@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 
 using Debug = System.Diagnostics.Debug;
+using System.Threading.Tasks;
 
 namespace SharpFace.Tests.Android
 {
@@ -17,19 +18,19 @@ namespace SharpFace.Tests.Android
 
             ImageView imgView = FindViewById<ImageView>(Resource.Id.imageView1);
             OpenCvSharp.Android.NativeBinding.Init(this, this, imgView);
-            Debug.WriteLine("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-            SharpFace.Android.Native.Init();
 
-            Debug.WriteLine("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+            SharpFace.Android.Native.Init();
             SharpFace.NativeTest.Test();
-            Debug.WriteLine("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
 
             Button button = FindViewById<Button>(Resource.Id.button1);
-            Debug.WriteLine("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
-            
-            TestBase t = new LandmarkWrapperTest(1, "/storage/emulated/0/openface_model/");
-            //t.Start();
-            Debug.WriteLine("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+
+            Task.Factory.StartNew(() => 
+            {
+                button.Text = "Loading";
+                TestBase t = new LandmarkWrapperTest(1, "/storage/emulated/0/openface_model/");
+                t.Start();
+                button.Text = "Processing";
+            });
         }
     }
 }

@@ -77,6 +77,7 @@ namespace SharpFace.Tests
             mat.PutText($"T:{pos[0].ToString(fmt)},{pos[1].ToString(fmt)},{pos[2].ToString(fmt)}", new Point(pt.X, pt.Y+20), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
         }
 
+        long realLastMs = 0;
         long lastMs = 0;
         long time = 0;
         bool onFace = true;
@@ -84,10 +85,11 @@ namespace SharpFace.Tests
         {
             if (!read.Empty())
             {
-                lastMs = sw.ElapsedMilliseconds;
-                Cv2.Flip(read, read, FlipMode.Y);
+                realLastMs = sw.ElapsedMilliseconds;
                 if (onFace)
                 {
+                    var scale = Math.Max(read.Height, read.Width) / 300;
+                    Cv2.Resize(read, read, new Size(read.Width / scale, read.Height / scale));
                     wrap.DetectImage(read);
                     wrap.Draw(read);
                     var box = wrap.BoundaryBox;
@@ -107,8 +109,10 @@ namespace SharpFace.Tests
                         read.Rectangle(face, Scalar.Blue, 2, LineTypes.AntiAlias);
                     }
                 }
-                time = sw.ElapsedMilliseconds - lastMs;
-                read.PutText($"fps:{time}", new Point(10, 100), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
+                time = sw.ElapsedMilliseconds - realLastMs;
+                read.PutText($"realfps:{1000/time}", new Point(10, 100), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
+                read.PutText($"fps:{1000 / (sw.ElapsedMilliseconds - lastMs)}", new Point(10, 120), HersheyFonts.HersheyPlain, 1, Scalar.Lime, 1, LineTypes.AntiAlias);
+                lastMs = sw.ElapsedMilliseconds;
                 Cv2.ImShow("test", read);
             }
 
