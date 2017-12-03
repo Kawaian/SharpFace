@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 
+using Debug = System.Diagnostics.Debug;
+
 namespace SharpFace.Tests.Android
 {
     [Activity(Label = "SharpFace.Tests.Android", MainLauncher = true)]
@@ -15,13 +17,18 @@ namespace SharpFace.Tests.Android
 
             ImageView imgView = FindViewById<ImageView>(Resource.Id.imageView1);
             OpenCvSharp.Android.NativeBinding.Init(this, this, imgView);
+            Debug.WriteLine("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
             SharpFace.Android.Native.Init();
-            SharpFace.NativeTest.Test();
+            Debug.WriteLine("GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
+            //SharpFace.NativeTest.Test();
+            Debug.WriteLine("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
 
             Button button = FindViewById<Button>(Resource.Id.button1);
+            Debug.WriteLine("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
 
-            TestBase t = new LandmarkWrapperTest();
-            t.Start();
+            //TestBase t = new LandmarkWrapperTest();
+            //t.Start();
+            Debug.WriteLine("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
         }
     }
 }
