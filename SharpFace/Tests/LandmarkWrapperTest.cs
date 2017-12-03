@@ -11,13 +11,16 @@ namespace SharpFace.Tests
 {
     public class LandmarkWrapperTest : TestBase
     {
-        LandmarkDetectorWrap wrap = new LandmarkDetectorWrap();
-        CascadeClassifier cascade = new CascadeClassifier();
+        LandmarkDetectorWrap wrap;
+        CascadeClassifier cascade;
         Capture capture;
         Stopwatch sw;
 
-        public LandmarkWrapperTest(int index = 0)
+        public LandmarkWrapperTest(int index = 0, string modelPath = "./")
         {
+            wrap = new LandmarkDetectorWrap(modelPath);
+            cascade = new CascadeClassifier();
+
             capture = NativeBindings.Kernal.NewCapture(index);
             capture.FrameReady += (sender, arg) =>
             {

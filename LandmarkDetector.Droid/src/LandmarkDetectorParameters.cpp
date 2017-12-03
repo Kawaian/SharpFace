@@ -62,6 +62,7 @@ FaceModelParameters::FaceModelParameters()
 FaceModelParameters::FaceModelParameters(vector<string> &arguments)
 {
 	// initialise the default values
+	cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << endl;
 	init();
 
 	// First element is reserved for the executable location (useful for finding relative model locs)
