@@ -265,22 +265,17 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>$(SolutionDir)\LandmarkDetector.Droid\include\stdafx.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\android;$(SolutionDir)SharpFace.External\include\android\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <ExceptionHandling>Enabled</ExceptionHandling>
-      <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\Release\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64\" -lOpenCvSharpExtern -lz -lm -fvisibility=default</AdditionalOptions>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ForceSymbolReferences>
-      </ForceSymbolReferences>
+      <AdditionalOptions>-lm</AdditionalOptions>
+      <SharedLibrarySearchPath>%(SharedLibrarySearchPath);$(Sysroot)\usr\lib;$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64;$(SolutionDir)SharpFace.External\lib\android\arm64;$(SolutionDir)\$(Platform)\Release;</SharedLibrarySearchPath>
+      <LibraryDependencies>boost_filesystem-gcc-mt-1_53;boost_system-gcc-mt-1_53;tbb;dlib_Droid;OpenCvSharpExtern;%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64;$(SolutionDir)SharpFace.External\lib\android\arm64;$(SolutionDir)\$(Platform)\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
