@@ -147,7 +147,7 @@ template <typename T> T SwigValueInit()
 #   endif
 # else
 #   if defined(__GNUC__) && defined(GCC_HASCLASSVISIBILITY)
-#     define SWIGEXPORT __attribute__ ((visibility("default")))
+#     define SWIGEXPORT __attribute__ ((visibility ("default")))
 #   else
 #     define SWIGEXPORT
 #   endif

@@ -152,7 +152,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\android;$(SolutionDir)SharpFace.External\include\android\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Enabled</ExceptionHandling>
-      <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DLL_EXPORT;CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
@@ -220,7 +220,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\android;$(SolutionDir)SharpFace.External\include\android\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Enabled</ExceptionHandling>
-      <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DLL_EXPORT;CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
@@ -257,10 +257,11 @@
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <AdditionalOptions>-fvisibility=default %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\Release\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
+      <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64\" -lOpenCvSharpExtern -lz -lm -fvisibility=default</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
