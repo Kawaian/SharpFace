@@ -7,11 +7,11 @@
  */
 
 #ifdef _WIN32
-#define RTI_EXPORT __declspec(dllexport)
+#define RTI_EXPORT extern "C" __declspec(dllexport)
 #define RTI_STD_CALL __stdcall
 
 #else
-#define RTI_EXPORT __attribute__((visibility("default")))
+#define RTI_EXPORT extern "C" __attribute__((visibility("default")))
 #define RTI_STD_CALL
 
 #endif

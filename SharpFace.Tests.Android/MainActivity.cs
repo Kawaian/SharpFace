@@ -20,14 +20,14 @@ namespace SharpFace.Tests.Android
             Debug.WriteLine("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
             SharpFace.Android.Native.Init();
             Debug.WriteLine("GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
-            //SharpFace.NativeTest.Test();
+            SharpFace.NativeTest.Test();
             Debug.WriteLine("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
 
             Button button = FindViewById<Button>(Resource.Id.button1);
             Debug.WriteLine("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
 
-            //TestBase t = new LandmarkWrapperTest();
-            //t.Start();
+            TestBase t = new LandmarkWrapperTest();
+            t.Start();
             Debug.WriteLine("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
         }
     }
