@@ -280,7 +280,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)external\dlib\include;$(SolutionDir)SharpFace.External\include\android;$(SolutionDir)SharpFace.External\include\android\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Enabled</ExceptionHandling>
-      <PreprocessorDefinitions>DLL_EXPORT;__TBB_GCC_BUILTIN_ATOMICS_PRESENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
       <CompileAs>CompileAsCpp</CompileAs>
