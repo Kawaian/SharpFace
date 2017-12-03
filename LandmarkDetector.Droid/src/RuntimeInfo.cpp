@@ -3,6 +3,7 @@
  * author: Matyas Constans
  * info: Exports basic runtime information.
  */
+#include <cstdio>
 
 #ifdef _WIN32
 #define RTI_EXPORT __declspec(dllexport)
@@ -29,4 +30,9 @@ RTI_API(uint8) TryInvoke()
     return 0x001;
 }
 
+#pragma GCC visibility push(default)
 
+void MyTestFunc() { puts("LOL"); }
+void MyTestFunc2() { puts("LOL"); }
+
+#pragma GCC visibility pop
