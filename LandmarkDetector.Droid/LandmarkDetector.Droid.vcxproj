@@ -99,6 +99,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
+    <UseOfStl>gnustl_static</UseOfStl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -135,6 +136,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>libLandmarkDetector</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <TargetName>libLandmarkDetector</TargetName>
@@ -155,11 +157,14 @@
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -171,12 +176,15 @@
       <ExceptionHandling>Enabled</ExceptionHandling>
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
@@ -189,12 +197,15 @@
       <PreprocessorDefinitions>DLL_EXPORT;__TBB_GCC_BUILTIN_ATOMICS_PRESENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\Release\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath);$(Sysroot)\usr\lib</SharedLibrarySearchPath>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
@@ -206,11 +217,14 @@
       <ExceptionHandling>Enabled</ExceptionHandling>
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -223,11 +237,20 @@
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DataLevelLinking>false</DataLevelLinking>
+      <AdditionalOptions>-fvisibility=hidden %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
+      <AdditionalOptions> -shared -Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+      <ShowProgress>false</ShowProgress>
+      <VerboseOutput>true</VerboseOutput>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -239,12 +262,15 @@
       <ExceptionHandling>Enabled</ExceptionHandling>
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x64\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x64\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -257,11 +283,14 @@
       <PreprocessorDefinitions>DLL_EXPORT;__TBB_GCC_BUILTIN_ATOMICS_PRESENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\arm64\libtbb.a;$(SolutionDir)\$(Platform)\Release\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\ARM64\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
@@ -273,11 +302,14 @@
       <ExceptionHandling>Enabled</ExceptionHandling>
       <PreprocessorDefinitions>DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)SharpFace.External\lib\android\x86\libboost_filesystem-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libboost_system-gcc-mt-1_53.a;$(SolutionDir)SharpFace.External\lib\android\x86\libtbb.a;$(SolutionDir)\$(Platform)\$(Configuration)\libdlib_Droid.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>-Wl,-rpath,"$(SolutionDir)OpenCvSharp\src\OpenCvSharpExternDroid\bin\Release\x86\" -lOpenCvSharpExtern -lz -lm</AdditionalOptions>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

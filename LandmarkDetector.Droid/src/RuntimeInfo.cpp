@@ -29,4 +29,9 @@ RTI_API(uint8) TryInvoke()
     return 0x001;
 }
 
+#pragma GCC visibility push(default)
 
+void MyTestFunc() { puts("LOL"); }
+void MyTestFunc2() { puts("LOL"); }
+
+#pragma GCC visibility pop
