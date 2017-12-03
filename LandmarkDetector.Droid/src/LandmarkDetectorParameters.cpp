@@ -49,6 +49,8 @@
 #define CONFIG_DIR "~"
 #endif
 
+#define l(msg) cout<<msg<<endl
+
 using namespace std;
 
 using namespace LandmarkDetector;
@@ -61,12 +63,25 @@ FaceModelParameters::FaceModelParameters()
 
 FaceModelParameters::FaceModelParameters(vector<string> &arguments)
 {
+	l("local");
+	//setlocale(LC_CTYPE, "C");
+	l("local");
+	//setlocale(LC_ALL, "C");
+	//l("local1");
+	std::locale::global(std::locale(""));
 	// initialise the default values
-	cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << endl;
 	init();
+	l("init finished");
 
 	// First element is reserved for the executable location (useful for finding relative model locs)
-	boost::filesystem::path root = boost::filesystem::path(arguments[0]).parent_path();
+	l("root");
+	l(arguments[0]);
+	boost::filesystem::path root = boost::filesystem::path(std::string(arguments[0]));
+	l("root");
+	l(root);
+	root = root.parent_path();
+	l("root");
+	l(root);
 
 	bool* valid = new bool[arguments.size()];
 	valid[0] = true;
