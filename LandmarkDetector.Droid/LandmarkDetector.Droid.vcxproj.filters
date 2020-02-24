@@ -86,4 +86,7 @@
     <ClCompile Include="..\swig\SharpFace_wrap.cxx" />
     <ClCompile Include="src\RuntimeInfo.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
